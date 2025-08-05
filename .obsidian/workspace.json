@@ -1,0 +1,231 @@
+{
+  "main": {
+    "id": "f6320fd3c58fc12b",
+    "type": "split",
+    "children": [
+      {
+        "id": "8529cc1e01e9ed0a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cbbf7ebfa1bbcec8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SQL/Materialized View In Postgres SQL.md",
+                "mode": "preview",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Materialized View In Postgres SQL"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "982aa3570d287206",
+    "type": "split",
+    "children": [
+      {
+        "id": "08b5c6c1d28b9a38",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "48aa58b0e9b0e8c8",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "5a95fa1b84e79a0c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "c6b75045c179df28",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "a6c8fb6b57f49f07",
+    "type": "split",
+    "children": [
+      {
+        "id": "a52f7cd038adba94",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b3ed57804d3c6e14",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Welcome.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Welcome"
+            }
+          },
+          {
+            "id": "3b31ec4a44f5cff1",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Welcome.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Welcome"
+            }
+          },
+          {
+            "id": "e5d8c56ade62da7f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "098a8206f2fe686a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Welcome.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Welcome"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "cbbf7ebfa1bbcec8",
+  "lastOpenFiles": [
+    "SQL/Views in SQL.md",
+    "SQL/Materialized View In Postgres SQL.md",
+    "Linux/Miscellaneous Important Commands/ps -aux parameters.png",
+    "Linux/Miscellaneous Important Commands/Linux Clear Cache.md",
+    "SQL/Images/Updating View Constraints.png",
+    "SQL/Updating View Constraints.png",
+    "SQL/Updating View Constrains.png",
+    "SQL/Screenshot from 2025-08-05 15-30-07.png",
+    "Screenshot from 2025-08-05 15-30-07.png",
+    "SQL/Images",
+    "SQL/📌  MySQL Date Functions Cheat sheet.md",
+    "SQL/SQL Window Functions and Aggregate Examples.md",
+    "SQL/SQL SubQueries.md",
+    "SQL/SQL Examples and Explanations.md",
+    "SQL/Most Frequent Functions.md",
+    "SQL/Master Class SQL Tricks Part -2.md",
+    "SQL/Master Class SQL Tricks.md",
+    "SQL/Links.md",
+    "SQL/Lateral Joins.md",
+    "SQL/Advanced SQL Aggregation ( Grouping , Rollup ,Cube).md",
+    "SQL",
+    "Linux/Miscellaneous Important Commands/Clear cache.png",
+    "Technical/SQL/Links.md",
+    "Technical/SQL/Master Class SQL Tricks.md",
+    "Technical/SQL/Lateral Joins.md",
+    "Technical/SQL/Advanced SQL Aggregation ( Grouping , Rollup ,Cube).md",
+    "Technical/SQL/📌  MySQL Date Functions Cheat sheet.md",
+    "Technical/SQL/Most Frequent Functions.md",
+    "Technical/SQL/Master Class SQL Tricks Part -2.md",
+    "Technical/SQL/SQL Examples and Explanations.md",
+    "Technical/SQL/SQL SubQueries.md",
+    "Technical/SQL/SQL Window Functions and Aggregate Examples.md",
+    "Postgres SQL/Create User.md",
+    "Postgres SQL",
+    "Regular Expression/Links.md",
+    "Regular Expression/Images/Screenshot from 2025-08-04 11-18-37.png",
+    "Regular Expression/Images/Screenshot from 2025-08-04 11-17-32.png",
+    "Regular Expression/Images/Screenshot from 2025-08-04 11-17-25.png",
+    "Regular Expression/Images",
+    "Data Science/Kaggle Revision.md",
+    "Regular Expression",
+    "Git and Github/Images",
+    "Data Science",
+    "Git and Github",
+    "Linux/Miscellaneous Important Commands",
+    "Linux/Concept Oriented Files/CHMOD",
+    "Untitled.canvas"
+  ]
+}
