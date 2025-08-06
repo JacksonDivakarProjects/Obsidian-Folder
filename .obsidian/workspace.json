@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SQL/Materialized View In Postgres SQL.md",
+                "file": "Pandas/Pandas Inserting Values.md",
                 "mode": "preview",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Materialized View In Postgres SQL"
+              "title": "Pandas Inserting Values"
             }
           }
         ]
@@ -180,16 +180,31 @@
   },
   "active": "cbbf7ebfa1bbcec8",
   "lastOpenFiles": [
-    "SQL/Views in SQL.md",
+    "Pandas/Pandas .str methods.md",
+    "Pandas/Pandas Inserting Values.md",
+    "Data Science Cheatsheets/Pandas/Pandas_Cheat_Sheet.pdf",
+    "Data Science Cheatsheets/Pandas/Pandas-1.webp",
+    "Data Science Cheatsheets/Pandas_Cheat_Sheet.pdf",
+    "Pandas_Cheat_Sheet.pdf",
+    "Data Science Cheatsheets/Pandas/Pandas-2.webp",
+    "Data Science Cheatsheets/Numpy/Numpy_Cheat_Sheet.pdf",
+    "Data Science Cheatsheets/Numpy/numpy.pdf",
+    "Data Science Cheatsheets/Sklearn/Scikit-Learn_Cheat_Sheet.pdf",
+    "Data Science Cheatsheets/Sklearn",
+    "Data Science Cheatsheets/Pandas",
+    "Data Science Cheatsheets/Numpy/numpy-cheat-sheet.pdf",
+    "Data Science Cheatsheets/Numpy",
+    "Data Science Cheatsheets/Matplotlib/Matplotlib-tips.webp",
+    "Data Science Cheatsheets/Matplotlib/Matplotlib-beginner.webp",
+    "Data Science Cheatsheets/Matplotlib/Matplotlib-intermediate.webp",
     "SQL/Materialized View In Postgres SQL.md",
+    "SQL/Views in SQL.md",
     "Linux/Miscellaneous Important Commands/ps -aux parameters.png",
     "Linux/Miscellaneous Important Commands/Linux Clear Cache.md",
     "SQL/Images/Updating View Constraints.png",
     "SQL/Updating View Constraints.png",
     "SQL/Updating View Constrains.png",
     "SQL/Screenshot from 2025-08-05 15-30-07.png",
-    "Screenshot from 2025-08-05 15-30-07.png",
-    "SQL/Images",
     "SQL/📌  MySQL Date Functions Cheat sheet.md",
     "SQL/SQL Window Functions and Aggregate Examples.md",
     "SQL/SQL SubQueries.md",
@@ -200,8 +215,6 @@
     "SQL/Links.md",
     "SQL/Lateral Joins.md",
     "SQL/Advanced SQL Aggregation ( Grouping , Rollup ,Cube).md",
-    "SQL",
-    "Linux/Miscellaneous Important Commands/Clear cache.png",
     "Technical/SQL/Links.md",
     "Technical/SQL/Master Class SQL Tricks.md",
     "Technical/SQL/Lateral Joins.md",
@@ -213,19 +226,6 @@
     "Technical/SQL/SQL SubQueries.md",
     "Technical/SQL/SQL Window Functions and Aggregate Examples.md",
     "Postgres SQL/Create User.md",
-    "Postgres SQL",
-    "Regular Expression/Links.md",
-    "Regular Expression/Images/Screenshot from 2025-08-04 11-18-37.png",
-    "Regular Expression/Images/Screenshot from 2025-08-04 11-17-32.png",
-    "Regular Expression/Images/Screenshot from 2025-08-04 11-17-25.png",
-    "Regular Expression/Images",
-    "Data Science/Kaggle Revision.md",
-    "Regular Expression",
-    "Git and Github/Images",
-    "Data Science",
-    "Git and Github",
-    "Linux/Miscellaneous Important Commands",
-    "Linux/Concept Oriented Files/CHMOD",
     "Untitled.canvas"
   ]
 }
