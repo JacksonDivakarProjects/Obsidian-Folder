@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Pandas/Pandas Inserting Values.md",
+                "file": "Pandas/Pandas Pivot Table.md",
                 "mode": "preview",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Pandas Inserting Values"
+              "title": "Pandas Pivot Table"
             }
           }
         ]
@@ -180,8 +180,14 @@
   },
   "active": "cbbf7ebfa1bbcec8",
   "lastOpenFiles": [
-    "Pandas/Pandas .str methods.md",
+    "Pandas/Pandas .agg(list).md",
+    "Pandas/Pandas Pivot Table.md",
     "Pandas/Pandas Inserting Values.md",
+    "Pandas/Pandas Groupby Function.md",
+    "Pandas/Pandas Fillna.md",
+    "Pandas/Pandas Dropna.md",
+    "Pandas/Pandas .str methods.md",
+    "Pandas/Pandas Join.md",
     "Data Science Cheatsheets/Pandas/Pandas_Cheat_Sheet.pdf",
     "Data Science Cheatsheets/Pandas/Pandas-1.webp",
     "Data Science Cheatsheets/Pandas_Cheat_Sheet.pdf",
@@ -220,12 +226,6 @@
     "Technical/SQL/Lateral Joins.md",
     "Technical/SQL/Advanced SQL Aggregation ( Grouping , Rollup ,Cube).md",
     "Technical/SQL/📌  MySQL Date Functions Cheat sheet.md",
-    "Technical/SQL/Most Frequent Functions.md",
-    "Technical/SQL/Master Class SQL Tricks Part -2.md",
-    "Technical/SQL/SQL Examples and Explanations.md",
-    "Technical/SQL/SQL SubQueries.md",
-    "Technical/SQL/SQL Window Functions and Aggregate Examples.md",
-    "Postgres SQL/Create User.md",
     "Untitled.canvas"
   ]
 }
