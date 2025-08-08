@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Pandas/Pandas Groupby Function.md",
+                "file": "Pandas/Pandas .agg(list).md",
                 "mode": "preview",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Pandas Groupby Function"
+              "title": "Pandas .agg(list)"
             }
           }
         ]
@@ -180,15 +180,15 @@
   },
   "active": "cbbf7ebfa1bbcec8",
   "lastOpenFiles": [
-    "Pandas/Pandas Inserting Values.md",
+    "Pandas/Pandas Dropna.md",
+    "Pandas/Pandas Fillna.md",
+    "Pandas/Pandas Groupby Function.md",
     "Pandas/Pandas .str methods.md",
     "Pandas/Pandas .melt().md",
+    "Pandas/Pandas .agg(list).md",
+    "Pandas/Pandas Inserting Values.md",
     "Pandas/Pandas Join.md",
     "Pandas/Pandas Pivot Table.md",
-    "Pandas/Pandas .agg(list).md",
-    "Pandas/Pandas Groupby Function.md",
-    "Pandas/Pandas Fillna.md",
-    "Pandas/Pandas Dropna.md",
     "Data Science Cheatsheets/Pandas/Pandas_Cheat_Sheet.pdf",
     "Data Science Cheatsheets/Pandas/Pandas-1.webp",
     "Data Science Cheatsheets/Pandas_Cheat_Sheet.pdf",

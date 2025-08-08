@@ -230,5 +230,49 @@ df.pivot(index='Department', columns='Gender', values='Salary')
     
 
 ---
+## 📌 Pandas Pivot & Pivot Table — Key Notes
 
-Would you like me to create a **project-level mini dashboard** using pivot_table and Streamlit to reinforce this?
+1. **`columns` or `aggfunc` is a must**
+    
+    - In **`pivot()`** → `columns` is required, `aggfunc` not allowed.
+        
+    - In **`pivot_table()`** → `aggfunc` is required **if** duplicate `(index, column)` pairs exist; otherwise defaults to `mean`.
+        
+2. **Index nesting (sub-index)**
+    
+    - When you pass multiple columns to `index=[...]`, Pandas creates a **MultiIndex** on rows.
+        
+    - Example: `index=['region', 'product']` → rows are grouped first by region, then by product.
+        
+3. **Column nesting (sub-columns)**
+    
+    - In `pivot_table()`, if you pass multiple `aggfunc`s or multiple columns to `columns=[...]`, Pandas creates a **MultiIndex** on columns.
+        
+    - Example: `columns=['store', 'year']` → column headers are split into hierarchical levels.
+        
+    - Example: `aggfunc=['mean', 'sum']` → first level = aggfunc, second = value column.
+        
+
+---
+
+### 🧠 Quick Visualization:
+
+**Rows: MultiIndex from multiple `index` args**
+
+```
+region   product
+North    A
+         B
+South    A
+```
+
+**Columns: MultiIndex from multiple `columns` args or aggfuncs**
+
+```
+           mean               sum
+           sales  profit  sales  profit
+```
+
+---
+
+Do you want me to extend these notes into a **pivot vs pivot_table cheat sheet** so you have both in one glance? That would make this bulletproof.
