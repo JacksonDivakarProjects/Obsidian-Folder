@@ -8,7 +8,7 @@
 [[Git and Github]]
 [[Airflow Scheduler]]
 [[Web Scraping]]
-[[Data Engineering Role Notes/Miscellaneous/Miscellaneous|Miscellaneous]]
+[[Data Science/Miscellaneous 1/Miscellaneous|Miscellaneous]]
 [[Excel]]
 
 

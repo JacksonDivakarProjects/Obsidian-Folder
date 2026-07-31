@@ -1,4 +1,4 @@
-**Two documentation types in dbt 
+**Two documentation types in dbt**
 
 ---
 
