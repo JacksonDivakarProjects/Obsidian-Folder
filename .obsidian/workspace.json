@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Claude Code/Introduction to Claude Code.md",
+                "file": "Claude Code/Part 6 Maintaining and Evolving Claude Code Ecosystem.md",
                 "mode": "preview",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Introduction to Claude Code"
+              "title": "Part 6 Maintaining and Evolving Claude Code Ecosystem"
             }
           }
         ]
@@ -181,8 +181,14 @@
   },
   "active": "300a0743f9aa456f",
   "lastOpenFiles": [
-    "Data Engineering Role Notes/Data Engineering Concepts/Methodologies/Kimball Methodology.md",
     "Claude Code/Introduction to Claude Code.md",
+    "Claude Code/Part 6 Maintaining and Evolving Claude Code Ecosystem.md",
+    "Claude Code/Part 1 Agentic Loop and Built in Tools.md",
+    "Claude Code/Part 2 Sub Agent, Operating Modes and Permission Safety Net.md",
+    "Claude Code/Part 3 Memory, Claude.md and the Context Engine.md",
+    "Claude Code/Part 4 Hooks and MCP, The Extension Architecture.md",
+    "Claude Code/Part 5 Custom Commands, IDE Integration and CI CD Automation.md",
+    "Data Engineering Role Notes/Data Engineering Concepts/Methodologies/Kimball Methodology.md",
     "Untitled/desktop.ini",
     "Claude Code",
     "Data Engineering Role Notes/Data Engineering Concepts/Methodologies",
@@ -205,12 +211,6 @@
     "Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 03/Building Models & Materializations.md",
     "Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 02/Configuration Files.md",
     "Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 02/Configs and Variables.md",
-    "Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 01/Foundations & Setup.md",
-    "Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/DBT Topic Links/Sources YAML File.md",
-    "Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/DBT Topic Links/Source Freshness.md",
-    "Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/DBT Topic Links/Snapshots.md",
-    "Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/DBT Topic Links/DBT Generic Test YAML (dbt_utils).md",
-    "Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/DBT Topic Links/Code Gen Package.md",
     "Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Important TBLProperties/desktop.ini"
   ]
 }
