@@ -594,3 +594,6 @@ If you want, I can now generate:
 📈 **A visual flowchart showing how the optimizer picks plans**
 
 Just tell me **which format you want next.**
+
+## 🔗 Related Notes
+- [[Data Science/SQL/SQL Optimization Concepts/Optimization Notes/Query Plan/Query Plan Practice|Query Plan Practice]]

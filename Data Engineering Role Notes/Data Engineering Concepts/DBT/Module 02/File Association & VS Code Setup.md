@@ -120,3 +120,8 @@ You have now optimized your primary development environment for dbt work. By ins
 
 **Ready for the next topic?**
 Type `NEXT` to proceed to **Topic 4: Configs & the Hierarchy (Project, Properties, Block)**, where we'll dive deeper into the practical use of the `{{ config() }}` macro and how different configuration levels interact.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 01/Foundations & Setup|Module 1: Foundations & Setup]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/Jinja/Jinja Templating Fundamentals|Jinja Templating Fundamentals]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 02/Configuration Files|Configuration Files Overview]]

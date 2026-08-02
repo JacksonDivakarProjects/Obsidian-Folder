@@ -160,3 +160,7 @@ Perfect! Let’s combine the **logical flow** we made earlier with all these **i
 If you want, I can now **draw a single clean diagram showing this whole flow**: **Original Data → RDD → Partitions → Tasks → Executors → Stages → Shuffle → Next Stage**, including notes about groupBy, caching, and parallelism.
 
 Do you want me to make that diagram?
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Spark/Joins/Types Of Joins|Types Of Joins]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Spark/Memory Management/Executer Memory Management|Spark Executor Memory Architecture]]

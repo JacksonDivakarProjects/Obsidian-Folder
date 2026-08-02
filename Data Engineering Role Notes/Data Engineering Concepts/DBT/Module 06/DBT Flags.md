@@ -336,3 +336,8 @@ If you want next, I can:
     
 
 Just tell me what you want next 👍
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 06/Difference Between dbt run and dbt build|`dbt run` vs `dbt build`]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 06/Plus Dependency Operator|What `+` Means in dbt Selection]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 05/dbt Node Selection Syntax|dbt Node Selection Syntax]]

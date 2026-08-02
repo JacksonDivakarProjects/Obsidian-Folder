@@ -154,3 +154,8 @@ streaming_df.writeStream \
 If you want, I can make a **diagram showing how `foreachBatch` works with micro-batches, batch_id, and writing** – it’s super helpful for meetings or interviews.
 
 Do you want me to do that?
+
+## 🔗 Related Notes
+- [[Data Science/Pyspark/Pyspark Streaming/Checkpointing And Idempotency|Checkpointing & Idempotency in PySpark Structured Streaming]]
+- [[Data Science/Pyspark/Pyspark Streaming/Output Modes in Streaming|Output Modes in Streaming]]
+- [[Data Science/Pyspark/Pyspark Streaming/Spark Streaming Foundational Concepts|Spark Streaming Foundational Concepts]]

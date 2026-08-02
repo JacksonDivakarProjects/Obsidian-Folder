@@ -355,3 +355,8 @@ Would you like me to prepare a **ready-to-run notebook block** that:
 * And prints skewness comparison side by side?
 
 It’ll be a perfect one-glance visual + code reference.
+
+## 🔗 Related Notes
+- [[Data Science/Data Transformation/Types of Skewness and How to Choose Transformations|Types of Skewness and How to Choose Transformations]]
+- [[Data Science/Data Transformation/Data Transformation|Data Transformation]]
+- [[Data Science/Data Transformation/Data Transformation Images/Data Transformation Images|Data Transformation Images]]

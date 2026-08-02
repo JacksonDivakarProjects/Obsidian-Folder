@@ -125,3 +125,8 @@ Imagine you want a specific model, `models/core/important_model.sql`, to be a ta
 
 **Ready for the next topic?**
 Type `NEXT` to proceed to **Topic 2: Jinja Templating Fundamentals**, where you'll learn how to make your SQL dynamic and powerful.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 02/Configs and Variables|Configs & the Hierarchy]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 01/Foundations & Setup|Module 1: Foundations & Setup]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/Jinja/Jinja Templating Fundamentals|Jinja Templating Fundamentals]]

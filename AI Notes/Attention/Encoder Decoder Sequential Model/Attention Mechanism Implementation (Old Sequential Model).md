@@ -123,3 +123,9 @@ The table above shows **inference** flow for one sentence.
 > `s` = decoder's memory of what it has said so far.  
 > `c` = a weighted blend of source words, where the weights (percentages) come from comparing `s` with each source word.  
 > The decoder adds `c` to `s` to get a new `s`, then uses that to predict the next word.
+
+## 🔗 Related Notes
+- [[AI Notes/Attention/Encoder Decoder Sequential Model/Attention Mechanism High Level Example|Attention Mechanism High Level Example]]
+- [[AI Notes/Attention/Encoder Decoder Sequential Model/Attention Mechanism Part 2 Notes|Attention Mechanism Part 2 Notes]]
+- [[AI Notes/Attention/Common Questions/Vanishing Gradients|Vanishing Gradients]]
+- [[AI Notes/Attention/Common Questions/Exploding Gradients|Exploding Gradients]]

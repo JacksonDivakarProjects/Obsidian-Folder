@@ -312,3 +312,10 @@ If you want next, I can:
     
 
 Say the word.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Linux/AWK/AWK Necessary Guide|AWK — Comprehensive Applied Guide (Real-World Edition)]]
+- [[Data Engineering Role Notes/Linux/AWK/Arrays|AWK Arrays — What You Should Learn (Only What Matters)]]
+- [[Data Engineering Role Notes/Linux/AWK/uniq commands|uniq commands]]
+- [[Data Engineering Role Notes/Linux/Concept Oriented Files/AWK|AWK]]
+- [[Data Engineering Role Notes/Linux/Linux Summary Guide|Linux Masterclass Concepts]]

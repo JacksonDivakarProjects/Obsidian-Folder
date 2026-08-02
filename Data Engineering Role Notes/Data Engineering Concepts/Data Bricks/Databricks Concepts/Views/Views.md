@@ -180,3 +180,8 @@ In the Lakehouse architecture, use prefixes to indicate the layer and content:
 - **Mistake: Overusing Dynamic Views on Dedicated Compute**
     - *Explanation:* Running complex Dynamic Views on older Dedicated Compute clusters (pre-15.4) or without serverless compute can fail or incur unexpected high costs.
     - *Solution:* Check compute requirements before deploying fine-grained access control to production.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Data Bricks/Databricks Concepts/Views/Global Temp Views|Global Temp Views]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Data Bricks/Delta Live Tables/View and Streaming Tables/Difference Between Views and Streaming Tables|Difference Between Views and Streaming Tables]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Data Bricks/Databricks Concepts/Managed Vs External Tables|Managed vs External Tables (Unity Catalog)]]

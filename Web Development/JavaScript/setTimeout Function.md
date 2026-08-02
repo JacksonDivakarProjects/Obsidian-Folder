@@ -56,3 +56,8 @@ const timeoutId = setTimeout(() => {
 
 clearTimeout(timeoutId); // Cancels the timeout
 ```
+
+
+## 🔗 Related Notes
+- [[Web Development/JavaScript/Higher Order Functions and Callback Functions|Higher Order Functions and Callback Functions]]
+- [[Web Development/JavaScript/Event Listeners|Event Listeners in JavaScript]]

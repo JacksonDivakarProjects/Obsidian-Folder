@@ -166,3 +166,8 @@ You now understand that Jinja is the engine for dynamic SQL in dbt. You know the
 
 **Ready for the next topic?**
 Type `NEXT` to proceed to **Topic 3: File Associations & VS Code Setup**, where you'll optimize your development environment for working with Jinja.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/Jinja/Jinja SQL|Jinja in SQL]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/Jinja/Jinja Data Structures|Jinja Data Structures]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/Jinja/Length in Jinja|Length in Jinja]]

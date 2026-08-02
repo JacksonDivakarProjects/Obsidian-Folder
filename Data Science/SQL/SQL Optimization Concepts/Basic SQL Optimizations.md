@@ -68,3 +68,8 @@ This is the video you just asked for. Once you have indexes, the *next* bottlene
 
 This video provides an excellent deep dive into the three join algorithms (Nested Loop, Hash, and Merge) that you'll see in your `EXPLAIN` plans.
 http://googleusercontent.com/youtube_content/4
+
+## 🔗 Related Notes
+- [[Data Science/SQL/SQL Optimization Concepts/Optimization Notes/Working of Index in SQL|Working of Index in SQL]]
+- [[Data Science/SQL/SQL Optimization Concepts/Optimization Notes/Common Pitfalls in Querying|Common Pitfalls in Querying]]
+- [[Data Science/SQL/SQL Optimization Concepts/Joins-Loops-Sorts/Joins-Loops-Sorts|Joins-Loops-Sorts]]

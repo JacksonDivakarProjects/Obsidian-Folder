@@ -111,3 +111,7 @@ FROM employees;
 ---
 
 These examples demonstrate how to leverage window functions along with parameters, CASE logic, and aggregate functions to perform complex analytical queries. Adjust the partitioning and ordering as needed for your specific dataset and analysis requirements.
+
+## 🔗 Related Notes
+- [[Data Science/SQL/Window Functions/SQL Window Function - 2|Comprehensive Guide to SQL Window Functions]]
+- [[Data Science/SQL/Tricks and Tips/Group By and Having Tricks|Group By and Having Tricks]]

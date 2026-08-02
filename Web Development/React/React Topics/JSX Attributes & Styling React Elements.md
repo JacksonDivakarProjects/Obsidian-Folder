@@ -945,3 +945,8 @@ function Notification({ type, message, duration, onClose }) {
 ---
 
 **Ready for Topic 9: "Inline Styling for React Elements"?**
+
+## 🔗 Related Notes
+- [[Web Development/React/React Topics/Inline Styling for React Elements|Inline Styling for React Elements]]
+- [[Web Development/React/JSX/JSX Guide|JSX Guide]]
+- [[Web Development/React/React Topics/Introduction to JSX and Babel|Introduction to JSX and Babel]]

@@ -138,3 +138,8 @@ select {{ cols | join(", ") }} from table
 - Lists + dicts dominate real-world Jinja/dbt usage.
     
 - Control flow mirrors Python with reduced mutability and no custom class definitions.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/Jinja/Jinja Templating Fundamentals|Jinja Templating Fundamentals]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/Jinja/Jinja SQL|Jinja in SQL]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/Jinja/Length in Jinja|Length in Jinja]]

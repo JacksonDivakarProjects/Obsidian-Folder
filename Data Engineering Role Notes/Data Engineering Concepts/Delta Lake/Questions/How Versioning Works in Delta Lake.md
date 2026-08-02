@@ -115,3 +115,8 @@ It’s a **balance between storage cost and reproducibility**.
 ---
 
 Would you like me to include a short visual flow (like how `write → commit → time travel → vacuum` affects versions) to make this even clearer?
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/ACID Property/Durability in Delta Lake|Durability in Delta Lake]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Important TBLProperties/Table Utility Commands|Delta Lake Table Utility Commands]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Important TBLProperties/Change Data Feed|Delta Lake – Change Data Feed]]

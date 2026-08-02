@@ -259,3 +259,9 @@ Treat `CLAUDE.md` like code. Review it in PRs. As the project evolves, so should
 ---
 
 Part 3 complete. This covers the entire memory architecture—how Claude knows your world and how to keep that knowledge intact across sessions, sub‑agents, and long tasks. Next in Part 4, we can tackle Hooks and MCP (Model Context Protocol)—the extension points that let you program Claude Code’s behavior and connect it to external systems. Ready when you are.
+
+## 🔗 Related Notes
+- [[Claude Code/Part 1 Agentic Loop and Built in Tools|Deep Dive: The Agentic Loop & Built-in Tools]]
+- [[Claude Code/Part 2 Sub Agent, Operating Modes and Permission Safety Net|Part 2 – Sub-Agents, Operating Modes & the Permission Safety Net]]
+- [[Claude Code/Part 4 Hooks and MCP, The Extension Architecture|Part 4 – Hooks & MCP: The Extension Architecture]]
+- [[Claude Code/Part 6 Maintaining and Evolving Claude Code Ecosystem|Part 6 – Maintaining & Evolving Your Claude Code Ecosystem]]

@@ -74,3 +74,7 @@ Enter the password you set.
 ---
 
 If you want, I can give a **ready-to-use command sequence to set up MySQL root + a dedicated Workbench user + login test** so you can start using Workbench immediately. Do you want me to do that?
+
+## 🔗 Related Notes
+- [[Laptop Level Notes/MySQL Configuration/MySQL Workbench|MySQL Workbench]]
+- [[Laptop Level Notes/Postgres SQL/Posgres Install & Create User|Posgres Install & Create User]]

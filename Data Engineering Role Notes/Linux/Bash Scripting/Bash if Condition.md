@@ -297,3 +297,7 @@ If you want next:
     
 
 Say the word.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Linux/Bash Scripting/Looping Conditions|The Beginner's Complete Guide to Bash Loops]]
+- [[Data Engineering Role Notes/Linux/Linux Summary Guide|Linux Masterclass Concepts]]

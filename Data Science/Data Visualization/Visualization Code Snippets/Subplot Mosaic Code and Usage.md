@@ -269,3 +269,7 @@ It empowers engineers, analysts, and scientists to build **high-impact visual da
 
 Would you like me to turn this into a **notebook-ready HTML version** (with styled headings, collapsible sections, and syntax-highlighted code) for your portfolio or Kaggle notes?
 That would make it look like an official learning document or a visualization reference guide.
+
+## 🔗 Related Notes
+- [[Data Science/Data Visualization/Data Science Visualization|Data Science Visualization]]
+- [[Data Science/Data Visualization/Visualization Code Snippets/Visualization Code Snippets|Visualization Code Snippets]]

@@ -739,3 +739,8 @@ const renderComponent = () => {
 ---
 
 **Ready for Topic 29: "Conditional Rendering Practice"?**
+
+## 🔗 Related Notes
+- [[Web Development/React/React Topics/Mapping Data to Components|Mapping Data to Components]]
+- [[Web Development/React/React Topics/React Hooks|React Hooks - useState]]
+- [[Web Development/React/React Topics/State in React - Declarative vs. Imperative Programming|State in React (Declarative vs Imperative)]]

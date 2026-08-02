@@ -172,3 +172,7 @@ If you want, I can walk you through:
 ✔ or a **visual diagram** of the index traversal path
 
 Just say **“show example”** or **“show diagram”**.
+
+## 🔗 Related Notes
+- [[Data Science/SQL/SQL Optimization Concepts/Table Scan Types/Bitmap Scan/Bitmap Index Scan|Bitmap Index Scan]]
+- [[Data Science/SQL/SQL Optimization Concepts/Table Scan Types/Index and Index Only Scan|Comprehensive Guide: Index Scan vs Index-Only Scan in SQL]]

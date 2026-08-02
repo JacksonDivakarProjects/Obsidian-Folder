@@ -651,3 +651,7 @@ CREATE EXTERNAL VOLUME iot.raw.device_logs
 Use **managed volumes** for Databricks‑only workflows; use **external volumes** when files must be shared with external systems. Always pair volumes with Delta tables for tabular data – volumes are not a replacement for tables, but a complement for file storage.
 
 For further reading, refer to the official Databricks documentation on [What are Unity Catalog volumes?](https://docs.databricks.com/en/volumes/index.html) and the [SQL reference for volumes](https://docs.databricks.com/en/sql/language-manual/sql-ref-volumes.html).
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Data Bricks/Databricks Concepts/Managed Vs External Tables|Managed vs External Tables (Unity Catalog)]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Data Bricks/Databricks Concepts/Views/Views|Views]]

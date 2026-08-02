@@ -194,3 +194,7 @@ WHERE price > ANY (10, 20, 30)  -- Must be >10
 - [ ] **_ ** matches exactly one character
 
 This guide focuses on practical applications you'll actually use in real SQL queries. Master these patterns, and you'll handle 90% of use cases for these keywords!
+
+## 🔗 Related Notes
+- [[Data Science/SQL/SQL SubQueries/SQL SubQueries|Comprehensive Guide to SQL Subqueries]]
+- [[Data Science/SQL/Other Keywords/SQL Exists and Not Exists|SQL EXISTS & NOT EXISTS: Quick Revision Guide]]

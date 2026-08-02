@@ -316,3 +316,8 @@ trigger = TriggerDagRunOperator(
 ---
 
 Would you like me to follow this up with a **"Top 5 Airflow Operators interview questions and answers"** (focused for data engineers)? It’ll help you speak confidently in interviews and meetings.
+
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Airflow Scheduler/Level -1 Airflow Scheduler Guide|Comprehensive Apache Airflow Scheduler Guide for Beginners]]
+- [[Data Engineering Role Notes/Airflow Scheduler/Airflow Installation|🚀 Apache Airflow: Complete Installation & Troubleshooting Guide (Local Virtualenv)]]

@@ -136,3 +136,9 @@ It’s crucial for **professional communication**, reporting progress, and discu
 Jack, if you like, I can create a **visual one-page chart comparing Simple Present, Present Continuous, and Present Perfect**, showing **structure, usage, and signal words**. This will help you **quickly pick the right tense in meetings or emails**.
 
 Do you want me to make that chart?
+
+## 🔗 Related Notes
+- [[English Communication/Tenses/Present Tense/Simple Present Tense|Simple Present Tense]]
+- [[English Communication/Tenses/Present Tense/Present Perfect Continuous|Present Perfect Continuous Tense]]
+- [[English Communication/Tenses/Past Tense/Past Perfect Tense|Past Perfect Tense]]
+- [[English Communication/Tenses/Summary|Tenses Summary]]

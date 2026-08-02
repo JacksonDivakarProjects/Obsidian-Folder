@@ -656,3 +656,8 @@ function Button({
 ---
 
 **Ready for Topic 21: "React Props Practice"?**
+
+## 🔗 Related Notes
+- [[Web Development/React/React Topics/React Components|React Components]]
+- [[Web Development/React/React Topics/JavaScript ES6 Object & Array Destructuring|JavaScript ES6 Object & Array Destructuring]]
+- [[Web Development/React/React Topics/State in React - Declarative vs. Imperative Programming|State in React (Declarative vs Imperative)]]

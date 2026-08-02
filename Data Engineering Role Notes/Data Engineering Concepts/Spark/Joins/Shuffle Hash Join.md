@@ -92,3 +92,7 @@ The **shuffle step handles grouping by key**, and the **hash join logic expands 
 ---
 
 Do you want me to also **draw a mini diagram (ASCII-style)** of how the shuffle → hash table → probe happens with duplicates? That makes it 100% crystal clear.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Spark/Joins/Types Of Joins|Types Of Joins]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Spark/Memory Management/Executer OOM with Salting|Executor OOM in Spark (with Salting)]]

@@ -175,3 +175,8 @@ delta_table.alias("target").merge(
 If you want, I can make a **diagram showing streaming → foreachBatch → Delta merge workflow**, which makes it visually crystal clear for presentations or interviews.
 
 Do you want me to create that diagram?
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Delta Lake Commands in Different APIs/Delta Lake Commands in Python API with Spark|Delta Lake Commands in Python API with Spark]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Other Important Concepts/Schema Operations|Schema Management in Spark/Delta Lake]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Miscellaneous/Data Modeling|Data Modelling Masterclass for Data Engineers]]

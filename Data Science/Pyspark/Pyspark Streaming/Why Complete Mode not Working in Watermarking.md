@@ -122,3 +122,8 @@ agg_df.writeStream \
 If you want, I can create a **diagram showing why complete mode fails with watermarking** and how update/append modes work instead — it makes this super clear visually.
 
 Do you want me to make that diagram?
+
+## 🔗 Related Notes
+- [[Data Science/Pyspark/Pyspark Streaming/Watermarking in Streaming|Watermarking in PySpark Structured Streaming]]
+- [[Data Science/Pyspark/Pyspark Streaming/Output Modes in Streaming|Output Modes in Streaming]]
+- [[Data Science/Pyspark/Pyspark Streaming/Types Of Windows|Window Operations in PySpark Structured Streaming]]

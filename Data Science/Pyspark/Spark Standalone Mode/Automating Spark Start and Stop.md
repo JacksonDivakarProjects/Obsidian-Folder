@@ -131,3 +131,6 @@ spark-status
 ---
 
 Jack, do you also want me to extend the **start script** so you can customize cores and memory per worker _on the fly_ (e.g. `spark-start 3 4 6G` → 3 workers, 4 cores each, 6 GB memory)?
+
+## 🔗 Related Notes
+- [[Data Science/Pyspark/Spark Standalone Mode/Spark Installation|🚀 Comprehensive Guide: Spark Standalone (Multiple Workers, Single Machine)]]

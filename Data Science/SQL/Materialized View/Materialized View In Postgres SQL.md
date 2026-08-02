@@ -122,3 +122,7 @@ To modify data, update the base tables and then refresh the materialized view.
 ---
 
 Let me know if you want to simulate materialized views in MySQL using tables + triggers.
+
+## 🔗 Related Notes
+- [[Data Science/SQL/Views in SQL/Views in SQL|SQL Views – The Complete Guide]]
+- [[Data Science/SQL/SQL Optimization Concepts/Basic SQL Optimizations|Basic SQL Optimizations]]

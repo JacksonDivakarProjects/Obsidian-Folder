@@ -52,3 +52,7 @@ In summary, hash joins are a powerful and efficient way for databases to combine
 8. [https://www.w3schools.com/sql/sql_join_full.asp](https://www.w3schools.com/sql/sql_join_full.asp)
 9. [https://mode.com/sql-tutorial/sql-joins-where-vs-on/](https://mode.com/sql-tutorial/sql-joins-where-vs-on/)
 10. [https://www.datacamp.com/tutorial/sql-update-with-join](https://www.datacamp.com/tutorial/sql-update-with-join)
+
+## 🔗 Related Notes
+- [[Data Science/SQL/SQL Optimization Concepts/Joins-Loops-Sorts/Merge Joins|Merge Joins]]
+- [[Data Science/SQL/SQL Optimization Concepts/Joins-Loops-Sorts/Nested Loops in SQL|Comprehensive Guide to Nested Loops in SQL]]

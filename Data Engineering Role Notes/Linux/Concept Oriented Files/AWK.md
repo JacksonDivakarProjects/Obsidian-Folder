@@ -144,3 +144,9 @@ awk '{ print NR, $0 }' file.txt
 ---
 
 Let me know if you want a **deep dive on advanced `awk` scripting**, or comparison with `cut`, `sed`, etc.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Linux/AWK/AWK - Comprehensive Practical Guide|AWK — Comprehensive Practical Guide]]
+- [[Data Engineering Role Notes/Linux/AWK/AWK Necessary Guide|AWK — Comprehensive Applied Guide (Real-World Edition)]]
+- [[Data Engineering Role Notes/Linux/AWK/Arrays|AWK Arrays — What You Should Learn (Only What Matters)]]
+- [[Data Engineering Role Notes/Linux/Concept Oriented Files/Find Command|Find Command]]

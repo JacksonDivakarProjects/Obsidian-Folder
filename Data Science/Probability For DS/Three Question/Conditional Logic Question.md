@@ -156,3 +156,8 @@ When you see a Conditional Probability result, you must ask: **"Is the populatio
     - If **No**: The feature is useless.
         
 3. **Check the Volume:** Are there enough people in that "filtered" group? If it's less than 30-50, the probability is unreliable.
+
+## 🔗 Related Notes
+- [[Data Science/Probability For DS/Three Question/Distributions Question|Distributions Question]]
+- [[Data Science/Probability For DS/Difference Between Correlation and Bayes' Theorem|Difference Between Correlation and Bayes' Theorem]]
+- [[Data Science/Probability For DS/Probability Topics List|Probability Topics List]]

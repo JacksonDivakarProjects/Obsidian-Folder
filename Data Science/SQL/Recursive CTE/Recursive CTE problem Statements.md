@@ -137,3 +137,7 @@ If you want, I can also provide:
 ✔ More advanced real-world scenarios (e.g., graph traversal, lineage tracking, audit trails)
 
 Just tell me **“give answers”** and I’ll deliver polished, ready-to-run solutions.
+
+## 🔗 Related Notes
+- [[Data Science/SQL/Recursive CTE/Recursive CTE Notes|Comprehensive Recursive CTE Guide]]
+- [[Data Science/SQL/Recursive CTE/Recursive CTE Interview Patterns|Most Used Recursive CTE Questions in Companies]]

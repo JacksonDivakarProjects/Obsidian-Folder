@@ -508,3 +508,8 @@ If files disappear, the table was actually **managed** (no `LOCATION` was specif
 ---
 
 *This guide assumes Unity Catalog is enabled and you have the necessary privileges (`CREATE CATALOG`, `CREATE SCHEMA`, `CREATE TABLE`, `CREATE EXTERNAL LOCATION`, etc.). For S3, replace `abfss://container@account.dfs.core.windows.net/...` with `s3://bucket/...` and use AWS IAM roles for storage credentials.*
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Data Bricks/Databricks Concepts/Volumes|Comprehensive Guide to Volumes in Databricks Unity Catalog]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Other Important Concepts/Open Table Format|Open Table Format]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Other Important Concepts/Delta Lake Uniform Format|Delta Lake Uniform Format (UniForm)]]

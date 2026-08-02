@@ -96,3 +96,9 @@ This is the most critical section for day-to-day work.
 6.  **Get Comfortable with Deployment**: Learn to use `spark-submit` and read the Web UI.
 
 This roadmap will give you a very strong foundation for using PySpark effectively in both data engineering and data science roles.
+
+## 🔗 Related Notes
+- [[Data Science/Pyspark/Basic DataFrame Operation|Basic DataFrame Operation]]
+- [[Data Science/Pyspark/Performance & Optimisation in Pyspark|Performance & Optimisation in Pyspark]]
+- [[Data Science/Pyspark/Spark RDD|Spark RDD]]
+- [[Data Science/Pyspark/Pyspark Streaming/Pyspark Streaming|Pyspark Streaming]]

@@ -222,3 +222,9 @@ final_df = (raw_df
             .orderBy(F.col("revenue").desc())
            )
 ```
+
+## 🔗 Related Notes
+- [[Data Science/Pyspark/Aggregation and Window Function|Aggregation and Window Function]]
+- [[Data Science/Pyspark/Handling Missing Values|Handling Missing Values]]
+- [[Data Science/Pyspark/Functions in Pyspark|Functions in Pyspark]]
+- [[Data Science/Pyspark/Joining DataFrames|Joining DataFrames]]

@@ -367,3 +367,8 @@ If you want, I can turn this into:
 💼 A study deck for interviews
 
 Just tell me which format you prefer.
+
+## 🔗 Related Notes
+- [[Data Science/SQL/SQL Optimization Concepts/Optimization Notes/Common Pitfalls in Querying|Common Pitfalls in Querying]]
+- [[Data Science/SQL/SQL Optimization Concepts/Optimization Notes/Role in SQL|Role in SQL]]
+- [[Data Science/SQL/SQL Optimization Concepts/Optimization Notes/Working of Index in SQL|Working of Index in SQL]]

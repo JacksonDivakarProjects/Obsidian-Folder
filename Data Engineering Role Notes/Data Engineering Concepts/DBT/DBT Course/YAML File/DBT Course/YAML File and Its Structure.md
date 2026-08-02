@@ -177,3 +177,8 @@ YAML declares **what**.
 ## One-line summary
 
 YAML is a human-readable format used to **configure systems, declare tests, and document data structures**, without containing logic or execution.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/YAML File/DBT Course/Types of YAML File|Types of YAML File]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/YAML File/Dash in YAML|Dash in YAML]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/Documentation/Documentation in YAML|Documentation in YAML]]

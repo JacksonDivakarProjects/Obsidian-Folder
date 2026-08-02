@@ -406,3 +406,7 @@ Index → find row locations
 Bitmap → group by blocks
 Heap → read those blocks efficiently
 ```
+
+## 🔗 Related Notes
+- [[Data Science/SQL/SQL Optimization Concepts/Table Scan Types/Bitmap Scan/Bitmap Heap Scan|Comprehensive Guide: Bitmap Heap Scan in PostgreSQL]]
+- [[Data Science/SQL/SQL Optimization Concepts/Table Scan Types/Bitmap Scan/Bitmap Index Scan|Bitmap Index Scan]]

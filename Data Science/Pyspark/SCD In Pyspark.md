@@ -261,3 +261,8 @@ def incremental_scd_processing(existing_path, updates_path, scd_type=2):
 ```
 
 This guide provides practical, runnable PySpark code for all three SCD types without requiring advanced concepts like Delta Lake. You can use these patterns as building blocks for your data pipelines!
+
+## 🔗 Related Notes
+- [[Data Science/Pyspark/Joining DataFrames|Joining DataFrames]]
+- [[Data Science/Pyspark/Broadcasting in Pyspark|Broadcasting in Pyspark]]
+- [[Data Science/Pyspark/Pyspark Programs|Pyspark Programs]]

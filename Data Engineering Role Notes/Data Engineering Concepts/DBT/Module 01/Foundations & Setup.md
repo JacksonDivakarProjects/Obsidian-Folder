@@ -196,3 +196,9 @@ WHERE is_active = true
 
 **Ready to proceed to Module 2: Configuration & Jinja Templating?**  
 *Type `NEXT` to continue or `REVIEW` to go over any topic again.*
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Syllabus|dbt Learning Syllabus]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 02/Configuration Files|Configuration Files Overview]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 02/File Association & VS Code Setup|File Associations & VS Code Setup]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 03/Building Models & Materializations|Building Models & Materializations]]

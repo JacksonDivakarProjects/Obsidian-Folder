@@ -217,3 +217,8 @@ agg_df = df.withWatermark("timestamp", "5 minutes") \
 If you want, I can make a **diagram showing Tumbling, Sliding, and Session windows with timestamps and overlapping behavior**, which visually explains how events fall into windows. This is extremely helpful for interviews or presentations.
 
 Do you want me to create that diagram?
+
+## 🔗 Related Notes
+- [[Data Science/Pyspark/Pyspark Streaming/Watermarking in Streaming|Watermarking in PySpark Structured Streaming]]
+- [[Data Science/Pyspark/Pyspark Streaming/Output Modes in Streaming|Output Modes in Streaming]]
+- [[Data Science/Pyspark/Pyspark Streaming/Spark Streaming Foundational Concepts|Spark Streaming Foundational Concepts]]

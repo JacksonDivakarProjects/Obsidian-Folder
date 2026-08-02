@@ -85,3 +85,8 @@ print(data_copy)  # {'name': 'Alice', 'age': 30}
 ---
 
 If you want, I can also explain **why `.toPandas()` triggers massive serialization/deserialization** and why it’s slow for large datasets. That’s a key gotcha in Spark.
+
+## 🔗 Related Notes
+- [[Data Science/Pyspark/Performance & Optimisation in Pyspark|Performance & Optimisation in Pyspark]]
+- [[Data Science/Pyspark/Spark RDD|Spark RDD]]
+- [[Data Science/Pyspark/Functions in Pyspark|Functions in Pyspark]]

@@ -85,3 +85,7 @@ Let me know if you want to see a practical query example, advice for specific da
 7. [https://postgrespro.com/blog/pgsql/5969403](https://postgrespro.com/blog/pgsql/5969403)
 8. [https://www.zen8labs.com/insights/development/sql/postgresql-scan-types-what-are-they/](https://www.zen8labs.com/insights/development/sql/postgresql-scan-types-what-are-they/)
 9. [https://www.postgresql.org/docs/current/using-explain.html](https://www.postgresql.org/docs/current/using-explain.html)
+
+## 🔗 Related Notes
+- [[Data Science/SQL/SQL Optimization Concepts/Table Scan Types/Bitmap Scan/Bitmap Heap Scan|Comprehensive Guide: Bitmap Heap Scan in PostgreSQL]]
+- [[Data Science/SQL/SQL Optimization Concepts/Table Scan Types/Index and Index Only Scan|Comprehensive Guide: Index Scan vs Index-Only Scan in SQL]]

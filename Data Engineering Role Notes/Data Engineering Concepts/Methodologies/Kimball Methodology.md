@@ -711,3 +711,8 @@ models/
 ```
 
 Since you're learning **dbt**, understanding Kimball's dimensional modeling will help you design marts that are easy to maintain, performant for analytics, and intuitive for business users. The key principles to remember are: **declare the grain first, model facts and dimensions separately, use star schemas, create conformed dimensions, and preserve history where needed with SCDs**.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Miscellaneous/Data Modeling|Data Modelling Masterclass for Data Engineers]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Spark/Miscellaneous/Types of Fact Table|Types of Fact Tables in Data Warehousing]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Miscellaneous/Fundamentals Of Data Engineering|Fundamentals Of Data Engineering]]

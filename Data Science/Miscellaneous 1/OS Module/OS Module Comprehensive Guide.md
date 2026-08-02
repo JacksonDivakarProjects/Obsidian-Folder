@@ -229,3 +229,7 @@ shutil.rmtree("backup/")       # delete directory with files
 ---
 
 Would you like me to create a **ready-to-use HTML note version** of this (with headings, code blocks, and formatted styling) so you can directly use it in your notebook or Kaggle environment?
+
+## 🔗 Related Notes
+- [[Data Science/Miscellaneous 1/File Handling In Python/File Handling Guide|Comprehensive Guide to File Handling in Python]]
+- [[Data Science/Miscellaneous 1/File Handling In Python/File Modes|Comprehensive Guide to File Modes in Python]]

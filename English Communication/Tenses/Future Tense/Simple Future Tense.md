@@ -136,3 +136,8 @@ It’s frequently used in **professional communication, planning, and forecastin
 Jack, once you’re ready, I can make a **full visual comparative chart of all tenses**—**present, past, and future**—including **structure, usage, signal words, and examples**. It will be perfect for **quick professional reference and emails/meetings**.
 
 Do you want me to make that chart?
+
+## 🔗 Related Notes
+- [[English Communication/Tenses/Present Tense/Simple Present Tense|Simple Present Tense]]
+- [[English Communication/Tenses/Past Tense/Simple Past Tense|Simple Past Tense]]
+- [[English Communication/Tenses/Summary|Tenses Summary]]

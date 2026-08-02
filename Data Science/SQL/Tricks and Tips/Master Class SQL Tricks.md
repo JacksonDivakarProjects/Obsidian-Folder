@@ -329,3 +329,7 @@ FROM immediate_orders;
 ```
 
 Keep this masterclass guide handy and update it as you learn new techniques or encounter edge cases. Good luck with your SQL mastery and interviews!
+
+## 🔗 Related Notes
+- [[Data Science/SQL/Tricks and Tips/Master Class SQL Tricks Part -2|Master Class SQL Tricks Part -2]]
+- [[Data Science/SQL/Tricks and Tips/Group By and Having Tricks|Group By and Having Tricks]]

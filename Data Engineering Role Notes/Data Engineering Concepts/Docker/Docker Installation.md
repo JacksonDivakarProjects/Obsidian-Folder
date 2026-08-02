@@ -53,3 +53,7 @@ This gives you a lightweight Docker CLI setup without the Desktop overhead. [DEV
 ✅ **Tip:** If you’re just starting out, Docker Desktop is easier and integrates smoothly with Windows. If you want a leaner setup or need to avoid licensing restrictions, go with the WSL-based CLI installation.
 
 Do you want me to walk you through the **WSL setup step-by-step**, or are you leaning toward the **Docker Desktop route**?
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Docker/Docker Hub Practice|Docker Beginner's Guide: Login, Create Image, Push & Pull]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Docker/Users and Groups/Users and Groups Syntax|Users and Groups Syntax]]

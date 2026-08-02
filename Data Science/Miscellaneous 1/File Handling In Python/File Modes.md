@@ -424,3 +424,7 @@ file.close()  # Might forget to close
 ```
 
 Understanding file modes thoroughly will help you avoid common pitfalls like accidental file overwrites and ensure your file operations are efficient and safe.
+
+## 🔗 Related Notes
+- [[Data Science/Miscellaneous 1/File Handling In Python/File Handling Guide|Comprehensive Guide to File Handling in Python]]
+- [[Data Science/Miscellaneous 1/OS Module/OS Module Comprehensive Guide|OS Module Comprehensive Guide]]

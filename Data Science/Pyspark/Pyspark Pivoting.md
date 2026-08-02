@@ -356,3 +356,8 @@ traditional_approach.show()
 6.  **Combine with other functions:** Pivot works well with aggregations, window functions, and data cleaning operations
 
 This comprehensive guide covers everything from basic syntax to advanced real-world applications of pivot operations in PySpark!
+
+## 🔗 Related Notes
+- [[Data Science/Pyspark/Aggregation and Window Function|Aggregation and Window Function]]
+- [[Data Science/Pyspark/Basic DataFrame Operation|Basic DataFrame Operation]]
+- [[Data Science/Pyspark/Pyspark Programs|Pyspark Programs]]

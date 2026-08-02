@@ -75,3 +75,7 @@ Then `collect()` gives:
 ---
 
 👉 Do you want me to give you a **rule of thumb** guide on _when to use `.collect()` vs `.toPandas()` vs `.show()`_?
+
+## 🔗 Related Notes
+- [[Data Science/Pyspark/Spark RDD|Spark RDD]]
+- [[Data Science/Pyspark/Basic DataFrame Operation|Basic DataFrame Operation]]

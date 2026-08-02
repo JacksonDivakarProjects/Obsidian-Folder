@@ -199,3 +199,9 @@ You've learned that **Custom Generic Tests** transform repeated, complex validat
 
 **Ready to learn how to control the impact of test failures?**
 Type `NEXT` to proceed to **Topic 4: Test Execution, Severity & the dbt build Command**, where we'll cover configuring test warnings vs. errors and combining run and test operations.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 04/Generic Tests & Their Types|Generic Tests & Their Types]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 04/Singular Tests|Singular Tests]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 04/Test Execution, Severity & the `dbt build` Command|Test Execution, Severity & the dbt build Command]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/Tests In DBT/Tests in DBT|Tests in DBT]]

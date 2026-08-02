@@ -41,3 +41,7 @@ Correcting a left tail is a two-step process:
 * **Extreme:** Reflect, then inverse ($y = 1 / (k-x)$)
 
 In summary, this table is a statistical "cheat sheet" that helps you choose the right mathematical function to apply to your data to make it more symmetrical, based on the direction and severity of its skew.
+
+## 🔗 Related Notes
+- [[Data Science/Data Transformation/Common Transformations|Comprehensive Guide to Data Transformations in Pandas]]
+- [[Data Science/Data Transformation/Data Transformation Images/Data Transformation Images|Data Transformation Images]]

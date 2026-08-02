@@ -210,3 +210,7 @@ Use variables inside Jinja.
 Never confuse variables with data.**
 
 That is the complete and correct mental model.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 02/Configs and Variables|Configs & the Hierarchy]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 06/DBT Flags|dbt Flags That Actually Matter]]

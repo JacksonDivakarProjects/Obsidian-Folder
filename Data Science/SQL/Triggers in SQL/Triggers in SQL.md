@@ -261,3 +261,7 @@ This covers **100% of what you need for interviews and real projects at your cur
 ---
 
 If you want, I can also create a **10-minute practice sheet** with exercises, or build a **visual chart** summarizing everything.
+
+## 🔗 Related Notes
+- [[Data Science/SQL/Stored Procedures in Postgres/Stored Procedures Notes|Comprehensive Beginner's Guide to PostgreSQL Stored Procedures]]
+- [[Data Science/SQL/Views in SQL/Views in SQL|SQL Views – The Complete Guide]]

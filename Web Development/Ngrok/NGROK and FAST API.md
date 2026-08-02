@@ -221,3 +221,7 @@ sudo systemctl enable --now fastapi.service
 ---
 
 Would you like me to add a **single combined script (bash)** that installs everything and starts both services automatically?
+
+## 🔗 Related Notes
+- [[Web Development/Ngrok/Ngrok|Ngrok]]
+- [[Web Development/Ngrok/Ngrok and Express.js|Comprehensive Guide: Setting Up Ngrok in Linux for an Express.js Server]]

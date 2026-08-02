@@ -42,3 +42,7 @@ Of course. Based on your goal to learn Apache Spark with Python (PySpark), here 
     
 
 This combination will give you a well-rounded and practical education in PySpark.
+
+## 🔗 Related Notes
+- [[Future Study Plan/Ansh Lamba Tutorial Order|Ansh Lamba Tutorial Order]]
+- [[Future Study Plan/AI Data Engineer|AI Data Engineer]]

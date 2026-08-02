@@ -281,3 +281,8 @@ sql_api.explain()
 ```
 
 This flexibility allows you to choose the right tool for each task in your data processing workflow!
+
+## 🔗 Related Notes
+- [[Data Science/Pyspark/Aggregation and Window Function|Aggregation and Window Function]]
+- [[Data Science/Pyspark/Joining DataFrames|Joining DataFrames]]
+- [[Data Science/Pyspark/Pyspark Pivoting|Pyspark Pivoting]]

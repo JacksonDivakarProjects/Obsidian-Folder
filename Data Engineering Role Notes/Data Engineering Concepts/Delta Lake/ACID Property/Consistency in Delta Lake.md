@@ -108,3 +108,8 @@ So, in short:
 ---
 
 Would you like me to show a **real-world scenario** of a failed concurrent write and how Delta resolves it (using OCC)? That makes consistency super tangible.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/ACID Property/Atomicity in Delta Lake|Atomicity in Delta Lake]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/ACID Property/Isolation in Delta Lake|Isolation in Delta Lake]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/ACID Property/Durability in Delta Lake|Durability in Delta Lake]]

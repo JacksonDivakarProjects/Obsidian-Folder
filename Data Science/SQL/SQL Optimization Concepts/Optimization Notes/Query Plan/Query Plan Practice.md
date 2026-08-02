@@ -363,3 +363,6 @@ If you want, I can also give you:
 🎯 **A checklist for reading plans like a senior engineer**
 
 Just tell me **“give me more plans”** or **“give me the diagram.”**
+
+## 🔗 Related Notes
+- [[Data Science/SQL/SQL Optimization Concepts/Optimization Notes/Query Plan/Query Plan Practice -2|SQL EXECUTION PLAN LIBRARY (20 Real World Examples)]]

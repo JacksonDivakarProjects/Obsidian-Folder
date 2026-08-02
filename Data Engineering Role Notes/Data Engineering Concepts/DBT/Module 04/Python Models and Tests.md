@@ -452,3 +452,8 @@ git clone https://github.com/dbt-labs/dbt-python-model-example
 **Remember:** dbt Python is **NOT** for replacing all SQL. It's for specific use cases where Python is clearly better. Start with SQL, add Python only when needed!
 
 Want me to dive deeper into any specific aspect?
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 04/Generic Tests & Their Types|Generic Tests & Their Types]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 03/Building Models & Materializations|Building Models & Materializations]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 04/Test Execution, Severity & the `dbt build` Command|Test Execution, Severity & the dbt build Command]]

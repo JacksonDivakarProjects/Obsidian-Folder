@@ -494,3 +494,7 @@ logger.info("This is a log message")
 ```
 
 This comprehensive guide covers all essential aspects of file handling in Python. Remember to always handle files responsibly by closing them properly and implementing error handling to make your code robust and reliable.
+
+## 🔗 Related Notes
+- [[Data Science/Miscellaneous 1/File Handling In Python/File Modes|Comprehensive Guide to File Modes in Python]]
+- [[Data Science/Miscellaneous 1/OS Module/OS Module Comprehensive Guide|OS Module Comprehensive Guide]]

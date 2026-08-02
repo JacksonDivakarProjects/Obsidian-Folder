@@ -168,3 +168,8 @@ If you notice Claude re‑reading files excessively, the context window may be f
 ---
 
 This is the engine. Master it, and everything else (hooks, MCP, custom commands) becomes a simple extension of this loop. If you want me to go deeper into any tool’s internal behavior (like how `Edit` handles ambiguous matches with examples, or the exact Bash sandboxing internals), just say the word. Otherwise, ready for Part 2.
+
+## 🔗 Related Notes
+- [[Claude Code/Introduction to Claude Code|Claude Code – The Pareto Reference (Maximum Output)]]
+- [[Claude Code/Part 2 Sub Agent, Operating Modes and Permission Safety Net|Part 2 – Sub-Agents, Operating Modes & the Permission Safety Net]]
+- [[Claude Code/Part 3 Memory, Claude.md and the Context Engine|Part 3 – Memory, CLAUDE.md, and the Context Engine]]

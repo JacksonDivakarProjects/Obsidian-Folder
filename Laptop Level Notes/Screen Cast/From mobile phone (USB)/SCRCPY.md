@@ -161,3 +161,7 @@ We can set that up next if needed.
 
 Just say:  
 **“Give Deskreen guide.”**
+
+## 🔗 Related Notes
+- [[Laptop Level Notes/Screen Cast/From Linux Laptop/Wireless Display|Wireless Display (GNOME Network Displays / Miracast)]]
+- [[Laptop Level Notes/Mobile Cam Tool For Webcam/Droid Cam|Use Your Phone Camera as a Virtual Webcam on Linux]]

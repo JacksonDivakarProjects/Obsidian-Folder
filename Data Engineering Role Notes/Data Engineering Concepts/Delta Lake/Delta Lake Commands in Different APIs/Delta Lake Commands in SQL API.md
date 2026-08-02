@@ -492,3 +492,8 @@ CHECK (event_time > '2020-01-01');
 ```
 
 This comprehensive guide covers the essential Delta Lake object commands for effective table management and data operations.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Delta Lake Commands in Different APIs/Delta Lake Commands in Python API with Spark|Delta Lake Commands in Python API with Spark]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Important TBLProperties/Table Utility Commands|Delta Lake Table Utility Commands]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Important TBLProperties/Table Utility Essential Commands|Delta Table Utility Guide]]

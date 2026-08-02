@@ -147,3 +147,7 @@ WHERE column NOT IN (SELECT column FROM table)
 - `NOT EXISTS` = "Are there none?" → Returns records WITHOUT matches
 
 This optimized guide focuses on the essential patterns you'll use 95% of the time. Master these, and you've mastered EXISTS/NOT EXISTS!
+
+## 🔗 Related Notes
+- [[Data Science/SQL/Other Keywords/ALL, ANY, LIKE Keywords|SQL Keywords Quick Reference: ALL, ANY, LIKE]]
+- [[Data Science/SQL/SQL SubQueries/SQL SubQueries|Comprehensive Guide to SQL Subqueries]]

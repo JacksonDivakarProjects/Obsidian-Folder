@@ -559,3 +559,8 @@ Create a function that safely extracts data even when:
 **Next Topic:** We'll dive into **Topic 6: Extracting Data - Tags, Classes, IDs, and Attributes** with more complex examples and real-world patterns.
 
 **Ready to continue?**
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Web Scraping/Selectolax/Selectolax Codes|Selectolax Codes]]
+- [[Data Engineering Role Notes/Web Scraping/Selenium/Selenium Notes|Selenium WebDriver - Practical Essentials]]
+- [[Data Engineering Role Notes/Web Scraping/Web Scraping|Web Scraping]]

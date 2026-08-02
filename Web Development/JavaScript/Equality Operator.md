@@ -33,3 +33,8 @@ Equality operators are used to compare two values. JavaScript has two main types
 ---
 
 **I have created the notes for Topic 2. Please say "Next" for me to proceed to Topic 3 (String Operations).**
+
+## 🔗 Related Notes
+- [[Web Development/JavaScript/Operator - typeof|The typeof Operator]]
+- [[Web Development/JavaScript/Datatypes in JavaScript|Data Types in JavaScript]]
+- [[Web Development/JavaScript/Difference Between `var`, `let`, and `const`|Difference Between var, let, and const]]

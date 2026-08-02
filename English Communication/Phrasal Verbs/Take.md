@@ -234,3 +234,9 @@ When speaking in meetings or presentations:
 ---
 
 Would you like me to make this into a **one-page professional reference sheet (PDF)** for your vocabulary collection?
+
+## 🔗 Related Notes
+- [[English Communication/Phrasal Verbs/Call|Call]]
+- [[English Communication/Phrasal Verbs/Get|Get]]
+- [[English Communication/Phrasal Verbs/Pull|Pull]]
+- [[English Communication/Phrasal Verbs/Put|Put]]

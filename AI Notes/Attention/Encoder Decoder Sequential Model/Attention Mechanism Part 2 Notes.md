@@ -80,3 +80,8 @@ With attention, translating `"The cat, which was sleeping on the windowsill, wok
 > Attention gives the decoder a **dynamic, weighted view** of the entire source sentence at every generation step, using the decoder's current state (query) to retrieve relevant source words (keys) and sum their information (values).
 
 If you want the next level (full scaled dot‑product attention with matrices, masking, multi‑head), just ask. But this is the optimal trade‑off between simplicity and working knowledge.
+
+## 🔗 Related Notes
+- [[AI Notes/Attention/Encoder Decoder Sequential Model/Attention Mechanism High Level Example|Attention Mechanism High Level Example]]
+- [[AI Notes/Attention/Encoder Decoder Sequential Model/Attention Mechanism Implementation (Old Sequential Model)|Attention Mechanism Implementation (Old Sequential Model)]]
+- [[AI Notes/Attention/Transformers/Difference between Encoder - Decoder and Transformers|Difference between Encoder - Decoder and Transformers]]

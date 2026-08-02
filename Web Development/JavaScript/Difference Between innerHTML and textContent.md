@@ -96,3 +96,7 @@ element.textContent = userInput; // Displays the text literally, no execution
 ---
 
 **I have created the notes for Topic 14. Please say "Next" for me to proceed to Topic 15 (Attributes).**
+
+## 🔗 Related Notes
+- [[Web Development/JavaScript/Manipulating Elements Using DOM|Manipulating Elements Using DOM - Camel Case for Properties]]
+- [[Web Development/JavaScript/Attributes|Attributes - attributes, getAttribute(), setAttribute()]]

@@ -198,3 +198,7 @@ pd.merge(sales, customers, on='customer_id')\
 ---
 
 Let me know if you'd like this exported as a **PDF reference sheet** or need practice problems to go with it!
+
+## 🔗 Related Notes
+- [[Data Science/Pandas/Pandas Special Notes For Tips and Tricks|Pandas Special Notes For Tips and Tricks]]
+- [[Data Science/Pandas/Pandas .str methods|Pandas .str methods]]

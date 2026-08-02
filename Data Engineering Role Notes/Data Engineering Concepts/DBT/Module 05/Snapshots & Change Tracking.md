@@ -190,3 +190,9 @@ You now have a complete understanding of dbt snapshots:
 5.  **Powerful Result**: Either method creates a queryable history with `dbt_valid_from` and `dbt_valid_to` columns.
 
 **Next Step**: Type `NEXT` to proceed to **Module 5, Topic 2: Macros & Reusable Code**, where you'll learn to write Jinja functions that eliminate SQL repetition.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/DBT Topic Links/Snapshots|Snapshots (dbt Learn links)]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Important TBLProperties/Change Data Feed|Delta Lake – Change Data Feed]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Questions/How Versioning Works in Delta Lake|How Versioning Works in Delta Lake]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 05/dbt Node Selection Syntax|dbt Node Selection Syntax]]

@@ -205,3 +205,8 @@ agg_df = df.withWatermark("timestamp", "10 minutes") \
 If you want, I can create a **visual diagram showing how watermark works with tumbling, sliding, and session windows**, which makes the concept extremely intuitive.
 
 Do you want me to create that diagram too?
+
+## 🔗 Related Notes
+- [[Data Science/Pyspark/Pyspark Streaming/Types Of Windows|Window Operations in PySpark Structured Streaming]]
+- [[Data Science/Pyspark/Pyspark Streaming/Why Complete Mode not Working in Watermarking|Why `complete` Output Mode Doesn't Work with Watermarks]]
+- [[Data Science/Pyspark/Pyspark Streaming/Output Modes in Streaming|Output Modes in Streaming]]

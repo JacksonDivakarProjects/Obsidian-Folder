@@ -174,3 +174,9 @@ As an expert educational content analyst, I have reviewed the provided transcrip
       - Watermarking is **only compatible with Update Mode** because Complete Mode always stores all states, regardless of the time interval.
    - Timestamp:– (Explanation of the problem of late data and the solution provided by watermarking)
    - Example: A watermark is set for 60 minutes. If the current processing time is 11:30 AM, any data arriving whose event time is before 10:30 AM (older than 60 minutes) will not be aggregated or counted, even if it belongs to a past window.
+
+## 🔗 Related Notes
+- [[Data Science/Pyspark/Pyspark Streaming/Types Of Windows|Window Operations in PySpark Structured Streaming]]
+- [[Data Science/Pyspark/Pyspark Streaming/Watermarking in Streaming|Watermarking in PySpark Structured Streaming]]
+- [[Data Science/Pyspark/Pyspark Streaming/Explode vs Explode Outer|Explode vs Explode Outer]]
+- [[Data Science/Pyspark/Pyspark Streaming/ForEachBatch|ForEachBatch]]

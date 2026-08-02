@@ -208,3 +208,8 @@ I strongly recommend:
 ➡️ **CSV aggregation challenge (10 tasks)**
 
 Say which one you want, and I’ll design it.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Linux/AWK/AWK - Comprehensive Practical Guide|AWK — Comprehensive Practical Guide]]
+- [[Data Engineering Role Notes/Linux/AWK/AWK Necessary Guide|AWK — Comprehensive Applied Guide (Real-World Edition)]]
+- [[Data Engineering Role Notes/Linux/AWK/uniq commands|uniq commands]]

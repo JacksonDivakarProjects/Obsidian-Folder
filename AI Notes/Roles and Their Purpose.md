@@ -160,3 +160,6 @@ messages → formatted prompt → model predicts next tokens → assistant reply
 - Roles define behavior and context
     
 - Converted to prompt → then model generates next assistant response
+
+## 🔗 Related Notes
+- [[AI Notes/AutoModel Class|AutoModel Class]]

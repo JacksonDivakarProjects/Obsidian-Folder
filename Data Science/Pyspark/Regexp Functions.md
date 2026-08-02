@@ -135,3 +135,7 @@ df.select("id", translate("phone", "+-()", "").alias("clean_phone")).show()
 If you want, I can **create a full list of 10 Spark SQL / PySpark exercises** using this DataFrame — for **extracting order IDs, emails, phone parts, timestamps**, etc. — so you can actually practice regex in Spark hands-on.
 
 Do you want me to do that next?
+
+## 🔗 Related Notes
+- [[Data Science/Pyspark/Functions in Pyspark|Functions in Pyspark]]
+- [[Data Science/Pyspark/Spark SQL|Spark SQL]]

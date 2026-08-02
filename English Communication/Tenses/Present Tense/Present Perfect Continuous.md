@@ -125,3 +125,9 @@ It’s especially useful in **professional settings** for reporting ongoing work
 Jack, I can now create a **single comparative chart for all four present tenses**—Simple Present, Present Continuous, Present Perfect, and Present Perfect Continuous. It would show **structure, usage, signal words, and examples side by side**, which is perfect for **quick reference during meetings or writing professional emails**.
 
 Do you want me to make that chart?
+
+## 🔗 Related Notes
+- [[English Communication/Tenses/Present Tense/Present Perfect Tense|Present Perfect Tense]]
+- [[English Communication/Tenses/Present Tense/Present Continuous Tense|Present Continuous Tense]]
+- [[English Communication/Tenses/Past Tense/Past Perfect Continuous Tense|Past Perfect Continuous Tense]]
+- [[English Communication/Tenses/Summary|Tenses Summary]]

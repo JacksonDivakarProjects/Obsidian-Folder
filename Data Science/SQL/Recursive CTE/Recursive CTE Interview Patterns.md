@@ -188,3 +188,7 @@ SELECT * FROM emp_cycles WHERE cycle = TRUE;
 6. **Cycle Detection** - Track visited nodes in array
 
 **These 6 patterns cover 95% of real company use cases. Master these and you're interview-ready.**
+
+## 🔗 Related Notes
+- [[Data Science/SQL/Recursive CTE/Recursive CTE Notes|Comprehensive Recursive CTE Guide]]
+- [[Data Science/SQL/Recursive CTE/Recursive CTE problem Statements|Recursive CTE problem Statements]]

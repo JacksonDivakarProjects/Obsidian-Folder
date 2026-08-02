@@ -294,3 +294,9 @@ const GoodList = ({ items }) => (
 5. **Consistent formatting** with proper indentation
 
 **Say "NEXT" for HTML Attributes in JSX**
+
+## 🔗 Related Notes
+- [[Web Development/React/React Topics/Introduction to JSX and Babel|Introduction to JSX and Babel]]
+- [[Web Development/React/React Topics/JSX Attributes & Styling React Elements|JSX Attributes & Styling React Elements]]
+- [[Web Development/React/React Topics/Inline Styling for React Elements|Inline Styling for React Elements]]
+- [[Web Development/React/React Topics/JavaScript Expressions in JSX & ES6 Template Literals|JavaScript Expressions in JSX & ES6 Template Literals]]

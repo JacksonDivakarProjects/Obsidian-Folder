@@ -84,3 +84,7 @@ They’re designed to unify **batch + streaming** data processing in one place.
 ---
 
 Would you like me to break down the **differences between Delta Lake, Iceberg, and Hudi** — feature-by-feature and use case wise? That’ll give you a solid sense of when to use each.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Other Important Concepts/Delta Lake Uniform Format|Delta Lake Uniform Format (UniForm)]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Miscellaneous/Data Lake House|Data Lakehouse]]

@@ -441,3 +441,9 @@ Core principle behind advanced SQL:
 
 SQL is not only **data retrieval**.  
 It is **query planning, storage structures, and computational strategy inside a database engine**.
+
+## 🔗 Related Notes
+- [[Data Science/SQL/Recursive CTE/Recursive CTE|Recursive CTE]]
+- [[Data Science/SQL/Window Functions/Window Functions|Window Functions]]
+- [[Data Science/SQL/SQL Optimization Concepts/SQL Optimization Concepts|SQL Optimization Concepts]]
+- [[Data Science/SQL/Materialized View/Materialized View In Postgres SQL|Materialized Views – The Complete Guide (PostgreSQL)]]

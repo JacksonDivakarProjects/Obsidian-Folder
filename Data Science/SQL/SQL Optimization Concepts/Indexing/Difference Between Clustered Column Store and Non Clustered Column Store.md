@@ -51,3 +51,6 @@ An NCCI is a **separate object** that sits on top of an existing rowstore table 
 Since you’ve been exploring **Data Engineering** and **dbt**, you'll usually see **CCI** used in the final "Gold" or "Mart" layers of a warehouse. It’s the standard for tables with millions or billions of rows where you don't care about looking up a single ID, but you care about the `SUM` of a billion transactions.
 
 Would you like to see how to check the **compression ratio** of your current columnstore indexes to see how much disk space you're saving?
+
+## 🔗 Related Notes
+- [[Data Science/SQL/SQL Optimization Concepts/Indexing/What is Delta Store|What is Delta Store]]

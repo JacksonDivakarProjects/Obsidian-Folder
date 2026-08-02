@@ -212,3 +212,9 @@ If you want next:
     
 
 Tell me your next focus.
+
+## 🔗 Related Notes
+- [[Laptop Level Notes/Swap Memory/Swapping Memory|Swapping Memory]]
+- [[Laptop Level Notes/Set Java SDK/Set Java SDK|Set Java SDK]]
+- [[Laptop Level Notes/Ollama Installation/Ollama Installation|Ollama Installation]]
+- [[Laptop Level Notes/MySQL Configuration/MySQL CMD Login and Create User|MySQL CMD Login and Create User]]

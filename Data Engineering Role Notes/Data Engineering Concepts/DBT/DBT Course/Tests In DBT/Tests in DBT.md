@@ -164,3 +164,8 @@ columns:
 - **Generic tests** declare reusable rules in YAML
     
 - **`ref()` in relationships tests is unquoted**; **other macros must be quoted**
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 04/Generic Tests & Their Types|Generic Tests & Their Types]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 04/Singular Tests|Singular Tests]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 04/Custom Generic Tests|Custom Generic Tests]]

@@ -492,3 +492,7 @@ with ThreadPoolExecutor(max_workers=5) as executor:
 5. **Mixing I/O-bound and CPU-bound tasks** (use ProcessPoolExecutor for CPU-bound)
 
 This guide covers the most practical and commonly used aspects of ThreadPoolExecutor. Start with simple examples and gradually move to more complex patterns as you become comfortable with the concepts!
+
+## 🔗 Related Notes
+- [[Data Science/Miscellaneous 1/Asynchronous Programming/Asynchronous Programming Notes|Asynchronous Programming in Python]]
+- [[Data Science/Miscellaneous 1/Asynchronous Programming/Synchronous vs Asynchronous Programming|Comprehensive Guide: Synchronous vs Asynchronous Programming in Python]]

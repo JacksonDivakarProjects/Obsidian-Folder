@@ -71,3 +71,8 @@ The most common error in dbt is forgetting the dash when defining columns.
 ---
 
 Would you like me to take a look at a specific YAML file you're working on to check if the nesting and dashes are correct?
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/YAML File/DBT Course/YAML File and Its Structure|YAML File and Its Structure]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/YAML File/DBT Course/Types of YAML File|Types of YAML File]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/Documentation/Documentation in YAML|Documentation in YAML]]

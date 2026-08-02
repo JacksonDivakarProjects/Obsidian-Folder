@@ -282,3 +282,8 @@ ReadSchema: struct<customer_id:int,amount:double>
 ---
 
 Would you like me to extend this into a **PDF-style visual cheat sheet** (with diagrams showing pushdown and pruning flow inside Spark + Delta)? It’d make this perfect for quick review or sharing.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Optimization for Data Read/Predicate Pruning & Predicate Pushdown|Predicate Pushdown vs Predicate Pruning]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Optimization for Data Read/How Predicate Pushdown and Predicate Pruning Works|How Predicate Pushdown and Predicate Pruning Works]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Other Important Concepts/Optimize, ZOrdering, Liquid Clustering|Optimize, Z-Ordering, Liquid Clustering]]

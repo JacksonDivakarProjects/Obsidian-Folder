@@ -140,3 +140,8 @@ Right-click on any model file and select **"Show DAG for this node"** to see a f
 
 **Ready to ensure your data is trustworthy?**
 Type `NEXT` to proceed to **Module 4, Topic 1: Generic Tests & Their Types**, where we'll learn how to add data quality checks to your models.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 03/Building Models & Materializations|Building Models & Materializations]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/ref() and source() Macros/Difference Between Ref and Source Macro|Difference Between ref() and source() Macros]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 05/dbt Node Selection Syntax|dbt Node Selection Syntax]]

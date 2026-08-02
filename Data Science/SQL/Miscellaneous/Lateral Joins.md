@@ -106,3 +106,7 @@ JOIN LATERAL (
 ---
 
 Let me know if you want a one-liner definition to memorize for interviews!
+
+## 🔗 Related Notes
+- [[Data Science/SQL/SQL SubQueries/SQL SubQueries|Comprehensive Guide to SQL Subqueries]]
+- [[Data Science/SQL/Window Functions/SQL Window Function - 2|Comprehensive Guide to SQL Window Functions]]

@@ -553,3 +553,8 @@ Of course. Here is a comprehensive list of synonyms and example sentences for th
 2. The team's morale hit rock bottom after their seventh consecutive loss.
 3. Simple gestures of appreciation can significantly improve workplace morale.
 4. The general visited the troops to assess their morale.
+
+## 🔗 Related Notes
+- [[English Communication/Vocabulary Hunt -1/ChatGPT|ChatGPT]]
+- [[English Communication/Vocabulary Hunt -1/Gemini|Gemini]]
+- [[English Communication/Vocabulary Hunt -1/Vocabs|Vocabs]]

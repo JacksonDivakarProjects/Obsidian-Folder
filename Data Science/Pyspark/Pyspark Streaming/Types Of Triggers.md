@@ -189,3 +189,8 @@ Triggers define the **heartbeat of your streaming job**. Picking the right trigg
 If you want, I can also **add a visual diagram** showing **how each trigger behaves over time** — it makes understanding these differences instantaneous, especially for presentations or documentation.
 
 Do you want me to create that diagram?
+
+## 🔗 Related Notes
+- [[Data Science/Pyspark/Pyspark Streaming/Archive Source File|Archive Source File]]
+- [[Data Science/Pyspark/Pyspark Streaming/Output Modes in Streaming|Output Modes in Streaming]]
+- [[Data Science/Pyspark/Pyspark Streaming/Spark Streaming Foundational Concepts|Spark Streaming Foundational Concepts]]

@@ -144,3 +144,6 @@ sql
 - Analyze your frequent queries and consider covering indexes for high-value read operations.
     
 
+
+## 🔗 Related Notes
+- [[Data Science/SQL/SQL Optimization Concepts/Table Scan Types/Differences among Scans/Difference between Index and Index Only Scan|Difference between Index and Index Only Scan]]

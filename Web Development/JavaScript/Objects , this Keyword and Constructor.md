@@ -196,3 +196,7 @@ console.log(typeof k1);                  // OUTPUT: "object"
 ---
 
 **I have covered Topics 18, 19, and 20 together as requested. Please say "Next" for me to proceed to Topic 21 (Loops in JS).**
+
+## 🔗 Related Notes
+- [[Web Development/JavaScript/Higher Order Functions and Callback Functions|Higher Order Functions and Callback Functions]]
+- [[Web Development/JavaScript/Loops in JavaScript|Loops in JavaScript and forEach with Event Listeners]]

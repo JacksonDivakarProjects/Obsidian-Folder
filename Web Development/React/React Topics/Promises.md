@@ -741,3 +741,7 @@ throw new Error('msg')       // Throw in chain
 ---
 
 **Ready for Topic 43: "Async await"?**
+
+## 🔗 Related Notes
+- [[Web Development/React/React Topics/Async-Await|Async/Await]]
+- [[Web Development/React/React Topics/Axios|Axios]]

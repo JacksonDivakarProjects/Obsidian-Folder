@@ -447,3 +447,8 @@ Or test small loops directly in the terminal:
 ```bash
 for i in {1..3}; do echo "Test $i"; done
 ```
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Linux/Bash Scripting/Bash if Condition|Bash if Condition — Complete Guide (Strings, Numbers, Files)]]
+- [[Data Engineering Role Notes/Linux/nohup (Background Process)/nohup Guide|The Complete nohup Guide for Beginners]]
+- [[Data Engineering Role Notes/Linux/Linux Summary Guide|Linux Masterclass Concepts]]

@@ -417,3 +417,7 @@ Try these tasks to practice:
 Remember: **With great power comes great responsibility!** `nohup` processes can run indefinitely, so always monitor them and clean up when done.
 
 Happy background processing! 🚀
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Linux/Linux Summary Guide|Linux Masterclass Concepts]]
+- [[Data Engineering Role Notes/Linux/Bash Scripting/Looping Conditions|The Beginner's Complete Guide to Bash Loops]]

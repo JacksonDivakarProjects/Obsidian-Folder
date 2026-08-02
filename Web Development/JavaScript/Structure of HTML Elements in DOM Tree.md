@@ -67,3 +67,7 @@ Its DOM Tree would look like this:
 ---
 
 **I have created the notes for Topic 8. Please say "Next" for me to proceed to Topic 9 (Selecting HTML elements using DOM).**
+
+## 🔗 Related Notes
+- [[Web Development/JavaScript/DOM (Document Object Model)|DOM (Document Object Model)]]
+- [[Web Development/JavaScript/Selecting HTML Elements Using DOM|Selecting HTML Elements Using the DOM]]

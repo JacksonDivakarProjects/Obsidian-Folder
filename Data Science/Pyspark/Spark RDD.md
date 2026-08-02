@@ -128,3 +128,8 @@ df = spark.createDataFrame(rdd, schema)
 **When you encounter RDDs in the wild, your first thought should be:** *"Can I convert this to a DataFrame?"*
 
 That's it! This is all the substantial RDD knowledge you need for modern PySpark development.
+
+## 🔗 Related Notes
+- [[Data Science/Pyspark/Miscellaneous Concepts|Miscellaneous Concepts]]
+- [[Data Science/Pyspark/Pyspark .collect()|Pyspark .collect()]]
+- [[Data Science/Pyspark/Serialization and Deserialization|Serialization and Deserialization]]

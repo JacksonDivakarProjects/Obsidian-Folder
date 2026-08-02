@@ -202,3 +202,8 @@ This flow minimizes risk, parallelizes work, and keeps you as the decision‑mak
 ---
 
 Part 2 complete. Part 3 will dissect **Memory, CLAUDE.md, and the Context Engine** – the layer that ensures Claude never forgets what matters. Ready when you are.
+
+## 🔗 Related Notes
+- [[Claude Code/Part 1 Agentic Loop and Built in Tools|Deep Dive: The Agentic Loop & Built-in Tools]]
+- [[Claude Code/Part 3 Memory, Claude.md and the Context Engine|Part 3 – Memory, CLAUDE.md, and the Context Engine]]
+- [[Claude Code/Part 4 Hooks and MCP, The Extension Architecture|Part 4 – Hooks & MCP: The Extension Architecture]]

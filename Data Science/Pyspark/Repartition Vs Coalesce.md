@@ -77,3 +77,7 @@ So, the right choice depends on your workload:
 ---
 
 Do you want me to show you a **small example with execution plans** (`explain()`) so you can _see_ the shuffle difference?
+
+## 🔗 Related Notes
+- [[Data Science/Pyspark/Performance & Optimisation in Pyspark|Performance & Optimisation in Pyspark]]
+- [[Data Science/Pyspark/Broadcasting in Pyspark|Broadcasting in Pyspark]]

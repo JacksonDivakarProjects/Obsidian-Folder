@@ -164,3 +164,8 @@ final_df = enriched_df.filter(F.col("category_name") == "Electronics")
 5.  **Manual control is better** when you know your data well
 
 Broadcasting is one of the easiest and most effective performance optimizations in your PySpark toolkit!
+
+## 🔗 Related Notes
+- [[Data Science/Pyspark/Performance & Optimisation in Pyspark|Performance & Optimisation in Pyspark]]
+- [[Data Science/Pyspark/Joining DataFrames|Joining DataFrames]]
+- [[Data Science/Pyspark/Repartition Vs Coalesce|Repartition Vs Coalesce]]

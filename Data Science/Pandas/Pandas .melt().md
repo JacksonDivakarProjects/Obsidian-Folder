@@ -81,3 +81,8 @@ pd.melt(
 ---
 
 Would you like an industry-style melt use case (e.g., time-series by months, KPI metrics)?
+
+## 🔗 Related Notes
+- [[Data Science/Pandas/Pandas .explode()|Pandas .explode()]]
+- [[Data Science/Pandas/Pandas Pivot Table|📊 Pivot Tables in Pandas — A Comprehensive Guide]]
+- [[Data Science/Pandas/Pandas Groupby Function|🔧 `groupby()` in Pandas – Comprehensive Guide]]

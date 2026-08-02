@@ -232,3 +232,9 @@ You've now learned how to **execute tests strategically** and **integrate them i
 
 **Ready to explore time-travel in your data?**
 Type `NEXT` to proceed to **Module 5, Topic 1: Snapshots & Change Tracking**, where we'll learn how to capture historical changes in your slowly-changing dimension tables.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 06/Difference Between dbt run and dbt build|`dbt run` vs `dbt build`]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 06/DBT Flags|dbt Flags That Actually Matter]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 04/Generic Tests & Their Types|Generic Tests & Their Types]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 04/Singular Tests|Singular Tests]]

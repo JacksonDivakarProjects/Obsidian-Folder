@@ -145,3 +145,6 @@ FROM students;
 ---
 
 Let me know if you want this in `.md`, `.pdf`, `.docx`, or as a **poster-style cheatsheet**.
+
+## 🔗 Related Notes
+- [[Data Science/SQL/SQL Functions/MySQL Date Functions Cheat sheet|MySQL Date Functions Cheat sheet]]

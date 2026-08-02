@@ -305,3 +305,10 @@ Jack, if you want, I can **create a full scenario-based master table** that:
 This will be like a **ready-to-use professional English cheat sheet**.
 
 Do you want me to make that table?
+
+## 🔗 Related Notes
+- [[English Communication/Tenses/Present Tense/Simple Present Tense|Simple Present Tense]]
+- [[English Communication/Tenses/Present Tense/Present Perfect Tense|Present Perfect Tense]]
+- [[English Communication/Tenses/Past Tense/Simple Past Tense|Simple Past Tense]]
+- [[English Communication/Tenses/Past Tense/Past Perfect Tense|Past Perfect Tense]]
+- [[English Communication/Tenses/Future Tense/Simple Future Tense|Simple Future Tense]]

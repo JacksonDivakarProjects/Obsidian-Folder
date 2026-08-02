@@ -96,3 +96,7 @@ spark.conf.set("spark.sql.autoBroadcastJoinThreshold", -1)
 ---
 
 Do you want me to also show you **how to check in Spark which join strategy was actually used** (using the `explain()` plan)? That way you can see if Spark picked hash join or sort-merge for your query.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Spark/Joins/Shuffle Hash Join|Shuffle Hash Join]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Spark/Miscellaneous/Job, Stages and Tasks|Spark Execution: Job, Stages and Tasks]]

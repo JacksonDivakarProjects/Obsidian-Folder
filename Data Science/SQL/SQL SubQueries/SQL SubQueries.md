@@ -212,3 +212,9 @@ Let me know if you'd like:
 - 10 real-world problems using these subquery types
     
 - A quiz to lock it all in!
+
+## 🔗 Related Notes
+- [[Data Science/SQL/Miscellaneous/Lateral Joins|LATERAL in SQL (PostgreSQL)]]
+- [[Data Science/SQL/Other Keywords/SQL Exists and Not Exists|SQL EXISTS & NOT EXISTS: Quick Revision Guide]]
+- [[Data Science/SQL/Other Keywords/ALL, ANY, LIKE Keywords|SQL Keywords Quick Reference: ALL, ANY, LIKE]]
+- [[Data Science/SQL/Set Operation in SQL/Set Operations in SQL|Comprehensive Guide to Set Operations in SQL]]

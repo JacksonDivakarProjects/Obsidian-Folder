@@ -708,3 +708,9 @@ const useLocalStorage = (key, initialValue) => {
 ---
 
 **Ready for Topic 27: "Keeper App Project - Part 2"?**
+
+## 🔗 Related Notes
+- [[Web Development/React/React Topics/JavaScript ES6 Map-Filter-Reduce|JavaScript ES6 Map/Filter/Reduce]]
+- [[Web Development/React/React Topics/JavaScript ES6 Object & Array Destructuring|JavaScript ES6 Object & Array Destructuring]]
+- [[Web Development/React/React Topics/JavaScript ES6 Spread Operator|JavaScript ES6 Spread Operator]]
+- [[Web Development/React/React Topics/Event Handling in React|Event Handling in React]]

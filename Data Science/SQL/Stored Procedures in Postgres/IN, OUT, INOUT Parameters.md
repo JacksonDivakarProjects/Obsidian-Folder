@@ -836,3 +836,7 @@ $$;
 ```
 
 This comprehensive guide covers all aspects of using IN, OUT, and INOUT parameters in PostgreSQL. Practice with these examples to master parameter usage in your stored procedures!
+
+## 🔗 Related Notes
+- [[Data Science/SQL/Stored Procedures in Postgres/Stored Procedures Notes|Comprehensive Beginner's Guide to PostgreSQL Stored Procedures]]
+- [[Data Science/SQL/Stored Procedures in Postgres/Question & Answers of SP|Question & Answers of SP]]

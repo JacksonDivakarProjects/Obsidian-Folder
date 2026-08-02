@@ -144,3 +144,8 @@ df[df['column'].str.len() > 0].explode('column')
 ``` 
 
 This avoids exploding unnecessary rows.
+
+## 🔗 Related Notes
+- [[Data Science/Pandas/Pandas .melt()|Pandas .melt()]]
+- [[Data Science/Pandas/Pandas .agg(list)|Pandas .agg(list)]]
+- [[Data Science/Pandas/Pandas Groupby Function|🔧 `groupby()` in Pandas – Comprehensive Guide]]

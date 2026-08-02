@@ -91,3 +91,7 @@ A Bitmap Heap Scan sits between an index scan and a sequential scan in both spee
 6. [https://www.yugabyte.com/blog/bitmap-scans-on-distributed-postgresql/](https://www.yugabyte.com/blog/bitmap-scans-on-distributed-postgresql/)
 7. [https://www.cybertec-postgresql.com/en/postgresql-indexing-index-scan-vs-bitmap-scan-vs-sequential-scan-basics/](https://www.cybertec-postgresql.com/en/postgresql-indexing-index-scan-vs-bitmap-scan-vs-sequential-scan-basics/)
 8. [https://www.postgresql.org/docs/8.1/performance-tips.html](https://www.postgresql.org/docs/8.1/performance-tips.html)
+
+## 🔗 Related Notes
+- [[Data Science/SQL/SQL Optimization Concepts/Table Scan Types/Bitmap Scan/Bitmap Index Scan|Bitmap Index Scan]]
+- [[Data Science/SQL/SQL Optimization Concepts/Table Scan Types/Bitmap Scan/Explained with Analogy|Explained with Analogy]]

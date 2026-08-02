@@ -214,3 +214,9 @@ airflow_project/
 ---
 
 Let me know if you want this exported as a PDF or Markdown for Obsidian or GitHub.
+
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Airflow Scheduler/Level -1 Airflow Scheduler Guide|Comprehensive Apache Airflow Scheduler Guide for Beginners]]
+- [[Data Engineering Role Notes/Airflow Scheduler/Operators in Airflow|Operators in Airflow]]
+- [[Data Engineering Role Notes/Airflow Scheduler/Airflow Scheduler|Airflow Scheduler]]

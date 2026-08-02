@@ -159,3 +159,7 @@ summary
 ✔ Produce a final report summary
 
 Just tell me what visualization style you want next.
+
+## 🔗 Related Notes
+- [[Data Science/Data Analysis/Data Analysis Notes Parts/Data Analysis - (Part -1)|The Business Data Analysis Playbook (Part 1)]]
+- [[Data Science/Data Analysis/Data Analysis Notes Parts/Data Analysis - (Part -2)|Part 2: The Analysis Framework - What to Look For]]

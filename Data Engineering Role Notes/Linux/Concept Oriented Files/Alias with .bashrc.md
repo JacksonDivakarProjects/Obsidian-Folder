@@ -45,3 +45,8 @@ runmyproject
 ---
 
 Would you like a dedicated Obsidian vault structure for Linux, Bash, or Python tips? I can suggest that too.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Linux/Concept Oriented Files/CHMOD|CHMOD]]
+- [[Data Engineering Role Notes/Linux/Concept Oriented Files/Find Command|Find Command]]
+- [[Data Engineering Role Notes/Linux/Linux Summary Guide|Linux Masterclass Concepts]]

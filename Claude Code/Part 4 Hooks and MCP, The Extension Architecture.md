@@ -294,3 +294,9 @@ The real power emerges when you chain them:
 ---
 
 Part 4 complete. You now control the extension layer. The final piece (Part 5) can be **Custom Slash Commands, IDE Integration, and the CI/CD Pipeline** – the practical shell that makes all this power part of your daily muscle memory. Proceed?
+
+## 🔗 Related Notes
+- [[Claude Code/Part 1 Agentic Loop and Built in Tools|Deep Dive: The Agentic Loop & Built-in Tools]]
+- [[Claude Code/Part 2 Sub Agent, Operating Modes and Permission Safety Net|Part 2 – Sub-Agents, Operating Modes & the Permission Safety Net]]
+- [[Claude Code/Part 5 Custom Commands, IDE Integration and CI CD Automation|Part 5 – Custom Commands, IDE Integration & CI/CD Automation]]
+- [[Claude Code/Part 6 Maintaining and Evolving Claude Code Ecosystem|Part 6 – Maintaining & Evolving Your Claude Code Ecosystem]]

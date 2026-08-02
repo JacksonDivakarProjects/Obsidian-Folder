@@ -170,3 +170,8 @@ query.awaitTermination()
 ### Summary
 
 Auto Loader (`cloudFiles`) is the recommended way to read streaming files from cloud storage in Structured Streaming. It eliminates manual file tracking, scales to millions of files, and gracefully handles schema changes. Use it when you have an append‑only stream of files landing in a cloud bucket and you need reliable, incremental processing into a Delta Lake or other sink.
+
+## 🔗 Related Notes
+- [[Data Science/Pyspark/Pyspark Streaming/Archive Source File|Archive Source File]]
+- [[Data Science/Pyspark/Pyspark Streaming/Checkpointing And Idempotency|Checkpointing & Idempotency in PySpark Structured Streaming]]
+- [[Data Science/Pyspark/Pyspark Streaming/Spark Streaming Foundational Concepts|Spark Streaming Foundational Concepts]]

@@ -149,3 +149,7 @@ This inserts a row into the **employees** table **because** it satisfies the vie
 ---
 
 Would you like this as a printable Markdown or PDF file?
+
+## 🔗 Related Notes
+- [[Data Science/SQL/Materialized View/Materialized View In Postgres SQL|Materialized Views – The Complete Guide (PostgreSQL)]]
+- [[Data Science/SQL/Triggers in SQL/Triggers in SQL|SQL Triggers — Comprehensive Beginner-Level Guide]]

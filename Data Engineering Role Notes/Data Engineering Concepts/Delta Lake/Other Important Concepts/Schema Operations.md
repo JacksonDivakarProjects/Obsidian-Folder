@@ -143,3 +143,7 @@ df.write.format("delta") \
 I can also create a **visual diagram showing enforcement vs evolution vs overwrite** — it helps remember the differences in meetings and design discussions.
 
 Do you want me to make that diagram too?
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/ACID Property/Consistency in Delta Lake|Consistency in Delta Lake]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Other Important Concepts/Upsert In DeltaLake|DeltaTable Upsert in PySpark]]

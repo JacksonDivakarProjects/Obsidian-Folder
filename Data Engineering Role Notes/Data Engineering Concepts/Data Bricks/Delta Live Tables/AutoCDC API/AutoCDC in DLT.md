@@ -362,3 +362,7 @@ CDC system = **data + meaning**
     
 
 Without defining meaning → system cannot apply correct actions
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Data Bricks/Delta Live Tables/Delta Live Tables|Delta Live Tables (DLT) Comprehensive Guide]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Important TBLProperties/Change Data Feed|Delta Lake – Change Data Feed]]

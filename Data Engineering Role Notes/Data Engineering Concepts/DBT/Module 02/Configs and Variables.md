@@ -162,3 +162,8 @@ You now understand the four ways to control your dbt models: from the broad **pr
 
 **Ready for the next topic?**
 Type `NEXT` to proceed to **Module 3, Topic 1: Building Models & Materializations**, where we'll put these configs to use and learn about the different ways (tables, views, incremental) dbt can build your data.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 02/Configuration Files|Configuration Files Overview]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/var() Macro/Var() Macro|var() in dbt]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 03/Building Models & Materializations|Building Models & Materializations]]

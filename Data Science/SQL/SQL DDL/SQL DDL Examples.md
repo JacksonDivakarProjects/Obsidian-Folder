@@ -229,3 +229,7 @@ CREATE TABLE IF NOT EXISTS order_items (
 ---
 
 This complete markdown note is ready to be pasted into Obsidian. It includes code snippets and detailed explanations for each SQL operation discussed. Enjoy your learning and feel free to modify the examples as needed!
+
+## 🔗 Related Notes
+- [[Data Science/SQL/SQL Optimization Concepts/Optimization Notes/Working of Index in SQL|Working of Index in SQL]]
+- [[Data Science/SQL/SQL Optimization Concepts/Basic SQL Optimizations|Basic SQL Optimizations]]

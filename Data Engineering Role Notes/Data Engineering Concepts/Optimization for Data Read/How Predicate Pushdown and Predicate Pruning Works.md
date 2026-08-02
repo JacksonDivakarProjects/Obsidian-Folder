@@ -110,3 +110,8 @@ SELECT customer_id, amount FROM sales WHERE region='EU' AND year=2023;
 ---
 
 If you want, I can **draw a simple diagram showing files, rows, and which ones are skipped by pushdown vs pruning** — it makes this concept click immediately. Do you want me to do that?
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Optimization for Data Read/Predicate Pruning & Predicate Pushdown|Predicate Pushdown vs Predicate Pruning]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Optimization for Data Read/Predicate Pushdown & Column Pruning|Predicate Pushdown & Column Pruning]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Other Important Concepts/Optimize, ZOrdering, Liquid Clustering|Optimize, Z-Ordering, Liquid Clustering]]

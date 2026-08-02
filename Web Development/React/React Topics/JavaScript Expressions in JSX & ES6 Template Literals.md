@@ -620,3 +620,8 @@ Create a CodeSandbox with:
 ---
 
 **Ready for Topic 7: "Javascript Expressions in JSX Practice"?**
+
+## 🔗 Related Notes
+- [[Web Development/React/React Topics/JavaScript Expressions in JSX Practice|JavaScript Expressions in JSX Practice]]
+- [[Web Development/React/React Topics/Introduction to JSX and Babel|Introduction to JSX and Babel]]
+- [[Web Development/React/JSX/JSX Guide|JSX Guide]]

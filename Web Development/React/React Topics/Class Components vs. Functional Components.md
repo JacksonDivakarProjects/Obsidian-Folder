@@ -858,3 +858,8 @@ The React community has moved to Functional Components. They're simpler, cleaner
 ---
 
 **Ready for Topic 40: "Javascript ES6 Spread Operator"?**
+
+## 🔗 Related Notes
+- [[Web Development/React/React Topics/React Components|React Components]]
+- [[Web Development/React/React Topics/React Hooks|React Hooks - useState]]
+- [[Web Development/React/React Topics/State in React - Declarative vs. Imperative Programming|State in React (Declarative vs Imperative)]]

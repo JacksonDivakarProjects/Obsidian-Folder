@@ -172,3 +172,9 @@ models:
 
 **Ready to write more specific, custom validations?**
 Type `NEXT` to proceed to **Topic 2: Singular Tests**, where we'll learn how to write custom SQL queries to check more complex business logic.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 04/Custom Generic Tests|Custom Generic Tests]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 04/Singular Tests|Singular Tests]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/Tests In DBT/Tests in DBT|Tests in DBT]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 04/Test Execution, Severity & the `dbt build` Command|Test Execution, Severity & the dbt build Command]]

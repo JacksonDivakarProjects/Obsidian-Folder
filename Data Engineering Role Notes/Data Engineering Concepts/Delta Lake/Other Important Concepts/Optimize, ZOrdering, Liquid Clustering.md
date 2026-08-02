@@ -291,3 +291,7 @@ Here’s a typical recommended workflow:
 ---
 
 If you like, I can build a **cheat-sheet** (SQL + patterns) or **decision flowchart** tailored to your environment (OSS vs Databricks) so you can use this at a glance. Do you want me to send that?
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Optimization for Data Read/How Predicate Pushdown and Predicate Pruning Works|How Predicate Pushdown and Predicate Pruning Works]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Important TBLProperties/Table Utility Commands|Delta Lake Table Utility Commands]]

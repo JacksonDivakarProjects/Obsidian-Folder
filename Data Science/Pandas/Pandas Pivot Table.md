@@ -276,3 +276,8 @@ South    A
 ---
 
 Do you want me to extend these notes into a **pivot vs pivot_table cheat sheet** so you have both in one glance? That would make this bulletproof.
+
+## 🔗 Related Notes
+- [[Data Science/Pandas/Pandas Groupby Function|🔧 `groupby()` in Pandas – Comprehensive Guide]]
+- [[Data Science/Pandas/Pandas .melt()|Pandas .melt()]]
+- [[Data Science/Pandas/Pandas .agg(list)|Pandas .agg(list)]]

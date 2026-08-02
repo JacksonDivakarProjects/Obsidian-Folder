@@ -399,3 +399,9 @@ df1.join(
     
 
 ---
+
+## 🔗 Related Notes
+- [[Data Science/Pyspark/Broadcasting in Pyspark|Broadcasting in Pyspark]]
+- [[Data Science/Pyspark/Performance & Optimisation in Pyspark|Performance & Optimisation in Pyspark]]
+- [[Data Science/Pyspark/Basic DataFrame Operation|Basic DataFrame Operation]]
+- [[Data Science/Pyspark/SCD In Pyspark|SCD In Pyspark]]

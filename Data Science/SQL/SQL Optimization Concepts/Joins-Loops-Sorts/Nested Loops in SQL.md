@@ -106,3 +106,7 @@ Would you like to see a practical code example, learn about nested loops in stor
 7. [https://www.w3schools.com/go/go_loops.php](https://www.w3schools.com/go/go_loops.php)
 8. [https://www.ibm.com/docs/en/informix-servers/12.10.0?topic=plan-nested-loop-join](https://www.ibm.com/docs/en/informix-servers/12.10.0?topic=plan-nested-loop-join)
 9. [https://academy.bytescout.com/essentials-in-2-minutes/14-tsql-execution-plan-operator-nested-loop/](https://academy.bytescout.com/essentials-in-2-minutes/14-tsql-execution-plan-operator-nested-loop/)
+
+## 🔗 Related Notes
+- [[Data Science/SQL/SQL Optimization Concepts/Joins-Loops-Sorts/Hash Join|Hash Join]]
+- [[Data Science/SQL/SQL Optimization Concepts/Joins-Loops-Sorts/Merge Joins|Merge Joins]]

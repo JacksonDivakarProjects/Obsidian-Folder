@@ -59,3 +59,7 @@ sudo yum install zip unzip   # RHEL/CentOS
 ```
 
 Want a bash script to zip and unzip interactively?
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Linux/Compress and Decompress/File Tar and Untar|File Tar and Untar]]
+- [[Data Engineering Role Notes/Linux/Linux Summary Guide|Linux Masterclass Concepts]]

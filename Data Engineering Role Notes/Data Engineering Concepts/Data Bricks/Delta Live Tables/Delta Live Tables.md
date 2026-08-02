@@ -302,3 +302,8 @@ def on_pipeline_completion(state):
 ### 8. Conclusion
 
 Delta Live Tables provides a powerful, declarative framework for building production-grade ETL pipelines on Databricks. By abstracting orchestration complexities and integrating data quality, CDC, and incremental processing, DLT accelerates time-to-value while ensuring reliability and maintainability. Whether using Python or SQL, data engineers can define transformations intuitively and let DLT handle the rest
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Data Bricks/Delta Live Tables/AutoCDC API/AutoCDC in DLT|AutoCDC in DLT]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Data Bricks/Delta Live Tables/View and Streaming Tables/Difference Between Views and Streaming Tables|Difference Between Views and Streaming Tables]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Important TBLProperties/Change Data Feed|Delta Lake – Change Data Feed]]

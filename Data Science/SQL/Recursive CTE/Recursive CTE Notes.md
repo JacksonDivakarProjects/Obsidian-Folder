@@ -441,3 +441,7 @@ SELECT * FROM cte;
 ```
 
 This guide covers 95% of real-world recursive CTE use cases. Master these patterns and you'll handle hierarchical data efficiently in SQL interviews and production systems.
+
+## 🔗 Related Notes
+- [[Data Science/SQL/Recursive CTE/Recursive CTE Interview Patterns|Most Used Recursive CTE Questions in Companies]]
+- [[Data Science/SQL/Recursive CTE/Recursive CTE problem Statements|Recursive CTE problem Statements]]

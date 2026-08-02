@@ -180,3 +180,7 @@ Fix = **don’t overload the driver** (push work to executors), **cap results**,
 ---
 
 Jack, do you want me to next break down **Executor OOM** in the same structured way (causes, symptoms, strategies), so you’ll have both halves of the OOM story?
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Spark/Memory Management/Driver Memory Management|Spark Driver Memory Architecture]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Spark/Memory Management/Executer OOM with Salting|Executor OOM in Spark (with Salting)]]

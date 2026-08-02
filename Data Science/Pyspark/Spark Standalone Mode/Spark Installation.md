@@ -305,3 +305,6 @@ rm -rf /tmp/worker1 /tmp/worker2
 - [ ] Web UIs accessible
 
 This comprehensive guide provides everything needed to install, configure, and run a Spark Standalone cluster with multiple workers on a single machine, along with troubleshooting tips for common issues.
+
+## 🔗 Related Notes
+- [[Data Science/Pyspark/Spark Standalone Mode/Automating Spark Start and Stop|🚀 Spark Standalone Cluster on One Machine (Multi-Worker)]]

@@ -119,3 +119,6 @@ df_old = DeltaTable("path/to/delta-table", version=0).to_pandas()
 If you want, I can make a **small Pandas+Delta Lake ETL example** showing **read → transform → write** — which is exactly how it’s done in real-world data engineering pipelines.
 
 Do you want me to do that?
+
+## 🔗 Related Notes
+- [[Data Science/Pandas/Pandas read_json|Pandas read_json]]

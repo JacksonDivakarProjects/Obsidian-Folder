@@ -142,3 +142,8 @@ df_with_errors = spark.read.option("mode", "PERMISSIVE") \
 ---
 
 Jack, I can also give you a **mini snippet that shows how to **print all corrupt rows** using `_corrupt_record`**, which is very useful for cleaning messy CSVs. Do you want me to do that?
+
+## 🔗 Related Notes
+- [[Data Science/Pyspark/Spark RDD|Spark RDD]]
+- [[Data Science/Pyspark/Pyspark Reading Modes|Pyspark Reading Modes]]
+- [[Data Science/Pyspark/Pyspark Programs|Pyspark Programs]]

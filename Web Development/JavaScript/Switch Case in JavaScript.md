@@ -236,3 +236,8 @@ function updateNavigation(page) {
 ---
 
 **I have created the notes for Topic 22. Please say "Next" for me to proceed to Topic 23 (Keystrokes).**
+
+
+## 🔗 Related Notes
+- [[Web Development/JavaScript/Keystrokes in JavaScript|Keystrokes: keypress Event and Event Object]]
+- [[Web Development/JavaScript/Loops in JavaScript|Loops in JavaScript and forEach with Event Listeners]]

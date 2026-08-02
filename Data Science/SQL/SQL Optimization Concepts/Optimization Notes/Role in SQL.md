@@ -237,3 +237,7 @@ If you want, I can create for you:
 🧠 **A mental model diagram of “How SQL thinks”**
 
 Just tell me **which one** you want.
+
+## 🔗 Related Notes
+- [[Data Science/SQL/SQL Optimization Concepts/Optimization Notes/Behaviours of SQL Engine and Tips|THE SQL ENGINE — A COMPREHENSIVE BEHAVIOR GUIDE]]
+- [[Data Science/SQL/SQL Optimization Concepts/Optimization Notes/Common Pitfalls in Querying|Common Pitfalls in Querying]]

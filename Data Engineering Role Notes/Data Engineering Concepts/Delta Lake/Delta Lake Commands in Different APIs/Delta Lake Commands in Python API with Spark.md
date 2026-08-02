@@ -561,3 +561,8 @@ except Exception as e:
 10. **Use partitioning** for large tables with predictable filters
 
 This comprehensive guide covers the essential Delta Lake operations in PySpark. Remember to adjust paths, configurations, and data types according to your specific use case and environment requirements.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Delta Lake Commands in Different APIs/Delta Lake Commands in SQL API|Delta Lake Object Commands (SQL API)]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Other Important Concepts/Upsert In DeltaLake|DeltaTable Upsert in PySpark]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Important TBLProperties/Table Utility Commands|Delta Lake Table Utility Commands]]

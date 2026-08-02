@@ -108,3 +108,7 @@ sudo groupdel groupname
 👉 This way, you’ll have full control over users and groups, and Docker will run smoothly without needing `sudo` every time.
 
 Would you like me to also show you a **step-by-step script** that sets up Docker group permissions automatically, so you don’t have to run each command manually?
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Docker/Docker Installation|Docker Installation]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Docker/Docker Hub Practice|Docker Beginner's Guide: Login, Create Image, Push & Pull]]

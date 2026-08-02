@@ -63,3 +63,6 @@ ALTER INDEX MyColumnstoreIndex ON MyTable REORGANIZE;
 ```
 
 Since you've been working with **dbt** and **data engineering** concepts, would you like to know how to query the system views (`sys.dm_db_column_store_row_group_physical_stats`) to see exactly how many rows are currently "stuck" in your Delta Store?
+
+## 🔗 Related Notes
+- [[Data Science/SQL/SQL Optimization Concepts/Indexing/Difference Between Clustered Column Store and Non Clustered Column Store|Difference Between Clustered Column Store and Non Clustered Column Store]]

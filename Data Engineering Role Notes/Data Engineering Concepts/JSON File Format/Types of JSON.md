@@ -164,3 +164,6 @@ Describes structure and rules for JSON documents.
 ---
 
 Would you like me to show you **how to identify each type programmatically in Python** (for example, detect whether a JSON is array-based or object-based)? It’s very useful in automation and data ingestion pipelines.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/JSON File Format/JSON with Python|JSON with Python]]

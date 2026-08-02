@@ -163,3 +163,8 @@ You've learned that **Singular Tests** are your customizable data quality audito
 
 **Ready to take reusability to the next level?**
 Type `NEXT` to proceed to **Topic 3: Custom Generic Tests**, where we'll learn how to write your own reusable test macros that behave like the built-in `unique` or `not_null` tests.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 04/Custom Generic Tests|Custom Generic Tests]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 04/Generic Tests & Their Types|Generic Tests & Their Types]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/Tests In DBT/Tests in DBT|Tests in DBT]]

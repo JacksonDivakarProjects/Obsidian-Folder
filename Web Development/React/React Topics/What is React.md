@@ -207,3 +207,8 @@ A: With this guide, you'll build your first React app today! Mastery takes pract
 ---
 
 **Ready for Topic 2: "What we will make in this React module"?**
+
+## 🔗 Related Notes
+- [[Web Development/React/React Topics/What We Will Make in This React Module|What We Will Make in This React Module]]
+- [[Web Development/React/React Topics/Introduction to CodeSandbox and the Structure of the Module|Introduction to CodeSandbox and the Structure of the Module]]
+- [[Web Development/React/React Topics/React Components|React Components]]

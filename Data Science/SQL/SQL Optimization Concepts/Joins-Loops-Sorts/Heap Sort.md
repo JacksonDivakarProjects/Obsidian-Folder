@@ -100,3 +100,6 @@ If you want to see the actual heap sort code in a procedural language (like Pyth
 7. [https://www.programiz.com/dsa/heap-sort](https://www.programiz.com/dsa/heap-sort)
 8. [https://www.interviewcake.com/concept/java/heapsort](https://www.interviewcake.com/concept/java/heapsort)
 9. [https://stackoverflow.com/questions/34824995/how-does-a-dbms-implement-their-own-sorting-algorithm-or-do-they](https://stackoverflow.com/questions/34824995/how-does-a-dbms-implement-their-own-sorting-algorithm-or-do-they)
+
+## 🔗 Related Notes
+- [[Data Science/SQL/SQL Optimization Concepts/Joins-Loops-Sorts/Quick Sort|Quick Sort in SQL: A Comprehensive Guide]]

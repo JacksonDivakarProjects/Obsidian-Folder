@@ -185,3 +185,8 @@ df_filled_simple.show()
     print(f"Filling salary with mean value ({mean_salary:.2f}):")
     df_fill_mean.show()
     ```
+
+## 🔗 Related Notes
+- [[Data Science/Pyspark/Basic DataFrame Operation|Basic DataFrame Operation]]
+- [[Data Science/Pyspark/Schema Operation in Pyspark|📘 Schema Operations in PySpark]]
+- [[Data Science/Pyspark/Pyspark Programs|Pyspark Programs]]

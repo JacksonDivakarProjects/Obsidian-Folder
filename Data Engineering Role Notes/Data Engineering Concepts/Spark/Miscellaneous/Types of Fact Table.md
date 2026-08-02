@@ -415,3 +415,8 @@ WHERE delivery_date_key IS NOT NULL;
 8. **Validate data quality** at ETL stage
 
 This comprehensive guide covers the essential types of fact tables and their practical implementations. Understanding these patterns is crucial for designing effective data warehouse solutions that meet business analytical needs.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Methodologies/Kimball Methodology|Kimball Methodology]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Miscellaneous/Data Modeling|Data Modelling Masterclass for Data Engineers]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Spark/Joins/Links For Types Of Fact Table|Links For Types Of Fact Table]]

@@ -83,3 +83,8 @@ df.groupby('Department')['Employee'].agg(list).explode().reset_index()
 ---
 
 Let me know if you want `.agg()` examples using functions like `sum`, `nunique`, or combining it with filters and `reset_index()`.
+
+## 🔗 Related Notes
+- [[Data Science/Pandas/Pandas Groupby Function|🔧 `groupby()` in Pandas – Comprehensive Guide]]
+- [[Data Science/Pandas/Pandas .explode()|Pandas .explode()]]
+- [[Data Science/Pandas/Pandas Pivot Table|📊 Pivot Tables in Pandas — A Comprehensive Guide]]

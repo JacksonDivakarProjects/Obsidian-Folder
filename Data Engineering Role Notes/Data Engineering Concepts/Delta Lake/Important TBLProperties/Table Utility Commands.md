@@ -561,3 +561,8 @@ WHERE timestamp > current_date() - INTERVAL 1 DAY;
 ```
 
 This comprehensive guide covers all essential Delta Lake table utility commands including the newly added DESCRIBE, DESCRIBE EXTENDED, RESTORE, TIMESTAMP, HISTORY, VACUUM, and CLONING commands for effective table management and maintenance.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Important TBLProperties/Table Utility Essential Commands|Delta Table Utility Guide]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Delta Lake Commands in Different APIs/Delta Lake Commands in SQL API|Delta Lake Object Commands (SQL API)]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Questions/How Versioning Works in Delta Lake|How Versioning Works in Delta Lake]]

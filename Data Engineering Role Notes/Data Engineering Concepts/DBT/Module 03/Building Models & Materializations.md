@@ -163,3 +163,9 @@ The power of dbt's configuration hierarchy means you can set a default (e.g., `v
 
 **Ready to learn how models connect?**
 Type `NEXT` to proceed to **Topic 2: The Ref() Function & Building DAGs**, where we'll explore how models depend on each other to form a pipeline.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Syllabus|dbt Learning Syllabus]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 03/The Ref() Function & Building DAGs|The Ref() Function & Building DAGs]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 02/Configs and Variables|Configs & the Hierarchy]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 04/Generic Tests & Their Types|Generic Tests & Their Types]]

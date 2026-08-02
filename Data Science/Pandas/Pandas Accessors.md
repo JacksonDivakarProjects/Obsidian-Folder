@@ -139,3 +139,7 @@ df[df['dept'] == 'IT']
 
 Jack, if you want, I can now **merge this into a one-page PDF cheat sheet** so you have the full `.dt`, `.str`, `.cat`, `.sparse` guide with examples, outputs, and SQL equivalents ready for interviews or work.  
 It’ll be cleaner than scrolling in code.
+
+## 🔗 Related Notes
+- [[Data Science/Pandas/Pandas .str methods|Pandas .str methods]]
+- [[Data Science/Pandas/Pandas Special Notes For Tips and Tricks|Pandas Special Notes For Tips and Tricks]]

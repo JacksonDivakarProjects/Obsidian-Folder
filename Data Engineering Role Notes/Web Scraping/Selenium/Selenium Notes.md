@@ -330,3 +330,7 @@ wait.until(EC.presence_of_element_located(locator))
 ---
 
 **Next:** We'll build a complete project combining BeautifulSoup (for simple sites) and Selenium (for complex sites).
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Web Scraping/Beautiful Soup/Beautiful Soup Notes|BeautifulSoup Installation & Core Syntax]]
+- [[Data Engineering Role Notes/Web Scraping/Web Scraping|Web Scraping]]

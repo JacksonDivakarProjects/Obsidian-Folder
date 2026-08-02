@@ -793,3 +793,8 @@ function InteractivePractice() {
 ---
 
 **Ready for Topic 8: "JSX Attributes & Styling React Elements"?**
+
+## 🔗 Related Notes
+- [[Web Development/React/React Topics/JavaScript Expressions in JSX & ES6 Template Literals|JavaScript Expressions in JSX & ES6 Template Literals]]
+- [[Web Development/React/React Topics/Introduction to JSX and Babel|Introduction to JSX and Babel]]
+- [[Web Development/React/React Topics/JSX Attributes & Styling React Elements|JSX Attributes & Styling React Elements]]

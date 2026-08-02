@@ -200,3 +200,10 @@ This masterclass aims to provide foundational, intermediate, and advanced Linux 
 
 **Analogy for Linux's Role:**
 Think of Linux as the **backbone of a massive, interconnected city**, like a high-speed railway system. While you, as a resident (developer), might interact with specific buildings (applications) or use a car (your local OS like Windows/Mac) to get around, the underlying railway (Linux servers) is what efficiently moves all the goods (data) and services (applications) throughout the entire metropolis, silently ensuring everything runs smoothly, often without a fancy car (GUI) required for its operation. Mastering Linux commands is like learning to operate the control panel of this railway, allowing you to manage and optimise the flow of information across the entire city.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Linux/AWK/AWK - Comprehensive Practical Guide|AWK — Comprehensive Practical Guide]]
+- [[Data Engineering Role Notes/Linux/Concept Oriented Files/CHMOD|CHMOD]]
+- [[Data Engineering Role Notes/Linux/Concept Oriented Files/Find Command|Find Command]]
+- [[Data Engineering Role Notes/Linux/nohup (Background Process)/nohup Guide|The Complete nohup Guide for Beginners]]
+- [[Data Engineering Role Notes/Linux/Concept Oriented Files/Alias with .bashrc|Alias with .bashrc]]

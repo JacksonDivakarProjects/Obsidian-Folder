@@ -259,3 +259,9 @@ Every 3 months, run this checklist (or automate parts of it):
 ---
 
 This completes the full technical reference series. You now have a living manual covering the internals, extensions, workflows, and long‑term maintenance of Claude Code. Each part is designed to be read independently when you need to refresh a specific subsystem, but together they form a complete mental model of the platform.
+
+## 🔗 Related Notes
+- [[Claude Code/Part 3 Memory, Claude.md and the Context Engine|Part 3 – Memory, CLAUDE.md, and the Context Engine]]
+- [[Claude Code/Part 4 Hooks and MCP, The Extension Architecture|Part 4 – Hooks & MCP: The Extension Architecture]]
+- [[Claude Code/Part 5 Custom Commands, IDE Integration and CI CD Automation|Part 5 – Custom Commands, IDE Integration & CI/CD Automation]]
+- [[Claude Code/Introduction to Claude Code|Claude Code – The Pareto Reference (Maximum Output)]]

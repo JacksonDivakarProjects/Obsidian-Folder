@@ -71,3 +71,8 @@ PySpark provides several read modes to handle issues like corrupt records, malfo
 | **EXCEPTION** | Throws exception for corrupt records (Parquet/ORC). | Binary format processing |
 
 For more details, you can refer to the official Spark documentation or articles like those by [Sathish_DE](https://medium.com/@py-spark/pyspark-dataframe-read-modes-me-d269f869617e) and [Shanoj Kumar](https://www.linkedin.com/pulse/apache-spark-101-read-modes-shanoj-kumar-v-myxpc).
+
+## 🔗 Related Notes
+- [[Data Science/Pyspark/Pyspark Read & Write Operations|Pyspark Read & Write Operations]]
+- [[Data Science/Pyspark/Miscellaneous Concepts|Miscellaneous Concepts]]
+- [[Data Science/Pyspark/Schema Operation in Pyspark|📘 Schema Operations in PySpark]]

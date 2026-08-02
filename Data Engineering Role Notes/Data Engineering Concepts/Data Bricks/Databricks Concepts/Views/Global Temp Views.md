@@ -116,3 +116,7 @@ SELECT * FROM global_temp.temp_kpi;
 - Not suitable for production persistence
     
 - No performance gain (recomputed every time)
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Data Bricks/Databricks Concepts/Views/Views|Views]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Data Bricks/Delta Live Tables/View and Streaming Tables/Difference Between Views and Streaming Tables|Difference Between Views and Streaming Tables]]

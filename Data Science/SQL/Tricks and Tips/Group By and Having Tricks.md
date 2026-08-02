@@ -275,3 +275,7 @@ If you want, I will now create a **practice sheet** with:
 - your turn to answer
     
 - then I'll review and improve your answer style for professional communication.
+
+## 🔗 Related Notes
+- [[Data Science/SQL/Miscellaneous/Advanced SQL Aggregation ( Grouping , Rollup ,Cube)|Advanced SQL Aggregation ( Grouping , Rollup ,Cube)]]
+- [[Data Science/SQL/Tricks and Tips/Master Class SQL Tricks|SQL Masterclass – Comprehensive Revision Guide]]

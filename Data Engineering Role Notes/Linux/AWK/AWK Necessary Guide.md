@@ -297,3 +297,9 @@ If you want, next I can:
     
 
 Your move.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Linux/AWK/AWK - Comprehensive Practical Guide|AWK — Comprehensive Practical Guide]]
+- [[Data Engineering Role Notes/Linux/AWK/Arrays|AWK Arrays — What You Should Learn (Only What Matters)]]
+- [[Data Engineering Role Notes/Linux/AWK/uniq commands|uniq commands]]
+- [[Data Engineering Role Notes/Linux/Concept Oriented Files/AWK|AWK]]

@@ -165,3 +165,8 @@ chmod 754 filename
 ---
 
 Let me know if you want a printable version, Obsidian markdown format, or cheat sheet variant.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Linux/Concept Oriented Files/Find Command|Find Command]]
+- [[Data Engineering Role Notes/Linux/Concept Oriented Files/Alias with .bashrc|Alias with .bashrc]]
+- [[Data Engineering Role Notes/Linux/Linux Summary Guide|Linux Masterclass Concepts]]

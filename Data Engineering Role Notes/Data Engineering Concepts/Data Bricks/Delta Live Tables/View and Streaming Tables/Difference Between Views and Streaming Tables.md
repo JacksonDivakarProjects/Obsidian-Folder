@@ -76,3 +76,8 @@ AS SELECT * FROM STREAM read_files('/path/to/orders', 'json');
 CREATE TEMPORARY LIVE VIEW validated_orders
 AS SELECT * FROM LIVE.raw_orders WHERE order_amount > 0;
 ```
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Data Bricks/Databricks Concepts/Views/Views|Views]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Data Bricks/Delta Live Tables/Delta Live Tables|Delta Live Tables (DLT) Comprehensive Guide]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Data Bricks/Databricks Concepts/Views/Global Temp Views|Global Temp Views]]

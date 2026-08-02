@@ -87,3 +87,8 @@ So no reader ever sees half-written data.
 ---
 
 If you want, I can illustrate the **exact commit JSON structure** (with `add` and `remove` actions) that makes this atomic — would you like that?
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/ACID Property/Consistency in Delta Lake|Consistency in Delta Lake]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/ACID Property/Isolation in Delta Lake|Isolation in Delta Lake]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/ACID Property/Durability in Delta Lake|Durability in Delta Lake]]

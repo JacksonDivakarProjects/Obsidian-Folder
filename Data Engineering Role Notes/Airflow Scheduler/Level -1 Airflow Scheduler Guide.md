@@ -520,3 +520,9 @@ The Airflow scheduler is powerful but requires careful configuration and monitor
 - [Airflow Slack Community](https://apache-airflow.slack.com)
 
 Happy scheduling! 🚀
+
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Airflow Scheduler/Airflow Installation|🚀 Apache Airflow: Complete Installation & Troubleshooting Guide (Local Virtualenv)]]
+- [[Data Engineering Role Notes/Airflow Scheduler/Operators in Airflow|Operators in Airflow]]
+- [[Data Engineering Role Notes/Airflow Scheduler/Airflow Images/Airflow Images|Airflow Images]]

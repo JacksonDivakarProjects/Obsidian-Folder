@@ -107,3 +107,7 @@ You can refer to the official Delta Lake documentation for Uniform / UniForm her
 ---
 
 If you like, I can also create a **cheat sheet PDF** version of this note—compact and print-friendly—for your reference. Do you want me to send that?
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Other Important Concepts/Open Table Format|Open Table Format]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Data Bricks/Databricks Concepts/Managed Vs External Tables|Managed vs External Tables (Unity Catalog)]]

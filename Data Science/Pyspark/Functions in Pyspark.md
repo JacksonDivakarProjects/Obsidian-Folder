@@ -224,3 +224,9 @@ df.withColumn("salary_squared", squared_udf(F.col("salary"))).show()
 | **Optimization** | None (Black box) | Limited | Full (Catalyst optimizer, predicate pushdown) |
 | **When to Use** | Only if no built-in alternative exists | For complex operations on entire columns | **Always prefer this first** |
 | **Syntax** | `F.udf(func, ReturnType())` | `@pandas_udf(ReturnType()) def func(s): ...` | `F.lower()`, `F.round()`, etc. |
+
+## 🔗 Related Notes
+- [[Data Science/Pyspark/Basic DataFrame Operation|Basic DataFrame Operation]]
+- [[Data Science/Pyspark/Aggregation and Window Function|Aggregation and Window Function]]
+- [[Data Science/Pyspark/Regexp Functions|Regexp Functions]]
+- [[Data Science/Pyspark/Schema Operation in Pyspark|📘 Schema Operations in PySpark]]

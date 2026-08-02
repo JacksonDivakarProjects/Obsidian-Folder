@@ -68,3 +68,8 @@ You asked: _"how to find that the two variables are dependent... by correlation 
 1. **Visual Check:** Plot a Scatter Plot. If you see a "U" shape or a circle, they are dependent, even if correlation is low.
     
 2. **Mutual Information:** This is a more advanced "Dependency Score" (from Information Theory) that detects _any_ relationship, straight or curved.10
+
+## 🔗 Related Notes
+- [[Data Science/Probability For DS/Three Question/Distributions Question|Distributions Question]]
+- [[Data Science/Probability For DS/Three Question/Conditional Logic Question|Conditional Logic Question]]
+- [[Data Science/Probability For DS/Probability Topics List|Probability Topics List]]

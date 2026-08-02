@@ -216,3 +216,6 @@ index → TID → heap row
 Index Only Scan
 index → return data directly
 ```
+
+## 🔗 Related Notes
+- [[Data Science/SQL/SQL Optimization Concepts/Table Scan Types/Index and Index Only Scan|Comprehensive Guide: Index Scan vs Index-Only Scan in SQL]]

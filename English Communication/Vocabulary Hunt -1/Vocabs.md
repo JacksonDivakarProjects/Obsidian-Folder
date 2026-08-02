@@ -44,3 +44,8 @@
 > “Effective synergy between R&D and operations improved product rollout speed.”
 
 I can also give **3–4 more natural sentences using ‘synergy’ for meetings, emails, or presentations**. Do you want me to do that?
+
+## 🔗 Related Notes
+- [[English Communication/Vocabulary Hunt -1/ChatGPT|ChatGPT]]
+- [[English Communication/Vocabulary Hunt -1/DeepSeek|DeepSeek]]
+- [[English Communication/Vocabulary Hunt -1/Gemini|Gemini]]

@@ -108,3 +108,7 @@ Merge join is a powerful technique for joining sorted tables in SQL. By leveragi
 18. [https://www.sigmacomputing.com/blog/sql-joins](https://www.sigmacomputing.com/blog/sql-joins)
 19. [https://builtin.com/articles/sql-merge-two-tables](https://builtin.com/articles/sql-merge-two-tables)
 20. [https://www.youtube.com/watch?v=MFazkaZKs1s](https://www.youtube.com/watch?v=MFazkaZKs1s)
+
+## 🔗 Related Notes
+- [[Data Science/SQL/SQL Optimization Concepts/Joins-Loops-Sorts/Hash Join|Hash Join]]
+- [[Data Science/SQL/SQL Optimization Concepts/Joins-Loops-Sorts/Nested Loops in SQL|Comprehensive Guide to Nested Loops in SQL]]

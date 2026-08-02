@@ -100,3 +100,8 @@ Explain logic, grain, assumptions.
 ## One-line summary
 
 dbt documentation has **inline single-line descriptions for quick meaning** and **Markdown doc blocks for structured, reusable explanations** rendered in dbt Docs.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/YAML File/DBT Course/Types of YAML File|Types of YAML File]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/YAML File/DBT Course/YAML File and Its Structure|YAML File and Its Structure]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/YAML File/Dash in YAML|Dash in YAML]]

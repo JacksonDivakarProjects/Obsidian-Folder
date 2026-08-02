@@ -296,3 +296,7 @@ WINDOW w AS (
 ## Conclusion
 
 SQL window functions are indispensable for advanced data analysis and reporting. Mastering the `OVER()` clause—specifically, the effects of `PARTITION BY`, `ORDER BY`, and the critical **frame clause**—is the key to using them effectively. By understanding the distinct purposes of `FIRST_VALUE`, `LAST_VALUE`, `NTH_VALUE`, `NTILE`, `CUME_DIST`, and `PERCENT_RANK`, and by using the `WINDOW` clause to write clean code, you can solve a wide array of complex querying problems with elegance and performance.
+
+## 🔗 Related Notes
+- [[Data Science/SQL/Window Functions/SQL Window Functions and Aggregate Examples|SQL Window Functions and Aggregate Examples]]
+- [[Data Science/SQL/Tricks and Tips/Group By and Having Tricks|Group By and Having Tricks]]

@@ -233,3 +233,7 @@ CREATE TABLE sales_test SHALLOW CLONE delta.`/data/sales`;
 If you want, I can **make a single-page visual cheat sheet** with **commands + quick example snippets** — ideal for interviews or reference.
 
 Do you want me to do that?
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Important TBLProperties/Table Utility Commands|Delta Lake Table Utility Commands]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Delta Lake Commands in Different APIs/Delta Lake Commands in SQL API|Delta Lake Object Commands (SQL API)]]

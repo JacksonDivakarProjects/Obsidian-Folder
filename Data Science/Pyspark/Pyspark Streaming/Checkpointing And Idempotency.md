@@ -166,3 +166,8 @@ Output modes in Spark control **how results are written to sinks**. They interac
 If you want, I can create a **visual diagram** showing **checkpoint, micro-batches, and idempotent writes** in Spark Structured Streaming — it makes this concept very intuitive.
 
 Do you want me to make that?
+
+## 🔗 Related Notes
+- [[Data Science/Pyspark/Pyspark Streaming/ForEachBatch|ForEachBatch]]
+- [[Data Science/Pyspark/Pyspark Streaming/Output Modes in Streaming|Output Modes in Streaming]]
+- [[Data Science/Pyspark/Pyspark Streaming/Archive Source File|Archive Source File]]

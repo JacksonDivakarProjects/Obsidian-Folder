@@ -84,3 +84,7 @@ button.classList.add("btn-primary");
 ---
 
 **I have created the notes for Topic 11. Please say "Next" for me to proceed to Topic 12 (Class List Functions).**
+
+## 🔗 Related Notes
+- [[Web Development/JavaScript/classList Functions (add,remove,toggle)|Class List Functions: add, remove, toggle]]
+- [[Web Development/JavaScript/Manipulating Elements Using DOM|Manipulating Elements Using DOM - Camel Case for Properties]]

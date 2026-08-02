@@ -82,3 +82,9 @@ title.style.padding = "10px";
 ---
 
 **I have created the notes for Topic 10. Please say "Next" for me to proceed to Topic 11 (DOM classList).**
+
+## 🔗 Related Notes
+- [[Web Development/JavaScript/Selecting HTML Elements Using DOM|Selecting HTML Elements Using the DOM]]
+- [[Web Development/JavaScript/DOM classList|DOM classList]]
+- [[Web Development/JavaScript/Attributes|Attributes - attributes, getAttribute(), setAttribute()]]
+- [[Web Development/JavaScript/Difference Between innerHTML and textContent|Difference Between innerHTML and textContent]]

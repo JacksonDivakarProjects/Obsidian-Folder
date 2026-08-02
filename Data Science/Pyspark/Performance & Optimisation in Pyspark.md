@@ -239,3 +239,9 @@ df.groupBy("state").agg(F.avg("salary")).explain()
 8.  **Use vectorized operations** - Prefer built-in functions over UDFs
 
 Would you like me to dive deeper into any of these optimization techniques or move on to the next topics like Structured Streaming or MLlib?
+
+## 🔗 Related Notes
+- [[Data Science/Pyspark/Broadcasting in Pyspark|Broadcasting in Pyspark]]
+- [[Data Science/Pyspark/Repartition Vs Coalesce|Repartition Vs Coalesce]]
+- [[Data Science/Pyspark/Joining DataFrames|Joining DataFrames]]
+- [[Data Science/Pyspark/Serialization and Deserialization|Serialization and Deserialization]]

@@ -311,3 +311,9 @@ print(s_int)
 
 # Pitfall: NaNs are floats, so object-to-int fails if NaNs present. Use pd.to_numeric() with errors='coerce' for flexibility.
 ```
+
+## 🔗 Related Notes
+- [[Data Science/Pandas/Pandas Dropna|📘 `pandas.DataFrame.dropna()` – Complete Guide]]
+- [[Data Science/Pandas/Pandas Join|Pandas Join]]
+- [[Data Science/Pandas/Pandas .str methods|Pandas .str methods]]
+- [[Data Science/Pandas/Pandas Groupby Function|🔧 `groupby()` in Pandas – Comprehensive Guide]]

@@ -417,3 +417,7 @@ WHERE data_warehouse_table.id = ur.id;
 7. **Consider the database system** - syntax may vary (EXCEPT vs MINUS)
 
 This comprehensive guide covers the essential set operations in SQL. Practice with these examples and adapt them to your specific use cases for effective data manipulation and analysis.
+
+## 🔗 Related Notes
+- [[Data Science/SQL/SQL SubQueries/SQL SubQueries|Comprehensive Guide to SQL Subqueries]]
+- [[Data Science/SQL/Recursive CTE/Recursive CTE Notes|Comprehensive Recursive CTE Guide]]

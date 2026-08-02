@@ -129,3 +129,10 @@ Do **not** pick up a textbook.
     
 
 That's it. If you know the concepts in lists 1-5, you know more probability than 90% of junior data scientists.
+
+## 🔗 Related Notes
+- [[Data Science/Probability For DS/Three Question/Distributions Question|Distributions Question]]
+- [[Data Science/Probability For DS/Three Question/Conditional Logic Question|Conditional Logic Question]]
+- [[Data Science/Probability For DS/Three Question/Uncertainity Question|Uncertainity Question]]
+- [[Data Science/Probability For DS/Hypothesis Errors/Types of Errors in Hypothesis Testing|Types of Errors in Hypothesis Testing]]
+- [[Data Science/Probability For DS/Statistics/P value and Hypothesis Testing|Comprehensive Revision Guide: p-Value & Hypothesis Testing]]

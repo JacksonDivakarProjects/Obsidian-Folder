@@ -72,3 +72,8 @@ Arrays are used to store multiple values in a single variable. "Push" and "Pull"
 ---
 
 **I have created the notes for Topic 6. Please say "Next" for me to proceed to Topic 7 (DOM).**
+
+## 🔗 Related Notes
+- [[Web Development/JavaScript/Loops in JavaScript|Loops in JavaScript and forEach with Event Listeners]]
+- [[Web Development/JavaScript/Higher Order Functions and Callback Functions|Higher Order Functions and Callback Functions]]
+- [[Web Development/JavaScript/String Operations|String Operations]]

@@ -815,3 +815,9 @@ const { data: [firstItem] } = obj;
 ---
 
 **Ready for Topic 35: "Event Handling in React"?**
+
+## 🔗 Related Notes
+- [[Web Development/React/React Topics/JavaScript ES6 Spread Operator|JavaScript ES6 Spread Operator]]
+- [[Web Development/React/React Topics/React Props|React Props]]
+- [[Web Development/React/React Topics/React Hooks|React Hooks - useState]]
+- [[Web Development/React/React Topics/JavaScript ES6 Arrow Functions|JavaScript ES6 Arrow Functions]]

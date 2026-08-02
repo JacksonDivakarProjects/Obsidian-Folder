@@ -130,3 +130,8 @@ If you want, next I can show:
 - `uniq` interview traps
     
 - A one-page Unix pipelines cheat sheet
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Linux/AWK/AWK - Comprehensive Practical Guide|AWK — Comprehensive Practical Guide]]
+- [[Data Engineering Role Notes/Linux/AWK/AWK Necessary Guide|AWK — Comprehensive Applied Guide (Real-World Edition)]]
+- [[Data Engineering Role Notes/Linux/AWK/Arrays|AWK Arrays — What You Should Learn (Only What Matters)]]

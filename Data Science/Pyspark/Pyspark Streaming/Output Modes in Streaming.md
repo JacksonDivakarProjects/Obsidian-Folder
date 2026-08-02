@@ -131,3 +131,8 @@ query.awaitTermination()
 ```
 
 Choose the output mode based on your specific use case, memory constraints, and the type of processing you're performing.
+
+## 🔗 Related Notes
+- [[Data Science/Pyspark/Pyspark Streaming/Watermarking in Streaming|Watermarking in PySpark Structured Streaming]]
+- [[Data Science/Pyspark/Pyspark Streaming/Why Complete Mode not Working in Watermarking|Why `complete` Output Mode Doesn't Work with Watermarks]]
+- [[Data Science/Pyspark/Pyspark Streaming/Types Of Windows|Window Operations in PySpark Structured Streaming]]

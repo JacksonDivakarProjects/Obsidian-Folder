@@ -225,3 +225,7 @@ for idx, df in enumerate(dfs, 1):
 If you want, I can also make a **visual timeline diagram** showing **sync vs async API calls** — it’s extremely helpful to **see the overlapping tasks clearly**.
 
 Do you want me to do that?
+
+## 🔗 Related Notes
+- [[Data Science/Miscellaneous 1/Asynchronous Programming/Asynchronous Programming Notes|Asynchronous Programming in Python]]
+- [[Data Science/Miscellaneous 1/Thread Pool Executor/Comprehensive Guide to ThreadPoolExecutor for Beginners|Comprehensive Guide to ThreadPoolExecutor for Beginners]]

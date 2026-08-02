@@ -78,3 +78,6 @@ SELECT YEARWEEK('2025-12-12'); -- 202550
 
 ---
 
+
+## 🔗 Related Notes
+- [[Data Science/SQL/SQL Functions/Most Frequent Functions|Most Frequent Functions]]

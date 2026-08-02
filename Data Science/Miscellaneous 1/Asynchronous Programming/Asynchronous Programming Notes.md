@@ -151,3 +151,7 @@ Main completed
     
 
 ---
+
+## 🔗 Related Notes
+- [[Data Science/Miscellaneous 1/Asynchronous Programming/Synchronous vs Asynchronous Programming|Comprehensive Guide: Synchronous vs Asynchronous Programming in Python]]
+- [[Data Science/Miscellaneous 1/Thread Pool Executor/Comprehensive Guide to ThreadPoolExecutor for Beginners|Comprehensive Guide to ThreadPoolExecutor for Beginners]]

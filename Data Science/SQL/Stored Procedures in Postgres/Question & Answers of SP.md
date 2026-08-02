@@ -361,3 +361,7 @@ $$;
 3. **Default parameter mode is IN**
 4. Use **DEFAULT** or **:=** in DECLARE section for initial values
 5. **CONSTANT** prevents variable modification
+
+## 🔗 Related Notes
+- [[Data Science/SQL/Stored Procedures in Postgres/Stored Procedures Notes|Comprehensive Beginner's Guide to PostgreSQL Stored Procedures]]
+- [[Data Science/SQL/Stored Procedures in Postgres/IN, OUT, INOUT Parameters|Comprehensive Guide to IN, OUT, and INOUT Parameters in PostgreSQL]]

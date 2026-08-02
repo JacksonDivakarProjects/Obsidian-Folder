@@ -685,3 +685,8 @@ AS $$
 - Join PostgreSQL communities and forums
 
 Remember: The key to mastering stored procedures is consistent practice and building real projects!
+
+## 🔗 Related Notes
+- [[Data Science/SQL/Stored Procedures in Postgres/IN, OUT, INOUT Parameters|Comprehensive Guide to IN, OUT, and INOUT Parameters in PostgreSQL]]
+- [[Data Science/SQL/Stored Procedures in Postgres/Question & Answers of SP|Question & Answers of SP]]
+- [[Data Science/SQL/Triggers in SQL/Triggers in SQL|SQL Triggers — Comprehensive Beginner-Level Guide]]

@@ -166,3 +166,7 @@ spark = SparkSession.builder \
 ---
 
 Jack, do you want me to now **combine the Driver + Executor architecture into a side-by-side comparison table/diagram** so you can see both perspectives clearly in one place?
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Spark/Memory Management/Driver Memory Management|Spark Driver Memory Architecture]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Spark/Memory Management/Executer OOM with Salting|Executor OOM in Spark (with Salting)]]

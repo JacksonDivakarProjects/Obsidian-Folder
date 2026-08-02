@@ -109,3 +109,8 @@ find . -type f -name '*.log' -exec rm {} \;
 ---
 
 Let me know if you want a **more advanced section** on `-perm`, `-user`, or `-exec`.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Linux/Concept Oriented Files/CHMOD|CHMOD]]
+- [[Data Engineering Role Notes/Linux/Concept Oriented Files/AWK|AWK]]
+- [[Data Engineering Role Notes/Linux/Linux Summary Guide|Linux Masterclass Concepts]]

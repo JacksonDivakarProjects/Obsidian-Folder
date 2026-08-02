@@ -190,3 +190,8 @@ Fix = **spread skewed keys with salting**, use smart joins, tune executor memory
 ---
 
 Jack — do you want me to also show you **a visual way to detect skewed partitions in Spark UI** (so you know when salting is needed), or keep it purely conceptual?
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Spark/Memory Management/Executer Memory Management|Spark Executor Memory Architecture]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Spark/Memory Management/Driver OOM|Driver Out-Of-Memory (OOM) in Spark]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Spark/Joins/Shuffle Hash Join|Shuffle Hash Join]]

@@ -87,3 +87,8 @@ console.log(typeof dynamicVar); // "boolean"
 ---
 
 **I have created the notes for Topic 5. Please say "Next" for me to proceed to Topic 6 (Arrays - Push and Pull Operations).**
+
+## 🔗 Related Notes
+- [[Web Development/JavaScript/Operator - typeof|The typeof Operator]]
+- [[Web Development/JavaScript/Equality Operator|Equality Operators]]
+- [[Web Development/JavaScript/Difference Between `var`, `let`, and `const`|Difference Between var, let, and const]]

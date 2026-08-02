@@ -106,3 +106,7 @@ Perfect, Jack — understood. I’ll keep it **laser-focused only on the Spark D
 ---
 
 Do you want me to next create a **similar focused breakdown for the Executor memory architecture**, so that together you’ll have both halves of the picture?
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Spark/Memory Management/Driver OOM|Driver Out-Of-Memory (OOM) in Spark]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Spark/Memory Management/Executer Memory Management|Spark Executor Memory Architecture]]

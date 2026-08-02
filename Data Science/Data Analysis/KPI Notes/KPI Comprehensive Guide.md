@@ -107,3 +107,9 @@ These metrics are critical for online businesses and marketing efforts.
 5.  **Review Regularly:** KPIs are for action, not just reporting. Review them frequently in management meetings to drive timely decisions.
 
 This guide provides a robust foundation. The most successful businesses select and adapt these KPIs to their specific strategy, industry, and stage of growth.
+
+## 🔗 Related Notes
+- [[Data Science/Data Analysis/Data Analysis Notes Parts/Data Analysis - (Part -1)|The Business Data Analysis Playbook (Part 1)]]
+- [[Data Science/Data Analysis/Data Analysis Notes Parts/Data Analysis - (Part -2)|Part 2: The Analysis Framework - What to Look For]]
+- [[Data Science/Data Analysis/Data Analysis Notes Parts/Data Analysis - (Part -4)|Part 4: Industry-Specific Cheat Sheets]]
+- [[Data Science/Data Analysis/Data Analysis Roadmap/Framework Based Data Analysis|Framework Based Data Analysis]]

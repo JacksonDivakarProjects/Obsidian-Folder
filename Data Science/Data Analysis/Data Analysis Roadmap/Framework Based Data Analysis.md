@@ -72,3 +72,9 @@ Whenever you get a data request, use this **3-Step Efficiency Filter**:
 | **4** | **Lillian Chiu** | Tech Industry Case Studies (The "Application") |
 
 **Would you like me to walk you through a real-world McKinsey-style "Issue Tree" exercise for a failing business to show you how this works?**
+
+## 🔗 Related Notes
+- [[Data Science/Data Analysis/Data Analysis Roadmap/Roadmap Table|Roadmap Table]]
+- [[Data Science/Data Analysis/Data Analysis Roadmap/Youtube Channel List|Youtube Channel List]]
+- [[Data Science/Data Analysis/Data Analysis Notes Parts/Data Analysis - (Part -3)|Part 3: From Insight to Action - The Decision Framework]]
+- [[Data Science/Data Analysis/KPI Notes/KPI Comprehensive Guide|KPI Comprehensive Guide]]

@@ -132,3 +132,8 @@ The Gold layer is where the dimensional model is constructed from the cleansed "
             1. The existing (old) record is "expired" by setting its `end_date` to the current timestamp and its `is_current` flag to 'N'.
             2. A new record is inserted with the updated information, a new `start_date`, a far-future `end_date` (or null), and an `is_current` flag of 'Y'.
         - **Implementation:** This requires a more complex, multi-stage `MERGE` process to first expire old records and then insert the new versions.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Methodologies/Kimball Methodology|Kimball Methodology]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Spark/Miscellaneous/Types of Fact Table|Types of Fact Tables in Data Warehousing]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Miscellaneous/Fundamentals Of Data Engineering|Fundamentals Of Data Engineering]]

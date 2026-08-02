@@ -93,3 +93,7 @@ df.select("id", explode_outer("letters").alias("letter")).show()
     
 
 Would you like me to include how it behaves for **map columns** (key–value pairs) too?
+
+## 🔗 Related Notes
+- [[Data Science/Pyspark/Pyspark Streaming/Spark Streaming Foundational Concepts|Spark Streaming Foundational Concepts]]
+- [[Data Science/Pyspark/Schema Operation in Pyspark|📘 Schema Operations in PySpark]]

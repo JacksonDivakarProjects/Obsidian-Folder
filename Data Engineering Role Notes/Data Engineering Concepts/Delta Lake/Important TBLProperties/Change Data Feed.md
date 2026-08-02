@@ -96,3 +96,8 @@ WHERE _change_type = 'update_postimage';
 If you want, I can also draft a **compact SQL cheat-sheet for Delta Lake CDF** that covers **create, alter, query, and best practices** all in one table. It will be extremely handy for quick reference.
 
 Do you want me to do that?
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Questions/How Versioning Works in Delta Lake|How Versioning Works in Delta Lake]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Data Bricks/Delta Live Tables/AutoCDC API/AutoCDC in DLT|AutoCDC in DLT]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 05/Snapshots & Change Tracking|Snapshots & Change Tracking]]

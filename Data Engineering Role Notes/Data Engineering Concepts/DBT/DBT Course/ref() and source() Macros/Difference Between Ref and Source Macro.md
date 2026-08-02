@@ -94,3 +94,7 @@ from {{ source('sales', 'orders') }}
     
 
 No overlap. Each has a distinct role in dbt’s architecture.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 03/The Ref() Function & Building DAGs|The Ref() Function & Building DAGs]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/DBT Topic Links/Sources YAML File|Sources YAML File]]

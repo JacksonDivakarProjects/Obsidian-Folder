@@ -103,3 +103,8 @@ df['username'] = df['email'].str.extract(r'(\w+)')
 ---
 
 This guide is your one-stop reference for working with text data in Pandas. Let me know if you'd like to expand it with NLP techniques or complex pattern extractions!
+
+## 🔗 Related Notes
+- [[Data Science/Pandas/Pandas Accessors|📚 Pandas Accessors – Practical Guide with Outputs]]
+- [[Data Science/Pandas/Pandas Special Notes For Tips and Tricks|Pandas Special Notes For Tips and Tricks]]
+- [[Data Science/Pandas/Pandas Join|Pandas Join]]

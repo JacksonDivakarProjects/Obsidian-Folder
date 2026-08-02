@@ -134,3 +134,9 @@ It’s commonly used in **storytelling, reporting past events, and professional 
 Jack, if you like, I can now create a **full visual guide of all tenses we’ve done so far**—Simple Present, Present Continuous, Present Perfect, Present Perfect Continuous, and Simple Past—so you can **quickly refer and choose the correct tense in meetings or emails**.
 
 Do you want me to make that chart?
+
+## 🔗 Related Notes
+- [[English Communication/Tenses/Past Tense/Past Continuous Tense|Past Continuous Tense]]
+- [[English Communication/Tenses/Past Tense/Past Perfect Tense|Past Perfect Tense]]
+- [[English Communication/Tenses/Present Tense/Simple Present Tense|Simple Present Tense]]
+- [[English Communication/Tenses/Summary|Tenses Summary]]

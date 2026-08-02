@@ -73,3 +73,7 @@ HAVING COUNT(DISTINCT ride_date) >= 30;
 
 Would you like me to lock these into your permanent “SQL Trick Sheet” context?  
 I can also add the **"30 consecutive days" solution logic** when you're ready to try it.
+
+## 🔗 Related Notes
+- [[Data Science/SQL/Tricks and Tips/Master Class SQL Tricks|SQL Masterclass – Comprehensive Revision Guide]]
+- [[Data Science/SQL/Tricks and Tips/Group By and Having Tricks|Group By and Having Tricks]]

@@ -254,3 +254,9 @@ def calculate_customer_lifetime_value(df):
 ```
 
 These programs cover the most critical patterns you'll use in real-world PySpark development. Master these, and you'll be prepared for the vast majority of data engineering tasks!
+
+## 🔗 Related Notes
+- [[Data Science/Pyspark/Aggregation and Window Function|Aggregation and Window Function]]
+- [[Data Science/Pyspark/Pyspark Read & Write Operations|Pyspark Read & Write Operations]]
+- [[Data Science/Pyspark/Pyspark Reading Modes|Pyspark Reading Modes]]
+- [[Data Science/Pyspark/SCD In Pyspark|SCD In Pyspark]]

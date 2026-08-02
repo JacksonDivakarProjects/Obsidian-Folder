@@ -134,3 +134,8 @@ Azure offers a suite of tools for implementing cloud data engineering architectu
 - **Microsoft Entra ID:** Manages user identities and access within an organisation in Azure.
 
 These tools integrate to form an end-to-end cloud data engineering architecture, where data flows from sources (like Event Hub or SQL DB) through ADLS Gen2 (Bronze layer), transformed by Databricks, curated in Synapse Analytics (Gold layer), and finally reported via Power BI.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Miscellaneous/Data Modeling|Data Modelling Masterclass for Data Engineers]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Miscellaneous/Data Lake House|Data Lakehouse]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Methodologies/Kimball Methodology|Kimball Methodology]]

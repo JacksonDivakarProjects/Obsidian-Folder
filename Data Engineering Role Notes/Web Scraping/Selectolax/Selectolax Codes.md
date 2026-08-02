@@ -76,3 +76,7 @@ print(f"Extracted URL: {url}")
 - Extract text or attributes from elements
 
 This process allows you to efficiently scrape and process web page data using Selectolax. If you'd like, I can provide a more specific example tailored to your particular HTML content.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Web Scraping/Beautiful Soup/Beautiful Soup Notes|BeautifulSoup Installation & Core Syntax]]
+- [[Data Engineering Role Notes/Web Scraping/Beautiful Soup/Beautiful Soup|Beautiful Soup]]

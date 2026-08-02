@@ -190,3 +190,9 @@ df_lag_lead.select("emp_id", "first_name", "department", "salary", "hire_date", 
 - **Window Functions**: "Show me each employee's salary and how it ranks within their department." or "What's the running total of hires per department over time?"
 
 Mastering both patterns allows you to answer virtually any analytical question about your data.
+
+## 🔗 Related Notes
+- [[Data Science/Pyspark/Basic DataFrame Operation|Basic DataFrame Operation]]
+- [[Data Science/Pyspark/Functions in Pyspark|Functions in Pyspark]]
+- [[Data Science/Pyspark/Pyspark Pivoting|Pyspark Pivoting]]
+- [[Data Science/Pyspark/Spark SQL|Spark SQL]]

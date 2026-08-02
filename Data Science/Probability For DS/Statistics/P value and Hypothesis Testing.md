@@ -250,3 +250,8 @@ If you want next, I can:
 - compress this into a **one-page cheat sheet**, or
     
 - help you **practice exam-style questions step by step**
+
+## 🔗 Related Notes
+- [[Data Science/Probability For DS/Hypothesis Errors/Types of Errors in Hypothesis Testing|Types of Errors in Hypothesis Testing]]
+- [[Data Science/Probability For DS/Three Question/Uncertainity Question|Uncertainity Question]]
+- [[Data Science/Probability For DS/Probability Topics List|Probability Topics List]]

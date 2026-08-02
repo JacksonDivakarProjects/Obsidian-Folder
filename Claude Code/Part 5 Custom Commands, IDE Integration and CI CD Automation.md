@@ -306,3 +306,9 @@ This entire sequence, with muscle memory, can happen in under 15 minutes for a m
 ---
 
 Part 5 complete. You now have the full stack: from core loop and sub‑agents to memory, extensions, and finally the workflows that make all that power daily habit. If you want a meta‑level “maintenance and evolution” guide (how to update your CLAUDE.md as the project grows, auditing hook performance, MCP server lifecycle, etc.), I can provide that as a closing Part 6. Otherwise, this series is your permanent technical reference.
+
+## 🔗 Related Notes
+- [[Claude Code/Part 4 Hooks and MCP, The Extension Architecture|Part 4 – Hooks & MCP: The Extension Architecture]]
+- [[Claude Code/Part 2 Sub Agent, Operating Modes and Permission Safety Net|Part 2 – Sub-Agents, Operating Modes & the Permission Safety Net]]
+- [[Claude Code/Part 6 Maintaining and Evolving Claude Code Ecosystem|Part 6 – Maintaining & Evolving Your Claude Code Ecosystem]]
+- [[Claude Code/Introduction to Claude Code|Claude Code – The Pareto Reference (Maximum Output)]]

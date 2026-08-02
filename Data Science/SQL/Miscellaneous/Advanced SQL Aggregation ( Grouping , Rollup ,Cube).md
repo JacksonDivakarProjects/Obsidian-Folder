@@ -196,3 +196,7 @@ Let me know if you want:
 - Real dataset examples
     
 - A cheat sheet PDF for revision
+
+## 🔗 Related Notes
+- [[Data Science/SQL/Tricks and Tips/Group By and Having Tricks|Group By and Having Tricks]]
+- [[Data Science/SQL/Window Functions/SQL Window Functions and Aggregate Examples|SQL Window Functions and Aggregate Examples]]

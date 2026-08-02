@@ -55,3 +55,7 @@ Here’s the breakdown:
 ---
 
 If you want, I can **draw a simple diagram showing Data Lake vs Lakehouse** with the Open Table Format layer — it makes this difference _instantly clear_ visually. It’s a favorite in enterprise discussions.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Other Important Concepts/Open Table Format|Open Table Format]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Miscellaneous/Fundamentals Of Data Engineering|Fundamentals Of Data Engineering]]

@@ -72,3 +72,6 @@ Do you want to see query plan examples or details for your specific database sys
 6. [https://cs186berkeley.net/notes/note8/](https://cs186berkeley.net/notes/note8/)
 7. [https://learn.microsoft.com/en-us/sql/t-sql/queries/select-order-by-clause-transact-sql?view=sql-server-ver17](https://learn.microsoft.com/en-us/sql/t-sql/queries/select-order-by-clause-transact-sql?view=sql-server-ver17)
 8. [https://www.geeksforgeeks.org/dsa/sorting-algorithms/](https://www.geeksforgeeks.org/dsa/sorting-algorithms/)
+
+## 🔗 Related Notes
+- [[Data Science/SQL/SQL Optimization Concepts/Joins-Loops-Sorts/Heap Sort|Comprehensive Guide to Heap Sort in SQL]]

@@ -242,3 +242,10 @@ These are valuable but less frequently needed or build upon the above.
 ---
 
 This is your **maximum‑density reference**. Keep it open, search it, extend it. If you want me to explode any single concept into a full deep‑dive (e.g., “exact sub‑agent lifecycle with intercepted logs”, “building a secure MCP server for your internal API”), just name it.
+
+## 🔗 Related Notes
+- [[Claude Code/Part 1 Agentic Loop and Built in Tools|Deep Dive: The Agentic Loop & Built-in Tools]]
+- [[Claude Code/Part 2 Sub Agent, Operating Modes and Permission Safety Net|Part 2 – Sub-Agents, Operating Modes & the Permission Safety Net]]
+- [[Claude Code/Part 3 Memory, Claude.md and the Context Engine|Part 3 – Memory, CLAUDE.md, and the Context Engine]]
+- [[Claude Code/Part 4 Hooks and MCP, The Extension Architecture|Part 4 – Hooks & MCP: The Extension Architecture]]
+- [[Claude Code/Part 5 Custom Commands, IDE Integration and CI CD Automation|Part 5 – Custom Commands, IDE Integration & CI/CD Automation]]

@@ -381,3 +381,7 @@ If you want, I can turn these into:
 🧠 A flashcard-style memory deck
 
 Just tell me what you prefer!
+
+## 🔗 Related Notes
+- [[Data Science/SQL/SQL Optimization Concepts/Optimization Notes/Behaviours of SQL Engine and Tips|THE SQL ENGINE — A COMPREHENSIVE BEHAVIOR GUIDE]]
+- [[Data Science/SQL/SQL Optimization Concepts/Optimization Notes/Role in SQL|Role in SQL]]

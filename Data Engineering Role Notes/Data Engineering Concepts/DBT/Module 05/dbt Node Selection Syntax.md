@@ -140,3 +140,8 @@ dbt test --select tag:finance,tag:critical
 ```
 
 Node selection is **the key to efficient dbt workflows**—it transforms dbt from a bulk processing tool into a precise surgical instrument for data transformation.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 03/The Ref() Function & Building DAGs|The Ref() Function & Building DAGs]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 06/DBT Flags|dbt Flags That Actually Matter]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 06/Plus Dependency Operator|What `+` Means in dbt Selection]]

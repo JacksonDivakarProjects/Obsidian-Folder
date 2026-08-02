@@ -95,3 +95,7 @@ function processData(data) {
 ---
 
 **I have created the notes for Topic 13 including `const`. Please say "Next" for me to proceed to Topic 14 (Difference between innerHTML and textContent).**
+
+## 🔗 Related Notes
+- [[Web Development/JavaScript/Datatypes in JavaScript|Data Types in JavaScript]]
+- [[Web Development/JavaScript/Equality Operator|Equality Operators]]

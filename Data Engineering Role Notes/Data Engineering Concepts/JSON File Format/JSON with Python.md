@@ -333,3 +333,6 @@ print(df_advanced)
 ```
 
 Here, `json_normalize` dove into `data` -> `schools`, flattened each school record (including the nested `principal` info), and added the `source` and `last_updated` metadata to every single row. This is incredibly efficient for cleaning API data for analysis.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/JSON File Format/Types of JSON|Types of JSON]]

@@ -145,3 +145,9 @@ It is one of the most frequently used tenses in English for **daily communicatio
 Jack, if you want, I can also make a **visual one-page chart** of the Simple Present tense that you can **refer to instantly during meetings or writing**. It will include **rules, examples, and common mistakes in a single glance**.
 
 Do you want me to make that?
+
+## 🔗 Related Notes
+- [[English Communication/Tenses/Present Tense/Present Continuous Tense|Present Continuous Tense]]
+- [[English Communication/Tenses/Present Tense/Present Perfect Tense|Present Perfect Tense]]
+- [[English Communication/Tenses/Past Tense/Simple Past Tense|Simple Past Tense]]
+- [[English Communication/Tenses/Summary|Tenses Summary]]

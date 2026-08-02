@@ -75,3 +75,7 @@ SELECT * FROM sales WHERE year = 2023;
 ---
 
 If you want, I can make a **tiny visual diagram** showing **how pushdown and pruning filter data differently** — it’s the quickest way to remember and explain it. Do you want me to do that?
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Optimization for Data Read/How Predicate Pushdown and Predicate Pruning Works|How Predicate Pushdown and Predicate Pruning Works]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Optimization for Data Read/Predicate Pushdown & Column Pruning|Predicate Pushdown & Column Pruning]]

@@ -86,3 +86,7 @@ tar -tvf archive.tar
 |`.tar.xz`|Compressed (xz)|
 
 Would you like examples using `.tar.gz` and `.tar.xz` too?
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Linux/Compress and Decompress/File Zip and Unzip|File Zip and Unzip]]
+- [[Data Engineering Role Notes/Linux/Linux Summary Guide|Linux Masterclass Concepts]]
