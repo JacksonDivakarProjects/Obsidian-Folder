@@ -29,4 +29,4 @@ This note is the overview and entry point for the **English Communication** area
 - [[English Communication/Vocabulary Hunt -1/Vocabs|Vocabs]] — Deep dive on the business buzzword "synergy" (meaning, synonyms, antonyms, usage tips).
 
 ### Files
-- English Communication/Files/vocabulary.csv — Raw vocabulary data (not read; non-markdown file).
+- [[English Communication/Files/vocabulary.csv|vocabulary.csv]] — Raw vocabulary data (non-markdown file).

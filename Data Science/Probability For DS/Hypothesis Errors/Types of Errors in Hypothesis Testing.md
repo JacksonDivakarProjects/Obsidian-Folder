@@ -112,3 +112,4 @@ If you want, I can also:
 - [[Data Science/Probability For DS/Statistics/P value and Hypothesis Testing|Comprehensive Revision Guide: p-Value & Hypothesis Testing]]
 - [[Data Science/Probability For DS/Three Question/Uncertainity Question|Uncertainity Question]]
 - [[Data Science/Probability For DS/Probability Topics List|Probability Topics List]]
+- [[Data Science/Probability For DS/Hypothesis Errors/Hypothesis Errors Images/Hypothesis Errors Images|Hypothesis Errors Images]]

@@ -86,24 +86,20 @@ columns:
   - name: customer_id
     tests:
       - relationships:
-          to: ref(customers)
+          to: ref('customers')
           field: customer_id
 ```
 
 ### **Important note about `ref()`**
 
-- In **`relationships` tests**, `ref()` is **parsed automatically by YAML**
-    
-- **No quotes are required**
-    
+- In the `relationships` test, `ref()` is written directly as the value of `to:`, without wrapping it in `{{ }}`
+- The model name inside `ref()` still needs quotes, like any Jinja string argument
 
 Correct:
 
 ```yaml
-to: ref(customers)
+to: ref('customers')
 ```
-
----
 
 ### **Other macros require quotes**
 

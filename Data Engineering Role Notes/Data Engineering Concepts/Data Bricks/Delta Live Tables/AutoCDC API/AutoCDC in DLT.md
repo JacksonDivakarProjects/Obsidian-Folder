@@ -1,43 +1,33 @@
-## Delta Live Tables (DLT) CDC — Refined Guide
-
----
+## Delta Live Tables (DLT) — AutoCDC (Change Data Capture)
 
 ## 1. Core Concept
 
-CDC streams contain **data rows + metadata columns**.  
-`operation` is **not syntax** — it is a **column in the source data**.
+A CDC stream contains **data columns plus metadata columns**. The `operation` column is not special syntax — it is an ordinary column in the source data, and DLT decides what to do with each row based on the *value* in that column.
 
 Example incoming row:
-
-```id="u6y8k3"
+```text
 userId = 101
 name = "Jack"
 operation = "DELETE"
 event_timestamp = "2024-01-01 10:00:00"
 ```
 
-DLT reads this row and decides **what action to perform** based on the **value inside the `operation` column**.
-
----
-
 ## 2. Architecture
 
-```id="7w7w0g"
-CDC Source Table (with operation column)
+```text
+CDC Source Table (with an operation column)
         ↓
 Streaming View
         ↓
-Auto CDC Flow (interprets column values)
+Auto CDC Flow (interprets the operation column's values)
         ↓
-Target Table (final state)
+Target Table (current/final state)
 ```
-
----
 
 ## 3. Complete Example
 
 ```python
-dp.create_auto_cdc_flow(
+dlt.create_auto_cdc_flow(
   target = "users_current",
   source = "users",
   keys = ["userId"],
@@ -49,147 +39,51 @@ dp.create_auto_cdc_flow(
 )
 ```
 
----
+(`create_auto_cdc_flow` is the current API name; older documentation and existing pipelines may still use its earlier alias, `apply_changes`.)
 
 ## 4. What `operation` Actually Is
 
-- A **column in your dataset**
-    
-- Contains values like:
-    
-    - `"INSERT"`
-        
-    - `"UPDATE"`
-        
-    - `"DELETE"`
-        
-    - `"TRUNCATE"`
-        
+A column in the dataset holding values such as:
+- `"INSERT"`
+- `"UPDATE"`
+- `"DELETE"`
+- `"TRUNCATE"`
 
-DLT does **not assume meaning automatically**.  
-You must define how to interpret these values.
+DLT does **not** infer meaning from these values automatically — you must tell it how to interpret them via `apply_as_deletes` and `apply_as_truncates`.
 
----
-
-## 5. `apply_as_deletes` — Clear Explanation
+## 5. `apply_as_deletes`
 
 ```python
 apply_as_deletes = expr("operation = 'DELETE'")
 ```
 
-### What this means
+For each row, DLT evaluates the condition. If it's **true**, DLT performs a DELETE against the target table for that key; if **false**, the row is treated as a normal insert/update. This is a per-row condition, not an assignment — equivalent to:
 
-- For each row, DLT checks:
-    
-    - Does the **operation column value equal 'DELETE'?**
-        
-
-### If TRUE
-
-- DLT performs a **DELETE in the target table**
-    
-
-### If FALSE
-
-- Row is treated as normal (insert/update)
-    
-
----
-
-### Important interpretation
-
-This is **not assignment**.  
-It is a **condition evaluated on a column**.
-
-Equivalent logic:
-
-```id="2h3l0k"
+```text
 if row.operation == "DELETE":
-    delete from target
+    delete from target where key = row.key
 ```
 
----
+Example: a row with `userId = 101, operation = "DELETE"` results in `DELETE FROM users_current WHERE userId = 101`.
 
-### Example
-
-Incoming row:
-
-```id="d2xk5o"
-userId = 101
-operation = "DELETE"
-```
-
-Action:
-
-```id="r8o3lz"
-DELETE FROM users_current WHERE userId = 101
-```
-
----
-
-## 6. `apply_as_truncates` — Clear Explanation
+## 6. `apply_as_truncates`
 
 ```python
 apply_as_truncates = expr("operation = 'TRUNCATE'")
 ```
 
-### What this means
+If the condition is true for a row, the **entire target table** is cleared — equivalent to:
 
-- For each row, DLT checks:
-    
-    - Does `operation` column equal `"TRUNCATE"`?
-        
-
-### If TRUE
-
-- Entire target table is cleared
-    
-
----
-
-### Equivalent logic
-
-```id="m1r9yt"
+```text
 if row.operation == "TRUNCATE":
     truncate entire table
 ```
 
----
+Example: a row with `operation = "TRUNCATE"` results in `TRUNCATE TABLE users_current`.
 
-### Example
+## 7. Why `expr()` Is Used
 
-Incoming row:
-
-```id="p4k8bz"
-operation = "TRUNCATE"
-```
-
-Action:
-
-```id="4az6qv"
-TRUNCATE TABLE users_current
-```
-
----
-
-## 7. Why Expression (`expr`) Is Used
-
-```python
-expr("operation = 'DELETE'")
-```
-
-- Defines a **boolean condition on a column**
-    
-- Evaluated **row by row**
-    
-- Can be customized
-    
-
----
-
-### Custom column examples
-
-If your dataset uses different column names:
+`expr("operation = 'DELETE'")` defines a boolean condition evaluated row by row. It's just a SQL expression string, so it adapts to any schema:
 
 ```python
 expr("op_type = 'D'")
@@ -197,30 +91,17 @@ expr("event = 'REMOVE'")
 expr("is_deleted = true")
 ```
 
----
+## 8. Execution Order (Per Row)
 
-## 8. Execution Order (Critical)
-
-For each incoming row:
-
-```id="6k2n8f"
-1. Check TRUNCATE condition
-2. Check DELETE condition
-3. Else → UPSERT (insert/update)
+```text
+1. Check the TRUNCATE condition.
+2. Check the DELETE condition.
+3. Otherwise → UPSERT (insert or update).
 ```
 
----
+## 9. Default UPSERT Behavior
 
-## 9. UPSERT Behavior (Default)
-
-If neither condition matches:
-
-- INSERT → new row
-    
-- UPDATE → overwrite existing row
-    
-
----
+If neither condition matches: a new key is **inserted**, an existing key is **updated** (overwritten) with the incoming row's values.
 
 ## 10. Role of `sequence_by`
 
@@ -228,25 +109,7 @@ If neither condition matches:
 sequence_by = col("event_timestamp")
 ```
 
-- Orders events per key
-    
-- Ensures latest change wins
-    
-
-Example:
-
-```id="3s8k1q"
-userId = 1 → UPDATE at 10:00
-userId = 1 → DELETE at 10:05
-```
-
-Final result:
-
-```id="j2m0nx"
-Row is deleted (latest event applied)
-```
-
----
+Orders events per key so the **latest** change wins, even if events arrive out of order. Example: for `userId = 1`, an UPDATE at 10:00 followed by a DELETE at 10:05 results in the row being deleted — the later event by `sequence_by` always takes precedence, regardless of arrival order.
 
 ## 11. Role of `keys`
 
@@ -254,29 +117,19 @@ Row is deleted (latest event applied)
 keys = ["userId"]
 ```
 
-- Identifies which row to update/delete
-    
-- Used in merge condition
-    
+Identifies which row to update or delete — used as the join/merge condition against the target table.
 
----
-
-## 12. Column Removal
+## 12. Removing Metadata Columns
 
 ```python
 except_column_list = ["operation", "event_timestamp"]
 ```
 
-- Removes metadata columns from final table
-    
-- Keeps only business data
-    
-
----
+Drops the CDC metadata columns from the final table, keeping only the business columns.
 
 ## 13. Internal Execution Model
 
-DLT transforms logic into:
+DLT compiles this logic into something equivalent to a MERGE statement:
 
 ```sql
 MERGE INTO users_current t
@@ -288,80 +141,33 @@ WHEN MATCHED THEN UPDATE SET *
 WHEN NOT MATCHED THEN INSERT *
 ```
 
-- ordering using timestamp
-    
-
----
+(with row ordering per key resolved first using `sequence_by`).
 
 ## 14. What Happens If You Skip These
 
-### No `apply_as_deletes`
-
-- DELETE rows treated as updates
-    
-- No deletion occurs
-    
-
----
-
-### No `apply_as_truncates`
-
-- TRUNCATE ignored
-    
-- Table never cleared
-    
-
----
-
-### No `operation` column
-
-- No way to detect delete/truncate
-    
-- Only upserts possible
-    
-
----
+| Missing | Effect |
+|---|---|
+| `apply_as_deletes` | DELETE rows are treated as updates — nothing is ever removed from the target. |
+| `apply_as_truncates` | TRUNCATE rows are ignored — the table is never cleared. |
+| The `operation` column itself | No way to detect deletes/truncates at all — only upserts are possible. |
 
 ## 15. Mental Model
 
-Each incoming row:
+For every incoming row: **read the column values → evaluate the conditions → perform the matching action.**
 
-```id="4n6y1r"
-Read column values → Evaluate condition → Perform action
-```
-
-|operation column value|action|
+| `operation` value | Action |
 |---|---|
-|DELETE|delete row|
-|TRUNCATE|clear table|
-|others|upsert|
-
----
+| `DELETE` | Delete the row |
+| `TRUNCATE` | Clear the entire table |
+| anything else | Upsert |
 
 ## 16. Key Insight
 
-These lines:
+`expr("operation = 'DELETE'")` and `expr("operation = 'TRUNCATE'")` are not syntax rules — they define **how to interpret a column's value as a database operation**. Without that mapping, DLT has no way to know that a given row means "delete this" versus "update this."
 
-```python
-expr("operation = 'DELETE'")
-expr("operation = 'TRUNCATE'")
-```
+## 17. Summary
 
-do **not define syntax rules** —  
-they define **how to interpret a column's value as a database operation**.
-
----
-
-## 17. Final Principle
-
-CDC system = **data + meaning**
-
-- Data → rows
-    
-- Meaning → defined by your conditions
-    
-
-Without defining meaning → system cannot apply correct actions
+A CDC pipeline is data plus meaning: the rows carry the data, and `apply_as_deletes` / `apply_as_truncates` supply the meaning. Without defining that meaning explicitly, DLT can only ever upsert.
 
 ## 🔗 Related Notes
 - [[Data Engineering Role Notes/Data Engineering Concepts/Data Bricks/Delta Live Tables/Delta Live Tables|Delta Live Tables (DLT) Comprehensive Guide]]

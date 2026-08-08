@@ -1,111 +1,46 @@
-Perfect, Jack — understood. I’ll keep it **laser-focused only on the Spark Driver memory architecture**, with no drift into OOM or executor details. Just the **essential components** and their roles.
+# Spark Driver Memory Architecture
 
----
-
-# 🚦 Spark Driver Memory Architecture
-
----
-
-## 1) Role of the Driver
-
+## 1. Role of the Driver
 - Central coordinator of a Spark application.
-    
 - Builds DAGs, schedules tasks, tracks metadata, and communicates with executors.
-    
-- Runs inside a **JVM process**, plus a **Python process** if using PySpark.
-    
+- Runs inside a JVM process, plus a separate Python process when using PySpark.
 
----
+## 2. Memory Layout of the Driver
 
-## 2) Memory Layout of the Driver
+### JVM Heap (primary area)
+- **Scheduler & Metadata** — `SparkContext`, `DAGScheduler`, `TaskScheduler`; stores job/stage/task objects and lineage information.
+- **BlockManager (driver-side)** — holds small cached blocks (rare, mostly in local mode) and keeps copies of broadcast variables before they're distributed to executors.
+- **Task Results** — temporary storage for results received from executors before they're handed to user code.
+- **User Objects** — any data structures created in driver code.
 
-### 🔹 JVM Heap (primary area)
-
-- **Scheduler & Metadata**
-    
-    - `SparkContext`, `DAGScheduler`, `TaskScheduler`.
-        
-    - Stores job/stage/task objects and lineage information.
-        
-- **BlockManager (driver-side)**
-    
-    - Holds small cached blocks (rare, mostly in local mode).
-        
-    - Keeps copies of broadcast variables before distribution.
-        
-- **Task Results**
-    
-    - Temporary storage for results received from executors (before delivering to user code).
-        
-- **User Objects**
-    
-    - Any data structures created in driver code.
-        
-
----
-
-### 🔹 JVM Non-Heap
-
+### JVM Non-Heap
 - **Metaspace / Code Cache** — class metadata, compiled code.
-    
 - **Direct Buffers (Netty, IO)** — network communication, shuffle metadata.
-    
 
----
+### Native / Off-Heap
+- Used by Spark's Tungsten engine when off-heap memory is enabled.
+- Reduces GC pressure by storing serialized data outside the JVM heap.
 
-### 🔹 Native / Off-Heap
+### Python Process Memory (PySpark only)
+- Runs alongside the JVM when using the Python APIs.
+- Holds objects returned by `collect()` / `toPandas()`, plus pandas, NumPy, and Arrow buffers.
+- Independent of the JVM heap, but still counts toward the driver's total memory footprint.
 
-- Used by Spark’s **Tungsten engine** (if off-heap enabled).
-    
-- Reduces GC pressure by storing serialized data outside JVM heap.
-    
+## 3. Key Configurations
+- **Heap size** — `spark.driver.memory` sets the JVM heap (e.g. `--driver-memory 4g`).
+- **Overhead (off-heap, native)** — `spark.driver.memoryOverhead` reserves extra memory for native buffers and the Python process.
+- **Result size cap** — `spark.driver.maxResultSize` caps how much result data the driver can hold at once.
 
----
-
-### 🔹 Python Process Memory (PySpark only)
-
-- Runs alongside the JVM when using Python APIs.
-    
-- Holds:
-    
-    - Objects returned by `collect()` / `toPandas()`.
-        
-    - Pandas, NumPy, and Arrow buffers.
-        
-- Independent of JVM heap, but contributes to driver’s total footprint.
-    
-
----
-
-## 3) Key Configurations for Driver Memory
-
-- **Heap size:**  
-    `spark.driver.memory` → sets JVM heap (e.g., `--driver-memory 4g`).
-    
-- **Overhead (off-heap, native):**  
-    `spark.driver.memoryOverhead` → reserves extra memory for native buffers and Python process.
-    
-- **Result size cap:**  
-    `spark.driver.maxResultSize` → maximum size of results driver can hold at once.
-    
-
----
-
-## 4) Summary Table
-
-|Component|Purpose|
+## 4. Summary Table
+| Component | Purpose |
 |---|---|
-|JVM Heap – Scheduler|Metadata, DAGs, SparkContext|
-|JVM Heap – BlockManager|Cached blocks, broadcast copies|
-|JVM Heap – Task Results|Data returned from executors|
-|JVM Heap – User Objects|User-created variables/data structures|
-|JVM Non-Heap|Metaspace, compiled code, Netty buffers|
-|Native / Off-Heap|Tungsten, direct buffers|
-|Python Process (PySpark)|Pandas, NumPy, Arrow data|
-
----
-
-Do you want me to next create a **similar focused breakdown for the Executor memory architecture**, so that together you’ll have both halves of the picture?
+| JVM Heap – Scheduler | Metadata, DAGs, SparkContext |
+| JVM Heap – BlockManager | Cached blocks, broadcast copies |
+| JVM Heap – Task Results | Data returned from executors |
+| JVM Heap – User Objects | User-created variables/data structures |
+| JVM Non-Heap | Metaspace, compiled code, Netty buffers |
+| Native / Off-Heap | Tungsten, direct buffers |
+| Python Process (PySpark) | Pandas, NumPy, Arrow data |
 
 ## 🔗 Related Notes
 - [[Data Engineering Role Notes/Data Engineering Concepts/Spark/Memory Management/Driver OOM|Driver Out-Of-Memory (OOM) in Spark]]

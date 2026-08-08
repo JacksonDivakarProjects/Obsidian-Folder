@@ -1,10 +1,8 @@
+# Airflow Scheduler
 
+Index note for this folder. Apache Airflow is the workflow-orchestration tool covered here — how its scheduler works internally, how to install it locally, and the operators used to actually build DAGs.
 
-[[Airflow Scheduler]]
-[[Data Engineering Role Notes/Airflow Scheduler/Airflow Images/Airflow Images]]
-[[Airflow Installation]]
-[[Level -1 Airflow Scheduler Guide]]
-[[Operators in Airflow]]
+Start with the guide below for core concepts and scheduler internals, then the installation note for a working local setup, and the operators note as a practical reference while writing DAGs.
 
 ## 🔗 Related Notes
 - [[Data Engineering Role Notes/Airflow Scheduler/Airflow Installation|🚀 Apache Airflow: Complete Installation & Troubleshooting Guide (Local Virtualenv)]]

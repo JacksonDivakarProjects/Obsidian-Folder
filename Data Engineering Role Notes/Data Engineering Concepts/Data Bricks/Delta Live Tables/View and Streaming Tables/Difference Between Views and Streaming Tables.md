@@ -1,4 +1,4 @@
-Let's break down the three dataset types from your example. The key distinction lies in **how the data is computed and stored**.
+Delta Live Tables exposes three dataset types — Materialized View, Streaming Table, and View. The key distinction between them is how each computes and stores its data.
 
 ### 1. Materialized View (Live Table)
 **Syntax & Behavior**

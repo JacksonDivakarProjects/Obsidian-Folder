@@ -163,15 +163,12 @@ models:
 ---
 ### **Summary: The Role of Generic Tests**
 
-1.  **Safety Net**: Generic tests are your first line of defense, catching common data issues like duplicates, missing values, and invalid codes.
-2.  **Documentation as Code**: Defining tests in YAML explicitly documents your assumptions about the data for your team.
-3.  **Integrated Workflow**: Running `dbt test` is as central to the workflow as `dbt run`. Many teams run tests in CI/CD pipelines.
-4.  **Foundation for Trust**: Consistent testing transforms raw data into a **trusted analytics layer**.
+1.  **Safety net**: Generic tests are the first line of defense, catching duplicates, missing values, and invalid codes.
+2.  **Documentation as code**: Defining tests in YAML explicitly documents your assumptions about the data for your team.
+3.  **Integrated workflow**: Running `dbt test` is as central to the workflow as `dbt run`; many teams run tests in CI/CD.
+4.  **Foundation for trust**: Consistent testing turns raw data into a trusted analytics layer.
 
-**Core Principle:** Test the things that, if wrong, would break your business logic or downstream reports. Start with primary keys and foreign keys.
-
-**Ready to write more specific, custom validations?**
-Type `NEXT` to proceed to **Topic 2: Singular Tests**, where we'll learn how to write custom SQL queries to check more complex business logic.
+**Core principle:** test the things that, if wrong, would break your business logic or downstream reports. Start with primary keys and foreign keys, then move on to singular tests for anything a generic test can't express.
 
 ## 🔗 Related Notes
 - [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 04/Custom Generic Tests|Custom Generic Tests]]

@@ -549,18 +549,16 @@ except Exception as e:
 
 ## Best Practices Summary
 
-1. **Always use schema enforcement** for data quality
-2. **Enable Change Data Feed** for auditing and replication
-3. **Use Z-Ordering** for frequently filtered columns
-4. **Regularly run OPTIMIZE** for better performance
-5. **Set appropriate VACUUM retention** based on compliance needs
-6. **Use time travel** for debugging and recovery
-7. **Monitor table history** for operational insights
-8. **Use constraints** for data validation
-9. **Enable auto-optimize** for frequently written tables
-10. **Use partitioning** for large tables with predictable filters
-
-This comprehensive guide covers the essential Delta Lake operations in PySpark. Remember to adjust paths, configurations, and data types according to your specific use case and environment requirements.
+1. **Always use schema enforcement** for data quality.
+2. **Enable Change Data Feed** for auditing and replication.
+3. **Use Z-Ordering** for frequently filtered columns.
+4. **Regularly run `OPTIMIZE`** for better read performance.
+5. **Set appropriate `VACUUM` retention** based on compliance and time-travel needs.
+6. **Use time travel** for debugging and recovery.
+7. **Monitor table history** for operational insights.
+8. **Use constraints** for data validation.
+9. **Enable auto-optimize** for frequently written tables.
+10. **Use partitioning** for large tables with predictable filter columns.
 
 ## 🔗 Related Notes
 - [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Delta Lake Commands in Different APIs/Delta Lake Commands in SQL API|Delta Lake Object Commands (SQL API)]]

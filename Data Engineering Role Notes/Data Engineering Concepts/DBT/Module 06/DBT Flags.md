@@ -1,341 +1,136 @@
-Understood, Jack 👍  
-Below is an **exclusive, clean, and crystal-clear guide ONLY for dbt flags** you mentioned.  
-I’ll explain **one flag at a time**, using **simple words**, **why it exists**, and **when to use it**.  
-No extra dbt theory. No distractions.
+# **dbt Flags That Actually Matter**
 
----
+These flags control **what dbt runs**, **what it skips**, and **how safely it runs**. Think of them as control switches you combine with `dbt run`, `dbt test`, or (most often) `dbt build`.
 
-# 📘 **dbt Flags That Actually Matter (Clear & Exclusive Guide)**
+## 1. `--full-refresh` — Delete and rebuild
 
-These flags control **WHAT dbt runs**, **WHAT it skips**, and **HOW safely it runs**.
-
-Think of them as **control switches**.
-
----
-
-## 1️⃣ `--full-refresh` → **Delete and rebuild**
-
-### What it does (simple)
-
-- Deletes existing **incremental tables**
-    
-- Recreates them from scratch
-    
-- Old data is **lost and rebuilt**
-    
+**What it does**
+- Drops and recreates existing **incremental models** from scratch.
+- Old incrementally-built data is discarded and rebuilt from the full query.
 
 ```bash
 dbt build --full-refresh
 ```
 
-### What it affects
+**Affects:** incremental models, seeds.
+**Does not affect:** views (they're always rebuilt anyway), snapshots (their history is preserved, not replayed).
 
-✅ Incremental models  
-✅ Seeds
+**When you must use it:**
+- You changed the incremental logic or the `unique_key`.
+- A column's data type changed.
+- The incrementally-built data became corrupted.
 
-### What it does NOT affect
+**When you should not use it:** daily/normal production runs, or large tables without a specific reason — it's a destructive, expensive operation.
 
-❌ Views (they always rebuild anyway)  
-❌ Snapshots (history is preserved)
-
-### When you MUST use it
-
-- You changed incremental logic
-    
-- Column type changed
-    
-- Data became corrupted
-    
-
-### When you should NOT use it
-
-- Daily runs
-    
-- Normal production runs
-    
-- Large tables without reason
-    
-
-⚠️ **Key warning**
-
-> `--full-refresh` is destructive. Always combine with `--select`.
-
-Example (safe):
+> **Warning:** `--full-refresh` is destructive. Always scope it with `--select`.
 
 ```bash
+# Safe: scoped to one model
 dbt build --select sales --full-refresh
 ```
 
----
+## 2. `--exclude` — Run everything except this
 
-## 2️⃣ `--exclude` → **Run everything EXCEPT this**
-
-### What it does
-
-- Skips models, folders, or tags
-    
-- Everything else runs normally
-    
+Skips the named models, folders, or tags while running everything else normally.
 
 ```bash
 dbt build --exclude int_legacy*
-```
-
-```bash
 dbt build --exclude tag:heavy
 ```
 
-### When to use
+**When to use:** a model is slow, broken, or deprecated, and you want to reduce risk without holding up the rest of the run.
 
-- Model is slow
-    
-- Model is broken
-    
-- Model is deprecated
-    
-- Reduce production risk
-    
+> Mental model: "Do everything, but don't touch this."
 
-📌 **Mental model**
-
-> “Do everything, but don’t touch this.”
-
----
-
-## 3️⃣ `--select` → **Run ONLY what I choose**
-
-### Run a single model
+## 3. `--select` — Run only what I choose
 
 ```bash
+# Run a single model
 dbt build --select fact_orders
-```
 
-### Run model + downstream models
-
-```bash
+# Run model + everything downstream of it
 dbt build --select fact_orders+
-```
 
-### Run upstream + model
-
-```bash
+# Run everything upstream of it, then the model
 dbt build --select +fact_orders
 ```
 
-### Why this flag is critical
+Faster runs, safer development, less compute usage. **Golden rule:** always use `--select` in development; reserve unscoped `dbt build` for full production runs.
 
-- Faster runs
-    
-- Safer development
-    
-- Less compute usage
-    
-
-📌 **Golden rule**
-
-> Always use `--select` in development.
-
----
-
-## 4️⃣ `state:modified` → **Run only changed code (CI use)**
+## 4. `state:modified` — Run only changed code (CI)
 
 ```bash
 dbt build --select state:modified+
 ```
 
-### What it does
+- Runs only models whose code changed since a reference point, plus everything downstream of them.
+- Requires a previous run's `manifest.json`, passed via `--state <path>`.
+- This is why CI pipelines for large dbt projects stay fast: no unnecessary rebuilds.
 
-- Runs only models whose code changed
-    
-- Also runs dependent models
-    
-- Needs previous `manifest.json`
-    
+> Think: "Run only what I touched."
 
-### Why teams love it
-
-- Very fast CI
-    
-- No unnecessary rebuilds
-    
-- Scales well for big projects
-    
-
-📌 Think:
-
-> “Run only what I touched.”
-
----
-
-## 5️⃣ `--fail-fast` → **Stop immediately on error**
+## 5. `--fail-fast` — Stop immediately on error
 
 ```bash
 dbt build --fail-fast
 ```
 
-### What it does
+Stops execution at the first failure instead of continuing through the rest of the DAG. Useful in CI pipelines, active debugging, and cost-sensitive environments where wasted compute after a known failure is pure waste.
 
-- Stops execution at first failure
-    
-- Prevents wasted compute
-    
-- Faster feedback
-    
-
-### When to use
-
-- CI pipelines
-    
-- Debugging failures
-    
-- Cost-sensitive environments
-    
-
----
-
-## 6️⃣ `--defer` → **Use prod data in dev**
+## 6. `--defer` — Use prod data for unbuilt models in dev
 
 ```bash
 dbt build --defer --state prod_manifest/
 ```
 
-### What it does
+- For any model you *haven't* selected to build, dbt resolves `{{ ref() }}` to the **production** relation instead of failing because it doesn't exist in your dev schema.
+- Lets you build and test just the models you changed without first rebuilding your entire dev environment.
+- Does not overwrite or touch prod data.
 
-- Uses **production tables** for unchanged models
-    
-- Builds only modified models
-    
-- Does NOT overwrite prod data
-    
+> Think: "Borrow prod data for what I'm not rebuilding."
 
-### Why this matters
-
-- Faster development
-    
-- No full rebuilds
-    
-- Enterprise-level workflow
-    
-
-📌 Think:
-
-> “Borrow prod data, don’t recreate it.”
-
----
-
-## 7️⃣ `--vars` → **Pass values at runtime**
+## 7. `--vars` — Pass values at runtime
 
 ```bash
-dbt build --vars '{run_date: "2025-01-01"}'
+dbt build --vars '{"run_date": "2025-01-01"}'
 ```
 
-### What it does
+Sends dynamic values into models via the `var()` Jinja function. Common uses: backfills, date-based logic, conditional branches per environment.
 
-- Sends dynamic values to models
-    
-- Used inside SQL via `var()`
-    
-
-### Use cases
-
-- Backfills
-    
-- Date-based logic
-    
-- Conditional behavior
-    
-
----
-
-## 8️⃣ `--threads` → **Parallel execution**
+## 8. `--threads` — Parallel execution
 
 ```bash
 dbt build --threads 8
 ```
 
-### What it does
+Controls how many models dbt tries to run concurrently (independent nodes in the DAG only — dependencies are still respected). More threads generally means faster runs but higher concurrent load on the warehouse; on consumption-billed platforms, that also means higher cost per run.
 
-- Controls how many models run at once
-    
-- More threads = faster, but costlier
-    
-
-⚠️ In Databricks:
-
-> More threads = more compute cost
-
----
-
-## 9️⃣ `--target` → **Switch environment**
+## 9. `--target` — Switch environment
 
 ```bash
 dbt build --target prod
 ```
 
-### What it does
+Swaps which set of credentials/schema from `profiles.yml` is used, without any code changes. Typical targets: `dev`, `qa`, `prod`.
 
-- Uses credentials & schema from `profiles.yml`
-    
-- No code change needed
-    
+## What to memorize
 
-### Typical targets
-
-- `dev`
-    
-- `qa`
-    
-- `prod`
-    
-
----
-
-## 🧠 What to MEMORIZE (very important)
-
-|Flag|Meaning|
+| Flag | Meaning |
 |---|---|
-|`--full-refresh`|Delete & rebuild incremental models|
-|`--select`|Run only selected models|
-|`--exclude`|Skip selected models|
-|`state:modified`|Run only changed code|
-|`--fail-fast`|Stop on first error|
-|`--defer`|Use prod data in dev|
+| `--full-refresh` | Delete & rebuild incremental models |
+| `--select` | Run only selected models |
+| `--exclude` | Skip selected models |
+| `state:modified` | Run only changed code (+ downstream) |
+| `--fail-fast` | Stop on first error |
+| `--defer` | Resolve unbuilt refs to production |
 
----
-
-## 💼 Professional one-liner (use this confidently)
-
-> “We control dbt execution using `--select` and `--exclude`, apply `--full-refresh` only when incremental logic changes, and rely on state-based selection and defer for efficient CI and development.”
-
----
-
-## ✅ Final clear guidance
+## Practical guidance
 
 - **Production** → `dbt build`
-    
 - **Development** → `dbt build --select model`
-    
-- **Fix bad data** → `--full-refresh + --select`
-    
-- **CI** → `state:modified+`
-    
-- **Avoid risk** → use `--exclude`
-    
-
----
-
-If you want next, I can:
-
-- Convert this into a **1-page cheat sheet**
-    
-- Give **real Databricks job examples**
-    
-- Explain **backfill without full-refresh**
-    
-- Draw a **mental flow diagram**
-    
-
-Just tell me what you want next 👍
+- **Fix bad/stale incremental data** → `--full-refresh` combined with `--select`
+- **CI** → `--select state:modified+`
+- **Reduce blast radius** → `--exclude`
 
 ## 🔗 Related Notes
 - [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 06/Difference Between dbt run and dbt build|`dbt run` vs `dbt build`]]

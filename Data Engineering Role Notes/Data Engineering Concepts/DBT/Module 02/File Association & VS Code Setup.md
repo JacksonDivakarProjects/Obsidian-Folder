@@ -115,11 +115,7 @@ LEFT JOIN {{ ref('dim_customers') }} c
 *   **Autocomplete doesn't suggest models**: Run `dbt compile` or `dbt parse` in your terminal first. The extension needs dbt to have parsed your project to know what models exist.
 
 ---
-**Summary of Topic 3:**
-You have now optimized your primary development environment for dbt work. By installing the **dbt Power User extension** and configuring **file associations** (`*.sql` as `jinja-sql` and `*.yml` as `jinja-yaml`), you've enabled syntax highlighting, intelligent autocomplete for the `ref()` and `source()` functions, one-click model execution, and visual dependency graphs—all of which dramatically increase your productivity and reduce errors.
-
-**Ready for the next topic?**
-Type `NEXT` to proceed to **Topic 4: Configs & the Hierarchy (Project, Properties, Block)**, where we'll dive deeper into the practical use of the `{{ config() }}` macro and how different configuration levels interact.
+**Summary:** Installing the **dbt Power User** extension and configuring **file associations** (`*.sql` as `jinja-sql`, `*.yml` as `jinja-yaml`) unlocks syntax highlighting, autocomplete for `ref()`/`source()`, one-click model execution, and visual dependency graphs — a meaningful productivity upgrade over editing dbt projects as plain text.
 
 ## 🔗 Related Notes
 - [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 01/Foundations & Setup|Module 1: Foundations & Setup]]

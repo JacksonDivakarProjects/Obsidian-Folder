@@ -1,135 +1,85 @@
-**`uniq` — clear, practical explanation**
+# `uniq` Command
 
-**`uniq`** is a Linux command that **finds and handles duplicate adjacent lines** in text.
+`uniq` is a Linux command that finds and handles **duplicate adjacent lines** in text.
 
-👉 Key truth upfront: **`uniq` works only on consecutive (adjacent) lines**.  
-If lines are not next to each other, `uniq` will **not** detect duplicates.
+Key fact up front: **`uniq` only detects duplicates that are directly next to each other**. If matching lines aren't adjacent, `uniq` will not catch them.
 
----
-
-## What `uniq` actually does
+## What `uniq` Actually Does
 
 ### 1. Remove duplicate lines
-
 ```bash
 uniq file.txt
 ```
-
-Removes **repeated adjacent lines**.
-
----
+Removes repeated adjacent lines (keeps the first occurrence).
 
 ### 2. Count duplicates
-
 ```bash
 uniq -c file.txt
 ```
+Prefixes each line with how many times it repeats consecutively.
 
-Shows how many times each line repeats.
-
----
-
-### 3. Show only duplicates
-
+### 3. Show only duplicated lines
 ```bash
 uniq -d file.txt
 ```
 
----
-
-### 4. Show only unique lines
-
+### 4. Show only lines with no adjacent duplicate
 ```bash
 uniq -u file.txt
 ```
 
----
+## The Golden Rule
 
-## The golden rule (very important)
-
-Most of the time, you must use **`sort` before `uniq`**:
+Because `uniq` only compares neighboring lines, you almost always need to **`sort` first**:
 
 ```bash
 sort file.txt | uniq
 ```
 
-Why?
+Why: `sort` brings identical lines together so `uniq` can actually collapse or count them.
 
-- `sort` brings identical lines together
-    
-- `uniq` then removes or counts them
-    
-
----
-
-## Real-world examples
+## Real-World Examples
 
 ### Count unique IP addresses
-
 ```bash
 awk '{print $1}' access.log | sort | uniq -c
 ```
 
----
-
 ### Find duplicate records
-
 ```bash
 sort users.txt | uniq -d
 ```
 
----
-
 ### Count word frequency
-
 ```bash
 tr ' ' '\n' < file.txt | sort | uniq -c | sort -nr
 ```
 
----
+## `uniq` vs. `awk`
 
-## `uniq` vs `awk` (clear difference)
-
-|Task|Better tool|
+| Task | Better tool |
 |---|---|
-|Simple dedup|`uniq`|
-|Counting adjacent lines|`uniq -c`|
-|Complex grouping|`awk`|
-|No sorting allowed|`awk`|
+| Simple dedup | `uniq` |
+| Counting adjacent duplicates | `uniq -c` |
+| Complex grouping/aggregation | `awk` |
+| Dedup without sorting first | `awk '{seen[$0]++} ... '` (`awk` can dedupe without pre-sorting since it tracks lines in an array) |
 
----
-
-## Common mistake (don’t do this ❌)
+## Common Mistake
 
 ```bash
-uniq file.txt   # Wrong if file is not sorted
+uniq file.txt   # Wrong if file.txt isn't already sorted — duplicates that
+                # aren't adjacent will be missed silently.
 ```
 
----
+## Mental Model
 
-## Mental model
+- `sort` → **groups** matching lines together
+- `uniq` → **collapses** or counts adjacent groups
+- `awk` → **analyzes** with arbitrary logic (including dedup without sorting)
 
-- `sort` → **groups**
-    
-- `uniq` → **collapses**
-    
-- `awk` → **analyzes**
-    
+## Key Takeaway
 
----
-
-### Bottom line
-
-`uniq` is **simple, fast, and sharp**, but **limited**.  
-Use it **after sorting**, or pair it with **`awk`** when logic is needed.
-
-If you want, next I can show:
-
-- `uniq` vs `awk` side-by-side
-    
-- `uniq` interview traps
-    
-- A one-page Unix pipelines cheat sheet
+`uniq` is simple, fast, and sharp, but limited to adjacent lines. Use it after `sort`, or reach for `awk` when the logic (grouping, non-adjacent dedup) is more than `uniq` can express.
 
 ## 🔗 Related Notes
 - [[Data Engineering Role Notes/Linux/AWK/AWK - Comprehensive Practical Guide|AWK — Comprehensive Practical Guide]]

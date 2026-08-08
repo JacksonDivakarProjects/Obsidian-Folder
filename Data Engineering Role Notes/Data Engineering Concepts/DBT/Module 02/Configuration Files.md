@@ -118,13 +118,7 @@ Imagine you want a specific model, `models/core/important_model.sql`, to be a ta
     **Result:** `important_model` is built as a **TABLE**. The in-model config block wins.
 
 ---
-
-**Summary of Topic 1:**
-*   You now know the **three key configuration files**: `dbt_project.yml` (project rules), `profiles.yml` (connections), and property files like `sources.yml` (data definitions).
-*   You understand the crucial **configuration hierarchy**, where settings in a model's SQL file (`{{ config() }}`) are the most powerful.
-
-**Ready for the next topic?**
-Type `NEXT` to proceed to **Topic 2: Jinja Templating Fundamentals**, where you'll learn how to make your SQL dynamic and powerful.
+**Summary:** There are three key configuration files — `dbt_project.yml` (project rules), `profiles.yml` (connections), and property files like `sources.yml` (data definitions) — and one configuration hierarchy where settings in a model's SQL file (`{{ config() }}`) always win. Jinja templating is what makes those SQL files dynamic, which is the next topic.
 
 ## 🔗 Related Notes
 - [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 02/Configs and Variables|Configs & the Hierarchy]]

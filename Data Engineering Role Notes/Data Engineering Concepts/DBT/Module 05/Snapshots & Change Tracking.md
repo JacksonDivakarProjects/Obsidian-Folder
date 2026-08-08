@@ -181,15 +181,11 @@ config:
 ---
 ## **Final Summary**
 
-You now have a complete understanding of dbt snapshots:
-
-1.  **Two Methods, One Purpose**: SQL files offer **flexibility** for raw data; YAML properties offer **simplicity** for existing models.
-2.  **Core Configuration**: Both methods use the same `strategy`, `unique_key`, and `updated_at`/`check_cols` settings.
-3.  **Key Difference**: SQL files contain the `SELECT` logic; YAML files use `relation: ref('...')` to reference an existing model.
-4.  **Execution Matters**: YAML snapshots depend on their referenced model being built first—use `dbt build`.
-5.  **Powerful Result**: Either method creates a queryable history with `dbt_valid_from` and `dbt_valid_to` columns.
-
-**Next Step**: Type `NEXT` to proceed to **Module 5, Topic 2: Macros & Reusable Code**, where you'll learn to write Jinja functions that eliminate SQL repetition.
+1.  **Two methods, one purpose**: SQL files offer **flexibility** for raw data; YAML properties offer **simplicity** for existing models.
+2.  **Core configuration**: both methods share the same `strategy`, `unique_key`, and `updated_at`/`check_cols` settings.
+3.  **Key difference**: SQL files contain the `SELECT` logic; YAML files use `relation: ref('...')` to point at an existing model.
+4.  **Execution matters**: YAML snapshots depend on their referenced model being built first — use `dbt build`.
+5.  **Powerful result**: either method creates a queryable history with `dbt_valid_from` and `dbt_valid_to` columns.
 
 ## 🔗 Related Notes
 - [[Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/DBT Topic Links/Snapshots|Snapshots (dbt Learn links)]]

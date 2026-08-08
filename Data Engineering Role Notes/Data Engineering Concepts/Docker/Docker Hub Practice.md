@@ -7,14 +7,14 @@
 
 ---
 
-## **Part 1: Docker Login**
+## Part 1: Docker Login
 
-### Step 1: Create Docker Hub Account
+### Step 1: Create a Docker Hub Account
 1. Go to https://hub.docker.com
 2. Sign up for a free account
 3. Verify your email
 
-### Step 2: Login from Command Line
+### Step 2: Login from the Command Line
 ```bash
 # Login to Docker Hub
 docker login
@@ -31,19 +31,18 @@ Login Succeeded
 
 ---
 
-## **Part 2: Create a Simple Application**
+## Part 2: Create a Simple Application
 
-Let's create a basic Python web app as an example.
+A basic Python web app makes a good example.
 
-### Step 1: Create project folder
+### Step 1: Create a project folder
 ```bash
-# Create a new folder for your project
 mkdir my-first-docker-app
 cd my-first-docker-app
 ```
 
-### Step 2: Create a simple application
-Create a file called `app.py`:
+### Step 2: Create the application
+`app.py`:
 ```python
 # app.py
 from flask import Flask
@@ -57,15 +56,15 @@ if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
 ```
 
-### Step 3: Create requirements file
-Create a file called `requirements.txt`:
+### Step 3: Create a requirements file
+`requirements.txt`:
 ```
 flask==2.0.1
 ```
 
 ---
 
-## **Part 3: Create Dockerfile**
+## Part 3: Create a Dockerfile
 
 Create a file named `Dockerfile` (no extension):
 
@@ -76,7 +75,7 @@ FROM python:3.9-slim
 # Set working directory in container
 WORKDIR /app
 
-# Copy requirements first (for better caching)
+# Copy requirements first (for better layer caching)
 COPY requirements.txt .
 
 # Install dependencies
@@ -92,9 +91,11 @@ EXPOSE 5000
 CMD ["python", "app.py"]
 ```
 
+Putting `COPY requirements.txt .` and the `RUN pip install` step before `COPY app.py .` matters: Docker caches each layer, so as long as `requirements.txt` doesn't change, the dependency-install layer is reused on rebuilds instead of re-running `pip install` every time application code changes.
+
 ---
 
-## **Part 4: Build Docker Image**
+## Part 4: Build the Docker Image
 
 ### Step 1: Build the image
 ```bash
@@ -108,16 +109,16 @@ docker build -t johnsmith/my-first-app:v1 .
 ```
 
 **What this does:**
-- `-t` = tag/name the image
+- `-t` = tag/name the image (`repository:tag` format)
 - `yourusername/my-first-app:v1` = repository name and tag
-- `.` = build from current directory
+- `.` = build context — use the Dockerfile in the current directory
 
 ### Step 2: Verify the image exists
 ```bash
 # List all images
 docker images
 
-# Or more detailed view
+# Or the more detailed view
 docker image ls
 ```
 
@@ -129,7 +130,7 @@ johnsmith/my-first-app     v1        abc123def456   2 minutes ago   125MB
 
 ---
 
-## **Part 5: Test Your Image Locally**
+## Part 5: Test the Image Locally
 
 ```bash
 # Run the container
@@ -137,18 +138,18 @@ docker run -p 5000:5000 your-dockerhub-username/my-first-app:v1
 ```
 
 **Explanation:**
-- `-p 5000:5000` = map port 5000 on your computer to port 5000 in container
+- `-p 5000:5000` = map `hostPort:containerPort` — port 5000 on the host maps to port 5000 inside the container
 
-**Test it:** Open browser and go to `http://localhost:5000`
+**Test it:** open a browser to `http://localhost:5000`
 
-**Stop the container:** Press `Ctrl+C`
+**Stop the container:** press `Ctrl+C`
 
-### Run in detached mode (background):
+### Run in detached mode (background)
 ```bash
 docker run -d -p 5000:5000 --name my-app your-dockerhub-username/my-first-app:v1
 ```
 
-**To stop detached container:**
+**To stop and remove the detached container:**
 ```bash
 docker stop my-app
 docker rm my-app
@@ -156,7 +157,7 @@ docker rm my-app
 
 ---
 
-## **Part 6: Push Image to Docker Hub**
+## Part 6: Push the Image to Docker Hub
 
 ### Step 1: Push the image
 ```bash
@@ -166,13 +167,13 @@ docker push your-dockerhub-username/my-first-app:v1
 ### Step 2: Verify on Docker Hub
 1. Go to hub.docker.com
 2. Login to your account
-3. You should see your repository with the pushed image
+3. Confirm the repository shows the pushed image/tag
 
 ---
 
-## **Part 7: Pull and Run from Docker Hub**
+## Part 7: Pull and Run from Docker Hub
 
-### On a different computer or clean environment:
+On a different computer or clean environment:
 
 ```bash
 # Pull the image
@@ -184,9 +185,9 @@ docker run -p 5000:5000 your-dockerhub-username/my-first-app:v1
 
 ---
 
-## **📝 Common Docker Commands Cheat Sheet**
+## 📝 Common Docker Commands Cheat Sheet
 
-### Image Commands:
+### Image Commands
 ```bash
 # List images
 docker images
@@ -194,7 +195,7 @@ docker images
 # Remove an image
 docker rmi image-name
 
-# Remove all unused images
+# Remove all unused (dangling) images
 docker image prune
 
 # Build an image
@@ -207,7 +208,7 @@ docker push username/repo:tag
 docker pull username/repo:tag
 ```
 
-### Container Commands:
+### Container Commands
 ```bash
 # List running containers
 docker ps
@@ -221,17 +222,17 @@ docker stop container-id
 # Remove a container
 docker rm container-id
 
-# Run container with name
+# Run container with a name
 docker run --name mycontainer image-name
 
-# Run in background
+# Run in background (detached)
 docker run -d image-name
 
 # View logs
 docker logs container-id
 ```
 
-### System Commands:
+### System Commands
 ```bash
 # Login to Docker Hub
 docker login
@@ -248,50 +249,49 @@ docker info
 
 ---
 
-## **🎯 Practice Exercise**
+## 🎯 Practice Exercise
 
-Try these steps on your own:
 1. Create a simple Node.js app instead of Python
-2. Use different tags (v1, v2, latest)
-3. Try building a static website with nginx
-4. Experiment with different base images
+2. Use meaningful tags (v1, v2, latest) instead of relying on a single tag
+3. Build a static website image using nginx as the base
+4. Experiment with different base images (e.g. `alpine` variants for smaller size)
 
 ---
 
-## **❓ Common Issues & Solutions**
+## ❓ Common Issues & Solutions
 
-### Issue: "Permission denied"
-**Solution:** Add user to docker group (Linux/Mac)
+### "Permission denied" running docker without sudo
+**Solution:** add your user to the `docker` group (Linux/Mac):
 ```bash
 sudo usermod -aG docker $USER
-# Log out and back in
+# Log out and back in for the group change to take effect
 ```
 
-### Issue: "Port already in use"
-**Solution:** Change host port
+### "Port already in use"
+**Solution:** change the host-side port:
 ```bash
 docker run -p 5001:5000 your-image
 ```
 
-### Issue: "Unable to find image locally"
-**Solution:** Docker will automatically pull from hub if not found locally
+### "Unable to find image locally"
+This isn't necessarily an error — `docker run` automatically pulls the image from Docker Hub if it isn't found locally.
 
-### Issue: "Docker login failed"
-**Solution:** Check your internet connection and credentials
-
----
-
-## **📚 Best Practices for Beginners**
-
-1. **Tag images meaningfully**: Use versions (v1, v2, 1.0.0) not just 'latest'
-2. **Keep images small**: Use slim versions of base images
-3. **Use .dockerignore**: Create a `.dockerignore` file to exclude unnecessary files
-4. **One process per container**: Each container should do one thing well
-5. **Don't run as root**: Create and use a non-root user in production
+### "Docker login failed"
+**Solution:** check your internet connection and credentials. If you have 2FA enabled on Docker Hub, use a personal access token instead of your account password.
 
 ---
 
-## **Example .dockerignore file**
+## 📚 Best Practices for Beginners
+
+1. **Tag images meaningfully** — use versions (`v1`, `v2`, `1.0.0`), not only `latest`
+2. **Keep images small** — use slim/alpine base images where possible
+3. **Use `.dockerignore`** — exclude files that shouldn't be copied into the build context
+4. **One process per container** — each container should do one thing well
+5. **Don't run as root in production** — create and use a non-root user inside the image
+
+---
+
+## Example `.dockerignore` file
 ```
 __pycache__
 *.pyc
@@ -309,14 +309,14 @@ Dockerfile
 
 ---
 
-**Congratulations!** 🎉 You've successfully:
-- Logged into Docker Hub
-- Created a Dockerfile
-- Built a Docker image
-- Pushed it to Docker Hub
-- Pulled and ran it from anywhere
+## Summary
 
-This is the foundation of working with Docker. Practice these steps until they become second nature!
+The full lifecycle covered here — login, build, tag, push, pull — is the core Docker workflow:
+1. Logged into Docker Hub
+2. Wrote a Dockerfile and built an image from it
+3. Ran and tested the image locally
+4. Pushed the image to Docker Hub
+5. Pulled and ran that same image from a different machine
 
 ## 🔗 Related Notes
 - [[Data Engineering Role Notes/Data Engineering Concepts/Docker/Docker Installation|Docker Installation]]

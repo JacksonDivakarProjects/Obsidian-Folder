@@ -2,7 +2,7 @@
 # Delta Lake Object Commands Comprehensive Guide
 
 ## Overview
-Delta Lake object commands provide powerful capabilities for managing and manipulating Delta tables using object storage semantics. This guide covers the complete set of commands and their usage patterns.
+Delta Lake's SQL API extends standard Spark SQL with commands for managing transactional tables: DDL (`CREATE`, `ALTER`), DML (`INSERT`, `UPDATE`, `DELETE`, `MERGE`), and table-maintenance verbs unique to Delta (`OPTIMIZE`, `VACUUM`, `RESTORE`, time-travel queries, cloning). This guide covers the complete command set and common usage patterns.
 
 ## Core Object Commands
 
@@ -480,7 +480,7 @@ SET spark.databricks.delta.schema.autoMerge.enabled = true;
 
 2. **Concurrency Conflicts**
 ```sql
--- Use optimistic concurrency control
+-- Enable automatic retry on optimistic-concurrency conflicts
 SET spark.databricks.delta.retryDuration.enabled = true;
 ```
 
@@ -490,8 +490,6 @@ SET spark.databricks.delta.retryDuration.enabled = true;
 ALTER TABLE events ADD CONSTRAINT valid_timestamp 
 CHECK (event_time > '2020-01-01');
 ```
-
-This comprehensive guide covers the essential Delta Lake object commands for effective table management and data operations.
 
 ## 🔗 Related Notes
 - [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Delta Lake Commands in Different APIs/Delta Lake Commands in Python API with Spark|Delta Lake Commands in Python API with Spark]]

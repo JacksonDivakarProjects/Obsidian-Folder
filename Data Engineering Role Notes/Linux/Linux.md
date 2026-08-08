@@ -1,14 +1,15 @@
-# Online Links
+# Linux
 
-[Crontab](https://crontab.guru/)
+Index for Linux command-line notes: shell fundamentals, text processing (AWK), Bash scripting, compression tools, and background-process management.
 
+## Quick Links
+- [Crontab.guru](https://crontab.guru/) — cron expression builder and reference.
 
-# File Links
-
-[[Compress and Decompress]]
-[[Concept Oriented  Files]]
-[[Data Engineering Role Notes/Linux/Miscellaneous Concepts/Miscellaneous Concepts]]
-[[Linux Summary Guide]]
+## Sub-folder Indexes
+- [[Data Engineering Role Notes/Linux/Compress and Decompress/Compress and Decompress|Compress and Decompress]]
+- [[Data Engineering Role Notes/Linux/Concept Oriented Files/Concept Oriented  Files|Concept Oriented Files]]
+- [[Data Engineering Role Notes/Linux/Miscellaneous Concepts/Miscellaneous Concepts|Miscellaneous Concepts]]
+- [[Data Engineering Role Notes/Linux/Linux Summary Guide|Linux Summary Guide]]
 
 ## 🗺️ Map of Content (auto-generated)
 

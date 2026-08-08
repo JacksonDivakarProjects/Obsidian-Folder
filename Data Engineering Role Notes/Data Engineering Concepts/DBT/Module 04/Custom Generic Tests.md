@@ -188,17 +188,14 @@ Use in YAML:
 ---
 ### **Summary: Elevating Your Testing Suite**
 
-You've learned that **Custom Generic Tests** transform repeated, complex validation logic into **reusable, declarative assets**.
+**Custom Generic Tests** turn repeated, complex validation logic into reusable, declarative assets.
 
-1.  **They are Macros**: Defined with `{% test macro_name(...) %}` in `.sql` files.
-2.  **They are Parameterizable**: Can accept arguments like `min_value` or `max_days_old` to make them flexible.
-3.  **They Integrate Seamlessly**: Are invoked in your YAML files alongside built-in tests, keeping your testing suite unified.
-4.  **They Promote Consistency**: Ensure the same business rule is checked the same way across your entire data platform.
+1.  **They are macros**: Defined with `{% test macro_name(...) %}` in `.sql` files.
+2.  **They are parameterizable**: Can accept arguments like `min_value` or `max_days_old` to stay flexible.
+3.  **They integrate seamlessly**: Invoked in YAML alongside built-in tests, keeping the testing suite unified.
+4.  **They promote consistency**: Ensure the same business rule is checked the same way across the whole data platform.
 
-**When to Build One**: Whenever you find yourself writing a similar `WHERE` clause in a second singular test, stop and extract it into a custom generic test.
-
-**Ready to learn how to control the impact of test failures?**
-Type `NEXT` to proceed to **Topic 4: Test Execution, Severity & the dbt build Command**, where we'll cover configuring test warnings vs. errors and combining run and test operations.
+**When to build one**: whenever you find yourself writing a similar `WHERE` clause in a second singular test, stop and extract it into a custom generic test. Once tests are in place, the next question is how to control their execution and severity.
 
 ## 🔗 Related Notes
 - [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 04/Generic Tests & Their Types|Generic Tests & Their Types]]

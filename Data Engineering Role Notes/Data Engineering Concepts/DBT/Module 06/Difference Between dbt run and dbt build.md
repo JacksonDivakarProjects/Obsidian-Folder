@@ -1,138 +1,62 @@
-
-### **`dbt run` vs `dbt build` — the real difference (no ambiguity)**
-
-Let’s cut straight to value.
-
----
+### **`dbt run` vs `dbt build` — the real difference**
 
 ## Executive summary
 
-- **`dbt run`** → _Only builds models_
-    
-- **`dbt build`** → _Builds models **and** enforces data quality_
-    
-
-That’s the core distinction.
-
----
+- **`dbt run`** → builds models only.
+- **`dbt build`** → builds models **and** enforces data quality (tests, snapshots, seeds) in dependency order.
 
 ## Side-by-side comparison
 
-|Capability|`dbt run`|`dbt build`|
+| Capability | `dbt run` | `dbt build` |
 |---|---|---|
-|Run models|✅|✅|
-|Run tests|❌|✅|
-|Run snapshots|❌|✅|
-|Load seeds|❌|✅|
-|Enforce DAG order|⚠️ partial|✅ full|
-|Production-safe|❌|✅|
-
----
+| Run models | Yes | Yes |
+| Run tests | No | Yes |
+| Run snapshots | No | Yes |
+| Load seeds | No | Yes |
+| Enforce full DAG order across resource types | Partial (models only) | Yes |
+| Stops on failing tests before downstream builds | No | Yes |
 
 ## What actually runs under the hood
 
 ### `dbt run`
+- Executes model SQL only.
+- Creates/updates tables and views.
+- No validation: if a model's data quietly breaks a business rule, `dbt run` doesn't know and won't stop.
+- Downstream models can build on top of bad data without any signal.
 
-```text
-Models only
-```
-
-- Executes model SQL
-    
-- Creates / updates tables & views
-    
-- **No validation**
-    
-- Downstream models may build on bad data
-    
-
-Use case: **local development**, fast iteration.
-
----
+Use case: fast local iteration while actively developing a model.
 
 ### `dbt build`
+Execution order: seeds → sources' freshness (if configured) → snapshots → models → tests, all interleaved per the DAG rather than run as separate phases.
 
-```text
-Seeds → Snapshots → Models → Tests
-```
+- Builds each node and, where applicable, immediately runs its tests before moving to nodes that depend on it.
+- Versions history via snapshots.
+- Stops the pipeline (or that branch of the DAG) if a test fails with `severity: error`.
+- Respects the full dependency graph across all resource types, not just models.
 
-- Builds data
-    
-- Versions history (snapshots)
-    
-- **Stops the pipeline if tests fail**
-    
-- Respects full dependency graph
-    
+Use case: CI, production, and scheduled jobs — anywhere you need a guarantee that what got built also passed its checks.
 
-Use case: **CI, production, scheduled jobs**
+## Why `dbt build` is the default for production
 
----
+Production pipelines need to prevent bad data from propagating downstream, track historical changes, and fail fast when quality breaks. `dbt run` alone does none of that — it will happily build a model on top of upstream data that just failed a test, because it never runs tests at all.
 
-## Why `dbt build` is the industry default now
+## Databricks-specific note
 
-Because production pipelines must:
+Both commands execute real SQL against the warehouse and modify tables (Delta tables on Databricks) — the difference is in **scope** (what gets executed), not in how each individual SQL statement runs.
 
-- Prevent bad data from propagating
-    
-- Track historical changes
-    
-- Fail fast when quality breaks
-    
+## Interview-ready phrasing
 
-`dbt run` cannot do that alone.
-
----
-
-## Databricks-specific clarity
-
-Both commands:
-
-- Execute real SQL in Databricks
-    
-- Modify Delta tables
-    
-- Consume compute
-    
-
-**Difference is scope, not impact.**
-
----
-
-## Straight professional phrasing (use this)
-
-> “`dbt run` focuses on model execution, whereas `dbt build` is a full-pipeline command that includes seeds, snapshots, and tests to enforce data quality.”
-
-That statement is interview-safe.
-
----
+> "`dbt run` focuses on model execution, whereas `dbt build` is a full-pipeline command that includes seeds, snapshots, and tests to enforce data quality — and it stops the DAG when a test fails, so it's the safer choice for CI and production."
 
 ## Practical recommendation
 
-- **Developing a model** → `dbt run --select model_name`
-    
+- **Developing a model** → `dbt run --select model_name` (fast, no test overhead while iterating)
 - **Merging to main / prod job** → `dbt build`
-    
 - **Hotfix** → targeted `dbt build --select model+`
-    
-
----
 
 ## Final takeaway
 
-If you care about **correctness, auditability, and governance**:  
-👉 **`dbt build` is non-negotiable.**
-
-If you want, next I can explain:
-
-- `dbt build` vs `dbt compile`
-    
-- Why tests don’t change data
-    
-- How to reduce runtime in Databricks
-    
-
-Say the next topic.
+For correctness, auditability, and governance, `dbt build` is the non-negotiable default. Reach for `dbt run` only as a faster inner-loop tool during active development.
 
 ## 🔗 Related Notes
 - [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 06/DBT Flags|dbt Flags That Actually Matter]]

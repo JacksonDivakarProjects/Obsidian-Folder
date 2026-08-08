@@ -1,0 +1,79 @@
+{
+  "collapse-filter": false,
+  "search": "",
+  "showTags": true,
+  "showAttachments": true,
+  "hideUnresolved": false,
+  "showOrphans": true,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "path:SQL  ",
+      "color": {
+        "a": 1,
+        "rgb": 4379087
+      }
+    },
+    {
+      "query": "path:Pandas  ",
+      "color": {
+        "a": 1,
+        "rgb": 1763956
+      }
+    },
+    {
+      "query": "path:Linux  ",
+      "color": {
+        "a": 1,
+        "rgb": 547325
+      }
+    },
+    {
+      "query": "path:\"Data Engineering Concepts/Delta Lake\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 11959039
+      }
+    },
+    {
+      "query": "path:\"Pyspark Streaming\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 12940903
+      }
+    },
+    {
+      "query": "path:\"Web Development Notes/JavaScript\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 5419488
+      }
+    },
+    {
+      "query": "path:\"Data Engineering Role Notes/Pyspark\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 11621088
+      }
+    },
+    {
+      "query": "path:\"Web Development\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 15231337
+      }
+    }
+  ],
+  "collapse-display": false,
+  "showArrow": true,
+  "textFadeMultiplier": -0.8,
+  "nodeSizeMultiplier": 2.03958333333333,
+  "lineSizeMultiplier": 1.73333333333333,
+  "collapse-forces": false,
+  "centerStrength": 0.109375,
+  "repelStrength": 20,
+  "linkStrength": 1,
+  "linkDistance": 500,
+  "scale": 0.01855855815975137,
+  "close": true
+}

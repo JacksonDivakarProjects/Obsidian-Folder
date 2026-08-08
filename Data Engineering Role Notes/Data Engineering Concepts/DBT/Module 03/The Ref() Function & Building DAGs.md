@@ -133,13 +133,10 @@ Right-click on any model file and select **"Show DAG for this node"** to see a f
 
 1.  **`{{ ref() }}` is the glue**: It explicitly defines dependencies between models, making relationships clear in your code.
 2.  **DAGs enable automation**: dbt automatically calculates the correct execution order, preventing circular references.
-3.  **Selection is powerful**: You can surgically run, test, or debug any subset of your DAG using `+` and `-` operators.
-4.  **Lineage is documentation**: The DAG *is* your data pipeline documentation, always up-to-date with your code.
+3.  **Selection is powerful**: You can surgically run, test, or debug any subset of your DAG using `+` and other selectors.
+4.  **Lineage is documentation**: The DAG *is* your data pipeline documentation, always up to date with your code.
 
-**The paradigm shift**: You're no longer just writing SQL scripts. You're **declaring nodes in a graph** and letting dbt figure out the optimal path to build them.
-
-**Ready to ensure your data is trustworthy?**
-Type `NEXT` to proceed to **Module 4, Topic 1: Generic Tests & Their Types**, where we'll learn how to add data quality checks to your models.
+**The paradigm shift**: you're no longer just writing SQL scripts — you're declaring nodes in a graph and letting dbt figure out the optimal path to build them. With models and their dependencies in place, testing them for data quality is the natural next step.
 
 ## 🔗 Related Notes
 - [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 03/Building Models & Materializations|Building Models & Materializations]]

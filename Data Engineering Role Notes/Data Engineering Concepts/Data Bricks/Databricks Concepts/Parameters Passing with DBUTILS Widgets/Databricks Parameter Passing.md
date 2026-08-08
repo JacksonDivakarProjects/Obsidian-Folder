@@ -1,98 +1,54 @@
-## Databricks Jobs — `dbutils.widgets` and `dbutils.jobs.taskValues` (Revision Guide)
-
----
+## Databricks Jobs Parameter Passing — `dbutils.widgets` vs `dbutils.jobs.taskValues`
 
 ## 1. Core Definitions
 
-### `dbutils.widgets`
+- **`dbutils.widgets`** — input interface for passing *external* parameters into a notebook (job parameters, or manual values typed into the notebook UI).
+- **`dbutils.jobs.taskValues`** — mechanism for passing small values *between tasks* inside a multi-task job.
 
-Input interface used to pass **external parameters** into a notebook.
-
-### `dbutils.jobs.taskValues`
-
-Mechanism used to pass **small data between tasks** inside a multi-task job.
-
----
+They solve different problems: widgets get data **into** a notebook; taskValues move data **between** notebooks/tasks within the same job run.
 
 ## 2. Minimal Syntax
 
-### Widgets
-
+**Widgets**
 ```python
 dbutils.widgets.text("mode", "full")
 mode = dbutils.widgets.get("mode")
 ```
 
-### taskValues
-
+**taskValues**
 ```python
-# set (upstream)
+# set (upstream task)
 dbutils.jobs.taskValues.set("row_count", count)
 
-# get (downstream)
+# get (downstream task)
 count = dbutils.jobs.taskValues.get(
     taskKey="task_a",
     key="row_count",
     debugValue=0
 )
 ```
-
----
 
 ## 3. Execution Flow
 
-```
+```text
 Job Parameters → Widgets → Notebook Logic → taskValues.set()
-                                             ↓
-                                      Next Task → taskValues.get()
+                                              ↓
+                                       Next Task → taskValues.get()
 ```
 
----
+## 4. Key Parameters of `taskValues.get()`
 
-## 4. Key Concepts
+- **`taskKey`** — the name of the *upstream task* that set the value. Must match the job's task configuration exactly.
+- **`key`** — the name under which the value was stored during `set()`.
 
-### What is `taskKey`?
-
-- Name of the **upstream task**
-    
-- Must match job configuration exactly
-    
-
-### What is `key`?
-
-- Name of the **value stored**
-    
-- Defined during `set()`
-    
-
-### Mapping
-
-```
-taskKey = source (which task)
-key     = variable (what value)
+```text
+taskKey = which task produced the value
+key     = which variable to retrieve
 ```
 
----
+### `debugValue`
 
-## 5. `debugValue`
-
-### Definition
-
-Fallback value used when:
-
-- Notebook runs **outside a job**
-    
-- No upstream task context exists
-    
-
-### Behavior
-
-- Job run → real value returned
-    
-- Manual run → `debugValue` returned
-    
-
-### Example
+Fallback used when there is no upstream task context — i.e., the notebook is run manually outside a job. In a real job run, the actual upstream value is returned; in a manual/interactive run, `debugValue` is returned instead.
 
 ```python
 count = dbutils.jobs.taskValues.get(
@@ -102,61 +58,38 @@ count = dbutils.jobs.taskValues.get(
 )
 ```
 
----
+## 5. Widget Value Source Priority
 
-## 6. Widget Value Source Priority
+When a widget is read, its value is resolved in this order:
 
-1. Job parameter
-    
-2. Default defined in code
-    
-3. Manual UI input
-    
+1. **Job parameter** passed in at run time (a job run overrides everything else).
+2. **Manually edited value** in the widget UI (interactive/manual runs).
+3. **Default value** defined in the `dbutils.widgets.text(...)` call (used if nothing else set it).
 
----
+## 6. Important Behaviors
 
-## 7. Important Behaviors
+**Widgets**
+- Always return **strings** — cast explicitly if you need another type, e.g. `int(dbutils.widgets.get("limit"))`.
+- Must be defined (via `dbutils.widgets.text/dropdown/combobox/multiselect`) before they can be read.
+- Are resolved at the **start** of notebook execution.
+- Do **not** pass data between tasks — each task's widgets are independent.
 
-### Widgets
+**taskValues**
+- Work **only inside Databricks Jobs** — outside a job, `get()` falls back to `debugValue`.
+- Store **small, serializable** values (counts, flags, short strings, paths) — never DataFrames or large objects.
+- Are set/read **during** task execution, not before it.
+- A `key` reused within the same task **silently overwrites** the previous value.
 
-- Always return **string**
-    
-- Must be defined before use
-    
-- Exist at **start of execution**
-    
-- Do not pass data between tasks
-    
+## 7. Combined Pattern
 
-### taskValues
-
-- Work only in **Jobs**
-    
-- Store **small serializable values**
-    
-- Used during execution
-    
-- Not for large data
-    
-
----
-
-## 8. Combined Pattern
-
+Task A:
 ```python
-# define input
-dbutils.widgets.text("mode", "full")
-mode = dbutils.widgets.get("mode")
-
-# process
-count = spark.table("data").count()
-
-# pass to next task
-dbutils.jobs.taskValues.set("row_count", count)
+mode = dbutils.widgets.get("mode")               # read input
+count = spark.table("data").count()              # process
+dbutils.jobs.taskValues.set("row_count", count)  # pass downstream
 ```
 
-Downstream:
-
+Task B:
 ```python
 count = dbutils.jobs.taskValues.get(
     taskKey="task_a",
@@ -165,64 +98,33 @@ count = dbutils.jobs.taskValues.get(
 )
 ```
 
----
+What this does **not** do: it doesn't automatically use `mode` anywhere else in the job, doesn't persist data outside the job run, and doesn't itself trigger the next task — orchestration is still controlled by the job's task DAG, not by `taskValues`.
 
-## 9. What the Code Does
+## 8. Widgets vs taskValues — Side by Side
 
-```python
-mode = dbutils.widgets.get("mode")
-count = spark.table("data").count()
-dbutils.jobs.taskValues.set("row_count", count)
-```
-
-- Reads external parameter (`mode`)
-    
-- Computes row count
-    
-- Stores result for next task
-    
-
-### Does NOT:
-
-- Automatically use `mode`
-    
-- Persist data externally
-    
-- Trigger next task logic
-    
-
----
-
-## 10. Key Differences
-
-|Aspect|Widgets|taskValues|
+| Aspect | Widgets | taskValues |
 |---|---|---|
-|Purpose|Input|Task communication|
-|Direction|External → Notebook|Task → Task|
-|Data Type|String|Small serializable|
-|Scope|Single notebook|Multi-task job|
-|Timing|Before execution|During execution|
+| Purpose | Input | Task-to-task communication |
+| Direction | External → notebook | Task → task |
+| Data type | String only | Small serializable value |
+| Scope | Single notebook | Multi-task job |
+| Timing | Resolved before execution | Set/read during execution |
 
----
+## 9. Common Patterns
 
-## 11. Common Patterns
-
-### Control Execution
-
+**Control execution based on input**
 ```python
 mode = dbutils.widgets.get("mode")
 if mode == "full":
     run_full()
 ```
 
-### Pass Metadata
-
+**Pass metadata to the next task**
 ```python
 dbutils.jobs.taskValues.set("output_path", "/mnt/output")
 ```
 
-### Conditional Pipeline
-
+**Conditional pipeline based on an upstream result**
 ```python
 status = dbutils.jobs.taskValues.get(
     taskKey="validation",
@@ -234,108 +136,32 @@ if status == "true":
     run_pipeline()
 ```
 
----
+## 10. Failure Scenarios / Gotchas
 
-## 12. Failure Scenarios
+- Reading a widget that was never defined → error.
+- Missing `debugValue` on a manual run with no upstream task context → failure.
+- Wrong `taskKey` or wrong `key` → value cannot be retrieved.
+- Passing large data (a DataFrame, a big JSON blob) through `taskValues` → unsupported.
+- Forgetting to cast a widget value → comparisons like `dbutils.widgets.get("limit") > 10` fail because widgets always return strings.
 
-- Widget not defined → error
-    
-- Missing `debugValue` → failure in manual run
-    
-- Wrong `taskKey` → cannot retrieve value
-    
-- Wrong `key` → value not found
-    
-- Passing large data → unsupported
-    
+## 11. When to Use Which
 
----
+- **Widgets** → configuration inputs: mode flags, limits, file paths, environment names.
+- **taskValues** → small results passed forward: row counts, validation flags, generated paths.
+- Avoid widgets for inter-task communication (they're notebook-scoped, not job-scoped); avoid taskValues for anything beyond small metadata.
 
-## 13. Constraints
+## 12. Mental Model
 
-### Widgets
-
-- String-only → requires casting
-    
-
-```python
-limit = int(dbutils.widgets.get("limit"))
+```text
+Widgets    = input API for a single notebook
+Notebook   = the processing unit
+taskValues = the message bus between tasks in a job
 ```
 
-### taskValues
+## 13. Quick Q&A
 
-- Avoid large objects (DataFrames, big JSON)
-    
-- Keys are overwritten silently if reused
-    
-
----
-
-## 14. Usage Boundary
-
-Use:
-
-- Widgets → configs (mode, limits, paths)
-    
-- taskValues → results (counts, flags, paths)
-    
-
-Avoid:
-
-- Widgets for inter-task communication
-    
-- taskValues for heavy data transfer
-    
-
----
-
-## 15. Mental Model
-
-```
-Widgets   = Input API
-Notebook  = Processing Unit
-taskValues = Internal Message Bus
-```
-
----
-
-## 16. Quick Q&A
-
-**Q: Is widget value set automatically?**  
-No. It must come from job config, default, or UI.
-
-**Q: Does `taskValues` work in notebooks directly?**  
-No. Only in Jobs. Uses `debugValue` otherwise.
-
-**Q: Can widgets pass values to another task?**  
-No.
-
-**Q: Can taskValues store large data?**  
-No. Only small metadata.
-
-**Q: Is `mode` used automatically in logic?**  
-No. Must be explicitly used.
-
-**Q: What happens if `taskKey` is wrong?**  
-Value cannot be retrieved.
-
----
-
-## 17. Minimal End-to-End
-
-Task A:
-
-```python
-count = spark.table("data").count()
-dbutils.jobs.taskValues.set("row_count", count)
-```
-
-Task B:
-
-```python
-count = dbutils.jobs.taskValues.get(
-    taskKey="task_a",
-    key="row_count",
-    debugValue=0
-)
-```
+- **Is a widget's value set automatically?** No — it comes from a job parameter, a manually edited UI value, or the code default.
+- **Does `taskValues` work outside Jobs?** No — it falls back to `debugValue`.
+- **Can widgets pass values to another task?** No.
+- **Can `taskValues` store large data?** No — only small metadata.
+- **What happens with a wrong `taskKey`?** The value cannot be retrieved (lookup fails).

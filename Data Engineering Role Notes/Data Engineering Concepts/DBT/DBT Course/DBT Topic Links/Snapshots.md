@@ -1,8 +1,7 @@
-Theory : https://learn.getdbt.com/learn/course/snapshots/snapshots-45min/snapshots?page=2
+dbt Learn + official docs bookmarks for snapshots — pairs with the full write-up in [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 05/Snapshots & Change Tracking|Snapshots & Change Tracking]].
 
-Practical : https://learn.getdbt.com/learn/course/snapshots/snapshots-45min/snapshots?page=3
+Theory: https://learn.getdbt.com/learn/course/snapshots/snapshots-45min/snapshots?page=2
 
-Documentation : https://docs.getdbt.com/docs/build/snapshots#what-are-snapshots
+Practical: https://learn.getdbt.com/learn/course/snapshots/snapshots-45min/snapshots?page=3
 
-## 🔗 Related Notes
-- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 05/Snapshots & Change Tracking|Snapshots & Change Tracking]]
+Documentation: https://docs.getdbt.com/docs/build/snapshots#what-are-snapshots

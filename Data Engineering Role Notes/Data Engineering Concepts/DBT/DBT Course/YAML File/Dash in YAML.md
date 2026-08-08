@@ -63,14 +63,8 @@ In dbt `schema.yml` files, you’ll often see these nested together. The structu
 
 The most common error in dbt is forgetting the dash when defining columns.
 
-- **Wrong:** You list `columns:` and then just write the names. dbt won't know where one column ends and the next begins.
-    
+- **Wrong:** Listing `columns:` and then just writing the names on their own lines — dbt won't know where one column ends and the next begins.
 - **Right:** Each new column starts with a `- name: column_name`.
-    
-
----
-
-Would you like me to take a look at a specific YAML file you're working on to check if the nesting and dashes are correct?
 
 ## 🔗 Related Notes
 - [[Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/YAML File/DBT Course/YAML File and Its Structure|YAML File and Its Structure]]

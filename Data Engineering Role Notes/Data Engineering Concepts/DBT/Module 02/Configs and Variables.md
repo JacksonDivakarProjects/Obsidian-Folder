@@ -152,16 +152,13 @@ Imagine your project is set up like this:
 | **`materialized`**     | How the model is built in the DB.                                            | `table`, `view`, `incremental`, `ephemeral`      |
 | **`schema`**           | The dataset/schema the model is placed in.                                   | `analytics`, `reporting`, `staging`              |
 | **`tags`**             | Labels for grouping and selection.                                           | `['daily', 'finance', 'pii']`                    |
-| **`unique_key`**       | Required for `incremental` models to identify rows for **upsert operation**. | `order_id`                                       |
+| **`unique_key`**       | Required for `incremental` models to identify rows for the **upsert operation**. | `order_id`                                       |
 | **`on_schema_change`** | How to handle new columns in incremental models.                             | `fail`, `append_new_columns`, `sync_all_columns` |
 | **`post_hook`**        | SQL to run after model is built (e.g., grants).                              | `"GRANT SELECT ..."`                             |
 
 ---
-**Summary of Topic 4:**
-You now understand the four ways to control your dbt models: from the broad **project file**, to the grouped **property files**, down to the precise **in-model config block**, and dynamic **command-line variables**. Most importantly, you've learned the **rule of precedence**: specificity wins. This allows you to set smart defaults for your entire project while retaining full power to override them exactly where needed.
-
-**Ready for the next topic?**
-Type `NEXT` to proceed to **Module 3, Topic 1: Building Models & Materializations**, where we'll put these configs to use and learn about the different ways (tables, views, incremental) dbt can build your data.
+**Summary:**
+There are four ways to control your dbt models: the broad **project file**, the grouped **property files**, the precise **in-model config block**, and dynamic **command-line variables**. The rule that ties them together is precedence: the more specific the location, the more power it has. This lets you set smart project-wide defaults while retaining the ability to override them exactly where needed — which is what Building Models & Materializations covers next.
 
 ## 🔗 Related Notes
 - [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 02/Configuration Files|Configuration Files Overview]]

@@ -16,7 +16,6 @@
 - [[Data Science/Data Visualization/Data Science Visualization|Data Visualization]] — Plot-type selection and Matplotlib subplot_mosaic dashboards.
 - [[Data Science/Excel/Excel|Excel]] — Excel formulas (COUNTIFS, XLOOKUP, FILTER) and PivotTables.
 - [[Data Science/Git and Github/Git and Github|Git and Github]] — Git/GitHub fundamentals, branching, and collaboration workflow.
-- [[Data Science/Miscellaneous 1/Miscellaneous 1|Miscellaneous 1]] — Python asyncio, file handling, os module, Pydantic, regex, and ThreadPoolExecutor.
 - [[Data Science/Miscellaneous/Miscellaneous|Miscellaneous]] — End-to-end DS reference and a Kaggle-style code cheat sheet (Numpy/Pandas/Matplotlib/Sklearn).
 - [[Data Science/Pandas/Pandas|Pandas]] — GroupBy, reshaping, missing data, windowing, string/type accessors, joins, and I/O.
 - [[Data Science/Probability For DS/Probability For DS|Probability For DS]] — Bayes' theorem, distributions, hypothesis testing, p-values, and confidence intervals.
@@ -26,7 +25,3 @@
 - [[Data Science/Probability For DS/Probability For DS|Probability For DS]] (hypothesis testing, p-values) underpins the KPI and segmentation techniques in [[Data Science/Data Analysis/Data Analysis|Data Analysis]].
 - [[Data Science/Data Science Cheatsheets/Data Science CheatSheets|Data Science CheatSheets]] is a quick-reference companion to the deeper [[Data Science/Pandas/Pandas|Pandas]] and [[Data Science/Miscellaneous/Miscellaneous|Miscellaneous]] guides.
 - [[Data Science/Data Visualization/Data Science Visualization|Data Visualization]] techniques are applied throughout [[Data Science/Data Analysis/Data Analysis|Data Analysis]] and [[Data Science/Miscellaneous/Miscellaneous|Miscellaneous]].
-
-## ⏳ Not Yet Organized
-- Data Science/Pyspark
-- Data Science/SQL

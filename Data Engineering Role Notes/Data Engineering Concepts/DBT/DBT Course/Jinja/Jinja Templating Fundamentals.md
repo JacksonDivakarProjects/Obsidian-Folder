@@ -115,7 +115,7 @@ FROM my_table
 
 ## **6. A Practical Example: Bringing It All Together**
 
-Here’s how you might use these concepts in a real model configuration and SQL.
+Here's how these concepts combine in a real model.
 
 ```sql
 -- models/marts/user_report.sql
@@ -151,21 +151,17 @@ WHERE u.status IN ({{ active_statuses | join(', ') }}) -- Filters to 'active', '
 {{ limit_clause }} -- Safely adds a LIMIT clause only in dev
 ```
 
-**Key Takeaways from this example:**
+**Key takeaways from this example:**
 1.  **`{{ config() }}`** sets model-specific configuration.
-2.  **`{# ... #}`** is used for a developer comment.
+2.  **`{# ... #}`** is a developer comment, stripped from the compiled SQL.
 3.  **`{% set ... %}`** defines reusable variables.
-4.  **`{% if ... %}`** changes the `limit_clause` based on the target (prod vs. dev).
+4.  **`{% if ... %}`** changes `limit_clause` based on the target (prod vs. dev).
 5.  **`{% for ... %}`** creates three count columns without copy-pasting.
 6.  **`{{ ref() }}` and `{{ source() }}`** correctly build dependencies.
-7.  **`{{ var() }}`** accesses a dbt variable (more on this later).
+7.  **`{{ var() }}`** accesses a dbt variable, defined in `dbt_project.yml` or via `--vars`.
 
 ---
-**Summary of Topic 2:**
-You now understand that Jinja is the engine for dynamic SQL in dbt. You know the core syntax: **`{{ }}` to output**, **`{% %}` to control logic**, and how to **clean whitespace**. Most importantly, you can use **`ref()` and `source()`** to build your project's dependency graph and incorporate **loops and conditionals** to write efficient, DRY (Don't Repeat Yourself) code.
-
-**Ready for the next topic?**
-Type `NEXT` to proceed to **Topic 3: File Associations & VS Code Setup**, where you'll optimize your development environment for working with Jinja.
+**Summary:** Jinja is the engine behind dynamic SQL in dbt: `{{ }}` outputs, `{% %}` controls logic, and `{# #}` comments. Combined with `ref()`/`source()` for dependencies and loops/conditionals for DRY code, it turns static SQL into a proper templating layer — one worth a dedicated editor setup, covered next.
 
 ## 🔗 Related Notes
 - [[Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/Jinja/Jinja SQL|Jinja in SQL]]

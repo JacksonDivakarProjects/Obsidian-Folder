@@ -421,10 +421,8 @@ with open("/path/to/large_file.zip", "rb") as f:
 | **Unstructured data** | Images, PDFs, audio, video for AI/ML pipelines (e.g., document parsing, image classification) | `/Volumes/legal/documents/contracts/` with `ai_parse_document` |
 | **Secure file sharing** | Share files across users, teams, and workspaces with fine‑grained permissions (instead of DBFS or email) | Grant `READ VOLUME` to `analysts_group` on `/Volumes/finance/reports/` |
 | **Library and init script storage** | Store JARs, Python wheels, and cluster init scripts in a governed location | `/Volumes/eng/libs/my_spark_udf.jar` |
-| **Checkpoint storage** | DataFrame checkpoints and Structured Streaming checkpoints (DBR 18.1+) | `spark.conf.set("spark.checkpoint.dir", "/Volumes/.../checkpoints/")` |
+| **Checkpoint storage** | Structured Streaming and DataFrame checkpoint locations, so checkpoints are governed and shared like any other Unity Catalog object | `.option("checkpointLocation", "/Volumes/.../checkpoints/")` on a streaming writer, or `spark.sparkContext.setCheckpointDir("/Volumes/.../checkpoints/")` for DataFrame checkpointing |
 | **External system integration** | When files must be written by Databricks and read by external tools (use external volumes) | Databricks writes aggregates to `/Volumes/.../output/` and a separate Airflow job reads them |
-
----
 
 ## Advantages
 
