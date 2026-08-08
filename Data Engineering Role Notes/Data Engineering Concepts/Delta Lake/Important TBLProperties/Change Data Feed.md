@@ -1,18 +1,10 @@
+# Delta Lake — Change Data Feed (CDF) in SQL
 
-Here’s a crisp, professional note on **Change Data Feed (CDF) in Delta Lake** from a SQL perspective:
+**Change Data Feed (CDF)** lets you track row-level changes (inserts, updates, deletes) on a Delta table over time, giving you an incremental view of what changed instead of forcing a full-table diff. This powers incremental ETL, replication, and auditing.
 
----
+## Enabling Change Data Feed
 
-## **Delta Lake – Change Data Feed (CDF) in SQL**
-
-**Definition:**  
-Change Data Feed (CDF) in Delta Lake allows you to track **row-level changes** (inserts, updates, deletes) in a Delta table over time. It provides an incremental view of the changes, enabling downstream analytics, ETL, and replication processes.
-
----
-
-### **Enabling Change Data Feed**
-
-When creating a table:
+At table creation:
 
 ```sql
 CREATE TABLE sales (
@@ -26,40 +18,32 @@ USING delta
 TBLPROPERTIES (delta.enableChangeDataFeed = true);
 ```
 
-For an **existing table**:
+On an existing table:
 
 ```sql
 ALTER TABLE sales
 SET TBLPROPERTIES (delta.enableChangeDataFeed = true);
 ```
 
-> ✅ **Note:** CDF must be enabled before changes occur. It **cannot track changes retroactively**.
+> **Note:** CDF must be enabled before the changes happen — it cannot reconstruct change history retroactively for versions committed before it was turned on.
 
----
+## Querying Changes
 
-### **Querying Changes**
-
-1. **Get all changes from a specific version:**
-    
+Get all changes from a specific version onward:
 
 ```sql
 SELECT *
-FROM table_changes('sales', 1); -- version 1 onwards
+FROM table_changes('sales', 1); -- version 1 onward
 ```
 
-- `table_changes(table_name, version)` returns a **CDF view** with `_change_type` column:
-    
-    - `insert`
-        
-    - `update_preimage`
-        
-    - `update_postimage`
-        
-    - `delete`
-        
+`table_changes(table_name, starting_version[, ending_version])` returns a CDF view with a `_change_type` column, whose values are:
 
-2. **Filter only inserts/updates/deletes**:
-    
+- `insert`
+- `update_preimage` (row values before the update)
+- `update_postimage` (row values after the update)
+- `delete`
+
+Filter to a specific change type:
 
 ```sql
 SELECT *
@@ -67,32 +51,20 @@ FROM table_changes('sales', 1)
 WHERE _change_type = 'update_postimage';
 ```
 
----
-
-### **Use Cases**
+## Use Cases
 
 - Incremental ETL pipelines
-    
 - Real-time analytics dashboards
-    
 - Data replication between systems
-    
 - Auditing and compliance
-    
 
----
+## Best Practices
 
-### **Best Practices**
+- CDF relies on Delta's versioning, so retain enough historical versions/log entries for the lookback window you need.
+- Combine with Z-Ordering or partitioning for better query performance when scanning change data.
+- Use time travel carefully on large datasets — CDF is designed for incremental consumption, not repeated full scans.
 
-- Retain **enough historical versions**: CDF relies on Delta Lake’s versioning.
-    
-- Combine with **Z-Ordering or partitioning** for better query performance.
-    
-- Use **time-travel** carefully for large datasets; CDF works best incrementally.
-    
-
----
-
-If you want, I can also draft a **compact SQL cheat-sheet for Delta Lake CDF** that covers **create, alter, query, and best practices** all in one table. It will be extremely handy for quick reference.
-
-Do you want me to do that?
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Questions/How Versioning Works in Delta Lake|How Versioning Works in Delta Lake]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Data Bricks/Delta Live Tables/AutoCDC API/AutoCDC in DLT|AutoCDC in DLT]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 05/Snapshots & Change Tracking|Snapshots & Change Tracking]]

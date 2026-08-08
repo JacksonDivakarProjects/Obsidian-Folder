@@ -265,3 +265,9 @@ Start with one section that addresses your biggest business headache right now. 
 5. Measure the result
 
 That's the entire game. Now go play.
+
+## 🔗 Related Notes
+- [[Data Science/Data Analysis/Data Analysis Notes Parts/Data Analysis - (Part -2)|Part 2: The Analysis Framework - What to Look For]]
+- [[Data Science/Data Analysis/Data Analysis Notes Parts/Data Analysis - (Part -3)|Part 3: From Insight to Action - The Decision Framework]]
+- [[Data Science/Data Analysis/Data Analysis Notes Parts/Data Analysis - (Part -4)|Part 4: Industry-Specific Cheat Sheets]]
+- [[Data Science/Data Analysis/KPI Notes/KPI Comprehensive Guide|KPI Comprehensive Guide]]

@@ -1,0 +1,75 @@
+{
+  "settings": {
+    "migrated": 2,
+    "iconPacksPath": ".obsidian/icons",
+    "fontSize": 16,
+    "emojiStyle": "native",
+    "iconColor": null,
+    "extraMargin": {
+      "top": 0,
+      "right": 4,
+      "bottom": 0,
+      "left": 0
+    },
+    "recentlyUsedIcons": [],
+    "recentlyUsedIconsSize": 5,
+    "rules": [],
+    "iconInTabsEnabled": false,
+    "iconInTitleEnabled": false,
+    "iconInTitlePosition": "above",
+    "iconInFrontmatterEnabled": false,
+    "iconInFrontmatterFieldName": "icon",
+    "iconColorInFrontmatterFieldName": "iconColor",
+    "iconsBackgroundCheckEnabled": false,
+    "iconsInNotesEnabled": true,
+    "iconsInLinksEnabled": true,
+    "iconIdentifier": ":",
+    "lucideIconPackType": "native",
+    "debugMode": false,
+    "useInternalPlugins": false
+  },
+  "AI Notes": {
+    "iconName": "LiFolder",
+    "iconColor": "#6254F5"
+  },
+  "Claude Code": {
+    "iconName": "LiFolder",
+    "iconColor": "#FF8D28"
+  },
+  "Data Engineering Role Notes": {
+    "iconName": "LiFolder",
+    "iconColor": "#03C3CF"
+  },
+  "Data Science": {
+    "iconName": "LiFolder",
+    "iconColor": "#0088FF"
+  },
+  "English Communication": {
+    "iconName": "LiFolder",
+    "iconColor": "#35C759"
+  },
+  "Future Study Plan": {
+    "iconName": "LiFolder",
+    "iconColor": "#FFCC02"
+  },
+  "Helpful Books and PDFs": {
+    "iconName": "LiFolder",
+    "iconColor": "#AC7F5E"
+  },
+  "Laptop Level Notes": {
+    "iconName": "LiFolder",
+    "iconColor": "#8E8E94"
+  },
+  "Miscellaneoues": {
+    "iconName": "LiFolder",
+    "iconColor": "#CB30E0"
+  },
+  "Stock Analyzer Project": {
+    "iconName": "LiFolder",
+    "iconColor": "#FF393C"
+  },
+  "Web Development": {
+    "iconName": "LiFolder",
+    "iconColor": "#FF2C55"
+  }
+}

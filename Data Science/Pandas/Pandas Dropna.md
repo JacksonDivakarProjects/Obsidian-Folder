@@ -218,3 +218,7 @@ df.dropna(subset=['name', 'city']).fillna(0)
 ---
 
 Let me know if you want a printable cheat sheet or a Jupyter notebook version for practice.
+
+## 🔗 Related Notes
+- [[Data Science/Pandas/Pandas Fillna|Pandas Fillna]]
+- [[Data Science/Pandas/Pandas Special Notes For Tips and Tricks|Pandas Special Notes For Tips and Tricks]]

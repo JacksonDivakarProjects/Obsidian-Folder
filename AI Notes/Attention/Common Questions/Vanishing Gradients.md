@@ -6,3 +6,8 @@ The vanishing gradient problem occurs during backpropagation in deep neural netw
 - **Training recurrent neural networks (RNNs)** on long sequences, where gradients vanish over many time steps.
 
 In essence, it happens when the gradient becomes so tiny that earlier layers learn extremely slowly or stop learning altogether.
+
+## 🔗 Related Notes
+- [[AI Notes/Attention/Common Questions/Exploding Gradients|Exploding Gradients]]
+- [[AI Notes/Attention/Encoder Decoder Sequential Model/Attention Mechanism Implementation (Old Sequential Model)|Attention Mechanism Implementation (Old Sequential Model)]]
+- [[AI Notes/Attention/Transformers/Difference between Encoder - Decoder and Transformers|Difference between Encoder - Decoder and Transformers]]

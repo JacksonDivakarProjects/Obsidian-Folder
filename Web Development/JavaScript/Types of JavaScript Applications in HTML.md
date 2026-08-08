@@ -64,3 +64,7 @@ JavaScript code can be included in an HTML document in three primary ways, allow
 ---
 
 **I have created the notes for Topic 1. Please say "Next" for me to proceed to Topic 2 (Equality Operators), or "Adjust" if you would like me to refine this topic.**
+
+## 🔗 Related Notes
+- [[Web Development/JavaScript/DOM (Document Object Model)|DOM (Document Object Model)]]
+- [[Web Development/JavaScript/Event Listeners|Event Listeners in JavaScript]]

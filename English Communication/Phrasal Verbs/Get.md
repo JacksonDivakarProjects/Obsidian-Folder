@@ -86,3 +86,10 @@ _(Answers: get over, get down, get in touch with, get rid of, getting on)_
 
 Would you like me to create a **“visual summary table” (diagram)** of “get” phrasal verbs grouped by meaning — like “movement, emotion, communication, progress”?  
 It’ll help you remember faster and use them naturally in speech.
+
+## 🔗 Related Notes
+- [[English Communication/Phrasal Verbs/Call|Call]]
+- [[English Communication/Phrasal Verbs/Pull|Pull]]
+- [[English Communication/Phrasal Verbs/Put|Put]]
+- [[English Communication/Phrasal Verbs/Take|Take]]
+- [[English Communication/Usage of Get|Usage of Get]]

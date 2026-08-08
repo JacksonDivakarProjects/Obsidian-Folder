@@ -191,3 +191,9 @@ If you are asked about Probability in a Data Engineering/Science interview, here
 3. **"Can we trust this number?"**
     
     - Check the Confidence Interval. Is it narrow or wide?
+
+## 🔗 Related Notes
+- [[Data Science/Probability For DS/Three Question/Conditional Logic Question|Conditional Logic Question]]
+- [[Data Science/Probability For DS/Three Question/Uncertainity Question|Uncertainity Question]]
+- [[Data Science/Probability For DS/Difference Between Correlation and Bayes' Theorem|Difference Between Correlation and Bayes' Theorem]]
+- [[Data Science/Probability For DS/Probability Topics List|Probability Topics List]]

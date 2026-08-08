@@ -209,3 +209,8 @@ Tell me:
 **`PDF`** / **`Cheat Sheet`** / **`Markdown`**
 
 I’ll generate it ready for download.
+
+## 🔗 Related Notes
+- [[Laptop Level Notes/OBS Camera Restart/Camera Restart Command|Camera Restart Command]]
+- [[Laptop Level Notes/Screen Cast/From Linux Laptop/Wireless Display|Wireless Display (GNOME Network Displays / Miracast)]]
+- [[Laptop Level Notes/Screen Cast/From mobile phone (USB)/SCRCPY|SCRCPY (Android Screen Mirroring)]]

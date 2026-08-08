@@ -150,3 +150,8 @@ df['fast_cumsum'] = df['value'].expanding(engine='numba').sum()
 - Use `.rolling()` when you only care about **recent N periods**  
 
 This guide covers **100% of practical `.expanding()` use cases** with optimal performance! 🚀
+
+## 🔗 Related Notes
+- [[Data Science/Pandas/Pandas .rolling()|The Essential Pandas .rolling() Guide]]
+- [[Data Science/Pandas/Pandas .ewm()|The Essential Pandas .ewm() Guide]]
+- [[Data Science/Pandas/Pandas series.expanding()|Pandas series.expanding()]]

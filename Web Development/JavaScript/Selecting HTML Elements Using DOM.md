@@ -128,3 +128,8 @@ Once you have selected an element, you can navigate to related elements using th
 ---
 
 **I have adjusted the notes for Topic 9 to include DOM traversal properties. Please say "Next" for me to proceed to Topic 10 (Manipulating elements using DOM).**
+
+## 🔗 Related Notes
+- [[Web Development/JavaScript/DOM (Document Object Model)|DOM (Document Object Model)]]
+- [[Web Development/JavaScript/Manipulating Elements Using DOM|Manipulating Elements Using DOM - Camel Case for Properties]]
+- [[Web Development/JavaScript/Structure of HTML Elements in DOM Tree|Tree Structure of HTML Elements (DOM Tree)]]

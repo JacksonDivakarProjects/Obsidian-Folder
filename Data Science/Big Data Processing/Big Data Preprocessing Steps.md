@@ -298,3 +298,6 @@ This covers **all major preprocessing steps used in the industry**:
 If you want, I can make a **single PySpark template script** that has **all preprocessing steps ready to run on any dataset** — fully commented and production-ready. It’s extremely useful for Kaggle or company projects.
 
 Do you want me to create that?
+
+## 🔗 Related Notes
+- [[Data Science/Big Data Processing/Big Data Processing|Big Data Processing]]

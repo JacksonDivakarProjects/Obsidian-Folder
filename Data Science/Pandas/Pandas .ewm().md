@@ -136,3 +136,8 @@ df[['ewma', 'ewstd']] = df['value'].ewm(span=10).agg(['mean', 'std'])
 - Use `.rolling()` when **all points in window are equally important**  
 
 This guide covers **100% of practical `.ewm()` applications** with optimal tuning! 🚀
+
+## 🔗 Related Notes
+- [[Data Science/Pandas/Pandas .rolling()|The Essential Pandas .rolling() Guide]]
+- [[Data Science/Pandas/Pandas .expanding()|The Essential Pandas .expanding() Guide]]
+- [[Data Science/Pandas/Pandas series.expanding()|Pandas series.expanding()]]

@@ -60,3 +60,6 @@ Now your notebook runs in that environment.
 ---
 
 If you want, I can also show a **shortcut to switch environments without reinstalling kernels every time**—it’s faster for frequent environment switching. Do you want me to show that?
+
+## 🔗 Related Notes
+- [[Laptop Level Notes/Set Java SDK/Set Java SDK|Set Java SDK]]

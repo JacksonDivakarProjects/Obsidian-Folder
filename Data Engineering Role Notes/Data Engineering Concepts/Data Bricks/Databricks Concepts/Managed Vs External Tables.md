@@ -218,19 +218,17 @@ AS SELECT * FROM external_data_catalog.landing.clicks WHERE user_id IS NOT NULL;
 ```
 Data is written directly to the user‑provided `LOCATION`.
 
-### 4.3 Temporary Tables vs Global Temp Tables
+### 4.3 Temporary Views vs Global Temp Views
 
-| Feature               | Temporary View / Table                       | Global Temporary Table / View                          |
-|-----------------------|----------------------------------------------|--------------------------------------------------------|
-| **Scope**             | Session‑only (disappears after cluster restart or session end) | Visible across multiple queries in the same **SQL warehouse** or cluster session, but not persisted |
-| **Namespace**         | No catalog/schema – resides in `local` schema | Resides in the `global_temp` schema (catalog `system`?) Actually: `global_temp` is a special schema inside the `system` catalog. |
-| **Storage location**  | No physical storage – purely temporary       | No physical storage – purely temporary                 |
-| **Example**           | `CREATE TEMP VIEW temp_high AS SELECT ... FROM sales_catalog.retail.orders;` | `CREATE GLOBAL TEMP VIEW global_high AS SELECT ... FROM sales_catalog.retail.orders;` then query `SELECT * FROM global_temp.global_high;` |
-| **Use case**          | Short‑lived intermediate results within a notebook | Sharing temporary results across multiple SQL statements in a session |
+| Feature | Temporary View | Global Temporary View |
+|---------|-----------------|------------------------|
+| **Scope** | Current Spark session only (a single notebook or job run) | All sessions sharing the same cluster/SQL warehouse, until it restarts |
+| **Namespace** | Not registered under any catalog or schema | Registered under the special `global_temp` database — a legacy Spark/Hive construct that sits outside Unity Catalog's three‑level namespace |
+| **Storage location** | No physical storage – purely a saved query definition | No physical storage – purely a saved query definition |
+| **Example** | `CREATE TEMP VIEW temp_high AS SELECT ... FROM sales_catalog.retail.orders;` | `CREATE GLOBAL TEMP VIEW global_high AS SELECT ... FROM sales_catalog.retail.orders;` then query with `SELECT * FROM global_temp.global_high;` |
+| **Use case** | Short‑lived intermediate results within a single notebook | Sharing temporary results across multiple notebooks on the same cluster |
 
-> **Important**: Temporary objects are **never** stored in managed or external locations. They exist only in memory or local scratch.
-
----
+> **Important**: Temporary objects are never stored in managed or external locations — they exist only as query definitions in session/cluster metadata, never as files.
 
 ## 5. Storage Resolution Logic (Critical Section)
 
@@ -508,3 +506,8 @@ If files disappear, the table was actually **managed** (no `LOCATION` was specif
 ---
 
 *This guide assumes Unity Catalog is enabled and you have the necessary privileges (`CREATE CATALOG`, `CREATE SCHEMA`, `CREATE TABLE`, `CREATE EXTERNAL LOCATION`, etc.). For S3, replace `abfss://container@account.dfs.core.windows.net/...` with `s3://bucket/...` and use AWS IAM roles for storage credentials.*
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Data Bricks/Databricks Concepts/Volumes|Comprehensive Guide to Volumes in Databricks Unity Catalog]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Other Important Concepts/Open Table Format|Open Table Format]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Other Important Concepts/Delta Lake Uniform Format|Delta Lake Uniform Format (UniForm)]]

@@ -806,3 +806,7 @@ import { name as newName } from './module';
 ---
 
 **Ready for Topic 14: "Javascript ES6 Import, Export and Modules Practice"?**
+
+## 🔗 Related Notes
+- [[Web Development/React/React Topics/React Components|React Components]]
+- [[Web Development/React/React Topics/What We Will Make in This React Module|What We Will Make in This React Module]]

@@ -104,3 +104,8 @@ If you want to be that "High Efficiency" analyst, this is your workflow for ever
 Your Next Step:
 
 Would you like to practice The Pyramid Principle? I can give you a messy "Junior Analyst" email, and you can try to rewrite it to be "Strategic" using the Answer-First method.
+
+## 🔗 Related Notes
+- [[Data Science/Data Analysis/Data Analysis Roadmap/Framework Based Data Analysis|Framework Based Data Analysis]]
+- [[Data Science/Data Analysis/Data Analysis Roadmap/Youtube Channel List|Youtube Channel List]]
+- [[Data Science/Data Analysis/Data Analysis Notes Parts/Data Analysis - (Part -3)|Part 3: From Insight to Action - The Decision Framework]]

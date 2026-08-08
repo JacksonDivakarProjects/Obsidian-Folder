@@ -199,3 +199,8 @@ completeButtons.forEach(function(button, index) {
 ---
 
 **I have created the notes for Topic 21. Please say "Next" for me to proceed to Topic 22 (Switch Case).**
+
+## 🔗 Related Notes
+- [[Web Development/JavaScript/Higher Order Functions and Callback Functions|Higher Order Functions and Callback Functions]]
+- [[Web Development/JavaScript/Event Listeners|Event Listeners in JavaScript]]
+- [[Web Development/JavaScript/Switch Case in JavaScript|Switch Case]]

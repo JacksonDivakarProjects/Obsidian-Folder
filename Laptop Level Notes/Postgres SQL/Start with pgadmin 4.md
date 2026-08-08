@@ -119,3 +119,7 @@ SELECT * FROM test_table;
 Once this is done, you can **explore databases, create users, run queries, and manage everything visually** through pgAdmin.
 
 I can also make a **visual step-by-step workflow for beginners** showing how to connect, create a database, table, and query—all in pgAdmin 4. Do you want me to make that?
+
+## 🔗 Related Notes
+- [[Laptop Level Notes/Postgres SQL/Posgres Install & Create User|Posgres Install & Create User]]
+- [[Laptop Level Notes/MySQL Configuration/MySQL Workbench|MySQL Workbench]]

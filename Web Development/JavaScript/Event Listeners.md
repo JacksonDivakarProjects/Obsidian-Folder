@@ -192,3 +192,8 @@ button.addEventListener('click', function() {
 ---
 
 **I have created the notes for Topic 17. Please say "Next" for me to proceed to Topic 18 (Objects).**
+
+## 🔗 Related Notes
+- [[Web Development/JavaScript/Higher Order Functions and Callback Functions|Higher Order Functions and Callback Functions]]
+- [[Web Development/JavaScript/Keystrokes in JavaScript|Keystrokes: keypress Event and Event Object]]
+- [[Web Development/JavaScript/Loops in JavaScript|Loops in JavaScript and forEach with Event Listeners]]

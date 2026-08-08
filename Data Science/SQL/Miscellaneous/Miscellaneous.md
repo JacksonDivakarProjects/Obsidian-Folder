@@ -1,1 +1,0 @@
-[[Connect SQL to Jupyter Notebook]]

@@ -120,3 +120,8 @@ Jack, now that we have covered **all major present and past tenses**, I can crea
 This will serve as a **quick reference guide for professional English and meeting communication**.
 
 Do you want me to make that chart?
+
+## 🔗 Related Notes
+- [[English Communication/Tenses/Past Tense/Past Perfect Tense|Past Perfect Tense]]
+- [[English Communication/Tenses/Present Tense/Present Perfect Continuous|Present Perfect Continuous Tense]]
+- [[English Communication/Tenses/Summary|Tenses Summary]]

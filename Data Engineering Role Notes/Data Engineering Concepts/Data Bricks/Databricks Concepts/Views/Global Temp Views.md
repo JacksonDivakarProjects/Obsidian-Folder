@@ -1,76 +1,42 @@
-## Global Temporary View in Databricks
+## Global Temporary Views in Databricks
 
-![Image](https://images.openai.com/static-rsc-4/2lX4J2ew_DPqjFmjFbFbruo4RRa4_xTx-h8CgZiMsRw5yl-qUhjZ9pK8-M1YXtqOB2Jy6i0B3jv5hebwHN14jJdRwVW9fNq78pCQ5f2rzj87H54_qrnO4-fjahy0eOZ47yuGtnwCQBGW4fxWDx_KssRgJ4ysi2r4RWCRpRNULW3eLv88fOcld8q-EIRTDwNe?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/P-HgR9AGLOyryOWY25KofspgONEh8etUmJcjl-LMGW-kQ2HQwcIxWP7MhD2l9-9elvIuq2Dk9PgaYd_fRlTTFWwj0Ku6vZP4RLXYoQwzzEAryqWhDIlT5SdEW9lnfGa54RAJhVbdfZB1H573mrJLkeVLtB-xF6hEQ9rzDApW0_c2atN0meB87xKLD2OPUc4K?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/LF_2aIChSb0gXcF9Vs9-oVyXZq0ph0x4lS4vmyKuUjjlZffHMWnsGfIytLtv07mrS_7HOtBDth26-5R1UN3n-QD6iWRbUBH8zQU3zgwaCUOz18SGLlaIOm3bceJYxkq-Fj-fONAM_QI-QjM9m5w4uyFOYUbdDGjBfHnkmvBqOwEmtDgj3MUvJY3OtfKwyXSh?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/-SV0cd3W3L9lSMAKFe6xFWO5kf4oy3Dp6YQWCwAnI7WG1JjVeqrK22oXrW5YD4cmLTOUsEzDdYyxQMJkbxaPCpCUDdDoY9fY9J6Na8lzQQvyRY423SRfrgXQcjvZz2DQe431EfNUlNXNElK5Bgi1BwhCz8xh4lz8QnOE_sXc-TnZidqxjop4EgsTuwU1j-51?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/Pqk4VxwOgBleXlR_JLyUeuONddvLCPU_p0qt0OosV_qrEcZIY-XitGL7uOKuv8iHvlgU4x1RAvhCq-aKaqe0i4BHQ5p-87C71XhQUIBFzexQK1Jyr4C3sD2rtX0d1KeWg0zNH9f8tv9crVZKntR65dudqRwFplXSj-F6hxv0guimEY6FMt9ZuBWAmApRgfsv?purpose=fullsize)
-
-**Definition**  
-A **global temporary view** is a Spark SQL view that is **shared across all notebooks and sessions within the same cluster**, stored under a system database called `global_temp`.
-
----
+**Definition**: A global temporary view is a Spark SQL view shared across every notebook and session attached to the same cluster, registered under the special `global_temp` database.
 
 ## Core Properties
 
-- **Scope**: Cluster-wide (all notebooks attached to the same cluster)
-    
-- **Database**: Always stored in `global_temp`
-    
-- **Persistence**: Exists until the cluster is restarted
-    
-- **Storage**: No physical storage (logical query only)
-    
-- **Visibility**: Must be accessed with `global_temp.` prefix
-    
-
----
+- **Scope**: Cluster-wide — visible to all notebooks attached to the same cluster.
+- **Database**: Always registered under `global_temp`.
+- **Persistence**: Exists until the cluster restarts (not saved anywhere permanent).
+- **Storage**: None — it is a logical query definition, not physical data.
+- **Visibility**: Must be queried with the `global_temp.` prefix.
 
 ## Syntax
 
-### SQL
-
+**SQL**
 ```sql
 CREATE OR REPLACE GLOBAL TEMP VIEW sales_view AS
 SELECT * FROM sales_data;
 ```
 
-### Access
-
+**Access**
 ```sql
 SELECT * FROM global_temp.sales_view;
 ```
 
-### PySpark
-
+**PySpark**
 ```python
 df.createOrReplaceGlobalTempView("sales_view")
 ```
 
----
+## How It Works
 
-## How It Works (Mechanism)
-
-- Data is not stored
-    
-- Only the query definition is stored
-    
-- When queried, Spark recomputes the result
-    
-- Stored in a **shared catalog (`global_temp`) inside the cluster runtime**
-    
-
----
+- No data is stored — only the query definition.
+- Every time the view is queried, Spark re-executes the underlying query against the current data.
+- The definition lives in a shared, cluster-scoped system database (`global_temp`), which is a legacy Hive-metastore construct, not part of Unity Catalog's three-level namespace.
 
 ## Example Flow
 
-1. Notebook A:
-    
-
+Notebook A (defines the view):
 ```sql
 CREATE GLOBAL TEMP VIEW temp_kpi AS
 SELECT region, SUM(revenue) AS total_revenue
@@ -78,41 +44,32 @@ FROM sales
 GROUP BY region;
 ```
 
-2. Notebook B (same cluster):
-    
-
+Notebook B, same cluster (reads it):
 ```sql
 SELECT * FROM global_temp.temp_kpi;
 ```
 
----
+## Temp View vs Global Temp View
 
-## Key Difference vs Temp View
-
-|Feature|Temp View|Global Temp View|
+| Feature | Temp View | Global Temp View |
 |---|---|---|
-|Scope|Single notebook|Entire cluster|
-|Prefix required|No|Yes (`global_temp`)|
-|Sharing|No|Yes|
-|Lifetime|Session|Cluster lifetime|
-
----
+| Scope | Single notebook/session | Entire cluster |
+| Prefix required | No | Yes (`global_temp.`) |
+| Shareable across notebooks | No | Yes |
+| Lifetime | Session | Cluster lifetime |
 
 ## When to Use
 
-- Multi-notebook workflows within same cluster
-    
-- Intermediate data sharing without saving tables
-    
-- Orchestration pipelines where steps run in separate notebooks
-    
+- Multi-notebook workflows running on the same cluster.
+- Sharing intermediate results without writing a table.
+- Orchestration pipelines where separate steps run in separate notebooks but need to hand off a result.
 
----
+## Gotchas
 
-## Limitation
+- Lost on cluster restart — not suitable for anything that needs to persist.
+- No performance benefit — the query is recomputed on every read, same as a regular temp view.
+- Databricks generally recommends avoiding global temp views in favor of writing to a real table when data needs to be shared reliably, since `global_temp` predates Unity Catalog and doesn't participate in its governance model.
 
-- Lost after cluster restart
-    
-- Not suitable for production persistence
-    
-- No performance gain (recomputed every time)
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Data Bricks/Databricks Concepts/Views/Views|Views]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Data Bricks/Delta Live Tables/View and Streaming Tables/Difference Between Views and Streaming Tables|Difference Between Views and Streaming Tables]]

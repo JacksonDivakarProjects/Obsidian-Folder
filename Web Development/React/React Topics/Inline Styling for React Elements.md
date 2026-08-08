@@ -881,3 +881,7 @@ function ThemeableButton({
 ---
 
 **Ready for Topic 11: "React Components"?**
+
+## 🔗 Related Notes
+- [[Web Development/React/React Topics/JSX Attributes & Styling React Elements|JSX Attributes & Styling React Elements]]
+- [[Web Development/React/JSX/JSX Guide|JSX Guide]]

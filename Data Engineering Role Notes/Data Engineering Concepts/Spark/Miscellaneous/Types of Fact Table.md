@@ -2,7 +2,7 @@
 
 ## Introduction to Fact Tables
 
-Fact tables are the central tables in a data warehouse schema that contain quantitative measurements, metrics, or facts of a business process. They are typically surrounded by dimension tables that provide descriptive context.
+Fact tables are the central tables in a data warehouse schema. They hold the quantitative measurements, metrics, and facts of a business process, and are typically surrounded by dimension tables that provide descriptive context.
 
 ## 1. Fundamental Concepts
 
@@ -405,13 +405,9 @@ WHERE delivery_date_key IS NOT NULL;
 
 ## 12. Best Practices Summary
 
-1. **Choose the right fact table type** based on business requirements
-2. **Maintain consistent grain** throughout the fact table
-3. **Use surrogate keys** for dimension relationships
-4. **Implement proper indexing** for query performance
-5. **Consider partitioning** for large fact tables
-6. **Document the fact table grain** and refresh frequency
-7. **Handle slowly changing dimensions** appropriately
-8. **Validate data quality** at ETL stage
+1. **Choose the right fact table type** based on business requirements\n2. **Maintain consistent grain** throughout the fact table\n3. **Use surrogate keys** for dimension relationships\n4. **Implement proper indexing** for query performance\n5. **Consider partitioning** for large fact tables\n6. **Document the fact table grain** and refresh frequency\n7. **Handle slowly changing dimensions** appropriately\n8. **Validate data quality** at the ETL stage
 
-This comprehensive guide covers the essential types of fact tables and their practical implementations. Understanding these patterns is crucial for designing effective data warehouse solutions that meet business analytical needs.
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Methodologies/Kimball Methodology|Kimball Methodology]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Miscellaneous/Data Modeling|Data Modelling Masterclass for Data Engineers]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Spark/Joins/Links For Types Of Fact Table|Links For Types Of Fact Table]]

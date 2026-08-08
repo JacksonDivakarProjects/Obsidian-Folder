@@ -42,3 +42,6 @@ Do you have a specific task in mind, like sentiment analysis or translation, tha
 [6] [https://pub.towardsai.net](https://pub.towardsai.net/part2-guide-to-huggingface-automodels-for-vision-and-audio-4b0c90f2255c)
 
 [7] [https://huggingface.co](https://huggingface.co/docs/transformers/model_doc/auto#:~:text=cohere2%20%E2%80%94%20Cohere2Config%20%28Cohere2%20model%29%20cohere2_vision%20%E2%80%94,%28ColModernVBert%20model%29%20colpali%20%E2%80%94%20ColPaliConfig%20%28ColPali%20model%29)
+
+## 🔗 Related Notes
+- [[AI Notes/Roles and Their Purpose|Roles and Their Purpose]]

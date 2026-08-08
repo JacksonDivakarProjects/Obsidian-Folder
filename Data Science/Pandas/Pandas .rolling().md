@@ -137,3 +137,8 @@ df['MA'] = df['price'].rolling(1000, engine='numba').mean()
 - **For business metrics**: Use `.sum()` for cumulative KPIs.  
 
 This covers **90% of real-world `.rolling()` use cases** efficiently! 🚀
+
+## 🔗 Related Notes
+- [[Data Science/Pandas/Pandas .ewm()|The Essential Pandas .ewm() Guide]]
+- [[Data Science/Pandas/Pandas .expanding()|The Essential Pandas .expanding() Guide]]
+- [[Data Science/Pandas/Pandas series.expanding()|Pandas series.expanding()]]

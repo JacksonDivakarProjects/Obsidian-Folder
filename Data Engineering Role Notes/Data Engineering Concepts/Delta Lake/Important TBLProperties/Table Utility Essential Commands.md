@@ -1,31 +1,14 @@
+# Delta Table Utility Guide
 
-Absolutely, Jack! Here’s a **professional, concise, and practical Delta Table Utility Guide** covering the commands and their use cases. This is designed like a reference sheet you can keep handy.
+A quick-reference sheet for the core Delta table utility commands: metadata inspection, time travel, recovery, cleanup, and cloning.
 
----
+## 1. DESCRIBE
 
-# **Delta Table Utility Guide**
-
----
-
-## **1️⃣ DESCRIBE**
-
-**Purpose:**  
-Provides **basic metadata** about a Delta table.
-
-**Syntax:**
+**Purpose:** Basic metadata about a Delta table — columns, types, nullability.
 
 ```sql
 DESCRIBE delta.`/path/to/table`;
 ```
-
-**Output:**
-
-- Column names
-    
-- Data types
-    
-- Nullable info
-    
 
 **Example:**
 
@@ -33,81 +16,51 @@ DESCRIBE delta.`/path/to/table`;
 DESCRIBE delta.`/data/sales`;
 ```
 
-Shows:
-
-|Column|Type|Nullable|
+| Column | Type | Nullable |
 |---|---|---|
-|id|INT|YES|
-|amount|DOUBLE|NO|
+| id | INT | YES |
+| amount | DOUBLE | NO |
 
-**Use Case:** Quick overview of table structure.
+**Use case:** quick overview of table structure.
 
----
+## 2. DESCRIBE EXTENDED / DESCRIBE DETAIL
 
-## **2️⃣ DESCRIBE EXTENDED**
-
-**Purpose:**  
-Provides **detailed metadata**, including storage location, format, and table properties.
-
-**Syntax:**
+**Purpose:** detailed metadata — storage location, format, partitioning, and table properties.
 
 ```sql
 DESCRIBE EXTENDED delta.`/path/to/table`;
+DESCRIBE DETAIL delta.`/path/to/table`;
 ```
-
-**Output Includes:**
-
-- Schema
-    
-- Table format
-    
-- Location
-    
-- Metadata properties (e.g., createdAt, version)
-    
 
 **Example:**
 
 ```sql
-DESCRIBE EXTENDED delta.`/data/sales`;
+DESCRIBE DETAIL delta.`/data/sales`;
 ```
 
-Shows detailed table information like path, partition columns, and table properties.
+Returns schema, table format, location, partition columns, file count, size, and reader/writer protocol versions.
 
----
+## 3. RESTORE
 
-## **3️⃣ RESTORE**
-
-**Purpose:**  
-Restores a Delta table to a **previous version**. Useful for recovering deleted or corrupted data.
-
-**Syntax:**
+**Purpose:** roll a Delta table back to a previous version or timestamp — useful for undoing accidental deletes, bad updates, or overwrites.
 
 ```sql
-RESTORE delta.`/path/to/table` TO VERSION AS OF <version_number>;
+RESTORE TABLE delta.`/path/to/table` TO VERSION AS OF <version_number>;
 -- OR
-RESTORE delta.`/path/to/table` TO TIMESTAMP AS OF '<timestamp>';
+RESTORE TABLE delta.`/path/to/table` TO TIMESTAMP AS OF '<timestamp>';
 ```
 
 **Example:**
 
 ```sql
-RESTORE delta.`/data/sales` TO VERSION AS OF 5;
+RESTORE TABLE delta.`/data/sales` TO VERSION AS OF 5;
 ```
 
-- Table now reflects **state of version 5**.
-    
+The table now reflects the state of version 5. `RESTORE` itself is logged as a new version — it doesn't erase history, it adds a commit that reverts the data.
 
-**Use Case:** Undo accidental deletes, updates, or overwrites.
+## 4. Time Travel (`TIMESTAMP AS OF` / `VERSION AS OF`)
 
----
-
-## **4️⃣ TIMESTAMP (Time Travel)**
-
-**Purpose:**  
-Query a Delta table as of a **specific point in time** using timestamp or version.
-
-**Syntax:**
+**Purpose:** query a Delta table as of a specific point in time, without restoring it.
 
 ```sql
 SELECT * FROM delta.`/path/to/table` TIMESTAMP AS OF '<yyyy-MM-dd HH:mm:ss>';
@@ -120,84 +73,48 @@ SELECT * FROM delta.`/path/to/table` VERSION AS OF <version_number>;
 SELECT * FROM delta.`/data/sales` TIMESTAMP AS OF '2025-10-01 12:00:00';
 ```
 
-**Use Case:** Audit, debugging, and data recovery.
+**Use case:** auditing, debugging, and read-only data recovery.
 
----
+## 5. HISTORY
 
-## **5️⃣ HISTORY**
-
-**Purpose:**  
-Shows the **transaction history** of a Delta table, including updates, deletes, and schema changes.
-
-**Syntax:**
+**Purpose:** shows the transaction history of a Delta table — every write, delete, update, merge, and schema change.
 
 ```sql
 DESCRIBE HISTORY delta.`/path/to/table`;
 ```
 
-**Output Includes:**
+Returns version, timestamp, user, operation (`WRITE`, `DELETE`, `UPDATE`, `MERGE`, ...), and operation parameters — useful for tracking how a table evolved.
 
-- Version
-    
-- Timestamp
-    
-- User
-    
-- Operation (WRITE, DELETE, UPDATE, MERGE)
-    
-- Operation parameters
-    
+## 6. VACUUM
 
-**Example:**
+**Purpose:** permanently deletes data files that are no longer referenced by the table's current version history, freeing storage space.
 
 ```sql
-DESCRIBE HISTORY delta.`/data/sales`;
-```
-
-Shows version-wise changes with timestamps for tracking table evolution.
-
----
-
-## **6️⃣ VACUUM**
-
-**Purpose:**  
-Deletes **old files** that are no longer referenced by the Delta table, freeing storage space.
-
-**Syntax:**
-
-```sql
-VACUUM delta.`/path/to/table` [RETAIN <hours>];
+VACUUM delta.`/path/to/table` [RETAIN <hours> HOURS];
 ```
 
 **Example:**
 
 ```sql
-VACUUM delta.`/data/sales` RETAIN 168; -- Retain 7 days of history
+VACUUM delta.`/data/sales` RETAIN 168 HOURS; -- retain 7 days of history
 ```
 
 **Notes:**
 
-- Default retention is **7 days (168 hours)**.
-    
-- Avoid reducing retention below 7 days unless you are sure you won’t need time travel.
-    
+- Default retention is 7 days (168 hours).
+- Avoid dropping retention below 7 days unless you're certain you won't need time travel or CDF over that window — vacuuming removes the physical files that old versions depend on, so time travel past the retention point will fail afterward.
 
-**Use Case:** Storage optimization and cleaning up unneeded data files.
+**Use case:** storage cost control and cleanup of obsolete data files.
 
----
+## 7. Cloning
 
-## **7️⃣ CLONING**
-
-**Purpose:**  
-Creates a **shallow or deep copy** of a Delta table for testing or sandbox environments.
-
-**Syntax:**
+**Purpose:** create a shallow or deep copy of a Delta table for testing, backups, or sandboxing.
 
 ```sql
--- Shallow clone (metadata only, data files are shared)
+-- Shallow clone (metadata only; data files are shared with the source)
 CREATE TABLE new_table SHALLOW CLONE delta.`/path/to/source_table`;
 
--- Deep clone (copies metadata + data)
+-- Deep clone (copies both metadata and data files)
 CREATE TABLE new_table DEEP CLONE delta.`/path/to/source_table`;
 ```
 
@@ -207,29 +124,23 @@ CREATE TABLE new_table DEEP CLONE delta.`/path/to/source_table`;
 CREATE TABLE sales_test SHALLOW CLONE delta.`/data/sales`;
 ```
 
-**Use Case:**
+**Use case:**
 
-- Test changes without affecting production data
-    
-- Quickly create copies for analytics or development
-    
+- Test changes without touching production data.
+- Quickly spin up copies for analytics or development.
 
----
+## Summary
 
-### ✅ **Summary Table**
-
-|Command|Purpose|Notes|
+| Command | Purpose | Notes |
 |---|---|---|
-|DESCRIBE|View basic schema|Columns, types|
-|DESCRIBE EXTENDED|Detailed metadata|Path, properties, partitions|
-|RESTORE|Roll back to version/timestamp|Time travel recovery|
-|TIMESTAMP / VERSION AS OF|Query old table state|Audit/debug|
-|HISTORY|Transaction history|Version, operation, user|
-|VACUUM|Remove old files|Storage cleanup|
-|CLONING|Copy table (shallow/deep)|Testing/dev sandbox|
+| DESCRIBE | View basic schema | Columns, types |
+| DESCRIBE EXTENDED / DETAIL | Detailed metadata | Path, properties, partitions |
+| RESTORE | Roll back to a version/timestamp | Logged as a new version; time-travel-based recovery |
+| TIMESTAMP / VERSION AS OF | Query an old table state | Read-only audit/debug |
+| HISTORY | Transaction history | Version, operation, user |
+| VACUUM | Remove old, unreferenced files | Storage cleanup; breaks time travel past retention |
+| CLONING | Copy a table (shallow/deep) | Testing/dev sandbox |
 
----
-
-If you want, I can **make a single-page visual cheat sheet** with **commands + quick example snippets** — ideal for interviews or reference.
-
-Do you want me to do that?
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Important TBLProperties/Table Utility Commands|Delta Lake Table Utility Commands]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Delta Lake Commands in Different APIs/Delta Lake Commands in SQL API|Delta Lake Object Commands (SQL API)]]

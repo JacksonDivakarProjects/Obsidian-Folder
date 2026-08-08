@@ -761,3 +761,8 @@ A: Always use controlled (with state) for React forms. It gives you full control
 7. **Clear form** after successful submission
 
 That's it! This pattern works for 95% of forms you'll build.
+
+## 🔗 Related Notes
+- [[Web Development/React/React Topics/Event Handling in React|Event Handling in React]]
+- [[Web Development/React/React Topics/React Hooks|React Hooks - useState]]
+- [[Web Development/React/React Topics/JavaScript ES6 Object & Array Destructuring|JavaScript ES6 Object & Array Destructuring]]

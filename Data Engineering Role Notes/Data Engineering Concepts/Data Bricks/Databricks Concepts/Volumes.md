@@ -421,10 +421,8 @@ with open("/path/to/large_file.zip", "rb") as f:
 | **Unstructured data** | Images, PDFs, audio, video for AI/ML pipelines (e.g., document parsing, image classification) | `/Volumes/legal/documents/contracts/` with `ai_parse_document` |
 | **Secure file sharing** | Share files across users, teams, and workspaces with fine‑grained permissions (instead of DBFS or email) | Grant `READ VOLUME` to `analysts_group` on `/Volumes/finance/reports/` |
 | **Library and init script storage** | Store JARs, Python wheels, and cluster init scripts in a governed location | `/Volumes/eng/libs/my_spark_udf.jar` |
-| **Checkpoint storage** | DataFrame checkpoints and Structured Streaming checkpoints (DBR 18.1+) | `spark.conf.set("spark.checkpoint.dir", "/Volumes/.../checkpoints/")` |
+| **Checkpoint storage** | Structured Streaming and DataFrame checkpoint locations, so checkpoints are governed and shared like any other Unity Catalog object | `.option("checkpointLocation", "/Volumes/.../checkpoints/")` on a streaming writer, or `spark.sparkContext.setCheckpointDir("/Volumes/.../checkpoints/")` for DataFrame checkpointing |
 | **External system integration** | When files must be written by Databricks and read by external tools (use external volumes) | Databricks writes aggregates to `/Volumes/.../output/` and a separate Airflow job reads them |
-
----
 
 ## Advantages
 
@@ -651,3 +649,7 @@ CREATE EXTERNAL VOLUME iot.raw.device_logs
 Use **managed volumes** for Databricks‑only workflows; use **external volumes** when files must be shared with external systems. Always pair volumes with Delta tables for tabular data – volumes are not a replacement for tables, but a complement for file storage.
 
 For further reading, refer to the official Databricks documentation on [What are Unity Catalog volumes?](https://docs.databricks.com/en/volumes/index.html) and the [SQL reference for volumes](https://docs.databricks.com/en/sql/language-manual/sql-ref-volumes.html).
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Data Bricks/Databricks Concepts/Managed Vs External Tables|Managed vs External Tables (Unity Catalog)]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Data Bricks/Databricks Concepts/Views/Views|Views]]

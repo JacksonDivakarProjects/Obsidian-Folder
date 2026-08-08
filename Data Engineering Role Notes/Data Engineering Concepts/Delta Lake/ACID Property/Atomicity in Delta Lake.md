@@ -1,89 +1,54 @@
-Excellent question, Jack — this gets to the **core of why Delta Lake is powerful**.  
-Let’s unpack it clearly 👇
+# Atomicity in Delta Lake
 
----
+**Atomicity** (the "A" in ACID) means a write operation either fully completes or leaves no trace at all — there is no such thing as a half-finished write landing in the table. Delta Lake enforces this through its transaction log (`_delta_log/`) and atomic file-system renames.
 
-## ⚙️ **Atomicity in Delta Lake**
+## How It Works
 
-**Atomicity** means that _a write operation either fully happens or doesn’t happen at all._  
-Delta Lake enforces this **using its transaction log (`_delta_log/`) and file-level commits**.
+### 1. Transaction Log (`_delta_log`)
 
----
-
-### 🔹 1. **Transaction Log (`_delta_log`)**
-
-Every Delta table has a hidden folder:
+Every Delta table has a hidden `_delta_log/` folder. Each operation (write, merge, update, delete) produces a new JSON commit file:
 
 ```
-/path/to/table/_delta_log/
+_delta_log/
+├── 00000000000000000010.json
+├── 00000000000000000011.json
 ```
 
-- Each operation (write, merge, update, delete) creates a **JSON log file** like:
-    
-    ```
-    00000000000000000010.json
-    ```
-    
-- The next successful commit creates:
-    
-    ```
-    00000000000000000011.json
-    ```
-    
-- These files describe **which Parquet files were added or removed**.
-    
+Each JSON file records exactly which Parquet data files were `add`ed and which were `remove`d by that operation. If a job fails before its commit JSON is written, the operation is simply discarded and the table's state is unchanged. That is atomicity in practice.
 
-If a job fails **before the JSON commit file is written**,  
-the operation is **aborted** → the table state is **unchanged**.  
-✅ That’s atomicity.
+### 2. Atomic Commit Protocol
 
----
+When a job writes data:
 
-### 🔹 2. **Commit Protocol (Single Writer)**
+1. It first writes the new Parquet data files.
+2. Once all data files are safely written, it atomically creates the next `_delta_log` JSON file (via a rename or a conditional "put-if-absent" write, depending on the storage backend) — e.g. `00000000000000000016.json`.
+3. If that atomic operation doesn't succeed, the transaction is treated as if it never happened — no partial data ever becomes visible.
 
-Delta Lake uses an **atomic rename protocol**:
+This relies on the underlying storage system's atomic rename / conditional-write guarantee (S3 with a commit coordinator, ADLS, HDFS, and DBFS all provide this).
 
-- When a job writes data, it first creates temporary Parquet files.
-    
-- Once all files are successfully written, it **atomically renames** the transaction log file (e.g., from `.tmp` → `.json`).
-    
-- If the rename doesn’t complete → the transaction is ignored.  
-    No partial data is visible.
-    
+### 3. Snapshot Reads Protect Readers
 
-This is guaranteed by **the underlying filesystem’s atomic rename operation** (like S3, DBFS, or HDFS).
+While a write is in progress, readers keep seeing the last committed version (e.g. version 15). The next version (16) only becomes visible once its log commit succeeds, so no reader ever sees a half-written table.
 
----
+## Example Timeline
 
-### 🔹 3. **Isolation via Snapshot Reads**
-
-While a write is happening, **readers always see the last committed version** of the table (e.g., version 15).  
-The next version (say version 16) only becomes visible **after** the transaction log commit succeeds.
-
-So no reader ever sees half-written data.
-
----
-
-### ✅ **Example Timeline**
-
-|Step|Operation|Table State|
+| Step | Operation | Table State |
 |---|---|---|
-|1|Job starts writing new data|temporary Parquet files created|
-|2|Job writes `_delta_log/0000000000000016.json.tmp`|not yet visible|
-|3|Rename to `_delta_log/0000000000000016.json` succeeds|new version committed|
-|4|Readers now see version 16|atomic transition complete|
+| 1 | Job starts writing new data | Temporary Parquet files created |
+| 2 | Job writes `_delta_log/...0016.json.tmp` | Not yet visible to readers |
+| 3 | Commit of `_delta_log/...0016.json` succeeds | New version committed |
+| 4 | Readers now see version 16 | Atomic transition complete |
 
----
+## Atomicity's Place in ACID
 
-### 🔒 Summary
-
-|Property|Maintained by|How|
+| Property | Maintained by | How |
 |---|---|---|
-|**Atomicity**|Transaction log + atomic rename|Commit all or nothing|
-|**Consistency**|Schema & constraints|Validation before commit|
-|**Isolation**|Snapshot reads|Versioned access|
-|**Durability**|File system replication|Parquet + log persisted|
+| Atomicity | Transaction log + atomic commit | All-or-nothing writes |
+| Consistency | Schema validation + constraints | Checked before commit |
+| Isolation | Snapshot reads + OCC | Versioned, conflict-checked access |
+| Durability | Persistent storage + replication | Parquet + log survive after commit |
 
----
-
-If you want, I can illustrate the **exact commit JSON structure** (with `add` and `remove` actions) that makes this atomic — would you like that?
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/ACID Property/Consistency in Delta Lake|Consistency in Delta Lake]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/ACID Property/Isolation in Delta Lake|Isolation in Delta Lake]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/ACID Property/Durability in Delta Lake|Durability in Delta Lake]]

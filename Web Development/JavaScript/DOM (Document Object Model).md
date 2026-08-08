@@ -34,3 +34,8 @@ let header = document.getElementById("main-header");
 ---
 
 **I have created the notes for Topic 7. Please say "Next" for me to proceed to Topic 8 (Tree Structure of HTML Elements).**
+
+## 🔗 Related Notes
+- [[Web Development/JavaScript/Structure of HTML Elements in DOM Tree|Tree Structure of HTML Elements (DOM Tree)]]
+- [[Web Development/JavaScript/Selecting HTML Elements Using DOM|Selecting HTML Elements Using the DOM]]
+- [[Web Development/JavaScript/Manipulating Elements Using DOM|Manipulating Elements Using DOM - Camel Case for Properties]]

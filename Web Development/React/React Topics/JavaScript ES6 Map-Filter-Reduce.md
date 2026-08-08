@@ -583,3 +583,8 @@ function UserDashboard({ users, filters }) {
 ---
 
 **Ready for Topic 26: "Javascript ES6 Arrow functions"?**
+
+## 🔗 Related Notes
+- [[Web Development/React/React Topics/Mapping Data to Components|Mapping Data to Components]]
+- [[Web Development/React/React Topics/JavaScript ES6 Arrow Functions|JavaScript ES6 Arrow Functions]]
+- [[Web Development/React/React Topics/JavaScript ES6 Spread Operator|JavaScript ES6 Spread Operator]]

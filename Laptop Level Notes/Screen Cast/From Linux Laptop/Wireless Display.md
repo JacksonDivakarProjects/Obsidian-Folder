@@ -216,3 +216,7 @@ If you want, I can now create a **One-Page PDF** of this guide so you can **save
 
 **Should I generate the PDF?**  
 Reply: **Yes** or **No**
+
+## 🔗 Related Notes
+- [[Laptop Level Notes/Screen Cast/From mobile phone (USB)/SCRCPY|SCRCPY (Android Screen Mirroring)]]
+- [[Laptop Level Notes/Mobile Cam Tool For Webcam/Droid Cam|Use Your Phone Camera as a Virtual Webcam on Linux]]

@@ -45,3 +45,7 @@ Both syntaxes are valid and functionally identical.
 ---
 
 **I have created the notes for Topic 4. Please say "Next" for me to proceed to Topic 5 (Datatypes in JS).**
+
+## 🔗 Related Notes
+- [[Web Development/JavaScript/Datatypes in JavaScript|Data Types in JavaScript]]
+- [[Web Development/JavaScript/Equality Operator|Equality Operators]]

@@ -213,3 +213,7 @@ This path should take you from beginner to confident data engineer, aligned with
 - [Databricks Full Course (With UNITY CATALOG) - YouTube](https://www.youtube.com/watch?v=P5pEeR3xQpI)
 - [Azure Databricks End-To-End Project 2025 [From SCRATCH!]](https://www.youtube.com/watch?v=4uKRzDf0zIc)
 - [Delta Lake Databricks (From Zero to Pro in 4 HOURS) - YouTube](https://www.youtube.com/watch?v=O18afGTGoIU)
+
+## 🔗 Related Notes
+- [[Future Study Plan/Spark|Spark]]
+- [[Future Study Plan/AI Data Engineer|AI Data Engineer]]

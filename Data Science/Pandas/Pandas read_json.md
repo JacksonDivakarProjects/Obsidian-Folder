@@ -144,3 +144,6 @@ df = pd.read_json('https://api.example.com/data', orient='records')
 ```
 
 The choice of orient depends on your data structure and what information (index, columns, etc.) you need to preserve during serialization/deserialization.
+
+## 🔗 Related Notes
+- [[Data Science/Pandas/Pandas DeltaLake|Pandas DeltaLake]]

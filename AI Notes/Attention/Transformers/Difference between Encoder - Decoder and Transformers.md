@@ -26,3 +26,9 @@ Here's a clear distinction between the **Transformer** and the **previous encode
 ## One-line answer
 
 > The Transformer replaces RNNs with **self-attention** as the primary mechanism, enabling **full parallelization** during training and much better handling of long-range dependencies, while adding **multi-head attention**, **positional encodings**, and **residual connections** with layer normalization.
+
+## 🔗 Related Notes
+- [[AI Notes/Attention/Encoder Decoder Sequential Model/Attention Mechanism High Level Example|Attention Mechanism High Level Example]]
+- [[AI Notes/Attention/Encoder Decoder Sequential Model/Attention Mechanism Implementation (Old Sequential Model)|Attention Mechanism Implementation (Old Sequential Model)]]
+- [[AI Notes/Attention/Encoder Decoder Sequential Model/Attention Mechanism Part 2 Notes|Attention Mechanism Part 2 Notes]]
+- [[AI Notes/Attention/Common Questions/Vanishing Gradients|Vanishing Gradients]]

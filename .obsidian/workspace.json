@@ -1,34 +1,20 @@
 {
   "main": {
-    "id": "a8604e816933fc69",
+    "id": "632d9bcfe95fc183",
     "type": "split",
     "children": [
       {
-        "id": "2c8d7a940600462a",
+        "id": "fdae89dd49ae0de8",
         "type": "tabs",
         "children": [
           {
-            "id": "300a0743f9aa456f",
+            "id": "54d8c3359884386f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Claude Code/Introduction to Claude Code.md",
-                "mode": "preview",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Introduction to Claude Code"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ]
@@ -37,28 +23,30 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "776417acbaf3398d",
+    "id": "5d503ce2b25f1abf",
     "type": "split",
     "children": [
       {
-        "id": "16d16143699814d0",
+        "id": "faf4649b7a64488a",
         "type": "tabs",
         "children": [
           {
-            "id": "256069ab8834dbf4",
+            "id": "a9e4c25dffe817e0",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
             }
           },
           {
-            "id": "e9777a2afa55a874",
+            "id": "328da2cf69303d15",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -75,7 +63,7 @@
             }
           },
           {
-            "id": "8c52b74c445e60c1",
+            "id": "786fe888e02a7b7e",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -91,20 +79,20 @@
     "width": 300
   },
   "right": {
-    "id": "13b49ad5ec342273",
+    "id": "f77fdbe810cc4146",
     "type": "split",
     "children": [
       {
-        "id": "5fa8c6a2a90f10c3",
+        "id": "bfa15d24d63f0c43",
         "type": "tabs",
         "children": [
           {
-            "id": "fef9cd72f07cb4fd",
+            "id": "8d8aea7b2553127f",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Miscellaneoues/Prompting Frameworks.md",
+                "file": "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Table Scan Types/Relationship between Bitmap Index Scan and Heap Scan.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,25 +102,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Prompting Frameworks"
+              "title": "Backlinks for Relationship between Bitmap Index Scan and Heap Scan"
             }
           },
           {
-            "id": "51442cde55b060fa",
+            "id": "0a0836a5c56d27fe",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Miscellaneoues/Prompting Frameworks.md",
+                "file": "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Table Scan Types/Relationship between Bitmap Index Scan and Heap Scan.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Prompting Frameworks"
+              "title": "Outgoing links from Relationship between Bitmap Index Scan and Heap Scan"
             }
           },
           {
-            "id": "6df7df573cc675a3",
+            "id": "19acc86738237288",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -147,18 +135,18 @@
             }
           },
           {
-            "id": "36d22715228f4895",
+            "id": "64834b67acbaa9fc",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Miscellaneoues/Prompting Frameworks.md",
+                "file": "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Table Scan Types/Relationship between Bitmap Index Scan and Heap Scan.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Prompting Frameworks"
+              "title": "Outline of Relationship between Bitmap Index Scan and Heap Scan"
             }
           }
         ]
@@ -179,38 +167,53 @@
       "bases:Create new base": false
     }
   },
-  "active": "300a0743f9aa456f",
+  "active": "54d8c3359884386f",
   "lastOpenFiles": [
-    "Data Engineering Role Notes/Data Engineering Concepts/Methodologies/Kimball Methodology.md",
-    "Claude Code/Introduction to Claude Code.md",
-    "Untitled/desktop.ini",
-    "Claude Code",
-    "Data Engineering Role Notes/Data Engineering Concepts/Methodologies",
-    "Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 05/dbt Node Selection Syntax.md",
-    "Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 04/Singular Tests.md",
-    "Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 04/Python Models and Tests.md",
-    "Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 05/Snapshots & Change Tracking.md",
-    "Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/Jinja/Jinja Data Structures.md",
-    "Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/Jinja/Jinja SQL.md",
-    "Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/Images/YAML File Purpose/Pasted image.png",
-    "Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/Documentation/Documentation in YAML.md",
-    "Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 04/Generic Tests & Their Types.md",
-    "Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 04/Custom Generic Tests.md",
-    "Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 04/Test Execution, Severity & the `dbt build` Command.md",
-    "Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/Tests In DBT/Tests in DBT.md",
-    "Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/DBT Topic Links/DBT Tests.md",
-    "Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 03/The Ref() Function & Building DAGs.md",
-    "Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 02/File Association & VS Code Setup.md",
-    "Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/DBT Topic Links/Jinja.md",
-    "Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 03/Building Models & Materializations.md",
-    "Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 02/Configuration Files.md",
-    "Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 02/Configs and Variables.md",
-    "Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 01/Foundations & Setup.md",
-    "Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/DBT Topic Links/Sources YAML File.md",
-    "Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/DBT Topic Links/Source Freshness.md",
-    "Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/DBT Topic Links/Snapshots.md",
-    "Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/DBT Topic Links/DBT Generic Test YAML (dbt_utils).md",
-    "Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/DBT Topic Links/Code Gen Package.md",
-    "Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Important TBLProperties/desktop.ini"
+    "Temp Folder/Stock Analyzer Project/Project Architecture.md",
+    "Home - Knowledge Base.md.tmp.17428.1cf22540884e",
+    "Helpful Books and PDFs/Helpful Books and PDFs.md",
+    "Data Science/Probability For DS/Hypothesis Errors/Types of Errors in Hypothesis Testing.md.tmp.17428.38353d3580d6",
+    "Data Science/Probability For DS/Hypothesis Errors/Hypothesis Errors Images/Hypothesis Errors Images.md",
+    "Data Science/Probability For DS/Hypothesis Errors/Hypothesis Errors Images/Screenshot From 2026-01-16 15-34-47.png",
+    "Data Science/Probability For DS/Hypothesis Errors/Hypothesis Errors Images/Error in Distribution.webp",
+    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/SQL Optimization Concepts.md.tmp.17428.fe711ddb67ec",
+    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Indexing Images.md",
+    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Index Usage/Index Usage.md",
+    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Classification.md",
+    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Structure/Structure.md",
+    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Structure/Clustered and Non Clustered/Clustered and Non Clustered.md",
+    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Structure/Clustered and Non Clustered/Pre-requisite/Pre-requisite.md",
+    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Structure/Clustered and Non Clustered/Points to Know/Points to Know.md",
+    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Structure/Clustered and Non Clustered/Non Clustered Index/Non Clustered Index.md",
+    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Structure/Clustered and Non Clustered/Heap Structure/Heap Structure.md",
+    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Structure/Clustered and Non Clustered/Composite Index/Composite Index.md",
+    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Structure/Clustered and Non Clustered/Clustered Index/Clustered Index.md",
+    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Storage/Storage.md",
+    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Storage/Row Store and Column Store Index/Row Store and Column Store Index.md",
+    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Storage/Row Store and Column Store Index/Column Store Index/Column Store Index.md",
+    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Storage/Row Store and Column Store Index/CCI Vs NCCI/CCI Vs NCCI.md",
+    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Functions/Functions.md",
+    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Structure/Clustered and Non Clustered/Pre-requisite/firefox_wJtv4A8QkT.jpg",
+    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Functions/Unique Index/Unique Index.md",
+    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Functions/Filtered Index/Filtered Index.md",
+    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Storage/Row Store and Column Store Index/CCI Vs NCCI/Delta Store.gif",
+    "Home - Knowledge Base.md",
+    "Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/Images/YAML File Purpose/YAML File Purpose.md",
+    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Joins-Loops-Sorts/Heap Sort.md",
+    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Joins-Loops-Sorts/Quick Sort.md",
+    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Joins-Loops-Sorts/Joins-Loops-Sorts.md",
+    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Storage/Row Store and Column Store Index/Column Store Index/3.png",
+    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Storage/Row Store and Column Store Index/1.png",
+    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Functions/Unique Index/firefox_BOob6CjncQ.png",
+    "Data Engineering Role Notes/Data Engineering Concepts/Fabric/Fabric Training Images/firefox_vX2XkV9NSH.png",
+    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Storage/Row Store and Column Store Index/CCI Vs NCCI/2.png",
+    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Structure/Clustered and Non Clustered/Points to Know/firefox_eCuDyb7WoD.png",
+    "Web Development/Web Development.md.tmp.17428.541d3de41ecf",
+    "Data Engineering Role Notes/Data Engineering Concepts/Data Engineering Concepts.md.tmp.17428.359090e03ff9",
+    "Web Development/JavaScript/JavaScript.md.tmp.17428.31f4fc84774a",
+    "Home - Knowledge Base.md.tmp.17428.d7bc1bd25c5b",
+    "Home - Knowledge Base.md.tmp.17428.40b083448656",
+    "Data Science/Data Science.md.tmp.17428.ddc635aaccf7",
+    "Data Engineering Role Notes/SQL/Window Functions"
   ]
 }

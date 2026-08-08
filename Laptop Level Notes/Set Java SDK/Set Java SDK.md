@@ -90,3 +90,7 @@ javac -version
 This sets JDK globally for your user.
 
 If you want, I can also show a **way to switch between multiple JDK versions on Linux easily**—super useful if you deal with multiple projects. Do you want me to do that?
+
+## 🔗 Related Notes
+- [[Laptop Level Notes/Fedora/Fedora Basic Commands|Fedora Linux Cheat Sheet (Essential)]]
+- [[Laptop Level Notes/Set Jupyter Kernel/Set env to kernel|Set env to kernel (Jupyter Kernel)]]

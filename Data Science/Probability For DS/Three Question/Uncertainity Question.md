@@ -172,3 +172,9 @@ This is the most critical part. You take the numbers from the tool and translate
     - **Wide?** Stop. The model is guessing. Do not automate decisions based on this.
         
 3. **Check the Lower Bound:** "Even in the worst-case scenario (`yhat_lower`), are we still profitable?" (This is how you use Uncertainty to save the company money).
+
+## 🔗 Related Notes
+- [[Data Science/Probability For DS/Three Question/Distributions Question|Distributions Question]]
+- [[Data Science/Probability For DS/Statistics/P value and Hypothesis Testing|Comprehensive Revision Guide: p-Value & Hypothesis Testing]]
+- [[Data Science/Probability For DS/Hypothesis Errors/Types of Errors in Hypothesis Testing|Types of Errors in Hypothesis Testing]]
+- [[Data Science/Probability For DS/Probability Topics List|Probability Topics List]]

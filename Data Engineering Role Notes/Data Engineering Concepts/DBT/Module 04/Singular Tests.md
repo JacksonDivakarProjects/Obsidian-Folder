@@ -154,12 +154,14 @@ tests/
 ---
 ### **Summary: The Power of Singular Tests**
 
-You've learned that **Singular Tests** are your customizable data quality auditors. They fill the gap where generic tests end, allowing you to:
-1.  **Encode Business Logic**: Translate spoken business rules ("discounts can't be used on small orders") into executable, automated checks.
-2.  **Debug with Precision**: The test output *is* the problematic data, making root-cause analysis straightforward.
-3.  **Maintain Flexibility**: Any query you can write can become a test, making them infinitely adaptable.
+**Singular tests** are customizable data quality auditors that fill the gap where generic tests end:
+1.  **Encode business logic**: translate spoken rules ("discounts can't apply to small orders") into executable checks.
+2.  **Debug with precision**: the test's output *is* the problematic data, making root-cause analysis direct.
+3.  **Stay flexible**: any query you can write can become a test.
 
-**Core Principle**: Use generic tests for **data integrity** (structure, relationships). Use singular tests for **business integrity** (rules, logic).
+**Core principle**: use generic tests for **data integrity** (structure, relationships); use singular tests for **business integrity** (rules, logic). When the same singular-test logic starts repeating across files, promote it to a custom generic test.
 
-**Ready to take reusability to the next level?**
-Type `NEXT` to proceed to **Topic 3: Custom Generic Tests**, where we'll learn how to write your own reusable test macros that behave like the built-in `unique` or `not_null` tests.
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 04/Custom Generic Tests|Custom Generic Tests]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 04/Generic Tests & Their Types|Generic Tests & Their Types]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/Tests In DBT/Tests in DBT|Tests in DBT]]

@@ -57,3 +57,8 @@ The `.expanding()` function is perfect for any analysis where you need to track 
 - **Data Analysis:** Finding the **running maximum or minimum** value in a time series (e.g., tracking the all-time high price of a stock).
     
 - **Statistics:** Computing a **cumulative average** to see how the mean of a dataset stabilizes as more data is collected.
+
+## 🔗 Related Notes
+- [[Data Science/Pandas/Pandas .expanding()|The Essential Pandas .expanding() Guide]]
+- [[Data Science/Pandas/Pandas .rolling()|The Essential Pandas .rolling() Guide]]
+- [[Data Science/Pandas/Pandas .ewm()|The Essential Pandas .ewm() Guide]]

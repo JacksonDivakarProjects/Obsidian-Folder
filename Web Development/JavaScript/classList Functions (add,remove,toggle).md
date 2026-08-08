@@ -111,3 +111,7 @@ element.classList.add("error");
 ---
 
 **I have created the notes for Topic 12. Please say "Next" for me to proceed to Topic 13 (Difference between Var and Let).**
+
+## 🔗 Related Notes
+- [[Web Development/JavaScript/DOM classList|DOM classList]]
+- [[Web Development/JavaScript/Manipulating Elements Using DOM|Manipulating Elements Using DOM - Camel Case for Properties]]

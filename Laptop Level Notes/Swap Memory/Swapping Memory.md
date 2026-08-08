@@ -111,3 +111,7 @@ sudo sysctl vm.swappiness=10  # makes system prefer RAM more
 ---
 
 If you want, I can give a **ready-to-run command set that configures swap + Ollama for 7B model** so it works smoothly on your 16 GB RAM laptop. This avoids trial-and-error. Do you want me to prepare that?
+
+## 🔗 Related Notes
+- [[Laptop Level Notes/Ollama Installation/Ollama Installation|Ollama Installation]]
+- [[Laptop Level Notes/Fedora/Fedora Basic Commands|Fedora Linux Cheat Sheet (Essential)]]

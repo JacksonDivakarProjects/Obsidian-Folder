@@ -276,3 +276,8 @@ summary = df.groupby(['Department', 'Gender']).agg(
 If you're preparing for **interviews or data tasks**, mastering `groupby()` with `agg`, `transform`, and `filter` will make your skills stand out—especially in analytics, ETL, and reporting roles.
 
 Would you like hands-on **practice exercises** or **interview-style case studies** on this?
+
+## 🔗 Related Notes
+- [[Data Science/Pandas/Pandas .agg(list)|Pandas .agg(list)]]
+- [[Data Science/Pandas/Pandas Pivot Table|📊 Pivot Tables in Pandas — A Comprehensive Guide]]
+- [[Data Science/Pandas/Pandas Special Notes For Tips and Tricks|Pandas Special Notes For Tips and Tricks]]

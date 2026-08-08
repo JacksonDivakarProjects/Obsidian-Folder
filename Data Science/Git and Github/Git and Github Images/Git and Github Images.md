@@ -16,3 +16,7 @@
 [[Data Science/Git and Github/Git and Github Images/Image -16.png]]
 [[Data Science/Git and Github/Git and Github Images/Image -17.png]]
 [[Data Science/Git and Github/Git and Github Images/Image -18.png]]
+
+## 🔗 Related Notes
+- [[Data Science/Git and Github/Git and Github Summary Guide|Git and Github Summary Guide]]
+- [[Data Science/Git and Github/Git and Github|Git and Github]]

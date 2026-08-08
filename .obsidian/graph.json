@@ -8,59 +8,143 @@
   "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "path:SQL  ",
+      "query": "path:\"Home - Knowledge Base.md\"",
       "color": {
         "a": 1,
-        "rgb": 4379087
+        "rgb": 16766720
       }
     },
     {
-      "query": "path:Pandas  ",
+      "query": "path:\"AI Notes/AI Notes.md\"",
       "color": {
         "a": 1,
-        "rgb": 1763956
+        "rgb": 12891645
       }
     },
     {
-      "query": "path:Linux  ",
+      "query": "path:\"AI Notes/\" -path:\"AI Notes/AI Notes.md\"",
       "color": {
         "a": 1,
-        "rgb": 547325
+        "rgb": 9133302
       }
     },
     {
-      "query": "path:\"Data Engineering Concepts/Delta Lake\"  ",
+      "query": "path:\"Claude Code/Claude Code.md\"",
       "color": {
         "a": 1,
-        "rgb": 11959039
+        "rgb": 9684477
       }
     },
     {
-      "query": "path:\"Pyspark Streaming\"  ",
+      "query": "path:\"Claude Code/\" -path:\"Claude Code/Claude Code.md\"",
       "color": {
         "a": 1,
-        "rgb": 12940903
+        "rgb": 3900150
       }
     },
     {
-      "query": "path:\"Web Development Notes/JavaScript\"  ",
+      "query": "path:\"Data Engineering Role Notes/Data Engineering Role Notes.md\" OR path:\"Data Engineering Role Notes/Airflow Scheduler/Airflow Scheduler.md\" OR path:\"Data Engineering Role Notes/Linux/Linux.md\" OR path:\"Data Engineering Role Notes/Web Scraping/Web Scraping.md\" OR path:\"Data Engineering Role Notes/Data Engineering Concepts/Data Engineering Concepts.md\" OR path:\"Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT.md\" OR path:\"Data Engineering Role Notes/Data Engineering Concepts/Data Bricks/Data Bricks.md\" OR path:\"Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Delta Lake.md\" OR path:\"Data Engineering Role Notes/Data Engineering Concepts/JSON File Format/JSON File Format.md\" OR path:\"Data Engineering Role Notes/Data Engineering Concepts/Miscellaneous/Miscellaneous.md\" OR path:\"Data Engineering Role Notes/Data Engineering Concepts/Optimization for Data Read/Optimization for Data Read.md\" OR path:\"Data Engineering Role Notes/Data Engineering Concepts/Spark/Spark.md\" OR path:\"Data Engineering Role Notes/SQL/SQL.md\" OR path:\"Data Engineering Role Notes/Pyspark/PySpark.md\"",
       "color": {
         "a": 1,
-        "rgb": 5419488
+        "rgb": 16628340
       }
     },
     {
-      "query": "path:\"Data Engineering Role Notes/Pyspark\"  ",
+      "query": "path:\"Data Engineering Role Notes/\" -path:\"Data Engineering Role Notes/Data Engineering Role Notes.md\" -path:\"Data Engineering Role Notes/Airflow Scheduler/Airflow Scheduler.md\" -path:\"Data Engineering Role Notes/Linux/Linux.md\" -path:\"Data Engineering Role Notes/Web Scraping/Web Scraping.md\" -path:\"Data Engineering Role Notes/Data Engineering Concepts/Data Engineering Concepts.md\" -path:\"Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT.md\" -path:\"Data Engineering Role Notes/Data Engineering Concepts/Data Bricks/Data Bricks.md\" -path:\"Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Delta Lake.md\" -path:\"Data Engineering Role Notes/Data Engineering Concepts/JSON File Format/JSON File Format.md\" -path:\"Data Engineering Role Notes/Data Engineering Concepts/Miscellaneous/Miscellaneous.md\" -path:\"Data Engineering Role Notes/Data Engineering Concepts/Optimization for Data Read/Optimization for Data Read.md\" -path:\"Data Engineering Role Notes/Data Engineering Concepts/Spark/Spark.md\" -path:\"Data Engineering Role Notes/SQL/SQL.md\" -path:\"Data Engineering Role Notes/Pyspark/PySpark.md\"",
       "color": {
         "a": 1,
-        "rgb": 11621088
+        "rgb": 16347926
       }
     },
     {
-      "query": "path:\"Web Development\"  ",
+      "query": "path:\"Data Science/Data Science.md\" OR path:\"Data Science/Data Science Cheatsheets/Data Science CheatSheets.md\" OR path:\"Data Science/Data Analysis/Data Analysis.md\" OR path:\"Data Science/Probability For DS/Probability For DS.md\" OR path:\"Data Science/Pandas/Pandas.md\"",
       "color": {
         "a": 1,
-        "rgb": 15231337
+        "rgb": 7268279
+      }
+    },
+    {
+      "query": "path:\"Data Science/\" -path:\"Data Science/Data Science.md\" -path:\"Data Science/Data Science Cheatsheets/Data Science CheatSheets.md\" -path:\"Data Science/Data Analysis/Data Analysis.md\" -path:\"Data Science/Probability For DS/Probability For DS.md\" -path:\"Data Science/Pandas/Pandas.md\"",
+      "color": {
+        "a": 1,
+        "rgb": 1096065
+      }
+    },
+    {
+      "query": "path:\"English Communication/English Communication.md\"",
+      "color": {
+        "a": 1,
+        "rgb": 16361684
+      }
+    },
+    {
+      "query": "path:\"English Communication/\" -path:\"English Communication/English Communication.md\"",
+      "color": {
+        "a": 1,
+        "rgb": 15485081
+      }
+    },
+    {
+      "query": "path:\"Future Study Plan/\"",
+      "color": {
+        "a": 1,
+        "rgb": 1357990
+      }
+    },
+    {
+      "query": "path:\"Helpful Books and PDFs/\"",
+      "color": {
+        "a": 1,
+        "rgb": 7041664
+      }
+    },
+    {
+      "query": "path:\"Laptop Level Notes/Laptop Level Notes.md\"",
+      "color": {
+        "a": 1,
+        "rgb": 16569165
+      }
+    },
+    {
+      "query": "path:\"Laptop Level Notes/\" -path:\"Laptop Level Notes/Laptop Level Notes.md\"",
+      "color": {
+        "a": 1,
+        "rgb": 14251782
+      }
+    },
+    {
+      "query": "path:\"Temp Folder/\"",
+      "color": {
+        "a": 1,
+        "rgb": 9741240
+      }
+    },
+    {
+      "query": "path:\"Miscellaneoues/Miscellaneoues.md\"",
+      "color": {
+        "a": 1,
+        "rgb": 6809849
+      }
+    },
+    {
+      "query": "path:\"Miscellaneoues/\" -path:\"Miscellaneoues/Miscellaneoues.md\"",
+      "color": {
+        "a": 1,
+        "rgb": 440020
+      }
+    },
+    {
+      "query": "path:\"Web Development/Web Development.md\" OR path:\"Web Development/JavaScript/JavaScript.md\" OR path:\"Web Development/React/React.md\"",
+      "color": {
+        "a": 1,
+        "rgb": 16557477
+      }
+    },
+    {
+      "query": "path:\"Web Development/\" -path:\"Web Development/Web Development.md\" -path:\"Web Development/JavaScript/JavaScript.md\" -path:\"Web Development/React/React.md\"",
+      "color": {
+        "a": 1,
+        "rgb": 15680580
       }
     }
   ],
@@ -70,10 +154,10 @@
   "nodeSizeMultiplier": 2.03958333333333,
   "lineSizeMultiplier": 1.73333333333333,
   "collapse-forces": false,
-  "centerStrength": 0.109375,
-  "repelStrength": 20,
+  "centerStrength": 0.35,
+  "repelStrength": 16,
   "linkStrength": 1,
-  "linkDistance": 500,
-  "scale": 0.015355906606692712,
+  "linkDistance": 300,
+  "scale": 0.041607006809668334,
   "close": true
 }

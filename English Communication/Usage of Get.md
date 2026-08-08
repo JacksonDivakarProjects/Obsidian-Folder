@@ -82,3 +82,9 @@ Try substituting “get” naturally:
 ---
 
 Would you like me to give you a short **“Get” vocabulary drill** — like 10 everyday phrases using _get_ with meanings (to improve your meeting English fluency)? It’s a great way to internalize its usage.
+
+## 🔗 Related Notes
+- [[English Communication/Phrasal Verbs/Get|Get]]
+- [[English Communication/Phrasal Verbs/Call|Call]]
+- [[English Communication/Phrasal Verbs/Put|Put]]
+- [[English Communication/Phrasal Verbs/Take|Take]]

@@ -143,3 +143,8 @@ console.log(link.getAttribute('data-id')); // OUTPUT: "P123"
 ---
 
 **I have created concise notes with direct outputs. Please say "Next" for me to proceed to Topic 16.**
+
+## 🔗 Related Notes
+- [[Web Development/JavaScript/Manipulating Elements Using DOM|Manipulating Elements Using DOM - Camel Case for Properties]]
+- [[Web Development/JavaScript/Selecting HTML Elements Using DOM|Selecting HTML Elements Using the DOM]]
+- [[Web Development/JavaScript/Difference Between innerHTML and textContent|Difference Between innerHTML and textContent]]

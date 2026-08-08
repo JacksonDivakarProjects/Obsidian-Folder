@@ -320,3 +320,9 @@ LONG-TERM:
 3. **Try something new** to create new value
 
 **Next:** Part 4 will provide industry-specific cheat sheets with immediate actions for retail, SaaS, services, and restaurants.
+
+## 🔗 Related Notes
+- [[Data Science/Data Analysis/Data Analysis Notes Parts/Data Analysis - (Part -2)|Part 2: The Analysis Framework - What to Look For]]
+- [[Data Science/Data Analysis/Data Analysis Notes Parts/Data Analysis - (Part -4)|Part 4: Industry-Specific Cheat Sheets]]
+- [[Data Science/Data Analysis/Data Analysis Notes Parts/Data Analysis - (Part -5)|Part 5: The Execution System]]
+- [[Data Science/Data Analysis/Data Analysis Roadmap/Framework Based Data Analysis|Framework Based Data Analysis]]

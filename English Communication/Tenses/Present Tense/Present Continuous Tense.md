@@ -141,3 +141,9 @@ It’s one of the most common tenses for **dynamic, real-time situations**.
 Jack, if you want, I can also make a **one-page visual chart comparing Simple Present and Present Continuous** so you can **see the difference and remember rules instantly**. This is especially handy for professional English and meetings.
 
 Do you want me to create that?
+
+## 🔗 Related Notes
+- [[English Communication/Tenses/Present Tense/Simple Present Tense|Simple Present Tense]]
+- [[English Communication/Tenses/Present Tense/Present Perfect Tense|Present Perfect Tense]]
+- [[English Communication/Tenses/Present Tense/Present Perfect Continuous|Present Perfect Continuous Tense]]
+- [[English Communication/Tenses/Summary|Tenses Summary]]

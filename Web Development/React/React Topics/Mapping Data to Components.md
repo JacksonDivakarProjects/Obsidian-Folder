@@ -650,3 +650,8 @@ function Notification({ message, type, time }) {
 ---
 
 **Ready for Topic 24: "Mapping Data to Components Practice"?**
+
+## 🔗 Related Notes
+- [[Web Development/React/React Topics/JavaScript ES6 Map-Filter-Reduce|JavaScript ES6 Map/Filter/Reduce]]
+- [[Web Development/React/React Topics/React Components|React Components]]
+- [[Web Development/React/React Topics/React Conditional Rendering with the Ternary Operator & AND Operator|React Conditional Rendering]]

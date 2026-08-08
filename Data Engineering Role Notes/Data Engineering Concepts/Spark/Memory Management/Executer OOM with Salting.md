@@ -1,192 +1,92 @@
-Perfect, Jack 👌 — let’s lock in on **Executor Out-Of-Memory (OOM)**, this time including **salting** as a mitigation technique. I’ll keep it tight, structured, and focused only on essentials.
+# Executor Out-Of-Memory (OOM) in Spark
 
----
+## 1. What Is Executor OOM?
+- Executors run tasks and hold cached/shuffled data.
+- Executor OOM happens when heap or off-heap memory is exhausted.
+- Unlike driver OOM (which kills the whole app immediately), executor OOM causes task failures and retries, and only fails the job once retries are exhausted.
 
-# ⚡ Executor Out-Of-Memory (OOM) in Spark
+## 2. Common Causes
 
----
+### Skewed Data (the biggest culprit)
+A few keys/partitions receive a disproportionate share of the data while others stay small. Example: `groupByKey()` or `reduceByKey()` where one "hot" key fills an executor's memory.
 
-## 1) What is Executor OOM?
+### Large Shuffles
+Joins, `groupBy`, and `reduceByKey` all generate shuffle data. If shuffle spill exceeds available memory, disk I/O explodes and OOM can still occur if buffers keep growing.
 
-- Executors run **tasks** and hold **cached/shuffled data**.
-    
-- Executor OOM happens when **heap / off-heap memory** is exhausted.
-    
-- Unlike driver OOM (which kills the app immediately), executor OOM:
-    
-    - Causes **task failures**, retries, and eventually job failure if retries exceed.
-        
+### Wide Transformations + Caching
+Persisting a large intermediate RDD/DataFrame without enough memory — executors try to keep blocks in memory and the heap fills up.
 
----
+### Large UDF Outputs
+A UDF that explodes data (e.g., one input row producing millions of output rows).
 
-## 2) Common Causes of Executor OOM
+### Insufficient Executor Memory Settings
+`spark.executor.memory` or `spark.executor.memoryOverhead` set too low, leaving no room for shuffle buffers, Python workers, or Arrow buffers.
 
-### 🔹 1. Skewed Data (Biggest Culprit)
+## 3. Symptoms
+- `java.lang.OutOfMemoryError: Java heap space`
+- `java.lang.OutOfMemoryError: GC overhead limit exceeded`
+- Frequent task retries, eventually failing the job
+- Spark UI shows skewed tasks with very high runtime and shuffle spill
 
-- Few keys/partitions get **huge data**, while others stay small.
-    
-- Example: `groupByKey()`, `reduceByKey()` → one hot key fills executor memory.
-    
+## 4. Strategies to Handle Executor OOM
 
----
-
-### 🔹 2. Large Shuffles
-
-- Joins, groupBy, reduceByKey generate shuffle data.
-    
-- If shuffle spill > memory, disk IO explodes, and OOM may occur if buffers grow.
-    
-
----
-
-### 🔹 3. Wide Transformations + Caching
-
-- Persisting large intermediate RDD/DataFrame without enough memory.
-    
-- Executors try to keep blocks in memory → heap fills up.
-    
-
----
-
-### 🔹 4. Large UDF Outputs
-
-- Exploding data in UDFs (e.g., one input row → millions of output rows).
-    
-
----
-
-### 🔹 5. Insufficient Executor Memory Settings
-
-- `spark.executor.memory` or `spark.memoryOverhead` too low.
-    
-- Not enough space for shuffle buffers, Python workers, Arrow, etc.
-    
-
----
-
-## 3) Symptoms of Executor OOM
-
-- Logs:
-    
-    - `java.lang.OutOfMemoryError: Java heap space`
-        
-    - `java.lang.OutOfMemoryError: GC overhead limit exceeded`
-        
-- Frequent **task retries** → eventually job fails.
-    
-- Spark UI → stages show **skewed tasks** with very high runtime & spill.
-    
-
----
-
-## 4) Strategies to Handle Executor OOM
-
-### 🔹 A. Handle Skew (Salting 🔑)
-
-- **Salting** = add random prefix to skewed key → distribute load across partitions.
-    
-
-**Example (Salting for groupByKey):**
+### A. Handle Skew with Salting
+Salting adds a random suffix to a skewed key so its rows spread across multiple partitions instead of piling into one.
 
 ```python
 from pyspark.sql import functions as F
 
-# Add salt for skewed key
+# Add salt to spread a skewed key across partitions
 salted = df.withColumn(
-    "salted_key", 
-    F.concat(F.col("key"), F.lit("_"), (F.rand()*10).cast("int"))
+    "salted_key",
+    F.concat(F.col("key"), F.lit("_"), (F.rand() * 10).cast("int"))
 )
 
-# Do aggregation on salted keys
+# Aggregate on the salted key first
 agg_salted = salted.groupBy("salted_key").agg(F.sum("value"))
 
-# Remove salt after aggregation
+# Strip the salt and do the final aggregation
 final = agg_salted.withColumn(
     "key", F.split("salted_key", "_")[0]
 ).groupBy("key").agg(F.sum("sum(value)"))
 ```
+The skewed key `"A"` is now spread across 10 partitions instead of landing entirely in one.
 
-- Skewed key "A" is now spread across 10 partitions instead of one.
-    
+### B. Use Better Joins
+Replace shuffle-heavy joins with broadcast joins when one side is small:
+```python
+spark.conf.set("spark.sql.autoBroadcastJoinThreshold", "100MB")
+```
+Avoid cartesian joins.
 
----
+### C. Optimize Caching
+Cache only data that's actually reused. Prefer `DISK_ONLY` or `MEMORY_AND_DISK` over `MEMORY_ONLY` for large datasets.
 
-### 🔹 B. Use Better Joins
+### D. Partition Deliberately
+Repartition skewed data, and use `df.repartition(n)` to raise parallelism before heavy aggregations.
 
-- Replace **shuffle-heavy joins** with **broadcast joins** if one side is small.
-    
-    ```python
-    spark.conf.set("spark.sql.autoBroadcastJoinThreshold", "100MB")
-    ```
-    
-- Avoid cartesian joins.
-    
+### E. Tune Executor Memory
+```bash
+--executor-memory 4g --conf spark.executor.memoryOverhead=1g
+```
+Right-size the number of cores per executor — too many cores sharing one heap causes memory contention.
 
----
+### F. Manage Spill
+- Use Kryo serialization (`spark.serializer=org.apache.spark.serializer.KryoSerializer`) so shuffle spill writes are more compact and efficient.
+- Ensure `spark.memory.fraction` leaves enough room for both execution and storage.
 
-### 🔹 C. Optimize Caching
+## 5. Quick Checklist
+- [ ] Identify skewed keys and apply salting.
+- [ ] Use broadcast joins for small tables.
+- [ ] Don't over-cache — pick the right storage level.
+- [ ] Repartition data before shuffles.
+- [ ] Tune executor heap and memory overhead.
+- [ ] Monitor Spark UI for skewed tasks and shuffle spill.
 
-- Cache only when reused.
-    
-- Use `DISK_ONLY` or `MEMORY_AND_DISK` instead of `MEMORY_ONLY` if data is large.
-    
+## In Short
+Executor OOM = data skew + shuffle pressure + under-tuned configs. Fix it by spreading skewed keys with salting, using smarter joins, tuning executor memory, and caching wisely.
 
----
-
-### 🔹 D. Partitioning
-
-- Repartition skewed data properly.
-    
-- Use `df.repartition(n)` to increase parallelism before heavy aggregations.
-    
-
----
-
-### 🔹 E. Executor Memory Tuning
-
-- Increase executor memory (heap):
-    
-    ```bash
-    --executor-memory 4g --conf spark.executor.memoryOverhead=1g
-    ```
-    
-- Right-size number of cores per executor (too many cores = memory contention).
-    
-
----
-
-### 🔹 F. Spill Management
-
-- Ensure shuffle spill writes efficiently:
-    
-    - Use **Kryo serialization** (`spark.serializer=org.apache.spark.serializer.KryoSerializer`).
-        
-    - Ensure sufficient `spark.memory.fraction` for execution vs storage.
-        
-
----
-
-## 5) Quick Checklist for Executor OOM
-
--  Identify skewed keys → **apply salting**.
-    
--  Use broadcast join for small tables.
-    
--  Don’t over-cache → pick smart storage levels.
-    
--  Repartition data before shuffles.
-    
--  Tune executor heap + memory overhead.
-    
--  Monitor Spark UI → check skewed tasks & shuffle spill.
-    
-
----
-
-✅ **In short**:  
-Executor OOM = **data skew + shuffle pressure + bad configs**.  
-Fix = **spread skewed keys with salting**, use smart joins, tune executor memory, and cache wisely.
-
----
-
-Jack — do you want me to also show you **a visual way to detect skewed partitions in Spark UI** (so you know when salting is needed), or keep it purely conceptual?
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Spark/Memory Management/Executer Memory Management|Spark Executor Memory Architecture]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Spark/Memory Management/Driver OOM|Driver Out-Of-Memory (OOM) in Spark]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Spark/Joins/Shuffle Hash Join|Shuffle Hash Join]]

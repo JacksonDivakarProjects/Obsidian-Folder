@@ -164,3 +164,7 @@ If you want, I can:
 * Help you answer **manager-level interview questions**
 
 Just tell me your **target role** (Business Analyst / Product Analyst / Strategy / Consulting).
+
+## 🔗 Related Notes
+- [[Data Science/Data Analysis/Data Analysis Roadmap/Framework Based Data Analysis|Framework Based Data Analysis]]
+- [[Data Science/Data Analysis/Data Analysis Roadmap/Roadmap Table|Roadmap Table]]

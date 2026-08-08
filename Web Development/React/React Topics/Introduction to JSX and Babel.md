@@ -540,3 +540,9 @@ function WeatherWidget() {
 ---
 
 **Ready for Topic 6: "Javascript Expressions in JSX & ES6 Template Literals"?**
+
+## 🔗 Related Notes
+- [[Web Development/React/JSX/JSX Guide|JSX Guide]]
+- [[Web Development/React/React Topics/JavaScript Expressions in JSX & ES6 Template Literals|JavaScript Expressions in JSX & ES6 Template Literals]]
+- [[Web Development/React/React Topics/JavaScript Expressions in JSX Practice|JavaScript Expressions in JSX Practice]]
+- [[Web Development/React/React Topics/JSX Attributes & Styling React Elements|JSX Attributes & Styling React Elements]]

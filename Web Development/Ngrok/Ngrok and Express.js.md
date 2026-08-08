@@ -243,3 +243,7 @@ It accelerates development velocity and eliminates environment bottlenecks.
 ✅ A Postman-ready API collection
 
 Just tell me.
+
+## 🔗 Related Notes
+- [[Web Development/Ngrok/Ngrok|Ngrok]]
+- [[Web Development/Ngrok/NGROK and FAST API|NGROK and FAST API]]

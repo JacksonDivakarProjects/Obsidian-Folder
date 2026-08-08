@@ -187,3 +187,7 @@ sudo apt install pgadmin4 -y
 ---
 
 If you want, I can give a **single command sequence that installs PostgreSQL + creates user + database + enables remote access** so it’s ready for GUI connections immediately. Do you want me to do that?
+
+## 🔗 Related Notes
+- [[Laptop Level Notes/Postgres SQL/Start with pgadmin 4|Start with pgadmin 4]]
+- [[Laptop Level Notes/MySQL Configuration/MySQL CMD Login and Create User|MySQL CMD Login and Create User]]

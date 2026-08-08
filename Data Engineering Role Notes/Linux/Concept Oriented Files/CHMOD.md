@@ -1,59 +1,46 @@
-Absolutely, Jack. Below is a **comprehensive, structured Obsidian-style note** for mastering the `chmod` command, fully integrating the content from your screenshots as well.
+# `chmod` Command — Full Guide
 
----
+## 🎯 Objective
 
-## 🔐 `chmod` Command — Full Guide
-
-### 🎯 Objective:
-
-To manage **file and directory permissions** in Linux using symbolic and numeric (octal) modes, and to confidently **analyze, modify, and validate** them.
-
----
+Manage file and directory **permissions** in Linux using symbolic and numeric (octal) modes, and confidently analyze, modify, and validate them.
 
 ## 🧪 Analyze Before You Act
 
-### ✅ Step 1: Inspect Permissions
-
+### Step 1: Inspect permissions
 ```bash
 ls -l filename
 ```
-
 Sample output:
-
 ```
 -rwxr-xr--
 ```
 
-### 🔍 Breakdown:
+### 🔍 Breakdown
 
-|Symbol|Meaning|
+| Symbol | Meaning |
 |---|---|
-|`-`|It's a file (`d` = directory)|
-|`rwx`|**User**: Read, Write, Execute|
-|`r-x`|**Group**: Read, Execute|
-|`r--`|**Others**: Read only|
-
----
+| `-` | It's a file (`d` = directory) |
+| `rwx` | **User** (owner): read, write, execute |
+| `r-x` | **Group**: read, execute |
+| `r--` | **Others**: read only |
 
 ## 🧠 Permission Mapping
 
-|Permission|Symbol|Value|
+| Permission | Symbol | Value |
 |---|---|---|
-|Read|`r`|4|
-|Write|`w`|2|
-|Execute|`x`|1|
+| Read | `r` | 4 |
+| Write | `w` | 2 |
+| Execute | `x` | 1 |
 
-### 🧮 Value Combinations:
+### 🧮 Value Combinations
 
-|Total|Meaning|
+| Total | Meaning |
 |---|---|
-|7|`rwx` = Read + Write + Execute|
-|6|`rw-` = Read + Write|
-|5|`r-x` = Read + Execute|
-|4|`r--` = Read only|
-|0|`---` = No permission|
-
----
+| 7 | `rwx` = read + write + execute |
+| 6 | `rw-` = read + write |
+| 5 | `r-x` = read + execute |
+| 4 | `r--` = read only |
+| 0 | `---` = no permission |
 
 ## 🔢 Numeric (Octal) Mode
 
@@ -61,28 +48,18 @@ Sample output:
 chmod [N][N][N] filename
 ```
 
-### Digits:
+Digits, in order: **User (owner)**, **Group**, **Others**.
 
-- 1st = **User (owner)**
-    
-- 2nd = **Group**
-    
-- 3rd = **Others**
-    
-
-#### Example:
-
+#### Example
 ```bash
 chmod 755 script.sh
 ```
 
-|Section|Value|Meaning|
+| Section | Value | Meaning |
 |---|---|---|
-|User|`7`|`rwx`|
-|Group|`5`|`r-x`|
-|Others|`5`|`r-x`|
-
----
+| User | `7` | `rwx` |
+| Group | `5` | `r-x` |
+| Others | `5` | `r-x` |
 
 ## 🧩 Symbolic Mode
 
@@ -90,78 +67,57 @@ chmod 755 script.sh
 chmod [who][operator][permission] filename
 ```
 
-|Component|Options|
+| Component | Options |
 |---|---|
-|`who`|`u` (user), `g` (group), `o` (others), `a` (all)|
-|`operator`|`+` (add), `-` (remove), `=` (assign only)|
-|`permission`|`r`, `w`, `x`|
+| `who` | `u` (user), `g` (group), `o` (others), `a` (all) |
+| `operator` | `+` (add), `-` (remove), `=` (set exactly) |
+| `permission` | `r`, `w`, `x` |
 
-### 🔹 Examples:
-
+### Examples
 ```bash
-chmod u+x file       # Add execute for user
-chmod g-w file       # Remove write from group
+chmod u+x file       # Add execute for the owner
+chmod g-w file       # Remove write from the group
 chmod o=r file       # Set others to read-only
 chmod a+rw file      # Give read and write to everyone
 ```
 
----
-
-## 🧾 Examples for Validation
+## 🧾 Worked Examples
 
 ### Case 1: `-rwxr-xr--`
 
-|Who|Permissions|
+| Who | Permissions |
 |---|---|
-|User|`rwx` = 7|
-|Group|`r-x` = 5|
-|Others|`r--` = 4|
+| User | `rwx` = 7 |
+| Group | `r-x` = 5 |
+| Others | `r--` = 4 |
 
-✔️ Valid `chmod` equivalent:
-
-```bash
-chmod 754 filename
-```
-
----
+✔️ Equivalent: `chmod 754 filename`
 
 ### Case 2: `-rw-r--r--`
 
-|Who|Permissions|
+| Who | Permissions |
 |---|---|
-|User|`rw-` = 6|
-|Group|`r--` = 4|
-|Others|`r--` = 4|
+| User | `rw-` = 6 |
+| Group | `r--` = 4 |
+| Others | `r--` = 4 |
 
-✔️ `chmod 644 filename`
-
----
+✔️ Equivalent: `chmod 644 filename`
 
 ## 🧠 Mental Model Summary
 
-- Think in **triplets**: `User | Group | Others`
-    
+- Think in **triplets**: User | Group | Others
 - Each position = sum of `r=4`, `w=2`, `x=1`
-    
-- Prefix `-` = file, `d` = directory
-    
-- Use `ls -l` to inspect permissions
-    
-
----
+- Leading character: `-` = file, `d` = directory, `l` = symlink
+- Use `ls -l` to inspect current permissions before changing them
 
 ## 🛠️ Pro Tips
 
-- Want **all access** (dangerous)?  
-    `chmod 777 file`
-    
-- Want **only owner access**?  
-    `chmod 700 file`
-    
-- Set **read-only** for all?  
-    `chmod 444 file`
-    
+- **All access for everyone** (dangerous, generally avoid): `chmod 777 file`
+- **Owner-only access**: `chmod 700 file`
+- **Read-only for everyone**: `chmod 444 file`
+- Applying to a whole directory tree: `chmod -R <mode> <directory>` — recursively updates permissions on the directory and everything inside it (use carefully, since directories usually need the execute bit to be enterable, unlike plain files).
 
----
-
-Let me know if you want a printable version, Obsidian markdown format, or cheat sheet variant.
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Linux/Concept Oriented Files/Find Command|Find Command]]
+- [[Data Engineering Role Notes/Linux/Concept Oriented Files/Alias with .bashrc|Alias with .bashrc]]
+- [[Data Engineering Role Notes/Linux/Linux Summary Guide|Linux Masterclass Concepts]]

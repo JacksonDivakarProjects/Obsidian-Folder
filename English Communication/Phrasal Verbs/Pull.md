@@ -138,3 +138,9 @@ But as a **phrasal verb**, it changes meaning depending on the preposition or ad
 ---
 
 Would you like me to create a **mini quiz or practical usage exercise** for “pull” phrasal verbs — so you can reinforce them in daily English or meetings?
+
+## 🔗 Related Notes
+- [[English Communication/Phrasal Verbs/Call|Call]]
+- [[English Communication/Phrasal Verbs/Get|Get]]
+- [[English Communication/Phrasal Verbs/Put|Put]]
+- [[English Communication/Phrasal Verbs/Take|Take]]

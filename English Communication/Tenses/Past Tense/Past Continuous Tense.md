@@ -128,3 +128,9 @@ Jack, if you want, I can **now create a single ultimate visual chart comparing a
 **Simple Present, Present Continuous, Present Perfect, Present Perfect Continuous, Simple Past, and Past Continuous**—with **structure, usage, signal words, and examples** side by side. It will be perfect for **quick professional reference**.
 
 Do you want me to make that chart?
+
+## 🔗 Related Notes
+- [[English Communication/Tenses/Past Tense/Simple Past Tense|Simple Past Tense]]
+- [[English Communication/Tenses/Past Tense/Past Perfect Tense|Past Perfect Tense]]
+- [[English Communication/Tenses/Present Tense/Present Continuous Tense|Present Continuous Tense]]
+- [[English Communication/Tenses/Summary|Tenses Summary]]

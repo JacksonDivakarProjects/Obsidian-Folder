@@ -406,3 +406,8 @@ p {
 ---
 
 **Ready for Topic 4: "Introduction to JSX and Babel"?**
+
+## 🔗 Related Notes
+- [[Web Development/React/React Topics/What is React|What is React]]
+- [[Web Development/React/React Topics/What We Will Make in This React Module|What We Will Make in This React Module]]
+- [[Web Development/React/React Topics/Introduction to JSX and Babel|Introduction to JSX and Babel]]

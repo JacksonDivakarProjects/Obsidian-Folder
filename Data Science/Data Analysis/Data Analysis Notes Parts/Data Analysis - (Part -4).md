@@ -267,3 +267,8 @@
 You now have everything you need to stop guessing and start making data-driven decisions in your business.
 
 **Start this week with your industry cheat sheet. Pick one metric to track daily and one analysis to complete weekly. The rest will follow naturally.**
+
+## 🔗 Related Notes
+- [[Data Science/Data Analysis/Data Analysis Notes Parts/Data Analysis - (Part -3)|Part 3: From Insight to Action - The Decision Framework]]
+- [[Data Science/Data Analysis/Data Analysis Notes Parts/Data Analysis - (Part -5)|Part 5: The Execution System]]
+- [[Data Science/Data Analysis/KPI Notes/KPI Comprehensive Guide|KPI Comprehensive Guide]]

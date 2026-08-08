@@ -53,3 +53,7 @@ Then `sudo apt install mysql-workbench-community` might work, but Snap is simple
 ---
 
 If you want, I can give a **one-shot command sequence that installs MySQL server + Workbench on Zorin OS using Snap** so it works perfectly without APT key errors. Do you want me to do that?
+
+## 🔗 Related Notes
+- [[Laptop Level Notes/MySQL Configuration/MySQL CMD Login and Create User|MySQL CMD Login and Create User]]
+- [[Laptop Level Notes/Postgres SQL/Start with pgadmin 4|Start with pgadmin 4]]

@@ -221,14 +221,15 @@ jobs:
 ---
 ### **Summary: A Cohesive Testing Strategy**
 
-You've now learned how to **execute tests strategically** and **integrate them into your development workflow**:
-
-1.  **`dbt test`** with selection syntax gives you surgical control over which tests run.
-2.  **Severity configuration** (`warn` vs `error`) lets you distinguish between blocking issues and quality warnings.
+1.  **`dbt test`** with selection syntax gives surgical control over which tests run.
+2.  **Severity configuration** (`warn` vs `error`) distinguishes blocking issues from quality warnings.
 3.  **`dbt build`** is the production-ready command that ensures no model is built unless its tests pass.
 4.  **Target environments** (`--target prod`) allow different test strictness per environment.
 
-**Key Insight**: A mature dbt project uses `dbt build` as its primary deployment command, with severity levels carefully tuned to balance data quality with pipeline reliability.
+**Key insight**: a mature dbt project uses `dbt build` as its primary deployment command, with severity levels tuned to balance data quality against pipeline reliability. Snapshots extend this same discipline to slowly-changing historical data.
 
-**Ready to explore time-travel in your data?**
-Type `NEXT` to proceed to **Module 5, Topic 1: Snapshots & Change Tracking**, where we'll learn how to capture historical changes in your slowly-changing dimension tables.
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 06/Difference Between dbt run and dbt build|`dbt run` vs `dbt build`]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 06/DBT Flags|dbt Flags That Actually Matter]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 04/Generic Tests & Their Types|Generic Tests & Their Types]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 04/Singular Tests|Singular Tests]]

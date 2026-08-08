@@ -251,3 +251,9 @@ They make you sound polished and collaborative:
 ---
 
 Would you like me to give you a **short quiz** or **conversation examples using these “put” phrasal verbs in a meeting setting** next? That’s great for mastering tone and usage.
+
+## 🔗 Related Notes
+- [[English Communication/Phrasal Verbs/Call|Call]]
+- [[English Communication/Phrasal Verbs/Get|Get]]
+- [[English Communication/Phrasal Verbs/Pull|Pull]]
+- [[English Communication/Phrasal Verbs/Take|Take]]

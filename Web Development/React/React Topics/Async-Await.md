@@ -397,3 +397,9 @@ Async/await doesn't replace Promises - it builds on them. You'll often use both 
 ---
 
 **Ready for Topic 44: "Axios"?**
+
+## 🔗 Related Notes
+- [[Web Development/React/React Topics/Promises|Promises]]
+- [[Web Development/React/React Topics/Axios|Axios]]
+- [[Web Development/React/React Topics/JavaScript ES6 Arrow Functions|JavaScript ES6 Arrow Functions]]
+- [[Web Development/React/React Topics/React Hooks|React Hooks - useState]]

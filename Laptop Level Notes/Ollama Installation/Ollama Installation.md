@@ -182,3 +182,8 @@ After installation and pulling a model:
 ---
 
 If you like, I can check **which Ollama models are best for low-RAM Linux machines** (or recommend based on your hardware). Do you want me to do that?
+
+## 🔗 Related Notes
+- [[Laptop Level Notes/Swap Memory/Swapping Memory|Swapping Memory]]
+- [[Laptop Level Notes/Fedora/Fedora Basic Commands|Fedora Linux Cheat Sheet (Essential)]]
+- [[Laptop Level Notes/Set Java SDK/Set Java SDK|Set Java SDK]]

@@ -152,14 +152,17 @@ dbt run --select fct_orders --full-refresh
 ---
 ### **Summary & Decision Flow**
 
-You’ve learned that a **model** is a transformed dataset defined by SQL. Its **materialization** determines how it's built in your warehouse. Follow this simple flow to choose:
+A **model** is a transformed dataset defined by a SQL `SELECT`. Its **materialization** determines how it's built in the warehouse. Use this flow to choose:
 
 1.  **Is it a reusable component?** → Use **`ephemeral`**.
 2.  **Is it a lightweight staging model?** → Use **`view`**.
 3.  **Is it a final, consumable table?** → Use **`table`**.
 4.  **Is it a very large fact table?** → Use **`incremental`**.
 
-The power of dbt's configuration hierarchy means you can set a default (e.g., `view` for `staging/`) in `dbt_project.yml` and override it for specific models (e.g., `table` for a large staging model) right inside their SQL file with `{{ config() }}`.
+The configuration hierarchy means you can set a project-wide default (e.g., `view` for `staging/`) in `dbt_project.yml` and override it for specific models (e.g., `table` for one heavily-queried staging model) right inside their SQL file with `{{ config() }}`. The next step is understanding how models connect to each other via `ref()` — that's what builds the DAG.
 
-**Ready to learn how models connect?**
-Type `NEXT` to proceed to **Topic 2: The Ref() Function & Building DAGs**, where we'll explore how models depend on each other to form a pipeline.
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Syllabus|dbt Learning Syllabus]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 03/The Ref() Function & Building DAGs|The Ref() Function & Building DAGs]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 02/Configs and Variables|Configs & the Hierarchy]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 04/Generic Tests & Their Types|Generic Tests & Their Types]]

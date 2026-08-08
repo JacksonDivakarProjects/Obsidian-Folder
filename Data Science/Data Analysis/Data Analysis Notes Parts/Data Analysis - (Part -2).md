@@ -288,3 +288,9 @@ ACTION: "Create premium gift sets and target metro customers in North region wit
 **Next: In Part 3, we'll cover how to turn these insights into specific, actionable business decisions that drive growth and profit.**
 
 This framework gives you exactly what to look for in your data. You don't need to be a data scientist - you just need to ask these questions and look for these patterns. The answers will tell you exactly where to focus your business efforts.
+
+## 🔗 Related Notes
+- [[Data Science/Data Analysis/Data Analysis Notes Parts/Data Analysis - (Part -1)|The Business Data Analysis Playbook (Part 1)]]
+- [[Data Science/Data Analysis/Data Analysis Notes Parts/Data Analysis - (Part -3)|Part 3: From Insight to Action - The Decision Framework]]
+- [[Data Science/Data Analysis/KPI Notes/KPI Comprehensive Guide|KPI Comprehensive Guide]]
+- [[Data Science/Data Analysis/Segmentation/Customer Segmentation Using Kmeans|Customer Segmentation Using K-Means]]

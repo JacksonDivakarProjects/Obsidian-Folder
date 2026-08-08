@@ -185,3 +185,7 @@ df.fillna(method='ffill')
 ---
 
 If you want a similar guide for `dropna()`, masking, interpolation, or replacing values — just say the word.
+
+## 🔗 Related Notes
+- [[Data Science/Pandas/Pandas Dropna|📘 `pandas.DataFrame.dropna()` – Complete Guide]]
+- [[Data Science/Pandas/Pandas Special Notes For Tips and Tricks|Pandas Special Notes For Tips and Tricks]]

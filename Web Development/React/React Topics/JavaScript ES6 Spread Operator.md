@@ -741,3 +741,8 @@ function ShoppingCart() {
 ---
 
 **Ready for Topic 41: "Javascript ES6 Spread Operator Practice"?**
+
+## 🔗 Related Notes
+- [[Web Development/React/React Topics/JavaScript ES6 Object & Array Destructuring|JavaScript ES6 Object & Array Destructuring]]
+- [[Web Development/React/React Topics/React Hooks|React Hooks - useState]]
+- [[Web Development/React/React Topics/State in React - Declarative vs. Imperative Programming|State in React (Declarative vs Imperative)]]

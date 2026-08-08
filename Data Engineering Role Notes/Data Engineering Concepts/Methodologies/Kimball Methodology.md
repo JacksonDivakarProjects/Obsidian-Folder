@@ -1,29 +1,16 @@
-Kimball is a **data warehouse design methodology** created by **Ralph Kimball**. It focuses on making data easy for business users to query and analyze. Instead of building a highly normalized enterprise model, Kimball recommends organizing data into **dimensional models** (fact and dimension tables).
+# Kimball Methodology
 
-If you're working with **dbt, Synapse, Snowflake, Databricks, or Power BI**, you'll encounter Kimball modeling frequently.
+Kimball is a **data warehouse design methodology** created by **Ralph Kimball**. It optimizes for making data easy for business users to query and analyze, rather than for eliminating data redundancy. Instead of a highly normalized enterprise model (Inmon-style), Kimball organizes data into **dimensional models** — fact tables and dimension tables joined into star schemas.
+
+If you work with **dbt, Synapse, Snowflake, Databricks, or Power BI**, you will run into Kimball-style modeling constantly — most modern BI marts are built on it.
 
 ---
 
-# Core Concepts
+## Fact Tables
 
-## 1. Fact Tables
+Fact tables store **measurable business events** — the numbers you aggregate and report on.
 
-Fact tables contain **measurable business events**.
-
-Examples:
-
-- Sales
-    
-- Orders
-    
-- Revenue
-    
-- Quantity
-    
-- Profit
-    
-
-Example
+Examples: Sales, Orders, Revenue, Quantity, Profit.
 
 ```text
 fact_sales
@@ -39,24 +26,18 @@ discount
 profit
 ```
 
-Characteristics
+Characteristics:
 
-- Very large tables
-    
-- Mostly numeric values
-    
-- Foreign keys to dimensions
-    
-- One row represents one business event
-    
+- Very large tables (grow with every business event)
+- Mostly numeric measures
+- Foreign keys to surrounding dimensions
+- One row = one business event at a defined grain
 
 ---
 
-## 2. Dimension Tables
+## Dimension Tables
 
-Dimensions describe the facts.
-
-Example
+Dimensions describe the context around a fact — the "who, what, where, when" of a business event.
 
 ```text
 dim_customer
@@ -79,57 +60,38 @@ category
 color
 ```
 
-Characteristics
+Characteristics:
 
-- Relatively small
-    
-- Descriptive information
-    
-- Used for filtering and grouping
-    
+- Relatively small compared to facts
+- Rich, descriptive, mostly text/attribute columns
+- Used for filtering, grouping, and labeling in reports
 
-Example
-
-> Revenue by Brand
-
-Brand comes from dimension
-
-Revenue comes from fact
+Example: a report on "Revenue by Brand" pulls `Brand` from `dim_product` and `Revenue` from `fact_sales` — this fact/dimension split is the core of dimensional modeling.
 
 ---
 
-# Star Schema
+## Star Schema
 
-Kimball strongly recommends a **Star Schema**.
+Kimball strongly recommends a **star schema**: one central fact table joined directly to its surrounding dimensions.
 
 ```
              dim_date
-
                  |
-
 dim_customer --- fact_sales --- dim_product
-
                  |
-
              dim_store
 ```
 
-Advantages
+Advantages:
 
-- Simple joins
-    
-- Fast queries
-    
-- Easy for analysts
-    
-- Good BI performance
-    
+- Simple joins (fact to dimension, one hop)
+- Fast queries — few joins for the query optimizer to plan
+- Easy for analysts and BI tools to understand
+- Strong BI/reporting performance
 
----
+### Snowflake Schema
 
-# Snowflake Schema
-
-Avoid unless necessary.
+A snowflake schema normalizes dimensions further, splitting them into sub-dimensions:
 
 ```
 Product
@@ -139,9 +101,9 @@ Category
 Department
 ```
 
-Instead of
+...instead of collapsing everything into one denormalized dimension:
 
-```
+```text
 dim_product
 
 category
@@ -149,529 +111,225 @@ department
 brand
 ```
 
-Kimball usually prefers putting everything into one dimension.
+Kimball generally recommends **avoiding snowflaking** unless there's a clear win (e.g. a huge, frequently-changing hierarchy) — it adds extra joins for little benefit in a BI context, since the storage savings from normalization matter far less than query simplicity.
 
 ---
 
-# Grain (Most Important Rule)
+## Grain — the Most Important Rule
 
-Kimball says:
+Kimball's core rule: **declare the grain first.**
 
-> Declare the grain first.
+Grain = **what does one row in the table represent?** Every other modeling decision follows from this.
 
-Grain means
+**Good grain (single, explicit):**
 
-**What does one row represent?**
+- One row per invoice line (`Invoice`, `Product`, `Quantity`)
+- One row per order
+- One row per customer per month
 
-Examples
+**Bad grain (mixed):**
 
-### Good
-
-One row per invoice line
-
-```
-Invoice
-Product
-Quantity
-```
-
-or
-
-One row per order
-
-or
-
-One row per customer per month
+Combining multiple levels of detail in one table — e.g. Order-level and Product-level and Month-level rows mixed together — causes double counting when you aggregate, because the same underlying event gets represented (and summed) at more than one level of detail.
 
 ---
 
-### Bad
+## Surrogate Keys vs. Natural Keys
 
-Mixing
+Use **surrogate keys** — warehouse-generated integer keys — instead of relying on source-system business keys.
 
-- Order
-    
-- Product
-    
-- Month
-    
+```text
+Natural key:    CustomerID = C1001
+Surrogate key:  CustomerKey = 101
+```
 
-inside one table.
+Both are typically stored on the dimension row, but the **fact table references only the surrogate key** (`CustomerKey`), never the natural key.
 
-This causes double counting.
+Reasons to use surrogate keys:
+
+- Business/source-system IDs can change or be reused
+- They make Slowly Changing Dimensions possible (multiple surrogate keys can map to one natural key over time)
+- Smaller, simpler integer joins
+- Decouples the warehouse from source-system key formats
 
 ---
 
-# Surrogate Keys
+## Slowly Changing Dimensions (SCD)
 
-Use surrogate keys instead of business keys.
+Handling how dimension attributes change over time is one of the most important (and most tested-in-interviews) Kimball concepts.
 
-Example
+### Type 1 — Overwrite
 
-Instead of
+Overwrite the old value in place; no history is kept.
 
-```
-CustomerID = C1001
-```
-
-Use
-
-```
-CustomerKey = 1523
-```
-
-Reasons
-
-- Business IDs change
-    
-- Easier Slowly Changing Dimensions
-    
-- Better joins
-    
-- Warehouse independence
-    
-
----
-
-# Natural Keys
-
-Natural key
-
-```
-CustomerID = C1001
-```
-
-Surrogate key
-
-```
-CustomerKey = 101
-```
-
-Both are stored.
-
-Fact table uses
-
-```
-CustomerKey
-```
-
----
-
-# Slowly Changing Dimensions (SCD)
-
-Very important in Kimball.
-
----
-
-## Type 1
-
-Overwrite old value.
-
-```
+```text
 City
-
-Old:
-London
-
-New:
-Paris
+Old: London
+New: Paris
 ```
 
-No history.
+Use when history doesn't matter for that attribute (e.g. correcting a typo).
 
----
+### Type 2 — Add a New Row (most common)
 
-## Type 2
+Keep full history by inserting a new dimension row with a new surrogate key whenever a tracked attribute changes.
 
-Keep history.
-
-Example
-
-Customer moves city.
-
-```
+```text
 CustomerKey
-
-101 London
-
-202 Paris
+101   London   (old row, now historical)
+202   Paris    (new row, current)
 ```
 
-Different surrogate keys.
+Existing fact rows keep pointing at the surrogate key that was current *at the time of the event*, so historical reports still reflect "London" for old sales — this is what makes Type 2 the standard choice for attributes you need to report on historically (e.g. a customer's region at time of purchase).
 
-Fact table continues pointing to the correct version.
+### Type 3 — Add a New Column
 
-Most common.
+Store the previous value alongside the current value in the same row (e.g. `Current City`, `Previous City`). Only keeps one prior state, not full history — rarely used, mainly for "compare current vs. last" cases.
 
 ---
 
-## Type 3
+## Conformed Dimensions
 
-Store previous value.
+A **conformed dimension** is a single, shared dimension used consistently across multiple fact tables, guaranteeing everyone means the same thing by "Customer."
 
-```
-Current City
-
-Previous City
-```
-
-Rarely used.
-
----
-
-# Conformed Dimensions
-
-One dimension shared across many fact tables.
-
-Example
-
-```
+```text
 dim_customer
 ```
 
-Used by
+used by:
 
-```
+```text
 fact_sales
-
 fact_returns
-
 fact_orders
-
 fact_support
 ```
 
-Everyone uses the same customer definition.
+This is what lets you join `fact_sales` and `fact_returns` through the same `dim_customer` and get consistent results — without conformed dimensions, different teams end up with subtly incompatible definitions of the same entity.
 
 ---
 
-# Fact Types
+## Fact Table Types
 
-## Transaction Fact
-
-Every transaction.
-
-```
-Every Sale
-```
+- **Transaction fact** — one row per individual event, as it happens (e.g. every sale).
+- **Periodic snapshot** — one row per fixed time interval, capturing a state (e.g. daily inventory levels).
+- **Accumulating snapshot** — one row per process instance, updated in place as the process moves through its stages (e.g. an order row updated as it moves through Created → Packed → Shipped → Delivered).
 
 ---
 
-## Periodic Snapshot
+## Degenerate Dimension
 
-One row every day/month.
-
-Example
-
-```
-Daily inventory
-```
+A dimension attribute that lives directly in the fact table because it has no other descriptive attributes worth a separate table — e.g. an `Invoice Number` column on `fact_sales`. No separate dimension table is created for it.
 
 ---
 
-## Accumulating Snapshot
+## Junk Dimension
 
-Tracks process.
+A single dimension that bundles together several small, low-cardinality flags that would otherwise clutter the fact table.
 
-```
-Order Created
-
-Packed
-
-Shipped
-
-Delivered
-```
-
-Updates over time.
+Instead of storing `IsOnline`, `IsGift`, `IsDiscount` as separate flag columns on the fact table, combine them into one `dim_flags` dimension and reference it with a single foreign key.
 
 ---
 
-# Degenerate Dimension
+## Role-Playing Dimensions
 
-Dimension stored inside fact.
+One physical dimension table used multiple times in the same fact table, in different "roles," typically via views or aliases at query time.
 
-Example
-
-```
-Invoice Number
-```
-
-No separate table needed.
-
----
-
-# Junk Dimension
-
-Combine small flags.
-
-Instead of
-
-```
-IsOnline
-
-IsGift
-
-IsDiscount
-```
-
-Make
-
-```
-dim_flags
-```
-
----
-
-# Role Playing Dimensions
-
-One dimension used multiple times.
-
-Example
-
-```
+```text
 dim_date
 ```
 
-Used as
+used as:
 
-```
+```text
 Order Date
-
 Ship Date
-
 Delivery Date
 ```
 
+The same `dim_date` table is joined into the fact table three times (once per role) rather than building three separate date dimensions.
+
 ---
 
-# Date Dimension
+## Date Dimension
 
-Never use raw dates everywhere.
+Never scatter raw date logic (fiscal year, holidays, weekday names) across queries — build one `dim_date` table and join to it everywhere.
 
-Instead
-
-```
+```text
 dim_date
 
 date_key
-
 date
-
 month
-
 quarter
-
 year
-
 holiday
-
 week
-
 weekday
 ```
 
 ---
 
-# Fact Table Rules
+## Modeling Rules
 
-Always
+### Fact table rules
+
+Always include:
 
 - Numeric measures
-    
-- Foreign keys only
-    
-- Lowest grain
-    
-- No descriptive columns
-    
+- Foreign keys only (to dimensions)
+- Data at the lowest available grain
+- No descriptive/text columns
 
-Good
+Good: `customer_key, product_key, date_key, sales, quantity`
+Bad: `customer_name, product_name, city` (these belong in dimensions, not facts)
 
-```
-customer_key
-product_key
-date_key
-sales
-quantity
-```
+### Dimension table rules
 
-Bad
+Include:
 
-```
-customer_name
-product_name
-city
-```
+- Names, categories, attributes, hierarchies
+
+Example (`dim_product`): `Brand, Category, Subcategory, Color, Size`
+
+### Null handling
+
+Never leave a fact table's foreign key `NULL`. Create an explicit "Unknown" member in the dimension (e.g. `CustomerKey = 0` for "Unknown Customer") and point unresolved rows at it instead — `NULL` foreign keys break joins and silently drop rows from inner joins.
+
+### Naming standards
+
+Good: `fact_sales, fact_orders, dim_customer, dim_product, dim_store`
+Avoid: `tbl1, data, master` — names should say what the table is at a glance.
 
 ---
 
-# Dimension Table Rules
+## Additive, Semi-Additive, and Non-Additive Facts
 
-Include
+This classifies whether a measure can be safely summed across a given dimension:
 
-- Names
-    
-- Categories
-    
-- Attributes
-    
-- Hierarchies
-    
-
-Example
-
-```
-Product
-
-Brand
-
-Category
-
-Subcategory
-
-Color
-
-Size
-```
+- **Additive** — can be summed across *all* dimensions, including time. Example: `Revenue`, `Quantity`.
+- **Semi-additive** — can be summed across some dimensions but not time. Example: `Bank Balance` — you can sum balances across accounts at a point in time, but summing a balance across days doesn't mean anything.
+- **Non-additive** — cannot be meaningfully summed at all, regardless of dimension. Example: `Percentage`, `Ratio` — these must be recalculated from their underlying additive components, not summed directly.
 
 ---
 
-# Null Handling
+## Best Practices
 
-Never leave foreign keys null.
-
-Create
-
-```
-Unknown Customer
-```
-
-```
-CustomerKey = 0
-```
-
-instead of NULL.
+1. **Define the grain first** — before creating any table, state explicitly what one row represents.
+2. **Prefer star schemas** — keep dimensions denormalized unless normalization gives a clear, specific benefit.
+3. **Use surrogate keys** — for stable joins and to support historical tracking (SCDs).
+4. **Keep facts narrow** — store only keys and measures in fact tables.
+5. **Build conformed dimensions** — reuse Customer, Product, Date, etc. across every fact table that needs them.
+6. **Use SCD Type 2 for history** — whenever an attribute's historical value matters for reporting.
+7. **Create a date dimension** — avoid re-deriving calendar logic (fiscal periods, holidays) in every query.
+8. **Store data at the lowest grain** — aggregate in the BI layer/reports, not in the warehouse tables themselves.
+9. **Handle unknown members explicitly** — use default dimension rows (e.g. key `0`) instead of `NULL` foreign keys.
+10. **Document business definitions** — make sure metrics like "Revenue," "Active Customer," and "Churn" mean the same thing everywhere they're used.
 
 ---
 
-# Additive Facts
+## Kimball in a dbt Project
 
-Can sum across all dimensions.
-
-Example
-
-```
-Revenue
-
-Quantity
-```
-
----
-
-# Semi-additive
-
-Can sum over some dimensions.
-
-Example
-
-```
-Bank Balance
-```
-
-Not across time.
-
----
-
-# Non-additive
-
-Cannot sum.
-
-Example
-
-```
-Percentage
-
-Ratio
-```
-
----
-
-# Naming Standards
-
-Good
-
-```
-fact_sales
-
-fact_orders
-
-dim_customer
-
-dim_product
-
-dim_store
-```
-
-Avoid
-
-```
-tbl1
-
-data
-
-master
-```
-
----
-
-# Best Practices
-
-### 1. Define grain first
-
-Before creating any table, clearly state what a single row represents.
-
-### 2. Prefer star schemas
-
-Keep dimensions denormalized unless normalization provides a clear benefit.
-
-### 3. Use surrogate keys
-
-Maintain stable joins and support historical tracking.
-
-### 4. Keep facts narrow
-
-Store only keys and measures in fact tables.
-
-### 5. Build conformed dimensions
-
-Reuse dimensions like Customer, Product, and Date across multiple fact tables.
-
-### 6. Use SCD Type 2 for history
-
-Preserve changes to important business attributes over time.
-
-### 7. Create a date dimension
-
-Avoid repeated date calculations and provide consistent calendar logic.
-
-### 8. Store data at the lowest grain
-
-Aggregate in reports rather than in the warehouse whenever possible.
-
-### 9. Handle unknown members explicitly
-
-Use default dimension records (for example, key `0`) instead of `NULL` foreign keys.
-
-### 10. Document business definitions
-
-Ensure metrics like "Revenue", "Active Customer", and "Churn" have consistent definitions across the organization.
-
----
-
-# Kimball in a dbt Project
-
-A common dbt project aligns well with Kimball principles:
+A typical dbt project layout maps cleanly onto Kimball's layers:
 
 ```text
 Raw Source
@@ -683,17 +341,13 @@ Staging (stg_*)
 Intermediate (int_*)
     │
     ▼
-Dimensions (dim_*)
-        +
-Facts (fact_*)
+Dimensions (dim_*)  +  Facts (fact_*)
     │
     ▼
 Marts / BI
 ```
 
-For example:
-
-```
+```text
 models/
 ├── staging/
 │   ├── stg_orders.sql
@@ -710,4 +364,9 @@ models/
         └── fact_sales.sql
 ```
 
-Since you're learning **dbt**, understanding Kimball's dimensional modeling will help you design marts that are easy to maintain, performant for analytics, and intuitive for business users. The key principles to remember are: **declare the grain first, model facts and dimensions separately, use star schemas, create conformed dimensions, and preserve history where needed with SCDs**.
+If you're learning dbt, understanding Kimball's dimensional modeling directly helps you design marts that are easy to maintain, performant for analytics, and intuitive for business users. The core habits to keep: **declare the grain first, model facts and dimensions separately, use star schemas, build conformed dimensions, and preserve history with SCDs where it matters.**
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Miscellaneous/Data Modeling|Data Modelling Masterclass for Data Engineers]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Spark/Miscellaneous/Types of Fact Table|Types of Fact Tables in Data Warehousing]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Miscellaneous/Fundamentals Of Data Engineering|Fundamentals Of Data Engineering]]

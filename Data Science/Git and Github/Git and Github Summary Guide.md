@@ -176,3 +176,7 @@ Contributing to open-source projects is highly valued in the developer community
 #### 5. Final Important Note: Practice Daily
 
 The most crucial advice is to **use Git in your daily life**. Consistent practice is key to truly mastering it and making it fruitful for your development workflow.
+
+## 🔗 Related Notes
+- [[Data Science/Git and Github/Git and Github|Git and Github]]
+- [[Data Science/Git and Github/Git and Github Images/Git and Github Images|Git and Github Images]]

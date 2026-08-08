@@ -66,3 +66,7 @@ bash restart_obs_cam.sh
 ```
 
 👉 Want me to build that script for you so you don’t have to remember all the commands?
+
+## 🔗 Related Notes
+- [[Laptop Level Notes/Mobile Cam Tool For Webcam/Droid Cam|Use Your Phone Camera as a Virtual Webcam on Linux]]
+- [[Laptop Level Notes/Screen Cast/From Linux Laptop/Wireless Display|Wireless Display (GNOME Network Displays / Miracast)]]

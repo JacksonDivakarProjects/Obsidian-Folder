@@ -1,4 +1,4 @@
-This guide provides a comprehensive overview of views in Databricks, covering their definition, types, practical applications, and best practices for data architecture.
+Views in Databricks are read-only, queryable objects built on top of tables, other views, or data sources. This note covers their types, practical applications, and best practices for data architecture.
 
 ---
 
@@ -20,7 +20,7 @@ Databricks offers several types of views, each designed for different use cases 
 ### **Temporary Views**
 A temporary view is scoped to the current Spark session within a notebook or job. It is ideal for chaining DataFrames or breaking down complex transformations into smaller, readable steps.
 
-- **Scope & Lifecycle:** Tied to the notebook or job’s session. It is automatically dropped when the cluster is detached or the notebook is detached from the cluster.
+- **Scope & Lifecycle:** Tied to the notebook or job's session. It is automatically dropped when the cluster is detached or the notebook is detached from the cluster.
 - **Storage Behavior:** Logical only. No physical data is created.
 - **Performance:** Since the data is recomputed every time the view is referenced, complex transformations can be slow if used multiple times.
 - **Syntax Examples:**
@@ -180,3 +180,8 @@ In the Lakehouse architecture, use prefixes to indicate the layer and content:
 - **Mistake: Overusing Dynamic Views on Dedicated Compute**
     - *Explanation:* Running complex Dynamic Views on older Dedicated Compute clusters (pre-15.4) or without serverless compute can fail or incur unexpected high costs.
     - *Solution:* Check compute requirements before deploying fine-grained access control to production.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Data Bricks/Databricks Concepts/Views/Global Temp Views|Global Temp Views]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Data Bricks/Delta Live Tables/View and Streaming Tables/Difference Between Views and Streaming Tables|Difference Between Views and Streaming Tables]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Data Bricks/Databricks Concepts/Managed Vs External Tables|Managed vs External Tables (Unity Catalog)]]

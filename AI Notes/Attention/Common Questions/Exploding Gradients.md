@@ -7,3 +7,8 @@ Exploding gradients occur when the gradients of the loss with respect to the mod
 - **High learning rates** – can further destabilize training and amplify gradient magnitudes.
 
 Consequences include numerical overflow, NaN losses, and very unstable training. Common solutions: gradient clipping, proper weight initialization (e.g., Xavier/He), and using architectures like LSTMs/GRUs with gating mechanisms to mitigate the issue.
+
+## 🔗 Related Notes
+- [[AI Notes/Attention/Common Questions/Vanishing Gradients|Vanishing Gradients]]
+- [[AI Notes/Attention/Encoder Decoder Sequential Model/Attention Mechanism Implementation (Old Sequential Model)|Attention Mechanism Implementation (Old Sequential Model)]]
+- [[AI Notes/Attention/Transformers/Difference between Encoder - Decoder and Transformers|Difference between Encoder - Decoder and Transformers]]

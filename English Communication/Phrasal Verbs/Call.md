@@ -89,3 +89,9 @@ Think of **“call”** as “reaching out” — every variation changes _how_ 
 ---
 
 Would you like me to make a **visual chart** (mind map-style) showing all “call” phrasal verbs with meanings and usage contexts next? It’ll help you memorize them faster.
+
+## 🔗 Related Notes
+- [[English Communication/Phrasal Verbs/Get|Get]]
+- [[English Communication/Phrasal Verbs/Pull|Pull]]
+- [[English Communication/Phrasal Verbs/Put|Put]]
+- [[English Communication/Phrasal Verbs/Take|Take]]

@@ -221,3 +221,8 @@ button.addEventListener('click', function(event) {
 ---
 
 **I have created the notes for Topic 24. Please say "Next" for me to proceed to Topic 25 (Event in callback function).**
+
+## 🔗 Related Notes
+- [[Web Development/JavaScript/Event Listeners|Event Listeners in JavaScript]]
+- [[Web Development/JavaScript/Loops in JavaScript|Loops in JavaScript and forEach with Event Listeners]]
+- [[Web Development/JavaScript/setTimeout Function|setTimeout Function]]

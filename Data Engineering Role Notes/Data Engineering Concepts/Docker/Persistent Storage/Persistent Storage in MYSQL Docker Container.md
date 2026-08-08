@@ -1,23 +1,30 @@
-Great question! You **pull the image** - you don't need to create your own. Let me walk you through exactly what to do step by step:
+# Persistent Storage in a MySQL Docker Container
 
-## 🎯 Your Action Plan: Run MySQL with Volumes
+## Why This Matters
 
-### Option 1: Pull First, Then Run (More Explicit)
+Containers are ephemeral by design: when a container is removed, everything written to its writable layer is lost. For a database like MySQL, that means all your data disappears the moment you run `docker rm`. **Docker volumes** solve this by storing data outside the container's lifecycle, on the host, so it survives container restarts, removals, and even upgrades to a new image version.
+
+## Pull vs. Build
+
+- **Pull** — download the official, pre-built MySQL image from Docker Hub. This is what you want 99% of the time.
+- **Build your own** — write a custom Dockerfile only when you need something the official image doesn't provide (custom config baked in, extra tooling, etc.).
+
+You don't need to run `docker pull` explicitly — `docker run` automatically pulls the image if it isn't already present locally. Pulling first just makes the download step visible and separate from the run step.
 
 ```bash
-# Step 1: Pull the MySQL image
+# Explicit pull (optional)
 docker pull mysql:latest
 ```
 
-You'll see download progress. This just downloads the image to your system.
+## Step-by-Step: Run MySQL with a Persistent Volume
 
+### 1. Create the named volume
 ```bash
-# Step 2: Create the volume
 docker volume create mysql-data
 ```
 
+### 2. Run the container, mounting the volume
 ```bash
-# Step 3: Run the container
 docker run -d \
   --name mysql-db \
   -p 3306:3306 \
@@ -25,109 +32,87 @@ docker run -d \
   -e MYSQL_ROOT_PASSWORD=MyStrongPassword123! \
   mysql:latest
 ```
+If the image isn't local yet, this pulls it automatically before starting the container.
 
-### Option 2: Run Directly (Docker Pulls Automatically)
-
-You can skip the explicit `pull` and just run:
-
+### 3. Verify it's running
 ```bash
-# Create volume first
-docker volume create mysql-data
-
-# Run container - Docker will automatically pull the image if needed
-docker run -d \
-  --name mysql-db \
-  -p 3306:3306 \
-  -v mysql-data:/var/lib/mysql \
-  -e MYSQL_ROOT_PASSWORD=MyStrongPassword123! \
-  mysql:latest
-```
-
-If the image isn't local, Docker will pull it automatically during the `run` command.
-
-## 📋 Complete Step-by-Step for You to Execute
-
-Here's exactly what to type, in order:
-
-```bash
-# 1. Create the persistent volume
-docker volume create mysql-data
-
-# 2. Run MySQL container (auto-pulls image if needed)
-docker run -d \
-  --name mysql-db \
-  -p 3306:3306 \
-  -v mysql-data:/var/lib/mysql \
-  -e MYSQL_ROOT_PASSWORD=MyStrongPassword123! \
-  mysql:latest
-
-# 3. Verify it's running
 docker ps
+```
 
-# 4. Check the logs to ensure MySQL started properly
+### 4. Check the logs until MySQL is ready
+```bash
 docker logs mysql-db
+```
+Wait for a line like:
+```
+2023-... [Server] /usr/sbin/mysqld: ready for connections.
+```
+That confirms MySQL has finished initializing and will accept connections.
 
-# 5. Connect to MySQL inside the container
+### 5. Connect and create test data
+```bash
 docker exec -it mysql-db mysql -u root -p
 # Enter password: MyStrongPassword123!
-
-# 6. Once connected, create test data
+```
+```sql
 CREATE DATABASE test_db;
 USE test_db;
 CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(100));
 INSERT INTO users (name) VALUES ('Alice'), ('Bob');
 SELECT * FROM users;
 EXIT;
+```
 
-# 7. Now test persistence - stop and remove container
+### 6. Prove persistence: destroy and recreate the container
+```bash
 docker stop mysql-db
 docker rm mysql-db
 
-# 8. Run a NEW container with the SAME volume
+# Start a brand-new container, reusing the SAME volume
 docker run -d \
   --name mysql-db-new \
   -p 3306:3306 \
   -v mysql-data:/var/lib/mysql \
   -e MYSQL_ROOT_PASSWORD=MyStrongPassword123! \
   mysql:latest
+```
 
-# 9. Connect and verify your data is still there!
+### 7. Confirm the data survived
+```bash
 docker exec -it mysql-db-new mysql -u root -p
-# Enter password, then:
+```
+```sql
 USE test_db;
-SELECT * FROM users;  # You should see Alice and Bob still there!
+SELECT * FROM users;  -- Alice and Bob are still there
 EXIT;
 ```
 
-## 🔍 Understanding What's Happening
+The container was fully destroyed and rebuilt, but because the data lived in the `mysql-data` volume (not inside the container's own filesystem), nothing was lost.
+
+## Command Reference
 
 | Command | What It Does |
 |---------|--------------|
-| `docker pull mysql:latest` | Downloads the MySQL image from Docker Hub (like downloading an app installer) |
-| `docker volume create mysql-data` | Creates a persistent storage area for your database files |
-| `docker run ... mysql:latest` | Creates and starts a container from the MySQL image |
+| `docker pull mysql:latest` | Downloads the MySQL image from Docker Hub |
+| `docker volume create mysql-data` | Creates a named, persistent storage area managed by Docker |
+| `docker volume ls` | Lists all volumes on the host |
+| `docker volume inspect mysql-data` | Shows where the volume's data actually lives on the host filesystem |
+| `docker run ... -v mysql-data:/var/lib/mysql ...` | Mounts the volume at MySQL's data directory inside the container |
 
-## 🤔 Why Pull vs Create Your Own?
+## Named Volumes vs. Bind Mounts
 
-- **Pull** = Download a pre-made, official MySQL image from Docker Hub (recommended!)
-- **Create your own** = Write a `Dockerfile` to build a custom MySQL image (only needed for special configurations)
-
-**99% of the time, you pull existing images** - it's like installing an app from an app store vs building it from source code.
-
-## ✅ What You Should Do Now
-
-Just follow the **Complete Step-by-Step** section above. Type each command and watch what happens. You'll see:
-
-1. Docker downloading MySQL (first time only)
-2. The container starting up
-3. MySQL logs showing it's ready
-4. Your data persisting across container deletions
-
-**Pro tip**: When you run `docker logs mysql-db`, wait until you see something like:
+The `-v mysql-data:/var/lib/mysql` syntax above uses a **named volume** — Docker manages where the data actually lives on the host, and you refer to it by name (`mysql-data`). The alternative is a **bind mount**, where you point directly at a host path:
+```bash
+-v /host/path/mysql-data:/var/lib/mysql
 ```
-2023-... [Server] /usr/sbin/mysqld: ready for connections.
-```
+Named volumes are generally preferred for database storage because Docker manages permissions and location for you; bind mounts are more useful when you need to inspect or edit the files directly from the host.
 
-That means MySQL is fully initialized and ready to accept connections.
+## Gotchas
 
-Try it now and let me know if you hit any issues! This is the perfect hands-on way to learn Docker volumes with a real database.
+- Always wait for the "ready for connections" log line before connecting — connecting too early during first-time initialization can fail or hang.
+- If you forget `-v` entirely, the container still works, but all data lives in the container's writable layer and is lost on `docker rm`.
+- `MYSQL_ROOT_PASSWORD` is only used the *first* time the volume is initialized. If you reuse a volume that already has data, changing this environment variable on a new container has no effect on the existing root password.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Docker/Docker Hub Practice|Docker Beginner's Guide: Login, Create Image, Push & Pull]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Docker/Docker Installation|Docker Installation]]

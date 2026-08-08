@@ -1217,3 +1217,8 @@ Alright, Jack 👍 Let’s continue with the **seventh batch (words 61–70)**.
 
 ---
 
+
+## 🔗 Related Notes
+- [[English Communication/Vocabulary Hunt -1/DeepSeek|DeepSeek]]
+- [[English Communication/Vocabulary Hunt -1/Gemini|Gemini]]
+- [[English Communication/Vocabulary Hunt -1/Vocabs|Vocabs]]

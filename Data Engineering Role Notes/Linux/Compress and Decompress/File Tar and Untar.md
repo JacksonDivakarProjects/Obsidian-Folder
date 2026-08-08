@@ -1,88 +1,65 @@
+# File Tar and Untar
 
-Here's a **clear and simple guide** to using `tar` for **archiving and extracting** files in Linux:
-
----
+A quick, practical guide to archiving and extracting files with `tar` in Linux.
 
 ## 📦 TAR (Create Archive)
 
-### ✅ 1. **Tar a file or folder**
-
+### Tar a file or folder
 ```bash
 tar -cvf archive.tar file_or_folder
 ```
-
 **Flags:**
-
-- `c` → Create archive
-    
-- `v` → Verbose (shows progress)
-    
-- `f` → Filename of the archive
-    
-
----
+- `c` → create archive
+- `v` → verbose (shows progress)
+- `f` → filename of the archive
 
 ## 📂 UNTAR (Extract Archive)
 
-### ✅ 2. **Extract `.tar` file**
-
+### Extract a `.tar` file
 ```bash
 tar -xvf archive.tar
 ```
-
 **Flags:**
-
-- `x` → Extract archive
-    
-- `v` → Verbose
-    
-- `f` → Filename
-    
-
----
+- `x` → extract archive
+- `v` → verbose
+- `f` → filename
 
 ## 📦🔧 Compressed TAR (.tar.gz or .tgz)
 
-### ✅ 3. **Create compressed archive**
-
+### Create a compressed archive
 ```bash
 tar -czvf archive.tar.gz file_or_folder
 ```
+- `z` → gzip compression
 
-- `z` → Gzip compression
-    
-
-### ✅ 4. **Extract compressed archive**
-
+### Extract a compressed archive
 ```bash
 tar -xzvf archive.tar.gz
 ```
 
----
-
-## 📂 Extract to Specific Directory
+## 📂 Extract to a Specific Directory
 
 ```bash
 tar -xvf archive.tar -C /path/to/folder
 ```
 
----
-
-## 🧪 Just View Contents
+## 🧪 View Contents Without Extracting
 
 ```bash
 tar -tvf archive.tar
 ```
 
----
+## 🧠 Tip: File Types
 
-### 🧠 Tip: File Types
-
-|Extension|Format|
+| Extension | Format |
 |---|---|
-|`.tar`|Archive only|
-|`.tar.gz` / `.tgz`|Compressed (gzip)|
-|`.tar.bz2`|Compressed (bzip2)|
-|`.tar.xz`|Compressed (xz)|
+| `.tar` | Archive only, no compression |
+| `.tar.gz` / `.tgz` | Compressed (gzip) |
+| `.tar.bz2` | Compressed (bzip2 — smaller than gzip, slower) |
+| `.tar.xz` | Compressed (xz — smallest, slowest) |
 
-Would you like examples using `.tar.gz` and `.tar.xz` too?
+For `.tar.bz2` and `.tar.xz`, swap the `z` flag for `j` (bzip2) or `J` (xz) respectively — e.g. `tar -cjvf archive.tar.bz2 folder/` or `tar -cJvf archive.tar.xz folder/`.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Linux/Compress and Decompress/File Zip and Unzip|File Zip and Unzip]]
+- [[Data Engineering Role Notes/Linux/Linux Summary Guide|Linux Masterclass Concepts]]

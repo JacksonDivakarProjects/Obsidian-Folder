@@ -433,3 +433,6 @@ print(confusion_matrix(y_true, y_pred))
 
 🧠 **End of Guide**  
 Now you can directly copy-paste this Markdown into a `.md` file or a Jupyter Notebook cell for interactive use. Let me know if you want this exported to a downloadable `.md` file or PDF.
+
+## 🔗 Related Notes
+- [[Data Science/Miscellaneous/Gemini DS Guide|The Comprehensive Data Scientist's Guide: From Foundations to Advanced Application]]

@@ -186,13 +186,14 @@ WHERE is_active = true
 ```
 
 ## **Summary of Module 1:**
-- ✅ Understand dbt's purpose and advantages
-- ✅ Know standard project structure
-- ✅ Set up dbt with database connection
-- ✅ Configure VS Code for optimal development
-- ✅ Recognize core configuration files
+- Understand dbt's purpose and advantages over raw SQL scripts.
+- Know the standard project structure and what each folder is for.
+- Set up dbt with a database connection via `profiles.yml`.
+- Configure VS Code (dbt Power User extension) for a productive workflow.
+- Recognize the core configuration files: `dbt_project.yml`, `profiles.yml`, model `.sql`/`.yml` files.
 
----
-
-**Ready to proceed to Module 2: Configuration & Jinja Templating?**  
-*Type `NEXT` to continue or `REVIEW` to go over any topic again.*
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Syllabus|dbt Learning Syllabus]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 02/Configuration Files|Configuration Files Overview]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 02/File Association & VS Code Setup|File Associations & VS Code Setup]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 03/Building Models & Materializations|Building Models & Materializations]]

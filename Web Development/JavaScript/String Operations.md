@@ -80,3 +80,7 @@ Strings are immutable (they cannot be changed directly). These methods return a 
 ---
 
 **I have created the notes for Topic 3. Please say "Next" for me to proceed to Topic 4 (typeof()).**
+
+## 🔗 Related Notes
+- [[Web Development/JavaScript/Array Operations|Arrays - Push and Pull Operations]]
+- [[Web Development/JavaScript/Datatypes in JavaScript|Data Types in JavaScript]]

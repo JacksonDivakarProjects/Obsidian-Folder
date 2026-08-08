@@ -230,10 +230,10 @@ DLT's enhanced autoscaling dynamically adjusts cluster resources based on pendin
 #### 5.2 Pipeline Configurations and Options
 
 **Key Pipeline Settings**:
-- **Product Edition**: Core (basic), Pro (photon acceleration), Advanced (expectations).
+- **Product Edition**: Core (batch pipeline orchestration only), Pro (adds change data capture via `create_auto_cdc_flow`), Advanced (adds data-quality expectations on top of Pro).
 - **Cluster Policies**: Define instance types, autoscaling, and spot instance usage.
-- **Storage Location**: Custom path for Delta tables (default is managed location).
-- **Continuous vs. Triggered**: Continuous pipelines run perpetually for streaming sources.
+- **Storage Location**: Custom path for Delta tables (default is the schema's managed location).
+- **Continuous vs. Triggered**: Continuous pipelines run perpetually for low-latency streaming sources; triggered pipelines run once per update and stop.
 
 **Example Pipeline Configuration (JSON)**:
 ```json
@@ -301,4 +301,9 @@ def on_pipeline_completion(state):
 
 ### 8. Conclusion
 
-Delta Live Tables provides a powerful, declarative framework for building production-grade ETL pipelines on Databricks. By abstracting orchestration complexities and integrating data quality, CDC, and incremental processing, DLT accelerates time-to-value while ensuring reliability and maintainability. Whether using Python or SQL, data engineers can define transformations intuitively and let DLT handle the rest
+Delta Live Tables provides a powerful, declarative framework for building production-grade ETL pipelines on Databricks. By abstracting orchestration complexity and integrating data quality, CDC, and incremental processing directly into the pipeline definition, DLT accelerates time-to-value while ensuring reliability and maintainability. Whether using Python or SQL, data engineers can define transformations intuitively and let DLT handle the rest.
+
+## 🔗 Related Notes
+- [[Data Engineering Role Notes/Data Engineering Concepts/Data Bricks/Delta Live Tables/AutoCDC API/AutoCDC in DLT|AutoCDC in DLT]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Data Bricks/Delta Live Tables/View and Streaming Tables/Difference Between Views and Streaming Tables|Difference Between Views and Streaming Tables]]
+- [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Important TBLProperties/Change Data Feed|Delta Lake – Change Data Feed]]

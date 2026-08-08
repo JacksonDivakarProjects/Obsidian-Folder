@@ -799,3 +799,9 @@ function TodoApp() {
 ---
 
 **Ready for Topic 12: "React Components Practice"?**
+
+## 🔗 Related Notes
+- [[Web Development/React/React Topics/Class Components vs. Functional Components|Class Components vs. Functional Components]]
+- [[Web Development/React/React Topics/React Props|React Props]]
+- [[Web Development/React/React Topics/React Hooks|React Hooks - useState]]
+- [[Web Development/React/React Topics/Mapping Data to Components|Mapping Data to Components]]
