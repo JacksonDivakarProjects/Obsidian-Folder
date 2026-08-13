@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Future Study Plan/Snowball/Practical Snowball Code 1/Summary of Snowball Code.md",
+                "file": "Temp Folder/Dimensional Modelling/Fact Table/New Business Requirement from the Existing Fact.md",
                 "mode": "preview",
                 "source": false,
                 "backlinks": true,
@@ -28,10 +28,59 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Summary of Snowball Code"
+              "title": "New Business Requirement from the Existing Fact"
+            }
+          },
+          {
+            "id": "5e7250d179047ae5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Temp Folder/Dimensional Modelling/Fact Table/Periodic Snapshot Table/Periodic Snapshot Pareto.md",
+                "mode": "preview",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Periodic Snapshot Pareto"
+            }
+          },
+          {
+            "id": "c81d43c94fce1c2c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Temp Folder/Dimensional Modelling/Miscellaneoues/Business asks but no source data.md",
+                "mode": "preview",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Business asks but no source data"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -181,46 +230,45 @@
       "bases:Create new base": false
     }
   },
-  "active": "54d8c3359884386f",
+  "active": "a9e4c25dffe817e0",
   "lastOpenFiles": [
-    "Future Study Plan/Snowball/Practical Snowball Code 1/Snowball Code.md",
-    "Future Study Plan/Snowball/Practical Snowball Code 1/Summary of Snowball Code.md",
-    "Future Study Plan/Snowball/Practical Snowball Code 1",
-    "Future Study Plan/Snowball/Practice Notes.md",
-    "Temp Folder/Dimensional Modelling/Consolidated Fact Table/Kimball's Definition of CFT.md",
-    "Temp Folder/Dimensional Modelling/Aggregate Fact Table/Kimball's Definition of Aggregate Fact Table.md",
-    "Temp Folder/Dimensional Modelling/Consolidated Fact Table",
-    "Temp Folder/Dimensional Modelling/Factless Fact Table/Kimball's Definition of Factless Fact Table.md",
-    "Temp Folder/Dimensional Modelling/Aggregate Fact Table",
-    "Temp Folder/Dimensional Modelling/Factless Fact Table/desktop.ini",
-    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Structure/Clustered and Non Clustered/Non Clustered Index/desktop.ini",
-    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Storage/desktop.ini",
-    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/desktop.ini",
-    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Table Scan Types/Differences among Scans/desktop.ini",
-    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Partitioning/desktop.ini",
-    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Optimization Notes/Query Plan/desktop.ini",
-    "Temp Folder/Dimensional Modelling/Accumulating Snapshot Fact Table/Pareto Common Queries.md",
-    "Future Study Plan/Ansh Lamba Tutorial Order.md",
-    "Home - Knowledge Base.md",
-    "Temp Folder/Dimensional Modelling/Accumulating Snapshot Fact Table/Pareto ASFT Concept.md",
-    "Temp Folder/Dimensional Modelling/Accumulating Snapshot Fact Table/Kimball's Definition of Accumulating Snapshot Fact Table.md",
-    "Temp Folder/Stock Analyzer Project/Project Architecture.md",
+    "Temp Folder/Dimensional Modelling/Fact Table/Conformed Fact Table/Conformed Fact.md",
+    "Temp Folder/Dimensional Modelling/Fact Table/Conformed Fact Table",
+    "Temp Folder/Dimensional Modelling/Fact Table/Consolidated Fact Table/Kimball's Definition of CFT.md",
+    "Temp Folder/Dimensional Modelling/Miscellaneoues/Slicing and Dicing of Data.md",
+    "Temp Folder/Dimensional Modelling/Fact Table/Factless Fact Table/Kimball's Definition of Factless Fact Table.md",
+    "Temp Folder/Dimensional Modelling/Fact Table/Factless Fact Table",
+    "Temp Folder/Dimensional Modelling/Fact Table/Consolidated Fact Table",
+    "Temp Folder/Dimensional Modelling/Fact Table/Aggregate Fact Table/Kimball's Definition of Aggregate Fact Table.md",
+    "Temp Folder/Dimensional Modelling/Fact Table/Aggregate Fact Table",
+    "Temp Folder/Dimensional Modelling/Fact Table/Accumulating Snapshot Fact Table/Pareto Common Queries.md",
+    "Temp Folder/Dimensional Modelling/Fact Table/Accumulating Snapshot Fact Table/Pareto ASFT Concept.md",
+    "Temp Folder/Dimensional Modelling/Fact Table/Accumulating Snapshot Fact Table/Kimball's Definition of Accumulating Snapshot Fact Table.md",
+    "Temp Folder/Dimensional Modelling/Fact Table/Accumulating Snapshot Fact Table",
+    "README.md",
     "Future Study Plan/Snowball/Step 1/How to Derive Start and End Dates.md",
+    "Future Study Plan/Snowball/Practical Snowball Code 1/Summary of Snowball Code.md",
+    "Future Study Plan/Snowball/Practical Snowball Code 1/Snowball Code.md",
+    "Future Study Plan/Snowball/Step 1",
     "Future Study Plan/Snowball/Steps in Building Snowball.md",
     "Future Study Plan/Snowball/Snowball Example Code.md",
-    "Future Study Plan/AI Data Engineer.md",
-    "Future Study Plan/Roadmap/Learning Tools Steps -1.md",
+    "Future Study Plan/Snowball/Practice Notes.md",
+    "Future Study Plan/Snowball/Practical Snowball Code 1",
+    "Future Study Plan/Snowball",
     "Future Study Plan/Roadmap/Data Engineer Plan -1.md",
+    "Future Study Plan/Roadmap/Learning Tools Steps -1.md",
     "Future Study Plan/Roadmap/AI Data Engineer -2.md",
-    "Future Study Plan/Spark.md",
-    "Helpful Books and PDFs/Helpful Books and PDFs.md",
-    "Data Science/Probability For DS/Hypothesis Errors/Hypothesis Errors Images/Hypothesis Errors Images.md",
+    "Future Study Plan/Roadmap",
+    "Temp Folder/Dimensional Modelling/Miscellaneoues",
+    "Temp Folder/Dimensional Modelling/Relationship/Nulls in Foreign Key.md",
+    "Temp Folder/Dimensional Modelling/Topics Learnt.md",
+    "Temp Folder/Dimensional Modelling/Dimension Tables/Shrunken Dimension Table.md",
+    "Temp Folder/Dimensional Modelling/Fact Table/Periodic Snapshot Table/Periodic Snapshot Fact Table.md",
+    "Temp Folder/Dimensional Modelling/Fact Table/Periodic Snapshot Table/Periodic Snapshot Pareto.md",
+    "Temp Folder/Dimensional Modelling/Miscellaneoues/Fact Table Grain.md",
+    "Temp Folder/Dimensional Modelling/Miscellaneoues/Business asks but no source data.md",
     "Data Science/Probability For DS/Hypothesis Errors/Hypothesis Errors Images/Screenshot From 2026-01-16 15-34-47.png",
     "Data Science/Probability For DS/Hypothesis Errors/Hypothesis Errors Images/Error in Distribution.webp",
-    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Indexing Images.md",
-    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Index Usage/Index Usage.md",
-    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Classification.md",
-    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Structure/Structure.md",
     "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Structure/Clustered and Non Clustered/Pre-requisite/firefox_wJtv4A8QkT.jpg",
     "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Storage/Row Store and Column Store Index/CCI Vs NCCI/Delta Store.gif",
     "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Storage/Row Store and Column Store Index/Column Store Index/3.png",
