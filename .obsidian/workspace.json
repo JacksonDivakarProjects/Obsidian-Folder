@@ -11,13 +11,76 @@
             "id": "54d8c3359884386f",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "Temp Folder/Dimensional Modelling/Fact Table/New Business Requirement from the Existing Fact.md",
+                "mode": "preview",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "New Business Requirement from the Existing Fact"
+            }
+          },
+          {
+            "id": "5e7250d179047ae5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Temp Folder/Dimensional Modelling/Fact Table/Periodic Snapshot/Periodic Snapshot Pareto.md",
+                "mode": "preview",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Periodic Snapshot Pareto"
+            }
+          },
+          {
+            "id": "c81d43c94fce1c2c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Temp Folder/Dimensional Modelling/Miscellaneoues/Slicing and Dicing of Data.md",
+                "mode": "preview",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Slicing and Dicing of Data"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -167,9 +230,27 @@
       "bases:Create new base": false
     }
   },
-  "active": "54d8c3359884386f",
+  "active": "a9e4c25dffe817e0",
   "lastOpenFiles": [
+    "Temp Folder/Dimensional Modelling/Miscellaneoues",
+    "Temp Folder/Dimensional Modelling/Fact Table/Conformed Fact.md",
+    "Temp Folder/Dimensional Modelling/Relationship/Nulls in Foreign Key.md",
+    "Temp Folder/Dimensional Modelling/Relationship",
+    "Temp Folder/Dimensional Modelling/Topics Learnt.md",
+    "Temp Folder/Dimensional Modelling/Dimension Tables/Shrunken Dimension Table.md",
+    "Temp Folder/Dimensional Modelling/Dimension Tables",
+    "Temp Folder/Dimensional Modelling/Fact Table/Periodic Snapshot/Periodic Snapshot Fact Table.md",
+    "Temp Folder/Dimensional Modelling/Fact Table/Periodic Snapshot/Periodic Snapshot Pareto.md",
+    "Temp Folder/Dimensional Modelling/Fact Table/Periodic Snapshot",
+    "Temp Folder/Dimensional Modelling/Miscellaneoues/Slicing and Dicing of Data.md",
+    "Temp Folder/Dimensional Modelling/Fact Table/Fact Table Grain.md",
+    "Temp Folder/Dimensional Modelling/Fact Table/No source data.md",
+    "Temp Folder/Dimensional Modelling/Fact Table/New Business Requirement from the Existing Fact.md",
+    "Temp Folder/Dimensional Modelling/Fact Table",
     "Temp Folder/Stock Analyzer Project/Project Architecture.md",
+    "Miscellaneoues/Miscellaneoues.md",
+    "Temp Folder/Dimensional Modelling",
+    "Home - Knowledge Base.md",
     "Home - Knowledge Base.md.tmp.17428.1cf22540884e",
     "Helpful Books and PDFs/Helpful Books and PDFs.md",
     "Data Science/Probability For DS/Hypothesis Errors/Types of Errors in Hypothesis Testing.md.tmp.17428.38353d3580d6",
@@ -187,21 +268,8 @@
     "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Structure/Clustered and Non Clustered/Non Clustered Index/Non Clustered Index.md",
     "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Structure/Clustered and Non Clustered/Heap Structure/Heap Structure.md",
     "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Structure/Clustered and Non Clustered/Composite Index/Composite Index.md",
-    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Structure/Clustered and Non Clustered/Clustered Index/Clustered Index.md",
-    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Storage/Storage.md",
-    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Storage/Row Store and Column Store Index/Row Store and Column Store Index.md",
-    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Storage/Row Store and Column Store Index/Column Store Index/Column Store Index.md",
-    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Storage/Row Store and Column Store Index/CCI Vs NCCI/CCI Vs NCCI.md",
-    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Functions/Functions.md",
     "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Structure/Clustered and Non Clustered/Pre-requisite/firefox_wJtv4A8QkT.jpg",
-    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Functions/Unique Index/Unique Index.md",
-    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Functions/Filtered Index/Filtered Index.md",
     "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Storage/Row Store and Column Store Index/CCI Vs NCCI/Delta Store.gif",
-    "Home - Knowledge Base.md",
-    "Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT Course/Images/YAML File Purpose/YAML File Purpose.md",
-    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Joins-Loops-Sorts/Heap Sort.md",
-    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Joins-Loops-Sorts/Quick Sort.md",
-    "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Joins-Loops-Sorts/Joins-Loops-Sorts.md",
     "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Storage/Row Store and Column Store Index/Column Store Index/3.png",
     "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Storage/Row Store and Column Store Index/1.png",
     "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Functions/Unique Index/firefox_BOob6CjncQ.png",
@@ -209,11 +277,6 @@
     "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Storage/Row Store and Column Store Index/CCI Vs NCCI/2.png",
     "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Structure/Clustered and Non Clustered/Points to Know/firefox_eCuDyb7WoD.png",
     "Web Development/Web Development.md.tmp.17428.541d3de41ecf",
-    "Data Engineering Role Notes/Data Engineering Concepts/Data Engineering Concepts.md.tmp.17428.359090e03ff9",
-    "Web Development/JavaScript/JavaScript.md.tmp.17428.31f4fc84774a",
-    "Home - Knowledge Base.md.tmp.17428.d7bc1bd25c5b",
-    "Home - Knowledge Base.md.tmp.17428.40b083448656",
-    "Data Science/Data Science.md.tmp.17428.ddc635aaccf7",
-    "Data Engineering Role Notes/SQL/Window Functions"
+    "Data Engineering Role Notes/Data Engineering Concepts/Data Engineering Concepts.md.tmp.17428.359090e03ff9"
   ]
 }
