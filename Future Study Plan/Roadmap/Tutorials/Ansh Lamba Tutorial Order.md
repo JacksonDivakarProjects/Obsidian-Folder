@@ -215,5 +215,5 @@ This path should take you from beginner to confident data engineer, aligned with
 - [Delta Lake Databricks (From Zero to Pro in 4 HOURS) - YouTube](https://www.youtube.com/watch?v=O18afGTGoIU)
 
 ## 🔗 Related Notes
-- [[Future Study Plan/Spark|Spark]]
-- [[Future Study Plan/AI Data Engineer|AI Data Engineer]]
+- [[Future Study Plan/Roadmap/Tutorials/Spark|Spark]]
+- [[AI Data Engineer|AI Data Engineer]]
