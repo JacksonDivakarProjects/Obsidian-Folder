@@ -97,5 +97,5 @@ You can get all that without ever computing a Q·Kᵀ matrix.
 > **Learn enough to be dangerous with LLM data plumbing, but leave the architecture deep dives to the researchers. As an AI Data Engineer, your value is in reliable, scalable data flows – not in deriving attention.**
 
 ## 🔗 Related Notes
-- [[Future Study Plan/Spark|Spark]]
-- [[Future Study Plan/Ansh Lamba Tutorial Order|Ansh Lamba Tutorial Order]]
+- [[Future Study Plan/Roadmap/Tutorials/Spark|Spark]]
+- [[Ansh Lamba Tutorial Order|Ansh Lamba Tutorial Order]]

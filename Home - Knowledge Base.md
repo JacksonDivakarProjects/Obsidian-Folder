@@ -6,10 +6,10 @@ Auto-generated map of the vault, organized by area, with cross-domain connection
 ## 🗺️ Areas
 - [[AI Notes/AI Notes|AI Notes]] — Hugging Face AutoModel classes, LLM prompt/chat roles, attention mechanisms, encoder-decoder models, and Transformers vs RNN/LSTM.
 - [[Claude Code/Claude Code|Claude Code]] — The agentic loop, sub-agents, permissions, memory/CLAUDE.md, hooks, MCP, custom commands, IDE integration, and CI/CD automation.
-- [[Data Engineering Role Notes/Data Engineering Role Notes|Data Engineering Role Notes]] — SQL (query optimization & execution plans, indexing internals, joins/sorts, recursive CTEs, window functions, stored procedures/triggers/views), PySpark (core DataFrame operations, performance & optimization, structured streaming, SCDs, Spark internals), Airflow orchestration, Linux/shell fundamentals, web scraping (BeautifulSoup/Selenium/Selectolax), and Data Engineering Concepts (Spark, Databricks, DBT, Delta Lake, Docker, Azure/Fabric).
+- [[Data Engineering Role Notes/Data Engineering Role Notes|Data Engineering Role Notes]] — SQL (query optimization & execution plans, indexing internals, joins/sorts, recursive CTEs, window functions, stored procedures/triggers/views), PySpark (core DataFrame operations, performance & optimization, structured streaming, SCDs, Spark internals), Airflow orchestration, Linux/shell fundamentals, web scraping (BeautifulSoup/Selenium/Selectolax), Data Engineering Concepts (Spark, Databricks, DBT, Delta Lake, Docker, Azure/Fabric), and a full three-chapter ARR Snowball / revenue-bridge modeling curriculum (concepts, production engineering, and real-data delivery).
 - [[Data Science/Data Science|Data Science]] — Pandas, data analysis frameworks, KPIs, transformations, visualization, probability/statistics, Excel, and Git.
 - [[English Communication/English Communication|English Communication]] — Phrasal verbs, English tenses, and vocabulary-building drills.
-- Future Study Plan — AI Data Engineering scope, a curated YouTube learning order (Ansh Lamba), and PySpark learning resources. See [[Future Study Plan/AI Data Engineer|AI Data Engineer]].
+- Future Study Plan — AI Data Engineering scope, a curated YouTube learning order (Ansh Lamba), and PySpark learning resources. See [[AI Data Engineer|AI Data Engineer]].
 - [[Helpful Books and PDFs/Helpful Books and PDFs|Helpful Books and PDFs]] — A single prompt-shortcuts reference PDF.
 - [[Laptop Level Notes/Laptop Level Notes|Laptop Level Notes]] — Fedora/Linux administration, dev environment setup (Java, Jupyter, Ollama), MySQL/Postgres config, webcam/screen-cast tools, and swap memory tuning.
 - [[Temp Folder/Stock Analyzer Project/Stock Analyzer Project|Temp Folder]] — Stock Analyzer Project: a multi-agent stock analysis tool design (data subsystem, fundamental/technical/sentiment agents, orchestrator).
@@ -42,6 +42,7 @@ Auto-generated map of the vault, organized by area, with cross-domain connection
 - [[Data Engineering Role Notes/Data Engineering Concepts/Azure Data Engineering/Azure Data Engineering|Azure Data Engineering]]
 - [[Data Engineering Role Notes/Data Engineering Concepts/Fabric/Fabric|Fabric]]
 - [[Data Engineering Role Notes/Data Engineering Concepts/Methodologies/Kimball Methodology|Kimball Methodology]]
+- [[Data Engineering Role Notes/Snowball/Snowball|Snowball (ARR Bridge Curriculum)]]
 
 ### Data Science
 - [[Data Science/Data Science|Data Science]]
@@ -58,6 +59,9 @@ Auto-generated map of the vault, organized by area, with cross-domain connection
 
 ### English Communication
 - [[English Communication/English Communication|English Communication]]
+
+### Future Study Plan
+- [[AI Data Engineer|AI Data Engineer]]
 
 ### Laptop Level Notes
 - [[Laptop Level Notes/Laptop Level Notes|Laptop Level Notes]]
