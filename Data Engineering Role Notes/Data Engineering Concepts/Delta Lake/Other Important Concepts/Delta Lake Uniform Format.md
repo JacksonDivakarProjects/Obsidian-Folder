@@ -69,4 +69,4 @@ Official docs: [Universal Format (UniForm) — Delta Lake Documentation](https:/
 
 ## 🔗 Related Notes
 - [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Other Important Concepts/Open Table Format|Open Table Format]]
-- [[Data Engineering Role Notes/Data Engineering Concepts/Data Bricks/Databricks Concepts/Managed Vs External Tables|Managed vs External Tables (Unity Catalog)]]
+- [[Managed Vs External Tables|Managed vs External Tables (Unity Catalog)]]

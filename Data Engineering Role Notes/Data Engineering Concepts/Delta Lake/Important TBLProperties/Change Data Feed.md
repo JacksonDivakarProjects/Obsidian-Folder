@@ -66,5 +66,5 @@ WHERE _change_type = 'update_postimage';
 
 ## 🔗 Related Notes
 - [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Questions/How Versioning Works in Delta Lake|How Versioning Works in Delta Lake]]
-- [[Data Engineering Role Notes/Data Engineering Concepts/Data Bricks/Delta Live Tables/AutoCDC API/AutoCDC in DLT|AutoCDC in DLT]]
-- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/Module 05/Snapshots & Change Tracking|Snapshots & Change Tracking]]
+- [[AutoCDC in DLT|AutoCDC in DLT]]
+- [[Snapshots & Change Tracking|Snapshots & Change Tracking]]

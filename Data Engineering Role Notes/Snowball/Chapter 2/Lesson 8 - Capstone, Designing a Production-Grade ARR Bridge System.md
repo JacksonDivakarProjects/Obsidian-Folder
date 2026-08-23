@@ -12,7 +12,7 @@ Before reading on, it is worth actually attempting this yourself: write down wha
 
 **Decision: a declarative CTE chain, modeled in dbt.**
 
-Recall from Chapter 1 Lesson 9 that the choice between the imperative T-SQL procedure and the portable ANSI CTE chain came down to a small number of factors: debuggability of intermediate state, portability across engines, and the surrounding tooling. Here the surrounding tooling settles it decisively. The team already knows [[Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT|DBT]], and dbt is fundamentally a declarative, CTE-oriented modeling tool — its whole model is "each node is a `SELECT` that materializes as a table or view, and dependencies are inferred from references between them." An imperative stored procedure fits into that world as an opaque blob invoked by a hook: dbt cannot see inside it, cannot infer its lineage, cannot test its intermediate stages, and cannot document it. You would be paying dbt's overhead and getting none of its benefits.
+Recall from Chapter 1 Lesson 9 that the choice between the imperative T-SQL procedure and the portable ANSI CTE chain came down to a small number of factors: debuggability of intermediate state, portability across engines, and the surrounding tooling. Here the surrounding tooling settles it decisively. The team already knows [[DBT|DBT]], and dbt is fundamentally a declarative, CTE-oriented modeling tool — its whole model is "each node is a `SELECT` that materializes as a table or view, and dependencies are inferred from references between them." An imperative stored procedure fits into that world as an opaque blob invoked by a hook: dbt cannot see inside it, cannot infer its lineage, cannot test its intermediate stages, and cannot document it. You would be paying dbt's overhead and getting none of its benefits.
 
 Concretely: the cascade stages become individual models, and dbt's `ref()` graph gives you lineage between them for free. The tie-out test and the rest of the Lesson 6 suite become dbt tests attached to the relevant models, which means they run as part of the build rather than as a separate script somebody remembers to invoke. And Snowflake is the target, so the imperative option's home-turf advantage — T-SQL-specific procedural constructs — isn't available anyway.
 
@@ -162,5 +162,5 @@ One thing GreenTide's brief handed you that real engagements don't: the requirem
 - [[Bucket Cascade Logic|Bucket Cascade Logic]]
 - [[Standardized ARR Snowball Procedure (T-SQL)|Standardized ARR Snowball Procedure (T-SQL)]]
 - [[ARR Snowball Template (ANSI SQL, Portable)|ARR Snowball Template (ANSI SQL, Portable)]]
-- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT|DBT]]
+- [[DBT|DBT]]
 - [[Data Engineering Role Notes/Airflow Scheduler/Airflow Scheduler|Airflow Scheduler]]

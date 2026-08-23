@@ -112,7 +112,7 @@ Most mature pipelines run the first or third *plus* the second, because belt-and
 
 ## Where to Read Next
 
-This entire pattern — full-refresh versus incremental materialization, `merge` and `delete+insert` incremental strategies, `is_incremental()` blocks for conditional window filtering, and configurable lookback — is a first-class, natively supported feature in dbt rather than something you hand-roll. If you are building this for real, read the incremental materialization documentation before writing your own MERGE; see [[Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT|DBT]]. And since the whole motivation here is query cost, the partitioning and clustering material in [[Data Engineering Role Notes/SQL/SQL Optimization Concepts/SQL Optimization Concepts|SQL Optimization Concepts]] is directly complementary — an incremental model whose window predicate can't prune partitions is still scanning the entire table, and you will have done all this work for nothing.
+This entire pattern — full-refresh versus incremental materialization, `merge` and `delete+insert` incremental strategies, `is_incremental()` blocks for conditional window filtering, and configurable lookback — is a first-class, natively supported feature in dbt rather than something you hand-roll. If you are building this for real, read the incremental materialization documentation before writing your own MERGE; see [[DBT|DBT]]. And since the whole motivation here is query cost, the partitioning and clustering material in [[Data Engineering Role Notes/SQL/SQL Optimization Concepts/SQL Optimization Concepts|SQL Optimization Concepts]] is directly complementary — an incremental model whose window predicate can't prune partitions is still scanning the entire table, and you will have done all this work for nothing.
 
 ## 📌 Key Takeaways
 
@@ -143,5 +143,5 @@ This entire pattern — full-refresh versus incremental materialization, `merge`
 ## 🔗 Related Notes
 
 - [[Snowball|Snowball]]
-- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT|DBT]]
+- [[DBT|DBT]]
 - [[Data Engineering Role Notes/SQL/SQL Optimization Concepts/SQL Optimization Concepts|SQL Optimization Concepts]]

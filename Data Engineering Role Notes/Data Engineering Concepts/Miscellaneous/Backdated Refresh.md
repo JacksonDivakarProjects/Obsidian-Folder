@@ -145,5 +145,5 @@ Backdated refresh  → selective rewind + recompute
 > Backdated refresh is controlled re-execution of pipeline logic on historical data, to restore correctness without rebuilding everything.
 
 ## 🔗 Related Notes
-- [[Data Engineering Role Notes/Data Engineering Concepts/Data Bricks/Delta Live Tables/AutoCDC API/AutoCDC in DLT|AutoCDC in DLT]]
+- [[AutoCDC in DLT|AutoCDC in DLT]]
 - [[Data Engineering Role Notes/Data Engineering Concepts/Delta Lake/Questions/How Versioning Works in Delta Lake|How Versioning Works in Delta Lake]]

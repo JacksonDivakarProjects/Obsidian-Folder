@@ -19,7 +19,7 @@ Once you've finished all eight lessons here, continue to [[ARR Bridge Course - C
 
 ## What's genuinely new here
 
-Chapter 1 answered "how do I build a correct ARR bridge." Chapter 2 answers three harder questions in sequence: "how do I get more insight out of the same bridge" (Lessons 1-3), "how do I make the bridge trustworthy when the input data is messy" (Lesson 4), and "how do I make this survive as a real, scheduled, tested, alerting production pipeline that a team relies on" (Lessons 5-8). That last stretch draws directly on this vault's existing [[Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT|DBT]] and [[Data Engineering Role Notes/Airflow Scheduler/Airflow Scheduler|Airflow Scheduler]] material — this is where the ARR bridge stops being a SaaS-metrics topic and becomes a data-engineering one.
+Chapter 1 answered "how do I build a correct ARR bridge." Chapter 2 answers three harder questions in sequence: "how do I get more insight out of the same bridge" (Lessons 1-3), "how do I make the bridge trustworthy when the input data is messy" (Lesson 4), and "how do I make this survive as a real, scheduled, tested, alerting production pipeline that a team relies on" (Lessons 5-8). That last stretch draws directly on this vault's existing [[DBT|DBT]] and [[Data Engineering Role Notes/Airflow Scheduler/Airflow Scheduler|Airflow Scheduler]] material — this is where the ARR bridge stops being a SaaS-metrics topic and becomes a data-engineering one.
 
 ## 🔗 Related Notes
 - [[ARR Bridge Course|Chapter 1 — ARR Bridge Course]] — the prerequisite foundation.
