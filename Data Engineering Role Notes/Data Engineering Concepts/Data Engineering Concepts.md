@@ -1,19 +1,19 @@
 [[Spark/Spark|Spark]]
 [[Data Engineering Concepts Images/Data Engineering Concept Images|Data Engineering Concept Images]]
 [[Delta Lake/Delta Lake|Delta Lake]]
-[[JSON File Format/JSON File Format|JSON File Format]]
+[[JSON File Format|JSON File Format]]
 [[Data Engineering Role Notes/Data Engineering Concepts/Miscellaneous/Miscellaneous|Miscellaneous]]
 [[Optimization for Data Read/Optimization for Data Read|Optimization for Data Read]]
 
 ## 🗺️ Map of Content (auto-generated)
 
-- [[Data Engineering Role Notes/Data Engineering Concepts/Azure Data Engineering/Azure Data Engineering|Azure Data Engineering]] — currently just a self-hosted file system configuration reference screenshot; no deeper Azure-specific DE tooling notes yet.
-- [[DBT/DBT|DBT]] — dbt fundamentals, project configuration & Jinja, models & materializations, testing framework, snapshots & node selection, dbt commands/flags, YAML reference, dbt Python models.
-- [[Data Bricks/Data Bricks|Data Bricks]] — Unity Catalog managed/external tables & Volumes, Databricks views (temp/global temp/materialized/dynamic), job parameter passing (widgets/taskValues), Delta Live Tables & AutoCDC (CDC).
+- [[Azure Data Engineering|Azure Data Engineering]] — currently just a self-hosted file system configuration reference screenshot; no deeper Azure-specific DE tooling notes yet.
+- [[DBT|DBT]] — dbt fundamentals, project configuration & Jinja, models & materializations, testing framework, snapshots & node selection, dbt commands/flags, YAML reference, dbt Python models.
+- [[Data Bricks|Data Bricks]] — Unity Catalog managed/external tables & Volumes, Databricks views (temp/global temp/materialized/dynamic), job parameter passing (widgets/taskValues), Delta Live Tables & AutoCDC (CDC).
 - [[Delta Lake/Delta Lake|Delta Lake]] — ACID properties, Python & SQL command APIs, table utilities/Change Data Feed, open table formats & UniForm, OPTIMIZE/Z-Ordering/Liquid Clustering, versioning & time travel internals.
-- Docker — no folder overview note yet; see [[Docker/Docker Hub Practice|Docker Hub Practice]] for the login/build/push/pull workflow, plus notes on Windows installation, persistent volumes for stateful containers, and Linux users/groups for Docker permissions.
-- [[Data Engineering Role Notes/Data Engineering Concepts/Fabric/Fabric|Fabric]] — Microsoft Fabric training reference screenshots (Azure-native counterpart to Databricks); no deeper notes yet.
-- [[JSON File Format/JSON File Format|JSON File Format]] — JSON fundamentals, document shapes (single-line, nested, NDJSON/JSON Lines, JSON Schema), Python's `json` module, `pandas.json_normalize` for flattening.
+- Docker — no folder overview note yet; see [[Docker Hub Practice|Docker Hub Practice]] for the login/build/push/pull workflow, plus notes on Windows installation, persistent volumes for stateful containers, and Linux users/groups for Docker permissions.
+- [[Fabric|Fabric]] — Microsoft Fabric training reference screenshots (Azure-native counterpart to Databricks); no deeper notes yet.
+- [[JSON File Format|JSON File Format]] — JSON fundamentals, document shapes (single-line, nested, NDJSON/JSON Lines, JSON Schema), Python's `json` module, `pandas.json_normalize` for flattening.
 - Methodologies — [[Methodologies/Kimball Methodology|Kimball Methodology]]: dimensional modeling, star vs snowflake schema, fact/dimension tables, Slowly Changing Dimensions (SCD 1/2/3), surrogate vs natural keys, conformed/junk/degenerate/role-playing dimensions, Kimball layering in dbt.
 - [[Data Engineering Role Notes/Data Engineering Concepts/Miscellaneous/Miscellaneous|Miscellaneous]] — backdated refresh/historical reprocessing, data lakehouse architecture, dimensional data modeling (OLTP vs OLAP), fundamentals of data engineering (warehouse layers, file formats, Azure stack).
 - [[Optimization for Data Read/Optimization for Data Read|Optimization for Data Read]] — predicate pushdown, predicate pruning/data skipping, column pruning, Spark Catalyst optimizer internals, Delta Lake transaction-log statistics.

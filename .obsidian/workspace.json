@@ -85,7 +85,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Temp Folder/Dimensional Modelling/Miscellaneoues/Slicing and Dicing of Data.md",
+                "file": "Data Engineering Role Notes/Data Engineering Concepts/Dimensional Modelling/Dimension Tables/Advanced Dimension Tables Techniques/Grouped Dimensions, Bridge Tables, and Time-Varying Multivalued Relationships.md",
                 "mode": "preview",
                 "source": false,
                 "backlinks": true,
@@ -100,7 +100,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Slicing and Dicing of Data"
+              "title": "Grouped Dimensions, Bridge Tables, and Time-Varying Multivalued Relationships"
             }
           }
         ],
@@ -254,14 +254,31 @@
       "bases:Create new base": false
     }
   },
-  "active": "0b539f0f4cfe2ef6",
+  "active": "a9e4c25dffe817e0",
   "lastOpenFiles": [
-    "Temp Folder/Dimensional Modelling/Miscellaneoues/Fact Table Grain.md",
-    "Temp Folder/Dimensional Modelling/Miscellaneoues/Drill Across.md",
-    "Temp Folder/Dimensional Modelling/Fact Table/Advanced Fact Table Techniques/Multiple Units of Fact Table/Multiple Units of Fact Table.md",
+    "Temp Folder/Dimensional Modelling Part 2",
+    "Data Engineering Role Notes/Data Engineering Concepts/Dimensional Modelling/Relationship/Nulls in Foreign Key.md",
+    "Data Engineering Role Notes/Data Engineering Concepts/Dimensional Modelling/Fact Table/Advanced Fact Table Techniques/Multiple Units of Fact Table/Multiple Units of Fact Table.md",
+    "Data Engineering Role Notes/Data Engineering Concepts/Dimensional Modelling/Special Purpose Schemas/Real Time Fact Tables and Hot Partitions.md",
+    "Data Engineering Role Notes/Data Engineering Concepts/Dimensional Modelling/Special Purpose Schemas/Error Event Schemas.md",
+    "Data Engineering Role Notes/Data Engineering Concepts/Dimensional Modelling/Miscellaneoues/Business asks but no source data.md",
+    "Data Engineering Role Notes/Data Engineering Concepts/Dimensional Modelling/Dimension Tables/Advanced Dimension Tables Techniques/Step Dimension.md",
+    "Data Engineering Role Notes/Data Engineering Concepts/Dimensional Modelling/Dimension Tables/Advanced Dimension Tables Techniques/Measure Type Dimension.md",
+    "Data Engineering Role Notes/Data Engineering Concepts/Dimensional Modelling/Dimension Tables/Advanced Dimension Tables Techniques/Late Arriving Dimensions/Late Arriving Dimension.md",
+    "Data Engineering Role Notes/Data Engineering Concepts/Dimensional Modelling/Dimension Tables/Advanced Dimension Tables Techniques/Grouped Dimensions, Bridge Tables, and Time-Varying Multivalued Relationships.md",
+    "Data Engineering Role Notes/Data Engineering Concepts/Dimensional Modelling/Dimension Tables/Advanced Dimension Tables Techniques/Behavior Groups.md",
+    "Data Engineering Role Notes/Data Engineering Concepts/Dimensional Modelling/Special Purpose Schemas/SuperType and SubType Schemas.md",
+    "Temp Folder/Dimensional Modelling/Dimension Tables/Advanced Dimension Tables Techniques/Untitled",
+    "Data Engineering Role Notes/Data Engineering Concepts/Dimensional Modelling/Special Purpose Schemas",
+    "Data Engineering Role Notes/Data Engineering Concepts/Dimensional Modelling/Dimension Tables/Shrunken Dimension Table.md",
+    "Data Engineering Role Notes/Data Engineering Concepts/Dimensional Modelling/Dimension Tables/Advanced Dimension Tables Techniques/Late Arriving Dimensions",
+    "Data Engineering Role Notes/Data Engineering Concepts/Dimensional Modelling/Dimension Tables/Advanced Dimension Tables Techniques",
+    "Data Engineering Role Notes/Data Engineering Concepts/Dimensional Modelling/Miscellaneoues/Slicing and Dicing of Data.md",
+    "Data Engineering Role Notes/Data Engineering Concepts/Dimensional Modelling/Miscellaneoues/Fact Table Grain.md",
+    "Data Engineering Role Notes/Data Engineering Concepts/Dimensional Modelling/Miscellaneoues/Drill Across.md",
     "Data Engineering Role Notes/Snowball/Code/Pipeline Patterns/Contract Dates Snowball Script (With Lifecycle Cross-Check).md",
-    "Temp Folder/Dimensional Modelling/Fact Table/Advanced Fact Table Techniques/Multiple Units of Fact Table",
-    "Temp Folder/Dimensional Modelling/Fact Table/Advanced Fact Table Techniques",
+    "Data Engineering Role Notes/Data Engineering Concepts/Dimensional Modelling/Fact Table/Advanced Fact Table Techniques/Multiple Units of Fact Table",
+    "Data Engineering Role Notes/Data Engineering Concepts/Dimensional Modelling/Fact Table/Advanced Fact Table Techniques",
     "Data Engineering Role Notes/Snowball/Code/Coding Templates/ARR Snowball Template (ANSI SQL, Portable).md",
     "Data Engineering Role Notes/Snowball/Chapter 1/Lesson 7 - Writing Your First Snowball Query.md",
     "Data Engineering Role Notes/Snowball/Chapter 1/Lesson 6 - Getting Real-World Dates Right.md",
@@ -271,27 +288,10 @@
     "Data Engineering Role Notes/Snowball/Chapter 1/Lesson 5 - The 5-Step Build Process.md",
     "Data Engineering Role Notes/Snowball/Chapter 1/ARR Bridge Course.md",
     "Data Engineering Role Notes/Snowball/Chapter 1/Lesson 10 - Validating, Visualizing, and Avoiding Mistakes.md",
-    "Data Engineering Role Notes/Snowball/Snowball.md",
-    "Data Engineering Role Notes/Snowball/Chapter 1/Chapter 1 Code/Dimensional Snowball Example (SQL).md",
     "Data Engineering Role Notes/Snowball/Chapter 1/Chapter 1 Code",
-    "Data Engineering Role Notes/Snowball/Code/Coding Templates/Original DW Code/Original Stored Procedure (As Provided).md",
     "Data Engineering Role Notes/Snowball/Code/Coding Templates/Original DW Code",
     "Data Engineering Role Notes/Snowball/Code/Coding Templates",
     "Data Engineering Role Notes/Snowball/Code/Pipeline Patterns/YTD Snowball Script (No End Dates, Monthly Grain).md.tmp.6004.a737e0eaf2c4",
-    "Data Engineering Role Notes/Snowball/Code/Pipeline Patterns/Contract Dates Snowball Script (With Lifecycle Cross-Check).md.tmp.6004.0e594e6b864a",
-    "Data Engineering Role Notes/Snowball/Code/Pipeline Patterns/Contract Dates Snowball Script (With Lifecycle Cross-Check).md.tmp.6004.7403b5c3cf85",
-    "Data Engineering Role Notes/Snowball/Snowball.md.tmp.6004.ae8c193c1b31",
-    "Data Engineering Role Notes/Snowball/Code/Pipeline Patterns/LTM Snowball Script (No End Dates, Monthly Grain).md.tmp.6004.598752a93ad9",
-    "Data Engineering Role Notes/Snowball/Code/Pipeline Patterns/YTD Snowball Script (No End Dates, Monthly Grain).md",
-    "Data Engineering Role Notes/Snowball/Code/Pipeline Patterns/Universal ARR Snowball Script (Raw to Bridge).md",
-    "Future Study Plan/Roadmap/Tutorials/Spark.md",
-    "Future Study Plan/Roadmap/Untitled.md",
-    "Future Study Plan/Roadmap/Tutorials/Ansh Lamba Tutorial Order.md",
-    "Future Study Plan/Roadmap/Data Engineer/AI Data Engineer -2.md",
-    "Future Study Plan/Roadmap/Tools/Learning Tools Steps -1.md",
-    "Future Study Plan/Roadmap/Data Engineer/Data Engineer Plan -1.md",
-    "Future Study Plan/Roadmap/AI Data Engineer.md",
-    "Data Engineering Role Notes/Snowball/Code/Pipeline Patterns/LTM Snowball Script (No End Dates, Monthly Grain).md",
     "Data Engineering Role Notes/Data Engineering Concepts/Data Engineering Concepts Images/Data Modeling Images/Image -2.png",
     "Data Science/Probability For DS/Hypothesis Errors/Hypothesis Errors Images/Screenshot From 2026-01-16 15-34-47.png",
     "Data Science/Probability For DS/Hypothesis Errors/Hypothesis Errors Images/Error in Distribution.webp",
@@ -300,7 +300,7 @@
     "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Storage/Row Store and Column Store Index/Column Store Index/3.png",
     "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Storage/Row Store and Column Store Index/1.png",
     "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Functions/Unique Index/firefox_BOob6CjncQ.png",
-    "Data Engineering Role Notes/Data Engineering Concepts/Fabric/Fabric Training Images/firefox_vX2XkV9NSH.png",
+    "Data Engineering Role Notes/Fabric/Fabric Training Images/firefox_vX2XkV9NSH.png",
     "Data Engineering Role Notes/SQL/SQL Optimization Concepts/Indexing/Indexing Images/Classification/Storage/Row Store and Column Store Index/CCI Vs NCCI/2.png"
   ]
 }

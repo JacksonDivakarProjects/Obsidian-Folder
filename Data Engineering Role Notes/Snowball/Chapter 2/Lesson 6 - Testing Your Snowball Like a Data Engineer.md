@@ -132,7 +132,7 @@ That is why a mature suite runs the whole set on every build, and why "the bridg
 
 ## Operationalizing It
 
-Wire the full suite to run **automatically after every build**, incremental or full — this is exactly what dbt's built-in test framework is designed for, with generic tests (`unique`, `not_null`, `relationships`) covering Tests 2 and 4 declaratively in a `schema.yml`, and singular tests as `.sql` files in `tests/` covering the bespoke logic in Tests 1, 3, 5, and 6. See [[Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT|DBT]] for the setup.
+Wire the full suite to run **automatically after every build**, incremental or full — this is exactly what dbt's built-in test framework is designed for, with generic tests (`unique`, `not_null`, `relationships`) covering Tests 2 and 4 declaratively in a `schema.yml`, and singular tests as `.sql` files in `tests/` covering the bespoke logic in Tests 1, 3, 5, and 6. See [[DBT|DBT]] for the setup.
 
 Two operational specifics that matter more than they sound:
 
@@ -169,4 +169,4 @@ Two operational specifics that matter more than they sound:
 ## 🔗 Related Notes
 
 - [[Snowball|Snowball]]
-- [[Data Engineering Role Notes/Data Engineering Concepts/DBT/DBT|DBT]]
+- [[DBT|DBT]]
