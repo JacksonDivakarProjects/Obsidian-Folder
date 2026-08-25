@@ -128,7 +128,7 @@ That's it — `source_fact` now has exactly the shape every other note in this f
 
 ## Step 3 — Lifecycle dates
 
-Collapse `stg_contracts` to one row per grain: earliest start, latest end (or `NULL` if any span is still open). This feeds the cascade's date cross-check in Step 4 — the stage that stops a late invoice or a billing correction from being misread as a new logo or a churn.
+Collapse `stg_contracts` to one row per grain: earliest start, latest end (or `NULL` if any span is still open). This feeds the cascade's date cross-check in Step 4 — the stage that stops a late invoice or a billing correction from being misread as a new logo or a churn. That check is binary (confirmed or demoted); [[ARR Bridge Course - Chapter 4|Chapter 4]] extends the same idea into a real multi-way classification — see [[Lesson 3 - Three Tiers of Gone|Lesson 3]].
 
 ```sql
 activity_dates AS (
